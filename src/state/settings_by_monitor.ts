@@ -47,6 +47,20 @@ export class WorkspaceConfiguration {
   }
 }
 
+export class MonitorInfo {
+  id: string = '';
+  index: number = 0;
+  orientation: MonitorOrientation = MonitorOrientation.HorizontalNormal;
+  is_tablet_mode: Boolean = false;
+}
+
+export enum MonitorOrientation {
+  HorizontalNormal = 0,
+  HorizontalUpSideDown = 1,
+  VerticalNormal = 2,
+  VerticalUpSideDown = 3,
+}
+
 export class MonitorConfiguration {
   tb: FancyToolbarSettingsByMonitor = new FancyToolbarSettingsByMonitor();
   wall: SeelenWallSettingsByMonitor = new SeelenWallSettingsByMonitor();
