@@ -19,6 +19,7 @@ export enum SeelenCommand {
   GetSystemColors = 'get_system_colors',
   SimulateFullscreen = 'simulate_fullscreen',
   CheckForUpdates = 'check_for_updates',
+  RequestMonitorInfo = 'get_monitor_info',
   /** Restart the app after install the update so it returns a promise resolved with `never` */
   InstallLastAvailableUpdate = 'install_last_available_update',
 

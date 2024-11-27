@@ -53,6 +53,8 @@ slu_events_declaration! {
     TrayInfo = "tray-info",
 
     ToolbarOverlaped = "set-auto-hide",
+    ToolbarTabletModeChanged = "tablet-mode-changed",
+    ToolbarOrientationChanged = "orientation-changed",
 
     WegOverlaped = "set-auto-hide",
     WegSetFocusedHandle = "set-focused-handle",
@@ -60,6 +62,8 @@ slu_events_declaration! {
     WegUpdateOpenAppInfo = "update-open-app-info",
     WegAddOpenApp = "add-open-app",
     WegRemoveOpenApp = "remove-open-app",
+    WegTabletModeChanged = "tablet-mode-changed",
+    WegOrientationChanged = "orientation-changed",
 
     WMSetReservation = "set-reservation",
     WMUpdateHeight = "update-height",

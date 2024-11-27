@@ -90,6 +90,34 @@ pub struct WorkspaceConfiguration {
     pub backgrounds: Option<Vec<SeelenWallWallpaper>>,
 }
 
+#[derive(Clone, Copy, Eq, PartialEq, Debug, Serialize, Deserialize, JsonSchema)]
+pub enum MonitorOrientation {
+    HorizontalNormal = 0,
+    HorizontalUpSideDown = 1,
+    VerticalNormal = 2,
+    VerticalUpSideDown = 3,
+}
+
+#[derive(Clone, Debug, Serialize, Deserialize, JsonSchema)]
+#[serde(rename_all = "camelCase")]
+pub struct MonitorInfo {
+    pub id: String,
+    pub index: usize,
+    pub orientation: MonitorOrientation,
+    pub is_tablet_mode: bool,
+}
+
+impl Default for MonitorInfo {
+    fn default() -> Self {
+        Self {
+            id: String::new(),
+            index: 0,
+            orientation: MonitorOrientation::HorizontalNormal,
+            is_tablet_mode: false,
+        }
+    }
+}
+
 #[derive(Clone, Debug, Default, Serialize, Deserialize, JsonSchema)]
 #[serde(default, rename_all = "camelCase")]
 pub struct MonitorConfiguration {
