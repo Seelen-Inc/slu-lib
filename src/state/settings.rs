@@ -88,6 +88,8 @@ pub struct SeelenWegSettings {
     pub mode: SeelenWegMode,
     /// When to hide the dock
     pub hide_mode: HideMode,
+    /// enables the logic which persists last overlapped HWND to enchance multimonitor overlap feature
+    pub use_multi_monitor_overlap_logic: bool,
     /// Dock position
     pub position: SeelenWegSide,
     /// enables the logic which persists last overlapped HWND to enchance multimonitor overlap feature
@@ -124,6 +126,7 @@ impl Default for SeelenWegSettings {
             margin: 8,
             padding: 8,
             space_between_items: 8,
+            use_multi_monitor_overlap_logic: false,
             delay_to_show: 100,
             delay_to_hide: 800,
         }
