@@ -47,6 +47,12 @@ export class WorkspaceConfiguration {
   }
 }
 
+export class MonitorInfo {
+  id: string = '';
+  index: number = 0;
+  isPrimary: boolean = false;
+}
+
 export class MonitorConfiguration {
   tb: FancyToolbarSettingsByMonitor = new FancyToolbarSettingsByMonitor();
   wall: SeelenWallSettingsByMonitor = new SeelenWallSettingsByMonitor();

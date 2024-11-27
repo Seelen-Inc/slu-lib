@@ -11,6 +11,7 @@ export interface PinnedWegItem {
   path: string;
   execution_command: string;
   is_dir: boolean;
+  presentative_monitor: number;
 }
 
 export interface TemporalPinnedWegItem {
