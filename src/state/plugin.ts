@@ -5,6 +5,7 @@ import { getCurrentWidget } from '../utils';
 
 export class Plugin {
   id: string = '';
+  icon: string = '';
   target: string = '';
   plugin: any = {};
   bundled: boolean = false;
