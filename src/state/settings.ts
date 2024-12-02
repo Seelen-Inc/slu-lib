@@ -164,22 +164,33 @@ export class AhkVarList {
   // launcher
   toggleLauncher: AhkVar = new AhkVar('Win + Space', 'LWin & Space');
   // wm
-  reserveTop: AhkVar = new AhkVar('Win + Shift + I', '#+i');
-  reserveBottom: AhkVar = new AhkVar('Win + Shift + K', '#+k');
-  reserveLeft: AhkVar = new AhkVar('Win + Shift + J', '#+j');
-  reserveRight: AhkVar = new AhkVar('Win + Shift + L', '#+l');
-  reserveFloat: AhkVar = new AhkVar('Win + Shift + U', '#+u');
-  reserveStack: AhkVar = new AhkVar('Win + Shift + O', '#+o');
-  focusTop: AhkVar = new AhkVar('Win + Shift + W', '#+w');
-  focusBottom: AhkVar = new AhkVar('Win + Shift + S', '#+s');
-  focusLeft: AhkVar = new AhkVar('Win + Shift + A', '#+a');
-  focusRight: AhkVar = new AhkVar('Win + Shift + D', '#+d');
-  focusLatest: AhkVar = new AhkVar('Win + Shift + E', '#+e');
-  increaseWidth: AhkVar = new AhkVar('Win + Alt + =', '#!=');
-  decreaseWidth: AhkVar = new AhkVar('Win + Alt + -', '#!-');
-  increaseHeight: AhkVar = new AhkVar('Win + Shift + =', '#+=');
-  decreaseHeight: AhkVar = new AhkVar('Win + Shift + -', '#+-');
-  restoreSizes: AhkVar = new AhkVar('Win + Alt + 0', '#!0');
+  reserveTop = new AhkVar('Win + Shift + I', '#+i');
+  reserveBottom = new AhkVar('Win + Shift + K', '#+k');
+  reserveLeft = new AhkVar('Win + Shift + J', '#+j');
+  reserveRight = new AhkVar('Win + Shift + L', '#+l');
+  reserveFloat = new AhkVar('Win + Shift + U', '#+u');
+  reserveStack = new AhkVar('Win + Shift + O', '#+o');
+  focusTop = new AhkVar('Win + Shift + W', '#+w');
+  focusBottom = new AhkVar('Win + Shift + S', '#+s');
+  focusLeft = new AhkVar('Win + Shift + A', '#+a');
+  focusRight = new AhkVar('Win + Shift + D', '#+d');
+  focusLatest = new AhkVar('Win + Shift + E', '#+e');
+  increaseWidth = new AhkVar('Win + Alt + =', '#!=');
+  decreaseWidth = new AhkVar('Win + Alt + -', '#!-');
+  increaseHeight = new AhkVar('Win + Shift + =', '#+=');
+  decreaseHeight = new AhkVar('Win + Shift + -', '#+-');
+  restoreSizes = new AhkVar('Win + Alt + 0', '#!0');
+  // weg
+  startWegApp0 = new AhkVar('Win + 0', '#0');
+  startWegApp1 = new AhkVar('Win + 1', '#1');
+  startWegApp2 = new AhkVar('Win + 2', '#2');
+  startWegApp3 = new AhkVar('Win + 3', '#3');
+  startWegApp4 = new AhkVar('Win + 4', '#4');
+  startWegApp5 = new AhkVar('Win + 5', '#5');
+  startWegApp6 = new AhkVar('Win + 6', '#6');
+  startWegApp7 = new AhkVar('Win + 7', '#7');
+  startWegApp8 = new AhkVar('Win + 8', '#8');
+  startWegApp9 = new AhkVar('Win + 9', '#9');
   // virtual desktops
   switchWorkspace0: AhkVar = new AhkVar('Alt + 1', '!1');
   switchWorkspace1: AhkVar = new AhkVar('Alt + 2', '!2');
