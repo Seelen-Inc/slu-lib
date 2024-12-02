@@ -166,6 +166,17 @@ export class AhkVarList {
   increaseHeight = new AhkVar('Win + Shift + =', '#+=');
   decreaseHeight = new AhkVar('Win + Shift + -', '#+-');
   restoreSizes = new AhkVar('Win + Alt + 0', '#!0');
+  // weg
+  startWegApp0 = new AhkVar('Win + 0', '#0');
+  startWegApp1 = new AhkVar('Win + 1', '#1');
+  startWegApp2 = new AhkVar('Win + 2', '#2');
+  startWegApp3 = new AhkVar('Win + 3', '#3');
+  startWegApp4 = new AhkVar('Win + 4', '#4');
+  startWegApp5 = new AhkVar('Win + 5', '#5');
+  startWegApp6 = new AhkVar('Win + 6', '#6');
+  startWegApp7 = new AhkVar('Win + 7', '#7');
+  startWegApp8 = new AhkVar('Win + 8', '#8');
+  startWegApp9 = new AhkVar('Win + 9', '#9');
   // virtual desktops
   switchWorkspace0 = new AhkVar('Alt + 1', '!1');
   switchWorkspace1 = new AhkVar('Alt + 2', '!2');
