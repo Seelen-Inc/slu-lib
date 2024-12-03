@@ -25,6 +25,7 @@ export enum SeelenEvent {
   WegUpdateOpenAppInfo = 'update-open-app-info',
   WegAddOpenApp = 'add-open-app',
   WegRemoveOpenApp = 'remove-open-app',
+  WegFocusedAppByIndex = 'start-focused-app-by-index',
   WMSetReservation = 'set-reservation',
   WMUpdateHeight = 'update-height',
   WMUpdateWidth = 'update-width',
