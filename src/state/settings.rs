@@ -27,6 +27,8 @@ pub struct FancyToolbarSettings {
     pub placeholder: String,
     /// hide mode
     pub hide_mode: HideMode,
+    /// enables the logic which persists last overlapped HWND to enchance multimonitor overlap feature
+    pub use_multi_monitor_overlap_logic: bool,
     /// delay to show the toolbar on Mouse Hover in milliseconds
     pub delay_to_show: u32,
     /// delay to hide the toolbar on Mouse Leave in milliseconds
@@ -40,6 +42,7 @@ impl Default for FancyToolbarSettings {
             height: 30,
             placeholder: String::from("default.yml"),
             hide_mode: HideMode::Never,
+            use_multi_monitor_overlap_logic: false,
             delay_to_show: 100,
             delay_to_hide: 800,
         }
@@ -87,6 +90,8 @@ pub struct SeelenWegSettings {
     pub hide_mode: HideMode,
     /// Dock position
     pub position: SeelenWegSide,
+    /// enables the logic which persists last overlapped HWND to enchance multimonitor overlap feature
+    pub use_multi_monitor_overlap_logic: bool,
     /// enable or disable separators visibility
     pub visible_separators: bool,
     /// item size in px
@@ -112,6 +117,7 @@ impl Default for SeelenWegSettings {
             mode: SeelenWegMode::MinContent,
             hide_mode: HideMode::OnOverlap,
             position: SeelenWegSide::Bottom,
+            use_multi_monitor_overlap_logic: false,
             visible_separators: true,
             size: 40,
             zoom_size: 70,
