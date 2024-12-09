@@ -104,6 +104,7 @@ export class FancyToolbarSettings {
   height: number = 30;
   placeholder: string = 'default.yml';
   hideMode: HideMode = HideMode.Never;
+  useMultiMonitorOverlapLogic: boolean = false;
   delayToShow: number = 100;
   delayToHide: number = 800;
 }
@@ -113,6 +114,7 @@ export class SeelenWegSettings {
   mode: SeelenWegMode = SeelenWegMode.MinContent;
   hideMode: HideMode = HideMode.OnOverlap;
   position: SeelenWegSide = SeelenWegSide.Bottom;
+  useMultiMonitorOverlapLogic: boolean = false;
   visibleSeparators: boolean = true;
   size: number = 40;
   zoomSize: number = 70;
