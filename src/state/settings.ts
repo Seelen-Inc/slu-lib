@@ -121,7 +121,6 @@ export class SeelenWegSettings {
   margin: number = 8;
   padding: number = 8;
   spaceBetweenItems: number = 8;
-  useMultiMonitorOverlapLogic: boolean = false;
   delayToShow: number = 100;
   delayToHide: number = 800;
 }
