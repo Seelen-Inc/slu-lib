@@ -19,6 +19,12 @@ export enum HideMode {
   OnOverlap = 'On-Overlap',
 }
 
+export enum SeelenWegItemDisplayOption {
+  PrimaryScreenAll = 'Primary screen all, anyway where open',
+  AllOnAll = 'All screen',
+  Minimal = 'Show where open',
+}
+
 export enum SeelenWegSide {
   Left = 'Left',
   Right = 'Right',
@@ -112,6 +118,7 @@ export class FancyToolbarSettings {
 export class SeelenWegSettings {
   enabled: boolean = true;
   mode: SeelenWegMode = SeelenWegMode.MinContent;
+  multitaskbarItemVisibilityBehaviour: SeelenWegItemDisplayOption = SeelenWegItemDisplayOption.AllOnAll;
   hideMode: HideMode = HideMode.OnOverlap;
   position: SeelenWegSide = SeelenWegSide.Bottom;
   useMultiMonitorOverlapLogic: boolean = false;

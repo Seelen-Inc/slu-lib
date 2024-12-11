@@ -21,6 +21,7 @@ export enum SeelenCommand {
   InstallLastAvailableUpdate = 'install_last_available_update',
 
   SystemGetMonitors = 'get_connected_monitors',
+  SystemGetCurrentMonitor = 'get_current_monitor',
   SystemGetColors = 'get_system_colors',
 
   // Seelen Settings
@@ -89,6 +90,7 @@ export enum SeelenCommand {
 
 type ReturnTypeByCommand = Record<SeelenCommand, unknown> & {
   [SeelenCommand.SystemGetMonitors]: ConnectedMonitor[];
+  [SeelenCommand.SystemGetCurrentMonitor]: ConnectedMonitor;
   [SeelenCommand.IsDevMode]: boolean;
   [SeelenCommand.CheckForUpdates]: boolean;
   [SeelenCommand.InstallLastAvailableUpdate]: never;
