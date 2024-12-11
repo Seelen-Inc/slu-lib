@@ -80,7 +80,6 @@ pub enum SeelenWegItemDisplayOption {
     Minimal,
 }
 
-
 #[derive(Debug, Copy, Clone, Serialize, Deserialize, JsonSchema, PartialEq, Eq)]
 pub enum SeelenWegSide {
     Left,

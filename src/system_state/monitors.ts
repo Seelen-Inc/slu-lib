@@ -8,7 +8,6 @@ export interface ConnectedMonitor {
   height: number;
   dpi: number;
   isPrimary: boolean;
-
 }
 
 export class ConnectedMonitor {
