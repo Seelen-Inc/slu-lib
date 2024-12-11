@@ -7,6 +7,14 @@ export interface ConnectedMonitor {
   width: number;
   height: number;
   dpi: number;
+  isPrimary: boolean;
+
+}
+
+export class ConnectedMonitor {
+  static async getCurrent(): Promise<ConnectedMonitor> {
+    return await invoke(SeelenCommand.SystemGetCurrentMonitor);
+  }
 }
 
 export class ConnectedMonitorList {

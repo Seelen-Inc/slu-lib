@@ -71,6 +71,17 @@ pub enum HideMode {
 }
 
 #[derive(Debug, Copy, Clone, Serialize, Deserialize, JsonSchema, PartialEq, Eq)]
+pub enum SeelenWegItemDisplayOption {
+    #[serde(rename = "Primary screen all, anyway where open")]
+    PrimaryScreenAll,
+    #[serde(rename = "All screen")]
+    AllOnAll,
+    #[serde(rename = "Show where open")]
+    Minimal,
+}
+
+
+#[derive(Debug, Copy, Clone, Serialize, Deserialize, JsonSchema, PartialEq, Eq)]
 pub enum SeelenWegSide {
     Left,
     Right,
@@ -86,6 +97,8 @@ pub struct SeelenWegSettings {
     pub enabled: bool,
     /// Dock/Taskbar mode
     pub mode: SeelenWegMode,
+    /// Dock item visibility in case of multiple monitor
+    pub multitaskbar_item_visibility_behaviour: SeelenWegItemDisplayOption,
     /// When to hide the dock
     pub hide_mode: HideMode,
     /// Dock position
@@ -115,6 +128,7 @@ impl Default for SeelenWegSettings {
         Self {
             enabled: true,
             mode: SeelenWegMode::MinContent,
+            multitaskbar_item_visibility_behaviour: SeelenWegItemDisplayOption::AllOnAll,
             hide_mode: HideMode::OnOverlap,
             position: SeelenWegSide::Bottom,
             use_multi_monitor_overlap_logic: false,
