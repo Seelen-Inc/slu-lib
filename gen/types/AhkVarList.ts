@@ -19,6 +19,16 @@ export type AhkVarList = {
   increaseHeight: AhkVar;
   decreaseHeight: AhkVar;
   restoreSizes: AhkVar;
+  startWegApp0: AhkVar;
+  startWegApp1: AhkVar;
+  startWegApp2: AhkVar;
+  startWegApp3: AhkVar;
+  startWegApp4: AhkVar;
+  startWegApp5: AhkVar;
+  startWegApp6: AhkVar;
+  startWegApp7: AhkVar;
+  startWegApp8: AhkVar;
+  startWegApp9: AhkVar;
   switchWorkspace0: AhkVar;
   switchWorkspace1: AhkVar;
   switchWorkspace2: AhkVar;

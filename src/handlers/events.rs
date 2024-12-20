@@ -62,6 +62,7 @@ slu_events_declaration! {
     WegUpdateOpenAppInfo = "update-open-app-info",
     WegAddOpenApp = "add-open-app",
     WegRemoveOpenApp = "remove-open-app",
+    WegFocusedAppByIndex = "start-focused-app-by-index",
 
     WMSetReservation = "set-reservation",
     WMUpdateHeight = "update-height",
