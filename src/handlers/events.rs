@@ -36,6 +36,9 @@ slu_events_declaration! {
     SystemMonitorsChanged = "system::monitors-changed",
     SystemLanguagesChanged = "system::languages-changed",
 
+    UserChanged = "user-changed",
+    UserRecentFolderChanged = "user-recent-folder-changed",
+
     MediaSessions = "media-sessions",
     MediaInputs = "media-inputs",
     MediaOutputs = "media-outputs",
