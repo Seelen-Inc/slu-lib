@@ -60,6 +60,7 @@ slu_events_declaration! {
     WegSetFocusedHandle = "set-focused-handle",
     WegSetFocusedExecutable = "set-focused-executable",
     WegUpdateOpenAppInfo = "update-open-app-info",
+    WegUpdateMonitorPosition = "update-monitor-position",
     WegAddOpenApp = "add-open-app",
     WegRemoveOpenApp = "remove-open-app",
 

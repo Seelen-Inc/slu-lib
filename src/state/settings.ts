@@ -3,6 +3,7 @@ import { SeelenCommand, SeelenEvent } from '../handlers/mod.ts';
 import type {
   HideMode,
   SeelenLauncherMonitor,
+  SeelenWegItemDisplayOption,
   SeelenWegMode,
   SeelenWegSide,
   Settings as ISettings,
@@ -61,6 +62,12 @@ const HideMode = enumFromUnion<HideMode>({
   OnOverlap: 'OnOverlap',
 });
 
+const SeelenWegItemDisplayOption = enumFromUnion<SeelenWegItemDisplayOption>({
+  PrimaryScreenAll: 'PrimaryScreenAll',
+  AllOnAll: 'AllOnAll',
+  Minimal: 'Minimal',
+});
+
 const SeelenWegSide = enumFromUnion<SeelenWegSide>({
   Left: 'Left',
   Right: 'Right',
@@ -79,4 +86,12 @@ const UpdateChannel = enumFromUnion<UpdateChannel>({
   Nightly: 'Nightly',
 });
 
-export { HideMode, SeelenLauncherMonitor, SeelenWegMode, SeelenWegSide, UpdateChannel, VirtualDesktopStrategy };
+export {
+  HideMode,
+  SeelenLauncherMonitor,
+  SeelenWegItemDisplayOption,
+  SeelenWegMode,
+  SeelenWegSide,
+  UpdateChannel,
+  VirtualDesktopStrategy,
+};

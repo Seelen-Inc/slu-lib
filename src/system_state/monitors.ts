@@ -8,6 +8,7 @@ declare global {
   }
   interface ReturnByCommand {
     [SeelenCommand.SystemGetMonitors]: ConnectedMonitor[];
+    [SeelenCommand.SystemGetCurrentMonitor]: ConnectedMonitor;
   }
   interface PayloadByEvent {
     [SeelenEvent.SystemMonitorsChanged]: ConnectedMonitor[];
@@ -20,6 +21,13 @@ export interface ConnectedMonitor {
   width: number;
   height: number;
   dpi: number;
+  isPrimary: boolean;
+}
+
+export class DisplayMonitor {
+  constructor(public monitor: ConnectedMonitor) { }
+
+  static readonly getCurrent = createInstanceInvoker(this, SeelenCommand.SystemGetCurrentMonitor);
 }
 
 export class ConnectedMonitorList extends List<ConnectedMonitor> {
