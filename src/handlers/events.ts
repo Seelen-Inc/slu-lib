@@ -24,6 +24,7 @@ export enum SeelenEvent {
   WegSetFocusedHandle = 'set-focused-handle',
   WegSetFocusedExecutable = 'set-focused-executable',
   WegUpdateOpenAppInfo = 'update-open-app-info',
+  WegUpdateMonitorPosition = 'update-monitor-position',
   WegAddOpenApp = 'add-open-app',
   WegRemoveOpenApp = 'remove-open-app',
   WMSetReservation = 'set-reservation',

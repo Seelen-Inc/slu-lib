@@ -19,6 +19,7 @@ export enum SeelenCommand {
   SystemGetMonitors = 'get_connected_monitors',
   SystemGetColors = 'get_system_colors',
   SystemGetLanguages = 'get_system_languages',
+  SystemGetCurrentMonitor = 'get_current_monitor',
 
   // Seelen Settings
   SetAutoStart = 'set_auto_start',

@@ -38,6 +38,7 @@ export * from './SeelenLauncherSettings.ts';
 export * from './SeelenWallSettings.ts';
 export * from './SeelenWallSettingsByMonitor.ts';
 export * from './SeelenWallWallpaper.ts';
+export * from './SeelenWegItemDisplayOption.ts';
 export * from './SeelenWegMode.ts';
 export * from './SeelenWegSettings.ts';
 export * from './SeelenWegSettingsByMonitor.ts';
