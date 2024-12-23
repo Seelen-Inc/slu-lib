@@ -41,6 +41,11 @@ export enum SeelenCommand {
   StateGetIconPacks = 'state_get_icon_packs',
   StateGetProfiles = 'state_get_profiles',
 
+  // User
+  GetUser = 'get_user',
+  GetUserRecentFolderContent = 'get_user_recent_folder_content',
+  SetUserRecentFolderLimit = 'set_user_recent_folder_limit',
+
   // Media
   MediaPrev = 'media_prev',
   MediaTogglePlayPause = 'media_toggle_play_pause',
@@ -58,6 +63,7 @@ export enum SeelenCommand {
   Suspend = 'suspend',
   Restart = 'restart',
   Shutdown = 'shutdown',
+  Lock = 'lock',
 
   // SeelenWeg
   WegGetItemsForWidget = 'weg_get_items_for_widget',
