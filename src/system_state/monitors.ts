@@ -19,6 +19,8 @@ export interface ConnectedMonitor {
   name: string;
   width: number;
   height: number;
+  fromTop: number;
+  fromLeft: number;
   dpi: number;
 }
 
