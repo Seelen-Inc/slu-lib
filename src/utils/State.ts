@@ -7,6 +7,10 @@ interface ConstructorWithSingleArg {
 }
 
 type InstanceInvoker<Instance> = () => Promise<Instance>;
+type InstanceInvokerWithArg<Instance, Command extends SeelenCommand> = (
+  args: SeelenCommandArg<Command>,
+) => Promise<Instance>;
+export type SeelenCommandArg<T extends SeelenCommand> = NonNullable<ArgsByCommand[T]>;
 
 export function createInstanceInvoker<This extends ConstructorWithSingleArg>(
   Class: This,
@@ -14,6 +18,18 @@ export function createInstanceInvoker<This extends ConstructorWithSingleArg>(
 ): InstanceInvoker<InstanceType<This>> {
   return async () => {
     return new Class(await invoke(command));
+  };
+}
+
+export function createInstanceInvokerWithArgs<
+  This extends ConstructorWithSingleArg,
+  Command extends SeelenCommand,
+>(
+  Class: This,
+  command: Command,
+): InstanceInvokerWithArg<InstanceType<This>, Command> {
+  return async (args: NonNullable<ArgsByCommand[Command]>) => {
+    return new Class(await invoke(command, args));
   };
 }
 
