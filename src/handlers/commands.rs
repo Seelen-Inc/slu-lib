@@ -83,8 +83,8 @@ slu_commands_declaration! {
 
   // User
   GetUser = get_user,
-  GetUserRecentFolderContent = get_user_recent_folder_content,
-  SetUserRecentFolderLimit = set_user_recent_folder_limit,
+  GetUserFolderContent = get_user_folder_content,
+  SetUserFolderLimit = set_user_folder_limit,
 
   // Media
   MediaPrev = media_prev,

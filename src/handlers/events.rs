@@ -37,7 +37,7 @@ slu_events_declaration! {
     SystemLanguagesChanged = "system::languages-changed",
 
     UserChanged = "user-changed",
-    UserRecentFolderChanged = "user-recent-folder-changed",
+    UserFolderChanged = "user-folder-changed",
 
     MediaSessions = "media-sessions",
     MediaInputs = "media-inputs",

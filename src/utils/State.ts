@@ -38,10 +38,13 @@ type InstanceOnEvent<Instance> = (cb: (instance: Instance) => void) => Promise<U
 export function createInstanceOnEvent<This extends ConstructorWithSingleArg>(
   Class: This,
   event: SeelenEvent,
+  filter?: (args: any) => boolean,
 ): InstanceOnEvent<InstanceType<This>> {
   return (cb: (instance: InstanceType<This>) => void) => {
     return subscribe(event, (eventData) => {
-      cb(new Class(eventData.payload));
+      if (!filter || filter(eventData.payload)) {
+        cb(new Class(eventData.payload));
+      }
     });
   };
 }

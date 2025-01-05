@@ -8,7 +8,7 @@ export enum SeelenEvent {
   SystemMonitorsChanged = 'system::monitors-changed',
   SystemLanguagesChanged = 'system::languages-changed',
   UserChanged = 'user-changed',
-  UserRecentFolderChanged = 'user-recent-folder-changed',
+  UserFolderChanged = 'user-folder-changed',
   MediaSessions = 'media-sessions',
   MediaInputs = 'media-inputs',
   MediaOutputs = 'media-outputs',
