@@ -34,11 +34,12 @@ export function createInstanceInvokerWithArgs<
 }
 
 type InstanceOnEvent<Instance> = (cb: (instance: Instance) => void) => Promise<UnlistenFn>;
+export type SeelenEventArg<T extends SeelenEvent> = PayloadByEvent[T];
 
-export function createInstanceOnEvent<This extends ConstructorWithSingleArg>(
+export function createInstanceOnEvent<This extends ConstructorWithSingleArg, Event extends SeelenEvent>(
   Class: This,
-  event: SeelenEvent,
-  filter?: (args: any) => boolean,
+  event: Event,
+  filter?: (args: SeelenEventArg<Event>) => boolean,
 ): InstanceOnEvent<InstanceType<This>> {
   return (cb: (instance: InstanceType<This>) => void) => {
     return subscribe(event, (eventData) => {
