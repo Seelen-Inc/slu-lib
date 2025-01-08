@@ -34,9 +34,7 @@ export interface User {
 }
 
 export interface File {
-  name: string;
   path: string;
-  iconLocation: string;
   lastAccessTime: number;
 }
 
