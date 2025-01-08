@@ -40,11 +40,13 @@ export function createInstanceOnEvent<This extends ConstructorWithSingleArg, Eve
   Class: This,
   event: Event,
   filter?: (args: SeelenEventArg<Event>) => boolean,
+  // deno-lint-ignore no-explicit-any
+  map?: (args: SeelenEventArg<Event>) => any,
 ): InstanceOnEvent<InstanceType<This>> {
   return (cb: (instance: InstanceType<This>) => void) => {
     return subscribe(event, (eventData) => {
       if (!filter || filter(eventData.payload)) {
-        cb(new Class(eventData.payload));
+        cb(new Class(map ? map(eventData.payload) : eventData.payload));
       }
     });
   };

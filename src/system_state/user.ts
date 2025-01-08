@@ -1,6 +1,8 @@
 import { SeelenCommand, SeelenEvent } from '../lib.ts';
 import { createInstanceInvoker, createInstanceInvokerWithArgs, createInstanceOnEvent } from '../utils/State.ts';
 import { List } from '../utils/List.ts';
+import { enumFromUnion } from '../utils/enums.ts';
+import type { File, FolderChangedArgs, FolderType, User } from '@seelen-ui/types';
 
 declare global {
   interface ArgsByCommand {
@@ -15,37 +17,19 @@ declare global {
   }
   interface PayloadByEvent {
     [SeelenEvent.UserChanged]: User;
-    [SeelenEvent.UserFolderChanged]: UserFolderContent;
+    [SeelenEvent.UserFolderChanged]: FolderChangedArgs;
   }
 }
 
-export interface UserFolderContent {
-  ofFolder: FolderType;
-  content: File[] | undefined;
-}
-
-export interface User {
-  name: string;
-  domain: string;
-  profileHomePath: string;
-  email: string | null;
-  oneDrivePath: string | null;
-  profilePicturePath: string;
-}
-
-export interface File {
-  path: string;
-  lastAccessTime: number;
-}
-
-export enum FolderType {
-  Recent = 'Recent',
-  Downloads = 'Downloads',
-  Documents = 'Documents',
-  Pictures = 'Pictures',
-  Videos = 'Videos',
-  Music = 'Music',
-}
+const FolderType = enumFromUnion<FolderType>({
+  Unknown: 'Unknown',
+  Recent: 'Recent',
+  Downloads: 'Downloads',
+  Documents: 'Documents',
+  Pictures: 'Pictures',
+  Videos: 'Videos',
+  Music: 'Music',
+});
 
 export class UserDetails {
   constructor(public user: User) {}
@@ -62,7 +46,8 @@ export class RecentFolder extends List<File> {
   static readonly onChange = createInstanceOnEvent(
     this,
     SeelenEvent.UserFolderChanged,
-    (folderArgs: UserFolderContent) => folderArgs.ofFolder == FolderType.Recent,
+    (folderArgs: FolderChangedArgs) => folderArgs.ofFolder == FolderType.Recent,
+    (result: FolderChangedArgs) => result.content,
   );
 
   static readonly setFolderLimit = (amount: number) =>
@@ -81,7 +66,8 @@ export class DownloadsFolder extends List<File> {
   static readonly onChange = createInstanceOnEvent(
     this,
     SeelenEvent.UserFolderChanged,
-    (folderArgs: UserFolderContent) => folderArgs.ofFolder == FolderType.Downloads,
+    (folderArgs: FolderChangedArgs) => folderArgs.ofFolder == FolderType.Downloads,
+    (result: FolderChangedArgs) => result.content,
   );
 
   static readonly setFolderLimit = (amount: number) =>
@@ -100,7 +86,8 @@ export class DocumentsFolder extends List<File> {
   static readonly onChange = createInstanceOnEvent(
     this,
     SeelenEvent.UserFolderChanged,
-    (folderArgs: UserFolderContent) => folderArgs.ofFolder == FolderType.Documents,
+    (folderArgs: FolderChangedArgs) => folderArgs.ofFolder == FolderType.Documents,
+    (result: FolderChangedArgs) => result.content,
   );
 
   static readonly setFolderLimit = (amount: number) =>
@@ -119,7 +106,8 @@ export class PicturesFolder extends List<File> {
   static readonly onChange = createInstanceOnEvent(
     this,
     SeelenEvent.UserFolderChanged,
-    (folderArgs: UserFolderContent) => folderArgs.ofFolder == FolderType.Pictures,
+    (folderArgs: FolderChangedArgs) => folderArgs.ofFolder == FolderType.Pictures,
+    (result: FolderChangedArgs) => result.content,
   );
 
   static readonly setFolderLimit = (amount: number) =>
@@ -138,7 +126,8 @@ export class VideosFolder extends List<File> {
   static readonly onChange = createInstanceOnEvent(
     this,
     SeelenEvent.UserFolderChanged,
-    (folderArgs: UserFolderContent) => folderArgs.ofFolder == FolderType.Videos,
+    (folderArgs: FolderChangedArgs) => folderArgs.ofFolder == FolderType.Videos,
+    (result: FolderChangedArgs) => result.content,
   );
 
   static readonly setFolderLimit = (amount: number) =>
@@ -157,7 +146,8 @@ export class MusicFolder extends List<File> {
   static readonly onChange = createInstanceOnEvent(
     this,
     SeelenEvent.UserFolderChanged,
-    (folderArgs: UserFolderContent) => folderArgs.ofFolder == FolderType.Music,
+    (folderArgs: FolderChangedArgs) => folderArgs.ofFolder == FolderType.Music,
+    (result: FolderChangedArgs) => result.content,
   );
 
   static readonly setFolderLimit = (amount: number) =>
