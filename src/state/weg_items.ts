@@ -1,3 +1,4 @@
+import { getCurrentWebviewWindow } from '@tauri-apps/api/webviewWindow';
 import type { WegItem, WegItems as IWegItems } from '@seelen-ui/types';
 import { invoke, SeelenCommand, SeelenEvent } from '../lib.ts';
 import { createInstanceInvoker, createInstanceOnEvent } from '../utils/State.ts';
@@ -23,6 +24,8 @@ declare global {
 export class WegItems {
   constructor(public inner: IWegItems) {}
 
+  private static readonly view = getCurrentWebviewWindow();
+
   /** Will return the stored/saved weg items */
   static readonly getStored = createInstanceInvoker(this, SeelenCommand.StateGetWegItems);
 
@@ -36,7 +39,9 @@ export class WegItems {
   );
 
   /** Event triggered when the weg items for the current widget are changed */
-  static readonly forCurrentWidgetChange = createInstanceOnEvent(this, SeelenEvent.WegInstanceChanged);
+  static readonly forCurrentWidgetChange = createInstanceOnEvent(this, SeelenEvent.WegInstanceChanged, {
+    target: { kind: 'Webview', label: WegItems.view.label },
+  });
 
   /** Will store the weg items placeoments on disk */
   save(): Promise<void> {

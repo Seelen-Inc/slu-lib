@@ -416,6 +416,7 @@
         "margin": 8,
         "mode": "MinContent",
         "padding": 8,
+        "pinnedItemsVisibility": "Always",
         "position": "Bottom",
         "size": 40,
         "spaceBetweenItems": 8,
@@ -1330,6 +1331,7 @@
         "weg": {
           "default": {
             "enabled": true,
+            "pinnedItemsVisibility": null,
             "temporalItemsVisibility": null
           },
           "allOf": [
@@ -1576,6 +1578,15 @@
           "format": "uint32",
           "minimum": 0.0
         },
+        "pinnedItemsVisibility": {
+          "description": "Determines is the pinned item should be shown or not (this can be overridden per monitor).",
+          "default": "Always",
+          "allOf": [
+            {
+              "$ref": "#/definitions/WegPinnedItemsVisibility"
+            }
+          ]
+        },
         "position": {
           "description": "Dock position",
           "default": "Bottom",
@@ -1600,7 +1611,7 @@
           "minimum": 0.0
         },
         "temporalItemsVisibility": {
-          "description": "Wich temporal items to show on the dock instance (this can be overridden per monitor)",
+          "description": "Which temporal items to show on the dock instance (this can be overridden per monitor)",
           "default": "All",
           "allOf": [
             {
@@ -1633,6 +1644,17 @@
         "enabled": {
           "default": true,
           "type": "boolean"
+        },
+        "pinnedItemsVisibility": {
+          "default": null,
+          "anyOf": [
+            {
+              "$ref": "#/definitions/WegPinnedItemsVisibility"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "temporalItemsVisibility": {
           "default": null,
@@ -1680,6 +1702,13 @@
       "enum": [
         "Native",
         "Seelen"
+      ]
+    },
+    "WegPinnedItemsVisibility": {
+      "type": "string",
+      "enum": [
+        "Always",
+        "WhenPrimary"
       ]
     },
     "WegTemporalItemsVisibility": {

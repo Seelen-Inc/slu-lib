@@ -67,6 +67,12 @@ pub enum WegTemporalItemsVisibility {
 }
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
+pub enum WegPinnedItemsVisibility {
+    Always,
+    WhenPrimary,
+}
+
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
 pub enum HideMode {
     /// never hide
     Never,
@@ -95,8 +101,10 @@ pub struct SeelenWegSettings {
     pub mode: SeelenWegMode,
     /// When to hide the dock
     pub hide_mode: HideMode,
-    /// Wich temporal items to show on the dock instance (this can be overridden per monitor)
+    /// Which temporal items to show on the dock instance (this can be overridden per monitor)
     pub temporal_items_visibility: WegTemporalItemsVisibility,
+    /// Determines is the pinned item should be shown or not (this can be overridden per monitor).
+    pub pinned_items_visibility: WegPinnedItemsVisibility,
     /// Dock position
     pub position: SeelenWegSide,
     /// enables the logic which persists last overlapped HWND to enchance multimonitor overlap feature
@@ -129,6 +137,7 @@ impl Default for SeelenWegSettings {
             use_multi_monitor_overlap_logic: false,
             visible_separators: true,
             temporal_items_visibility: WegTemporalItemsVisibility::All,
+            pinned_items_visibility: WegPinnedItemsVisibility::Always,
             size: 40,
             zoom_size: 70,
             margin: 8,

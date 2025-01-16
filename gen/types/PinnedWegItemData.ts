@@ -30,4 +30,8 @@ export type PinnedWegItemData = {
    * Window handles in the app group, in case of pinned file/dir always will be empty
    */
   windows: Array<WegAppGroupItem>;
+  /**
+   * This intention is to prevent pinned state change, when this is neccesary
+   */
+  pinDisabled: boolean;
 };

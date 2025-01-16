@@ -28,6 +28,15 @@ pub struct PinnedWegItemData {
     /// Window handles in the app group, in case of pinned file/dir always will be empty
     #[serde(default, skip_deserializing)]
     pub windows: Vec<WegAppGroupItem>,
+    /// This intention is to prevent pinned state change, when this is neccesary
+    #[serde(default, skip_deserializing)]
+    pub pin_disabled: bool,
+}
+
+impl PinnedWegItemData {
+    pub fn set_pin_disabled(&mut self, pin_disabled: bool) {
+        self.pin_disabled = pin_disabled;
+    }
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
@@ -92,6 +101,7 @@ impl Default for WegItems {
                 relaunch_command: "C:\\Windows\\explorer.exe".into(),
                 is_dir: false,
                 windows: vec![],
+                pin_disabled: false,
             })],
             right: vec![WegItem::Media {
                 id: uuid::Uuid::new_v4().to_string(),
@@ -134,6 +144,35 @@ impl WegItems {
             }
         }
         result
+    }
+
+    fn temporalise_collection(source: &Vec<WegItem>) -> Vec<WegItem> {
+        let mut items = vec![];
+        for item in source {
+            match item {
+                WegItem::Temporal(pinned_weg_item_data) => {
+                    let mut cloned = pinned_weg_item_data.clone();
+                    cloned.set_pin_disabled(true);
+                    items.push(WegItem::Temporal(cloned))
+                }
+                WegItem::Pinned(pinned_weg_item_data) => {
+                    let mut cloned = pinned_weg_item_data.clone();
+                    cloned.set_pin_disabled(true);
+                    items.push(WegItem::Temporal(cloned))
+                }
+                WegItem::Separator { id: _ }
+                | WegItem::Media { id: _ }
+                | WegItem::StartMenu { id: _ } => {}
+            }
+        }
+
+        items
+    }
+
+    pub fn temporalise(&mut self) {
+        self.left = Self::temporalise_collection(&self.left);
+        self.center = Self::temporalise_collection(&self.center);
+        self.right = Self::temporalise_collection(&self.right);
     }
 
     pub fn sanitize(&mut self) {
