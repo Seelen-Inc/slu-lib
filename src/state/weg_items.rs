@@ -146,35 +146,6 @@ impl WegItems {
         result
     }
 
-    fn temporalise_collection(source: &Vec<WegItem>) -> Vec<WegItem> {
-        let mut items = vec![];
-        for item in source {
-            match item {
-                WegItem::Temporal(pinned_weg_item_data) => {
-                    let mut cloned = pinned_weg_item_data.clone();
-                    cloned.set_pin_disabled(true);
-                    items.push(WegItem::Temporal(cloned))
-                }
-                WegItem::Pinned(pinned_weg_item_data) => {
-                    let mut cloned = pinned_weg_item_data.clone();
-                    cloned.set_pin_disabled(true);
-                    items.push(WegItem::Temporal(cloned))
-                }
-                WegItem::Separator { id: _ }
-                | WegItem::Media { id: _ }
-                | WegItem::StartMenu { id: _ } => {}
-            }
-        }
-
-        items
-    }
-
-    pub fn temporalise(&mut self) {
-        self.left = Self::temporalise_collection(&self.left);
-        self.center = Self::temporalise_collection(&self.center);
-        self.right = Self::temporalise_collection(&self.right);
-    }
-
     pub fn sanitize(&mut self) {
         let mut dict = HashSet::new();
         self.left = Self::sanitize_items(&mut dict, std::mem::take(&mut self.left));
