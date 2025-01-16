@@ -16,6 +16,6 @@ declare global {
 }
 
 export class ThemeList extends List<Theme> {
-  static readonly getAsync = createInstanceInvoker(this, SeelenCommand.StateGetWidgets);
-  static readonly onChange = createInstanceOnEvent(this, SeelenEvent.StateWidgetsChanged);
+  static readonly getAsync = createInstanceInvoker(this, SeelenCommand.StateGetThemes);
+  static readonly onChange = createInstanceOnEvent(this, SeelenEvent.StateThemesChanged);
 }

@@ -1,4 +1,4 @@
-import { invoke as tauriInvoke, type InvokeArgs, type InvokeOptions } from '@tauri-apps/api/core';
+import { invoke as tauriInvoke, type InvokeOptions } from '@tauri-apps/api/core';
 import { type EventCallback, listen, type Options as ListenerOptions, type UnlistenFn } from '@tauri-apps/api/event';
 
 import type { SeelenCommand } from './commands.ts';
@@ -7,7 +7,7 @@ import type { SeelenEvent } from '../lib.ts';
 export * from './commands.ts';
 
 declare global {
-  interface ArgsByCommand extends Record<SeelenCommand, InvokeArgs | null> {
+  interface ArgsByCommand extends Record<SeelenCommand, unknown> {
     [SeelenCommand.IsDevMode]: null;
     [SeelenCommand.CheckForUpdates]: null;
     [SeelenCommand.InstallLastAvailableUpdate]: null;

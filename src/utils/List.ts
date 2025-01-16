@@ -17,6 +17,14 @@ export abstract class List<T = unknown> {
     }
   }
 
+  public [Symbol.iterator](): Iterable<T> {
+    return this.inner[Symbol.iterator]();
+  }
+
+  public get length(): number {
+    return this.inner.length;
+  }
+
   /**
    * Provides direct access to the internal array of items.
    * @returns A reference to the internal array of items.

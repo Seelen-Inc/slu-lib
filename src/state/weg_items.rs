@@ -4,34 +4,42 @@ use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 use ts_rs::TS;
 
-#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
-pub struct PinnedWegItemData {
-    /// Direct path to file, forder or program.
-    ///
-    /// PWA: In case of pwa programs this will be the creator of the process, will point to the
-    /// browser executable so this is not unique across PWA apps, and can't be used to identify apps.
-    /// Also this can't be used to launch the app.
-    ///
-    /// UWP: In case of UWP apps this will be the path to the app executable, but this can't be used to
-    /// invoke the app instead should be used the `shell:AppsFolder` + app user model id.
-    #[serde(alias = "exe")]
-    pub path: PathBuf,
-    /// Program, file or folder to execute/open when clicking the item.
-    ///
-    /// Exclusion: On `.lnk` files this is the target of the link and when open action is triggered,
-    /// this field and arguments are ignored, using the link file as command.
-    ///
-    /// Important: This should be unique across all weg items because this is used as identifier, dupes will be removed on load.
-    ///
-    /// Note: this field is mandatory and will be filled with `path` if it is not set
-    #[serde(default, alias = "execution_path")]
-    pub execution_command: String,
-    /// true if self.path is a folder
-    #[serde(default)]
-    pub is_dir: bool,
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
+pub struct WegAppGroupItem {
+    pub title: String,
+    pub handle: isize,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
+#[serde(rename_all = "camelCase")]
+pub struct PinnedWegItemData {
+    /// internal UUID to differentiate items
+    pub id: String,
+    /// Application user model id.
+    pub umid: Option<String>,
+    /// Direct path to file, forder or program.
+    pub path: PathBuf,
+    /// literal command to be executed via CMD.
+    pub relaunch_command: String,
+    /// display name of the item
+    pub display_name: String,
+    /// true if self.path is a folder
+    pub is_dir: bool,
+    /// Window handles in the app group, in case of pinned file/dir always will be empty
+    #[serde(default, skip_deserializing)]
+    pub windows: Vec<WegAppGroupItem>,
+    /// This intention is to prevent pinned state change, when this is neccesary
+    #[serde(default, skip_deserializing)]
+    pub pin_disabled: bool,
+}
+
+impl PinnedWegItemData {
+    pub fn set_pin_disabled(&mut self, pin_disabled: bool) {
+        self.pin_disabled = pin_disabled;
+    }
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(tag = "type")]
 pub enum WegItem {
     #[serde(alias = "PinnedApp")]
@@ -40,11 +48,37 @@ pub enum WegItem {
     Separator {
         id: String,
     },
-    Media,
-    StartMenu,
+    Media {
+        id: String,
+    },
+    StartMenu {
+        id: String,
+    },
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
+impl WegItem {
+    pub fn id(&self) -> &String {
+        match self {
+            WegItem::Pinned(data) => &data.id,
+            WegItem::Temporal(data) => &data.id,
+            WegItem::Separator { id } => id,
+            WegItem::Media { id } => id,
+            WegItem::StartMenu { id } => id,
+        }
+    }
+
+    fn set_id(&mut self, identifier: String) {
+        match self {
+            WegItem::Pinned(data) => data.id = identifier,
+            WegItem::Temporal(data) => data.id = identifier,
+            WegItem::Separator { id } => *id = identifier,
+            WegItem::Media { id } => *id = identifier,
+            WegItem::StartMenu { id } => *id = identifier,
+        }
+    }
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default)]
 #[ts(export)]
 pub struct WegItems {
@@ -56,13 +90,22 @@ pub struct WegItems {
 impl Default for WegItems {
     fn default() -> Self {
         Self {
-            left: vec![WegItem::StartMenu],
+            left: vec![WegItem::StartMenu {
+                id: uuid::Uuid::new_v4().to_string(),
+            }],
             center: vec![WegItem::Pinned(PinnedWegItemData {
+                id: uuid::Uuid::new_v4().to_string(),
+                umid: None,
                 path: "C:\\Windows\\explorer.exe".into(),
-                execution_command: "C:\\Windows\\explorer.exe".into(),
+                display_name: "Explorer".into(),
+                relaunch_command: "C:\\Windows\\explorer.exe".into(),
                 is_dir: false,
+                windows: vec![],
+                pin_disabled: false,
             })],
-            right: vec![WegItem::Media],
+            right: vec![WegItem::Media {
+                id: uuid::Uuid::new_v4().to_string(),
+            }],
         }
     }
 }
@@ -76,44 +119,28 @@ impl WegItems {
                     if !data.path.exists() {
                         continue;
                     }
-                    if data.execution_command.is_empty() {
-                        data.execution_command = data.path.to_string_lossy().to_string();
-                    }
-                    if !dict.contains(&data.execution_command) {
-                        dict.insert(data.execution_command.clone());
-                        result.push(item);
+                    if data.relaunch_command.is_empty() {
+                        data.relaunch_command = data.path.to_string_lossy().to_string();
                     }
                 }
                 WegItem::Temporal(data) => {
-                    if !data.path.exists() {
+                    if data.windows.is_empty() || !data.path.exists() {
                         continue;
                     }
-                    if data.execution_command.is_empty() {
-                        data.execution_command = data.path.to_string_lossy().to_string();
-                    }
-                    if !dict.contains(&data.execution_command) {
-                        dict.insert(data.execution_command.clone());
-                        result.push(item);
+                    if data.relaunch_command.is_empty() {
+                        data.relaunch_command = data.path.to_string_lossy().to_string();
                     }
                 }
-                WegItem::Separator { id } => {
-                    if !dict.contains(id) {
-                        dict.insert(id.clone());
-                        result.push(item);
-                    }
-                }
-                WegItem::StartMenu => {
-                    if !dict.contains("StartMenu") {
-                        dict.insert("StartMenu".to_owned());
-                        result.push(item);
-                    }
-                }
-                WegItem::Media => {
-                    if !dict.contains("Media") {
-                        dict.insert("Media".to_owned());
-                        result.push(item);
-                    }
-                }
+                _ => {}
+            }
+
+            if item.id().is_empty() {
+                item.set_id(uuid::Uuid::new_v4().to_string());
+            }
+
+            if !dict.contains(item.id()) {
+                dict.insert(item.id().clone());
+                result.push(item);
             }
         }
         result

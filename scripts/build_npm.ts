@@ -24,8 +24,8 @@ await emptyDir('./npm');
 await build({
   typeCheck: 'both',
   compilerOptions: {
-    lib: ['DOM', 'DOM.Iterable', 'ES2022'],
-    target: 'ES2022',
+    lib: ['DOM', 'DOM.Iterable', 'ESNext'],
+    target: 'ES2023',
   },
   test: false,
   entryPoints: [{

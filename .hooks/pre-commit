@@ -6,6 +6,7 @@ deno fmt --check
 deno lint
 
 cargo fmt -- --check
+cargo clippy -- -D warnings
 # cargo test # we skip this cuz cargo test generate files
 
 deno test

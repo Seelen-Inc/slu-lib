@@ -5,5 +5,5 @@ export type WegItem =
   | { 'type': 'Pinned' } & PinnedWegItemData
   | { 'type': 'Temporal' } & PinnedWegItemData
   | { 'type': 'Separator'; id: string }
-  | { 'type': 'Media' }
-  | { 'type': 'StartMenu' };
+  | { 'type': 'Media'; id: string }
+  | { 'type': 'StartMenu'; id: string };
