@@ -54,7 +54,7 @@ export class RecentFolder extends List<File> {
         cb(new RecentFolder(folder.inner.content!));
       }
     });
-  }
+  };
 
   static readonly setFolderLimit = (amount: number) =>
     Folders.setFolderLimit({ folderType: FolderType.Recent, amount });
@@ -63,7 +63,6 @@ export class RecentFolder extends List<File> {
     return new this([]);
   }
 }
-
 
 export class DownloadsFolder extends List<File> {
   static readonly getAsync = () => Folders.getAsync({ folderType: FolderType.Downloads });
@@ -147,8 +146,7 @@ export class MusicFolder extends List<File> {
     });
   };
 
-  static readonly setFolderLimit = (amount: number) =>
-    Folders.setFolderLimit({ folderType: FolderType.Music, amount });
+  static readonly setFolderLimit = (amount: number) => Folders.setFolderLimit({ folderType: FolderType.Music, amount });
 
   static default(): MusicFolder {
     return new this([]);
