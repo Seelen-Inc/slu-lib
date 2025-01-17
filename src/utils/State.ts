@@ -35,21 +35,15 @@ export function createInstanceInvokerWithArgs<
 }
 
 type InstanceOnEvent<Instance> = (cb: (instance: Instance) => void) => Promise<UnlistenFn>;
-export type SeelenEventArg<T extends SeelenEvent> = PayloadByEvent[T];
 
-export function createInstanceOnEvent<This extends ConstructorWithSingleArg, Event extends SeelenEvent>(
+export function createInstanceOnEvent<This extends ConstructorWithSingleArg>(
   Class: This,
   event: SeelenEvent,
   options?: ListenerOptions,
-  filter?: (args: SeelenEventArg<Event>) => boolean,
-  // deno-lint-ignore no-explicit-any
-  map?: (args: SeelenEventArg<Event>) => any,
 ): InstanceOnEvent<InstanceType<This>> {
   return (cb: (instance: InstanceType<This>) => void) => {
     return subscribe(event, (eventData) => {
-      if (!filter || filter(eventData.payload)) {
-        cb(new Class(map ? map(eventData.payload) : eventData.payload));
-      }
+      cb(new Class(eventData.payload));
     }, options);
   };
 }
