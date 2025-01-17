@@ -73,7 +73,7 @@ export class DownloadsFolder extends List<File> {
         cb(new DownloadsFolder(folder.inner.content!));
       }
     });
-  }
+  };
 
   static readonly setFolderLimit = (amount: number) =>
     Folders.setFolderLimit({ folderType: FolderType.Downloads, amount });
@@ -91,7 +91,7 @@ export class DocumentsFolder extends List<File> {
         cb(new DocumentsFolder(folder.inner.content!));
       }
     });
-  }
+  };
 
   static readonly setFolderLimit = (amount: number) =>
     Folders.setFolderLimit({ folderType: FolderType.Documents, amount });
@@ -109,7 +109,7 @@ export class PicturesFolder extends List<File> {
         cb(new PicturesFolder(folder.inner.content!));
       }
     });
-  }
+  };
 
   static readonly setFolderLimit = (amount: number) =>
     Folders.setFolderLimit({ folderType: FolderType.Pictures, amount });
@@ -127,7 +127,7 @@ export class VideosFolder extends List<File> {
         cb(new VideosFolder(folder.inner.content!));
       }
     });
-  }
+  };
 
   static readonly setFolderLimit = (amount: number) =>
     Folders.setFolderLimit({ folderType: FolderType.Videos, amount });
@@ -145,7 +145,7 @@ export class MusicFolder extends List<File> {
         cb(new RecentFolder(folder.inner.content!));
       }
     });
-  }
+  };
 
   static readonly setFolderLimit = (amount: number) =>
     Folders.setFolderLimit({ folderType: FolderType.Music, amount });
