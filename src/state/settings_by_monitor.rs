@@ -4,7 +4,7 @@ use ts_rs::TS;
 
 use crate::rect::Rect;
 
-use super::{SeelenWallWallpaper, WegTemporalItemsVisibility};
+use super::{SeelenWallWallpaper, WegPinnedItemsVisibility, WegTemporalItemsVisibility};
 
 #[derive(Clone, Debug, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
@@ -23,6 +23,7 @@ impl Default for FancyToolbarSettingsByMonitor {
 pub struct SeelenWegSettingsByMonitor {
     pub enabled: bool,
     pub temporal_items_visibility: Option<WegTemporalItemsVisibility>,
+    pub pinned_items_visibility: Option<WegPinnedItemsVisibility>,
 }
 
 impl Default for SeelenWegSettingsByMonitor {
@@ -30,6 +31,7 @@ impl Default for SeelenWegSettingsByMonitor {
         Self {
             enabled: true,
             temporal_items_visibility: None,
+            pinned_items_visibility: None,
         }
     }
 }

@@ -51,6 +51,12 @@
               "description": "Direct path to file, forder or program.",
               "type": "string"
             },
+            "pinDisabled": {
+              "description": "This intention is to prevent pinned state change, when this is neccesary",
+              "default": false,
+              "readOnly": true,
+              "type": "boolean"
+            },
             "relaunchCommand": {
               "description": "literal command to be executed via CMD.",
               "type": "string"
@@ -105,6 +111,12 @@
             "path": {
               "description": "Direct path to file, forder or program.",
               "type": "string"
+            },
+            "pinDisabled": {
+              "description": "This intention is to prevent pinned state change, when this is neccesary",
+              "default": false,
+              "readOnly": true,
+              "type": "boolean"
             },
             "relaunchCommand": {
               "description": "literal command to be executed via CMD.",

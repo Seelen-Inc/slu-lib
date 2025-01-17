@@ -28,6 +28,15 @@ pub struct PinnedWegItemData {
     /// Window handles in the app group, in case of pinned file/dir always will be empty
     #[serde(default, skip_deserializing)]
     pub windows: Vec<WegAppGroupItem>,
+    /// This intention is to prevent pinned state change, when this is neccesary
+    #[serde(default, skip_deserializing)]
+    pub pin_disabled: bool,
+}
+
+impl PinnedWegItemData {
+    pub fn set_pin_disabled(&mut self, pin_disabled: bool) {
+        self.pin_disabled = pin_disabled;
+    }
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
@@ -92,6 +101,7 @@ impl Default for WegItems {
                 relaunch_command: "C:\\Windows\\explorer.exe".into(),
                 is_dir: false,
                 windows: vec![],
+                pin_disabled: false,
             })],
             right: vec![WegItem::Media {
                 id: uuid::Uuid::new_v4().to_string(),

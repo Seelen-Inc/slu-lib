@@ -1,5 +1,5 @@
 import { SeelenCommand, SeelenEvent } from '../handlers/mod.ts';
-import { getCurrentWidget } from '../utils/mod.ts';
+import { getCurrentWidget } from '../lib.ts';
 import { List } from '../utils/List.ts';
 import { createInstanceInvoker, createInstanceOnEvent } from '../utils/State.ts';
 import type { Plugin } from '@seelen-ui/types';

@@ -61,6 +61,7 @@ export * from './VirtualDesktopStrategy.ts';
 export * from './WegAppGroupItem.ts';
 export * from './WegItem.ts';
 export * from './WegItems.ts';
+export * from './WegPinnedItemsVisibility.ts';
 export * from './WegTemporalItemsVisibility.ts';
 export * from './Widget.ts';
 export * from './WidgetId.ts';

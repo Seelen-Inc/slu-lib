@@ -1,5 +1,6 @@
 import type { UnlistenFn } from '@tauri-apps/api/event';
 import { invoke, type SeelenCommand, type SeelenEvent, subscribe } from '../lib.ts';
+import type { Options as ListenerOptions } from '@tauri-apps/api/event';
 
 interface ConstructorWithSingleArg {
   // deno-lint-ignore no-explicit-any
@@ -38,7 +39,8 @@ export type SeelenEventArg<T extends SeelenEvent> = PayloadByEvent[T];
 
 export function createInstanceOnEvent<This extends ConstructorWithSingleArg, Event extends SeelenEvent>(
   Class: This,
-  event: Event,
+  event: SeelenEvent,
+  options?: ListenerOptions,
   filter?: (args: SeelenEventArg<Event>) => boolean,
   // deno-lint-ignore no-explicit-any
   map?: (args: SeelenEventArg<Event>) => any,
@@ -48,6 +50,6 @@ export function createInstanceOnEvent<This extends ConstructorWithSingleArg, Eve
       if (!filter || filter(eventData.payload)) {
         cb(new Class(map ? map(eventData.payload) : eventData.payload));
       }
-    });
+    }, options);
   };
 }

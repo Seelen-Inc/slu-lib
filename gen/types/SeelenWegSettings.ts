@@ -2,6 +2,7 @@
 import type { HideMode } from './HideMode.ts';
 import type { SeelenWegMode } from './SeelenWegMode.ts';
 import type { SeelenWegSide } from './SeelenWegSide.ts';
+import type { WegPinnedItemsVisibility } from './WegPinnedItemsVisibility.ts';
 import type { WegTemporalItemsVisibility } from './WegTemporalItemsVisibility.ts';
 
 export type SeelenWegSettings = {
@@ -18,9 +19,13 @@ export type SeelenWegSettings = {
    */
   hideMode: HideMode;
   /**
-   * Wich temporal items to show on the dock instance (this can be overridden per monitor)
+   * Which temporal items to show on the dock instance (this can be overridden per monitor)
    */
   temporalItemsVisibility: WegTemporalItemsVisibility;
+  /**
+   * Determines is the pinned item should be shown or not (this can be overridden per monitor).
+   */
+  pinnedItemsVisibility: WegPinnedItemsVisibility;
   /**
    * Dock position
    */
