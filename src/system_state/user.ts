@@ -42,12 +42,13 @@ class Folders {
   constructor(public inner: FolderChangedArgs) {}
 
   static readonly onChange = createInstanceOnEvent(this, SeelenEvent.UserFolderChanged);
-  static readonly getAsync = createInstanceInvokerWithArgs(this, SeelenCommand.GetUserFolderContent);
-  static readonly setFolderLimit = createInstanceInvokerWithArgs(this, SeelenCommand.SetUserFolderLimit);
 }
 
 export class RecentFolder extends List<File> {
-  static readonly getAsync = () => Folders.getAsync({ folderType: FolderType.Recent });
+  static readonly _getAsync = createInstanceInvokerWithArgs(this, SeelenCommand.GetUserFolderContent);
+  static readonly _setFolderLimit = createInstanceInvokerWithArgs(this, SeelenCommand.SetUserFolderLimit);
+
+  static readonly getAsync = () => RecentFolder._getAsync({ folderType: FolderType.Recent });
   static readonly onChange = (cb: (instance: RecentFolder) => void) => {
     Folders.onChange((folder) => {
       if (folder.inner.ofFolder == FolderType.Recent) {
@@ -57,7 +58,7 @@ export class RecentFolder extends List<File> {
   };
 
   static readonly setFolderLimit = (amount: number) =>
-    Folders.setFolderLimit({ folderType: FolderType.Recent, amount });
+    RecentFolder._setFolderLimit({ folderType: FolderType.Recent, amount });
 
   static default(): RecentFolder {
     return new this([]);
@@ -65,7 +66,10 @@ export class RecentFolder extends List<File> {
 }
 
 export class DownloadsFolder extends List<File> {
-  static readonly getAsync = () => Folders.getAsync({ folderType: FolderType.Downloads });
+  static readonly _getAsync = createInstanceInvokerWithArgs(this, SeelenCommand.GetUserFolderContent);
+  static readonly _setFolderLimit = createInstanceInvokerWithArgs(this, SeelenCommand.SetUserFolderLimit);
+
+  static readonly getAsync = () => DownloadsFolder._getAsync({ folderType: FolderType.Downloads });
   static readonly onChange = (cb: (instance: DownloadsFolder) => void) => {
     Folders.onChange((folder) => {
       if (folder.inner.ofFolder == FolderType.Downloads) {
@@ -75,7 +79,7 @@ export class DownloadsFolder extends List<File> {
   };
 
   static readonly setFolderLimit = (amount: number) =>
-    Folders.setFolderLimit({ folderType: FolderType.Downloads, amount });
+    DownloadsFolder._setFolderLimit({ folderType: FolderType.Downloads, amount });
 
   static default(): DownloadsFolder {
     return new this([]);
@@ -83,7 +87,10 @@ export class DownloadsFolder extends List<File> {
 }
 
 export class DocumentsFolder extends List<File> {
-  static readonly getAsync = () => Folders.getAsync({ folderType: FolderType.Documents });
+  static readonly _getAsync = createInstanceInvokerWithArgs(this, SeelenCommand.GetUserFolderContent);
+  static readonly _setFolderLimit = createInstanceInvokerWithArgs(this, SeelenCommand.SetUserFolderLimit);
+
+  static readonly getAsync = () => DocumentsFolder._getAsync({ folderType: FolderType.Documents });
   static readonly onChange = (cb: (instance: DocumentsFolder) => void) => {
     Folders.onChange((folder) => {
       if (folder.inner.ofFolder == FolderType.Documents) {
@@ -93,7 +100,7 @@ export class DocumentsFolder extends List<File> {
   };
 
   static readonly setFolderLimit = (amount: number) =>
-    Folders.setFolderLimit({ folderType: FolderType.Documents, amount });
+    DocumentsFolder._setFolderLimit({ folderType: FolderType.Documents, amount });
 
   static default(): DocumentsFolder {
     return new this([]);
@@ -101,7 +108,10 @@ export class DocumentsFolder extends List<File> {
 }
 
 export class PicturesFolder extends List<File> {
-  static readonly getAsync = () => Folders.getAsync({ folderType: FolderType.Pictures });
+  static readonly _getAsync = createInstanceInvokerWithArgs(this, SeelenCommand.GetUserFolderContent);
+  static readonly _setFolderLimit = createInstanceInvokerWithArgs(this, SeelenCommand.SetUserFolderLimit);
+
+  static readonly getAsync = () => PicturesFolder._getAsync({ folderType: FolderType.Pictures });
   static readonly onChange = (cb: (instance: PicturesFolder) => void) => {
     Folders.onChange((folder) => {
       if (folder.inner.ofFolder == FolderType.Pictures) {
@@ -111,7 +121,7 @@ export class PicturesFolder extends List<File> {
   };
 
   static readonly setFolderLimit = (amount: number) =>
-    Folders.setFolderLimit({ folderType: FolderType.Pictures, amount });
+    PicturesFolder._setFolderLimit({ folderType: FolderType.Pictures, amount });
 
   static default(): PicturesFolder {
     return new this([]);
@@ -119,7 +129,10 @@ export class PicturesFolder extends List<File> {
 }
 
 export class VideosFolder extends List<File> {
-  static readonly getAsync = () => Folders.getAsync({ folderType: FolderType.Videos });
+  static readonly _getAsync = createInstanceInvokerWithArgs(this, SeelenCommand.GetUserFolderContent);
+  static readonly _setFolderLimit = createInstanceInvokerWithArgs(this, SeelenCommand.SetUserFolderLimit);
+
+  static readonly getAsync = () => VideosFolder._getAsync({ folderType: FolderType.Videos });
   static readonly onChange = (cb: (instance: VideosFolder) => void) => {
     Folders.onChange((folder) => {
       if (folder.inner.ofFolder == FolderType.Videos) {
@@ -129,7 +142,7 @@ export class VideosFolder extends List<File> {
   };
 
   static readonly setFolderLimit = (amount: number) =>
-    Folders.setFolderLimit({ folderType: FolderType.Videos, amount });
+    VideosFolder._setFolderLimit({ folderType: FolderType.Videos, amount });
 
   static default(): VideosFolder {
     return new this([]);
@@ -137,7 +150,10 @@ export class VideosFolder extends List<File> {
 }
 
 export class MusicFolder extends List<File> {
-  static readonly getAsync = () => Folders.getAsync({ folderType: FolderType.Music });
+  static readonly _getAsync = createInstanceInvokerWithArgs(this, SeelenCommand.GetUserFolderContent);
+  static readonly _setFolderLimit = createInstanceInvokerWithArgs(this, SeelenCommand.SetUserFolderLimit);
+
+  static readonly getAsync = () => MusicFolder._getAsync({ folderType: FolderType.Music });
   static readonly onChange = (cb: (instance: RecentFolder) => void) => {
     Folders.onChange((folder) => {
       if (folder.inner.ofFolder == FolderType.Recent) {
@@ -146,7 +162,8 @@ export class MusicFolder extends List<File> {
     });
   };
 
-  static readonly setFolderLimit = (amount: number) => Folders.setFolderLimit({ folderType: FolderType.Music, amount });
+  static readonly setFolderLimit = (amount: number) =>
+    MusicFolder._setFolderLimit({ folderType: FolderType.Music, amount });
 
   static default(): MusicFolder {
     return new this([]);
