@@ -413,6 +413,16 @@ define_struct_and_hashmap![
     increase_height,
     decrease_height,
     restore_sizes,
+    start_weg_app_0,
+    start_weg_app_1,
+    start_weg_app_2,
+    start_weg_app_3,
+    start_weg_app_4,
+    start_weg_app_5,
+    start_weg_app_6,
+    start_weg_app_7,
+    start_weg_app_8,
+    start_weg_app_9,
     switch_workspace_0,
     switch_workspace_1,
     switch_workspace_2,
@@ -476,6 +486,17 @@ impl Default for AhkVarList {
             increase_height: AhkVar::new("Ctrl + Win + Alt + =", "^#!="),
             decrease_height: AhkVar::new("Ctrl + Win + Alt + -", "^#!-"),
             restore_sizes: AhkVar::new("Win + Alt + 0", "#!0"),
+            // weg
+            start_weg_app_0: AhkVar::new("Win + 0", "#0"),
+            start_weg_app_1: AhkVar::new("Win + 1", "#1"),
+            start_weg_app_2: AhkVar::new("Win + 2", "#2"),
+            start_weg_app_3: AhkVar::new("Win + 3", "#3"),
+            start_weg_app_4: AhkVar::new("Win + 4", "#4"),
+            start_weg_app_5: AhkVar::new("Win + 5", "#5"),
+            start_weg_app_6: AhkVar::new("Win + 6", "#6"),
+            start_weg_app_7: AhkVar::new("Win + 7", "#7"),
+            start_weg_app_8: AhkVar::new("Win + 8", "#8"),
+            start_weg_app_9: AhkVar::new("Win + 9", "#9"),
             // virtual desktops
             switch_workspace_0: AhkVar::new("Alt + 1", "!1"),
             switch_workspace_1: AhkVar::new("Alt + 2", "!2"),
@@ -620,7 +641,7 @@ impl Settings {
 
     pub fn get_system_language() -> String {
         match sys_locale::get_locale() {
-            Some(l) => l.split('-').next().unwrap_or("en").to_string(),
+            Some(l) => l.split("-").next().unwrap_or("en").to_string(),
             None => "en".to_string(),
         }
     }
