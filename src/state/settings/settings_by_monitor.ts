@@ -1,8 +1,8 @@
-import { SeelenCommand } from '../lib.ts';
+import { SeelenCommand } from '../../lib.ts';
 
 import type { MonitorConfiguration as IMonitorConfiguration, WorkspaceIdentifierType } from '@seelen-ui/types';
-import { createInstanceInvoker } from '../utils/State.ts';
-import { enumFromUnion } from '../utils/enums.ts';
+import { createInstanceInvoker } from '../../utils/State.ts';
+import { enumFromUnion } from '../../utils/enums.ts';
 
 declare global {
   interface ArgsByCommand {

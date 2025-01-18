@@ -378,14 +378,88 @@
         }
       ]
     },
-    "custom": {
+    "byWidget": {
       "description": "Custom settings for widgets",
-      "default": {},
-      "type": "object",
-      "additionalProperties": {
-        "type": "object",
-        "additionalProperties": true
-      }
+      "default": {
+        "@seelen/fancy-toolbar": {
+          "delayToHide": 800,
+          "delayToShow": 100,
+          "enabled": true,
+          "height": 30,
+          "hideMode": "Never",
+          "placeholder": "default.yml",
+          "useMultiMonitorOverlapLogic": false
+        },
+        "@seelen/launcher": {
+          "enabled": false,
+          "monitor": "MouseOver",
+          "runners": [
+            {
+              "id": "RUN",
+              "label": "t:app_launcher.runners.explorer",
+              "program": "explorer.exe",
+              "readonly": true
+            },
+            {
+              "id": "CMD",
+              "label": "t:app_launcher.runners.cmd",
+              "program": "cmd.exe",
+              "readonly": true
+            }
+          ]
+        },
+        "@seelen/wallpaper-manager": {
+          "backgrounds": [],
+          "enabled": true,
+          "interval": 60,
+          "randomize": false
+        },
+        "@seelen/weg": {
+          "delayToHide": 800,
+          "delayToShow": 100,
+          "enabled": true,
+          "hideMode": "OnOverlap",
+          "margin": 8,
+          "mode": "MinContent",
+          "padding": 8,
+          "pinnedItemsVisibility": "Always",
+          "position": "Bottom",
+          "size": 40,
+          "spaceBetweenItems": 8,
+          "temporalItemsVisibility": "All",
+          "useMultiMonitorOverlapLogic": false,
+          "visibleSeparators": true,
+          "zoomSize": 70
+        },
+        "@seelen/window-manager": {
+          "autoStackingByCategory": true,
+          "border": {
+            "enabled": true,
+            "offset": 0.0,
+            "width": 3.0
+          },
+          "defaultLayout": "default.yml",
+          "enabled": false,
+          "floating": {
+            "height": 500.0,
+            "width": 800.0
+          },
+          "resizeDelta": 10.0,
+          "workspaceGap": 10,
+          "workspaceMargin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "workspacePadding": 10
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/SettingsByWidget"
+        }
+      ]
     },
     "dateFormat": {
       "description": "MomentJS date format",
@@ -398,19 +472,14 @@
       "type": "boolean"
     },
     "fancyToolbar": {
-      "description": "fancy toolbar config",
-      "default": {
-        "delayToHide": 800,
-        "delayToShow": 100,
-        "enabled": true,
-        "height": 30,
-        "hideMode": "Never",
-        "placeholder": "default.yml",
-        "useMultiMonitorOverlapLogic": false
-      },
-      "allOf": [
+      "description": "@deprecated since v2.1.0, will be removed in v3.0.0",
+      "writeOnly": true,
+      "anyOf": [
         {
           "$ref": "#/definitions/FancyToolbarSettings"
+        },
+        {
+          "type": "null"
         }
       ]
     },
@@ -433,28 +502,14 @@
       ]
     },
     "launcher": {
-      "description": "App launcher settings",
-      "default": {
-        "enabled": false,
-        "monitor": "MouseOver",
-        "runners": [
-          {
-            "id": "RUN",
-            "label": "t:app_launcher.runners.explorer",
-            "program": "explorer.exe",
-            "readonly": true
-          },
-          {
-            "id": "CMD",
-            "label": "t:app_launcher.runners.cmd",
-            "program": "cmd.exe",
-            "readonly": true
-          }
-        ]
-      },
-      "allOf": [
+      "description": "@deprecated since v2.1.0, will be removed in v3.0.0",
+      "writeOnly": true,
+      "anyOf": [
         {
           "$ref": "#/definitions/SeelenLauncherSettings"
+        },
+        {
+          "type": "null"
         }
       ]
     },
@@ -467,27 +522,14 @@
       }
     },
     "seelenweg": {
-      "description": "seelenweg (dock/taskbar) config",
-      "default": {
-        "delayToHide": 800,
-        "delayToShow": 100,
-        "enabled": true,
-        "hideMode": "OnOverlap",
-        "margin": 8,
-        "mode": "MinContent",
-        "padding": 8,
-        "pinnedItemsVisibility": "Always",
-        "position": "Bottom",
-        "size": 40,
-        "spaceBetweenItems": 8,
-        "temporalItemsVisibility": "All",
-        "useMultiMonitorOverlapLogic": false,
-        "visibleSeparators": true,
-        "zoomSize": 70
-      },
-      "allOf": [
+      "description": "@deprecated since v2.1.0, will be removed in v3.0.0",
+      "writeOnly": true,
+      "anyOf": [
         {
           "$ref": "#/definitions/SeelenWegSettings"
+        },
+        {
+          "type": "null"
         }
       ]
     },
@@ -522,47 +564,26 @@
       ]
     },
     "wall": {
-      "description": "background and virtual desktops config",
-      "default": {
-        "backgrounds": [],
-        "enabled": true,
-        "interval": 60,
-        "randomize": false
-      },
-      "allOf": [
+      "description": "@deprecated since v2.1.0, will be removed in v3.0.0",
+      "writeOnly": true,
+      "anyOf": [
         {
           "$ref": "#/definitions/SeelenWallSettings"
+        },
+        {
+          "type": "null"
         }
       ]
     },
     "windowManager": {
-      "description": "window manager config",
-      "default": {
-        "autoStackingByCategory": true,
-        "border": {
-          "enabled": true,
-          "offset": 0.0,
-          "width": 3.0
-        },
-        "defaultLayout": "default.yml",
-        "enabled": false,
-        "floating": {
-          "height": 500.0,
-          "width": 800.0
-        },
-        "resizeDelta": 10.0,
-        "workspaceGap": 10,
-        "workspaceMargin": {
-          "bottom": 0,
-          "left": 0,
-          "right": 0,
-          "top": 0
-        },
-        "workspacePadding": 10
-      },
-      "allOf": [
+      "description": "@deprecated since v2.1.0, will be removed in v3.0.0",
+      "writeOnly": true,
+      "anyOf": [
         {
           "$ref": "#/definitions/WindowManagerSettings"
+        },
+        {
+          "type": "null"
         }
       ]
     }
@@ -1496,57 +1517,69 @@
     },
     "MonitorConfiguration": {
       "type": "object",
+      "required": [
+        "byWidget",
+        "workspacesV2"
+      ],
       "properties": {
-        "tb": {
-          "default": {
-            "enabled": true
-          },
+        "byWidget": {
+          "description": "dictionary of settings by widget",
           "allOf": [
             {
+              "$ref": "#/definitions/SettingsByWidget"
+            }
+          ]
+        },
+        "tb": {
+          "description": "@deprecated since v2.1.0, will be removed in v3.0.0",
+          "writeOnly": true,
+          "anyOf": [
+            {
               "$ref": "#/definitions/FancyToolbarSettingsByMonitor"
+            },
+            {
+              "type": "null"
             }
           ]
         },
         "wall": {
-          "default": {
-            "backgrounds": null,
-            "enabled": true
-          },
-          "allOf": [
+          "description": "@deprecated since v2.1.0, will be removed in v3.0.0",
+          "writeOnly": true,
+          "anyOf": [
             {
               "$ref": "#/definitions/SeelenWallSettingsByMonitor"
+            },
+            {
+              "type": "null"
             }
           ]
         },
         "weg": {
-          "default": {
-            "enabled": true,
-            "pinnedItemsVisibility": null,
-            "temporalItemsVisibility": null
-          },
-          "allOf": [
+          "description": "@deprecated since v2.1.0, will be removed in v3.0.0",
+          "writeOnly": true,
+          "anyOf": [
             {
               "$ref": "#/definitions/SeelenWegSettingsByMonitor"
+            },
+            {
+              "type": "null"
             }
           ]
         },
         "wm": {
-          "default": {
-            "enabled": true,
-            "gap": null,
-            "layout": null,
-            "margin": null,
-            "padding": null
-          },
-          "allOf": [
+          "description": "@deprecated since v2.1.0, will be removed in v3.0.0",
+          "writeOnly": true,
+          "anyOf": [
             {
               "$ref": "#/definitions/WindowManagerSettingsByMonitor"
+            },
+            {
+              "type": "null"
             }
           ]
         },
         "workspacesV2": {
           "description": "list of settings by workspace on this monitor",
-          "default": [],
           "type": "array",
           "items": {
             "$ref": "#/definitions/WorkspaceConfiguration"
@@ -1867,6 +1900,13 @@
         "Top",
         "Bottom"
       ]
+    },
+    "SettingsByWidget": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": true
+      }
     },
     "UpdateChannel": {
       "type": "string",

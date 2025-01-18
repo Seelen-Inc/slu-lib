@@ -1,4 +1,4 @@
-import type { Widget } from '@seelen-ui/types';
+import type { Widget, WidgetId } from '@seelen-ui/types';
 import { SeelenCommand, SeelenEvent } from '../lib.ts';
 import { List } from '../utils/List.ts';
 import { createInstanceInvoker, createInstanceOnEvent } from '../utils/State.ts';
@@ -14,6 +14,12 @@ declare global {
     [SeelenEvent.StateWidgetsChanged]: Widget[];
   }
 }
+
+export const SeelenWegWidgetId: WidgetId = '@seelen/weg';
+export const SeelenToolbarWidgetId: WidgetId = '@seelen/fancy-toolbar';
+export const SeelenWindowManagerWidgetId: WidgetId = '@seelen/window-manager';
+export const SeelenLauncherWidgetId: WidgetId = '@seelen/launcher';
+export const SeelenWallWidgetId: WidgetId = '@seelen/wallpaper-manager';
 
 export class WidgetList extends List<Widget> {
   static readonly getAsync = createInstanceInvoker(this, SeelenCommand.StateGetWidgets);
