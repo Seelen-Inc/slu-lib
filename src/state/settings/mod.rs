@@ -1,4 +1,10 @@
 /* In this file we use #[serde_alias(SnakeCase)] as backward compatibility from versions below v1.9.8 */
+pub mod by_widget;
+pub mod declaration;
+pub mod settings_by_monitor;
+
+use by_widget::SettingsByWidget;
+pub use settings_by_monitor::*;
 
 use std::{
     collections::{HashMap, HashSet},
@@ -12,13 +18,14 @@ use ts_rs::TS;
 
 use crate::rect::Rect;
 
-use super::{MonitorConfiguration, WidgetId};
+use super::WidgetId;
 
 // ============== Fancy Toolbar Settings ==============
 
 #[serde_alias(SnakeCase)]
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
+#[ts(export)]
 pub struct FancyToolbarSettings {
     /// enable or disable the fancy toolbar
     pub enabled: bool,
@@ -94,6 +101,7 @@ pub enum SeelenWegSide {
 #[serde_alias(SnakeCase)]
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
+#[ts(export)]
 pub struct SeelenWegSettings {
     /// enable or disable the seelenweg
     pub enabled: bool,
@@ -178,6 +186,7 @@ pub struct FloatingWindowSettings {
 #[serde_alias(SnakeCase)]
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
+#[ts(export)]
 pub struct WindowManagerSettings {
     /// enable or disable the window manager
     pub enabled: bool,
@@ -255,6 +264,7 @@ pub struct SeelenLauncherRunner {
 
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
+#[ts(export)]
 pub struct SeelenLauncherSettings {
     pub enabled: bool,
     pub monitor: SeelenLauncherMonitor,
@@ -308,6 +318,7 @@ pub struct SeelenWallWallpaper {
 
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
+#[ts(export)]
 pub struct SeelenWallSettings {
     pub enabled: bool,
     pub backgrounds: Vec<SeelenWallWallpaper>,
@@ -576,16 +587,26 @@ pub enum VirtualDesktopStrategy {
 #[serde(default, rename_all = "camelCase")]
 #[ts(export)]
 pub struct Settings {
-    /// fancy toolbar config
-    pub fancy_toolbar: FancyToolbarSettings,
-    /// seelenweg (dock/taskbar) config
-    pub seelenweg: SeelenWegSettings,
-    /// window manager config
-    pub window_manager: WindowManagerSettings,
-    /// background and virtual desktops config
-    pub wall: SeelenWallSettings,
-    /// App launcher settings
-    pub launcher: SeelenLauncherSettings,
+    /// @deprecated since v2.1.0, will be removed in v3.0.0
+    #[ts(skip)]
+    #[serde(skip_serializing)]
+    fancy_toolbar: Option<FancyToolbarSettings>,
+    ///@deprecated since v2.1.0, will be removed in v3.0.0
+    #[ts(skip)]
+    #[serde(skip_serializing)]
+    seelenweg: Option<SeelenWegSettings>,
+    /// @deprecated since v2.1.0, will be removed in v3.0.0
+    #[ts(skip)]
+    #[serde(skip_serializing)]
+    window_manager: Option<WindowManagerSettings>,
+    /// @deprecated since v2.1.0, will be removed in v3.0.0
+    #[ts(skip)]
+    #[serde(skip_serializing)]
+    wall: Option<SeelenWallSettings>,
+    /// @deprecated since v2.1.0, will be removed in v3.0.0
+    #[ts(skip)]
+    #[serde(skip_serializing)]
+    launcher: Option<SeelenLauncherSettings>,
     /// list of monitors and their configurations
     pub monitors_v2: HashMap<String, MonitorConfiguration>,
     /// enable or disable ahk
@@ -608,28 +629,49 @@ pub struct Settings {
     /// Updater Settings
     pub updater: UpdaterSettings,
     /// Custom settings for widgets
-    pub custom: HashMap<WidgetId, HashMap<String, serde_json::Value>>,
+    pub by_widget: SettingsByWidget,
 }
 
 impl Default for Settings {
     fn default() -> Self {
+        let mut settings_by_widget = SettingsByWidget::default();
+        settings_by_widget
+            .set_config(WidgetId::known_toolbar(), FancyToolbarSettings::default())
+            .unwrap();
+        settings_by_widget
+            .set_config(WidgetId::known_weg(), SeelenWegSettings::default())
+            .unwrap();
+        settings_by_widget
+            .set_config(WidgetId::known_wm(), WindowManagerSettings::default())
+            .unwrap();
+        settings_by_widget
+            .set_config(WidgetId::known_wall(), SeelenWallSettings::default())
+            .unwrap();
+        settings_by_widget
+            .set_config(
+                WidgetId::known_launcher(),
+                SeelenLauncherSettings::default(),
+            )
+            .unwrap();
+
         Self {
+            fancy_toolbar: None,
+            seelenweg: None,
+            window_manager: None,
+            wall: None,
+            launcher: None,
+            // ---
             ahk_enabled: true,
             selected_themes: vec!["default".to_string()],
             icon_packs: vec!["system".to_string()],
             monitors_v2: HashMap::new(),
-            fancy_toolbar: FancyToolbarSettings::default(),
-            seelenweg: SeelenWegSettings::default(),
-            window_manager: WindowManagerSettings::default(),
-            wall: SeelenWallSettings::default(),
-            launcher: SeelenLauncherSettings::default(),
             ahk_variables: AhkVarList::default(),
             dev_tools: false,
             language: Some(Self::get_system_language()),
             date_format: "ddd D MMM, hh:mm A".to_owned(),
             virtual_desktop_strategy: VirtualDesktopStrategy::Native,
             updater: UpdaterSettings::default(),
-            custom: HashMap::new(),
+            by_widget: settings_by_widget,
         }
     }
 }
@@ -641,14 +683,75 @@ impl Settings {
 
     pub fn get_system_language() -> String {
         match sys_locale::get_locale() {
-            Some(l) => l.split("-").next().unwrap_or("en").to_string(),
+            Some(l) => l.split('-').next().unwrap_or("en").to_string(),
             None => "en".to_string(),
         }
     }
 
-    pub fn sanitize(&mut self) {
-        self.launcher.sanitize();
-        self.wall.sanitize();
+    pub fn fancy_toolbar(&self) -> FancyToolbarSettings {
+        self.by_widget.get_config(&WidgetId::known_toolbar())
+    }
+
+    pub fn fancy_toolbar_mut(&mut self) -> &mut serde_json::Map<String, serde_json::Value> {
+        self.by_widget
+            .get_raw_config_mut(&WidgetId::known_toolbar())
+            .unwrap()
+    }
+
+    pub fn seelenweg(&self) -> SeelenWegSettings {
+        self.by_widget.get_config(&WidgetId::known_weg())
+    }
+
+    pub fn window_manager(&self) -> WindowManagerSettings {
+        self.by_widget.get_config(&WidgetId::known_wm())
+    }
+
+    pub fn window_manager_mut(&mut self) -> &mut serde_json::Map<String, serde_json::Value> {
+        self.by_widget
+            .get_raw_config_mut(&WidgetId::known_wm())
+            .unwrap()
+    }
+
+    pub fn wall(&self) -> SeelenWallSettings {
+        self.by_widget.get_config(&WidgetId::known_wall())
+    }
+
+    pub fn launcher(&self) -> SeelenLauncherSettings {
+        self.by_widget.get_config(&WidgetId::known_launcher())
+    }
+
+    /// Migrate old settings (before v2.1.0) (will be removed in v3.0.0)
+    pub fn migrate(&mut self) -> Result<(), serde_json::Error> {
+        let dict = &mut self.by_widget;
+        if let Some(tb) = self.fancy_toolbar.take() {
+            dict.set_config(WidgetId::known_toolbar(), tb)?;
+        }
+        if let Some(weg) = self.seelenweg.take() {
+            dict.set_config(WidgetId::known_weg(), weg)?;
+        }
+        if let Some(wm) = self.window_manager.take() {
+            dict.set_config(WidgetId::known_wm(), wm)?;
+        }
+        if let Some(wall) = self.wall.take() {
+            dict.set_config(WidgetId::known_wall(), wall)?;
+        }
+        if let Some(launcher) = self.launcher.take() {
+            dict.set_config(WidgetId::known_launcher(), launcher)?;
+        }
+        Ok(())
+    }
+
+    pub fn sanitize(&mut self) -> Result<(), serde_json::Error> {
+        self.by_widget.sanitize();
+
+        let mut wall = self.wall();
+        wall.sanitize();
+        self.by_widget.set_config(WidgetId::known_wall(), wall)?;
+
+        let mut launcher = self.launcher();
+        launcher.sanitize();
+        self.by_widget
+            .set_config(WidgetId::known_launcher(), launcher)?;
 
         if self.language.is_none() {
             self.language = Some(Self::get_system_language());
@@ -663,5 +766,11 @@ impl Settings {
         if !self.icon_packs.contains(&default_icon_pack) {
             self.icon_packs.insert(0, default_icon_pack);
         }
+
+        for m in self.monitors_v2.values_mut() {
+            m.sanitize();
+        }
+
+        Ok(())
     }
 }

@@ -1,17 +1,30 @@
-import { SeelenCommand, SeelenEvent } from '../handlers/mod.ts';
+import { SeelenCommand, SeelenEvent } from '../../handlers/mod.ts';
 
 import type {
+  FancyToolbarSettings,
   HideMode,
   SeelenLauncherMonitor,
+  SeelenLauncherSettings,
+  SeelenWallSettings,
   SeelenWegMode,
+  SeelenWegSettings,
   SeelenWegSide,
   Settings as ISettings,
   UpdateChannel,
   VirtualDesktopStrategy,
+  WidgetId,
+  WindowManagerSettings,
 } from '@seelen-ui/types';
-import { createInstanceInvoker, createInstanceOnEvent } from '../utils/State.ts';
-import { enumFromUnion } from '../utils/enums.ts';
-import { invoke } from '../lib.ts';
+import { createInstanceInvoker, createInstanceOnEvent } from '../../utils/State.ts';
+import { enumFromUnion } from '../../utils/enums.ts';
+import { invoke } from '../../lib.ts';
+import {
+  SeelenLauncherWidgetId,
+  SeelenToolbarWidgetId,
+  SeelenWallWidgetId,
+  SeelenWegWidgetId,
+  SeelenWindowManagerWidgetId,
+} from '../widget.ts';
 
 declare global {
   interface ArgsByCommand {
@@ -37,6 +50,36 @@ export class Settings {
 
   static async loadCustom(path: string): Promise<Settings> {
     return new this(await invoke(SeelenCommand.StateGetSettings, { path }));
+  }
+
+  getWidgetConfig(id: WidgetId): Record<string, unknown> | undefined {
+    return this.inner.byWidget[id];
+  }
+
+  private getBundledWidgetConfig<T extends Record<string, unknown>>(id: WidgetId): T {
+    const config = this.inner.byWidget[id];
+    if (!config) throw new Error('Bundled widget settings not found');
+    return config! as T;
+  }
+
+  get fancyToolbar(): FancyToolbarSettings {
+    return this.getBundledWidgetConfig(SeelenToolbarWidgetId);
+  }
+
+  get seelenweg(): SeelenWegSettings {
+    return this.getBundledWidgetConfig(SeelenWegWidgetId);
+  }
+
+  get windowManager(): WindowManagerSettings {
+    return this.getBundledWidgetConfig(SeelenWindowManagerWidgetId);
+  }
+
+  get launcher(): SeelenLauncherSettings {
+    return this.getBundledWidgetConfig(SeelenLauncherWidgetId);
+  }
+
+  get wall(): SeelenWallSettings {
+    return this.getBundledWidgetConfig(SeelenWallWidgetId);
   }
 
   /** Will store the settings on disk */
@@ -84,3 +127,5 @@ const UpdateChannel = enumFromUnion<UpdateChannel>({
 });
 
 export { HideMode, SeelenLauncherMonitor, SeelenWegMode, SeelenWegSide, UpdateChannel, VirtualDesktopStrategy };
+export * from './settings_by_monitor.ts';
+export * from './declaration.ts';

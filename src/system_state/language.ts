@@ -7,10 +7,10 @@ declare global {
     [SeelenCommand.SystemGetLanguages]: null;
   }
   interface ReturnByCommand {
-    [SeelenCommand.SystemGetLanguages]: Language[];
+    [SeelenCommand.SystemGetLanguages]: SystemLanguage[];
   }
   interface PayloadByEvent {
-    [SeelenEvent.SystemLanguagesChanged]: Language[];
+    [SeelenEvent.SystemLanguagesChanged]: SystemLanguage[];
   }
 }
 
@@ -19,13 +19,13 @@ export interface KeyboardLayout {
   displayName: string;
 }
 
-export interface Language {
+export interface SystemLanguage {
   code: string;
   name: string;
   inputMethods: KeyboardLayout[];
 }
 
-export class LanguageList extends List<Language> {
+export class LanguageList extends List<SystemLanguage> {
   static readonly getAsync = createInstanceInvoker(this, SeelenCommand.SystemGetLanguages);
   static readonly onChange = createInstanceOnEvent(this, SeelenEvent.SystemLanguagesChanged);
 }

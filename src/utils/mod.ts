@@ -1,15 +1,5 @@
 export * from './layered_hitbox.ts';
 
-/** @deprecated */
-// todo remove this, library should be agnostic to framework
-export function getRootElement(): HTMLElement {
-  const element = document.getElementById('root');
-  if (!element) {
-    throw new Error('Root element not found');
-  }
-  return element;
-}
-
 export class Rect {
   left = 0;
   top = 0;
