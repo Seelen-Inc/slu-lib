@@ -156,7 +156,7 @@ export class MusicFolder extends List<File> {
   static readonly getAsync = () => MusicFolder._getAsync({ folderType: FolderType.Music });
   static readonly onChange = (cb: (instance: RecentFolder) => void) => {
     Folders.onChange((folder) => {
-      if (folder.inner.ofFolder == FolderType.Recent) {
+      if (folder.inner.ofFolder == FolderType.Music) {
         cb(new RecentFolder(folder.inner.content!));
       }
     });

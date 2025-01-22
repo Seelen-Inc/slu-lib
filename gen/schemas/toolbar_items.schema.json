@@ -568,6 +568,7 @@
           "properties": {
             "badge": {
               "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Notifications Item Scope ```ts const count: number; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -580,6 +581,7 @@
             },
             "onClick": {
               "description": "Deprecated use `onClickV2` instead.",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -587,6 +589,7 @@
             },
             "onClickV2": {
               "description": "This code will be parsed and executed when the item is clicked.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Notifications Item Scope ```ts const count: number; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -614,6 +617,7 @@
             },
             "tooltip": {
               "description": "Content to display in tooltip of the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Notifications Item Scope ```ts const count: number; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
