@@ -180,7 +180,6 @@ pub enum NoFallbackBehavior {
 #[serde(default, rename_all = "camelCase")]
 #[ts(export)]
 pub struct WindowManagerLayout {
-    pub info: WManagerLayoutInfo,
     pub structure: WmNode,
     pub no_fallback_behavior: NoFallbackBehavior,
 }
@@ -188,7 +187,6 @@ pub struct WindowManagerLayout {
 impl Default for WindowManagerLayout {
     fn default() -> Self {
         Self {
-            info: Default::default(),
             structure: WmNode::Fallback(WmFallbackNode {
                 subtype: WmNode::default_subtype(),
                 priority: WmNode::default_priority(),

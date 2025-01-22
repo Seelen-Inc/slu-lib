@@ -17,7 +17,7 @@ import type {
 } from '@seelen-ui/types';
 import { createInstanceInvoker, createInstanceOnEvent } from '../../utils/State.ts';
 import { enumFromUnion } from '../../utils/enums.ts';
-import { invoke } from '../../lib.ts';
+import { invoke } from '../../handlers/mod.ts';
 import {
   SeelenLauncherWidgetId,
   SeelenToolbarWidgetId,

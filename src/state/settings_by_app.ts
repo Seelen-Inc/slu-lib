@@ -1,6 +1,6 @@
 import type { AppConfig, AppExtraFlag, AppIdentifierType, MatchingStrategy } from '@seelen-ui/types';
 import { List } from '../utils/List.ts';
-import { SeelenCommand, SeelenEvent } from '../lib.ts';
+import { SeelenCommand, SeelenEvent } from '../handlers/mod.ts';
 import { createInstanceInvoker } from '../utils/State.ts';
 import { createInstanceOnEvent } from '../utils/State.ts';
 import { enumFromUnion } from '../utils/enums.ts';

@@ -1,7 +1,7 @@
 import type { IconPack } from '@seelen-ui/types';
 import { List } from '../utils/List.ts';
 import { createInstanceInvoker, createInstanceOnEvent } from '../utils/State.ts';
-import { invoke, SeelenCommand, SeelenEvent } from '../lib.ts';
+import { invoke, SeelenCommand, SeelenEvent } from '../handlers/mod.ts';
 import { path } from '@tauri-apps/api';
 import { Settings } from './settings/mod.ts';
 import { convertFileSrc } from '@tauri-apps/api/core';
@@ -113,7 +113,7 @@ export class IconPackManager {
     }
 
     for (const active of this.actives.toReversed()) {
-      const pack = this._iconPacks.asArray().find((p) => p.info.filename === active);
+      const pack = this._iconPacks.asArray().find((p) => p.metadata.filename === active);
       if (!pack) {
         continue;
       }
@@ -129,7 +129,7 @@ export class IconPackManager {
       }
 
       if (icon) {
-        return convertFileSrc(this.iconPackPath + '\\' + pack.info.filename + '\\' + icon);
+        return convertFileSrc(this.iconPackPath + '\\' + pack.metadata.filename + '\\' + icon);
       }
     }
     return null;

@@ -3,18 +3,29 @@
   "title": "Theme",
   "type": "object",
   "properties": {
-    "info": {
+    "id": {
+      "default": "@unknown/unknown",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ThemeId"
+        }
+      ]
+    },
+    "metadata": {
       "description": "Metadata about the theme",
       "default": {
         "author": "",
-        "description": "",
-        "displayName": "",
+        "bundled": false,
+        "description": {},
+        "displayName": {},
         "filename": "",
+        "portrait": null,
+        "screenshots": [],
         "tags": []
       },
       "allOf": [
         {
-          "$ref": "#/definitions/ThemeInfo"
+          "$ref": "#/definitions/ResourceMetadata"
         }
       ]
     },
@@ -28,31 +39,63 @@
     }
   },
   "definitions": {
-    "ThemeInfo": {
+    "ResourceId": {
+      "description": "visual id composed of the creator username and the resource name",
+      "type": "string"
+    },
+    "ResourceMetadata": {
       "type": "object",
       "properties": {
         "author": {
-          "description": "Author of the theme",
+          "description": "The author name of the resource",
           "default": "",
           "type": "string"
+        },
+        "bundled": {
+          "default": false,
+          "readOnly": true,
+          "type": "boolean"
         },
         "description": {
-          "description": "Description of the theme",
-          "default": "",
-          "type": "string"
+          "description": "Map of language code to description. Could be a string, mapped to `en`.",
+          "default": {},
+          "allOf": [
+            {
+              "$ref": "#/definitions/ResourceText"
+            }
+          ]
         },
         "displayName": {
-          "description": "Display name of the theme",
-          "default": "",
-          "type": "string"
+          "description": "Map of language code to display name. Could be a string, mapped to `en`.",
+          "default": {},
+          "allOf": [
+            {
+              "$ref": "#/definitions/ResourceText"
+            }
+          ]
         },
         "filename": {
-          "description": "Filename of the theme, is overridden by the program on load.",
           "default": "",
+          "readOnly": true,
           "type": "string"
         },
+        "portrait": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "screenshots": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
         "tags": {
-          "description": "Tags to be used in search",
           "default": [],
           "type": "array",
           "items": {
@@ -60,6 +103,22 @@
           }
         }
       }
+    },
+    "ResourceText": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "ThemeId": {
+      "$ref": "#/definitions/ResourceId"
     }
   }
 }

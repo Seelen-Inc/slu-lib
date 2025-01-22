@@ -11,20 +11,6 @@
         "$ref": "#/definitions/ToolbarItem2"
       }
     },
-    "info": {
-      "description": "Metadata about the placeholder",
-      "default": {
-        "author": "",
-        "description": "",
-        "displayName": "",
-        "filename": ""
-      },
-      "allOf": [
-        {
-          "$ref": "#/definitions/PlaceholderInfo"
-        }
-      ]
-    },
     "left": {
       "description": "Items to be displayed in the toolbar",
       "default": [],
@@ -43,40 +29,12 @@
     }
   },
   "definitions": {
-    "DateUpdateInterval": {
-      "type": "string",
-      "enum": [
-        "millisecond",
-        "second",
-        "minute",
-        "hour",
-        "day"
-      ]
+    "PluginId": {
+      "$ref": "#/definitions/ResourceId"
     },
-    "PlaceholderInfo": {
-      "type": "object",
-      "properties": {
-        "author": {
-          "description": "Author of the placeholder",
-          "default": "",
-          "type": "string"
-        },
-        "description": {
-          "description": "Description of the placeholder",
-          "default": "",
-          "type": "string"
-        },
-        "displayName": {
-          "description": "Display name of the placeholder",
-          "default": "",
-          "type": "string"
-        },
-        "filename": {
-          "description": "Filename of the placeholder, is overridden by the program on load.",
-          "default": "",
-          "type": "string"
-        }
-      }
+    "ResourceId": {
+      "description": "visual id composed of the creator username and the resource name",
+      "type": "string"
     },
     "StyleValue": {
       "anyOf": [
@@ -84,19 +42,7 @@
           "type": "string"
         },
         {
-          "type": "integer",
-          "format": "uint64",
-          "minimum": 0.0
-        },
-        {
-          "description": "Always less than zero.",
-          "type": "integer",
-          "format": "int64"
-        },
-        {
-          "description": "Always finite.",
-          "type": "number",
-          "format": "double"
+          "type": "number"
         }
       ]
     },
@@ -110,6 +56,7 @@
           "properties": {
             "badge": {
               "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Base Item Scope Have all icons defined on [React Icons](https://react-icons.github.io/react-icons) as properties of the object. ```js const icon: object; ``` Haves all environment variables defined on the system as properties of the object. ```js const env: object; ``` Functions to add images to the item. ```js function getIcon(name: string, size: number = 16): string function imgFromUrl (url: string, size: number = 16): string function imgFromPath (path: string, size: number = 16): string function imgFromExe (exe_path: string, size: number = 16): string function t(path: string): string ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -122,6 +69,7 @@
             },
             "onClick": {
               "description": "Deprecated use `onClickV2` instead.",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -129,6 +77,7 @@
             },
             "onClickV2": {
               "description": "This code will be parsed and executed when the item is clicked.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Base Item Scope Have all icons defined on [React Icons](https://react-icons.github.io/react-icons) as properties of the object. ```js const icon: object; ``` Haves all environment variables defined on the system as properties of the object. ```js const env: object; ``` Functions to add images to the item. ```js function getIcon(name: string, size: number = 16): string function imgFromUrl (url: string, size: number = 16): string function imgFromPath (path: string, size: number = 16): string function imgFromExe (exe_path: string, size: number = 16): string function t(path: string): string ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -156,6 +105,7 @@
             },
             "tooltip": {
               "description": "Content to display in tooltip of the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Base Item Scope Have all icons defined on [React Icons](https://react-icons.github.io/react-icons) as properties of the object. ```js const icon: object; ``` Haves all environment variables defined on the system as properties of the object. ```js const env: object; ``` Functions to add images to the item. ```js function getIcon(name: string, size: number = 16): string function imgFromUrl (url: string, size: number = 16): string function imgFromPath (path: string, size: number = 16): string function imgFromExe (exe_path: string, size: number = 16): string function t(path: string): string ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -177,6 +127,7 @@
           "properties": {
             "badge": {
               "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Generic Item Scope ```ts // the current focused window const window: { name: string; title: string; exe: string | null; }; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -189,6 +140,7 @@
             },
             "onClick": {
               "description": "Deprecated use `onClickV2` instead.",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -196,6 +148,7 @@
             },
             "onClickV2": {
               "description": "This code will be parsed and executed when the item is clicked.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Generic Item Scope ```ts // the current focused window const window: { name: string; title: string; exe: string | null; }; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -223,6 +176,7 @@
             },
             "tooltip": {
               "description": "Content to display in tooltip of the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Generic Item Scope ```ts // the current focused window const window: { name: string; title: string; exe: string | null; }; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -244,24 +198,11 @@
           "properties": {
             "badge": {
               "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Date Item Scope ```ts const date: string; // the formatted date ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
               ]
-            },
-            "each": {
-              "description": "@deprecated -- v2 uses settings date format instead (it will perform the minimal updates)",
-              "default": "minute",
-              "allOf": [
-                {
-                  "$ref": "#/definitions/DateUpdateInterval"
-                }
-              ]
-            },
-            "format": {
-              "description": "@deprecated -- v2 uses settings date format instead",
-              "default": "MMM Do, HH:mm",
-              "type": "string"
             },
             "id": {
               "description": "Id to identify the item, should be unique.",
@@ -270,6 +211,7 @@
             },
             "onClick": {
               "description": "Deprecated use `onClickV2` instead.",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -277,6 +219,7 @@
             },
             "onClickV2": {
               "description": "This code will be parsed and executed when the item is clicked.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Date Item Scope ```ts const date: string; // the formatted date ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -304,6 +247,7 @@
             },
             "tooltip": {
               "description": "Content to display in tooltip of the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Date Item Scope ```ts const date: string; // the formatted date ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -325,6 +269,7 @@
           "properties": {
             "badge": {
               "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Power Item Scope ```ts interface PowerStatus { acLineStatus: number; batteryFlag: number; batteryLifePercent: number; systemStatusFlag: number; batteryLifeTime: number; batteryFullLifeTime: number; }\n\ninterface Battery { // Static info vendor: string | null; model: string | null; serialNumber: string | null; technology: string;\n\n// Common information state: string; capacity: number; temperature: number | null; percentage: number; cycleCount: number | null; smartCharging: boolean;\n\n// Energy stats energy: number; energyFull: number; energyFullDesign: number; energyRate: number; voltage: number;\n\n// Charge stats timeToFull: number | null; timeToEmpty: number | null; }\n\nconst power: PowerStatus; const batteries: Battery[]; const battery: Battery | null; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -337,6 +282,7 @@
             },
             "onClick": {
               "description": "Deprecated use `onClickV2` instead.",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -344,6 +290,7 @@
             },
             "onClickV2": {
               "description": "This code will be parsed and executed when the item is clicked.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Power Item Scope ```ts interface PowerStatus { acLineStatus: number; batteryFlag: number; batteryLifePercent: number; systemStatusFlag: number; batteryLifeTime: number; batteryFullLifeTime: number; }\n\ninterface Battery { // Static info vendor: string | null; model: string | null; serialNumber: string | null; technology: string;\n\n// Common information state: string; capacity: number; temperature: number | null; percentage: number; cycleCount: number | null; smartCharging: boolean;\n\n// Energy stats energy: number; energyFull: number; energyFullDesign: number; energyRate: number; voltage: number;\n\n// Charge stats timeToFull: number | null; timeToEmpty: number | null; }\n\nconst power: PowerStatus; const batteries: Battery[]; const battery: Battery | null; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -371,6 +318,7 @@
             },
             "tooltip": {
               "description": "Content to display in tooltip of the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Power Item Scope ```ts interface PowerStatus { acLineStatus: number; batteryFlag: number; batteryLifePercent: number; systemStatusFlag: number; batteryLifeTime: number; batteryFullLifeTime: number; }\n\ninterface Battery { // Static info vendor: string | null; model: string | null; serialNumber: string | null; technology: string;\n\n// Common information state: string; capacity: number; temperature: number | null; percentage: number; cycleCount: number | null; smartCharging: boolean;\n\n// Energy stats energy: number; energyFull: number; energyFullDesign: number; energyRate: number; voltage: number;\n\n// Charge stats timeToFull: number | null; timeToEmpty: number | null; }\n\nconst power: PowerStatus; const batteries: Battery[]; const battery: Battery | null; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -392,6 +340,7 @@
           "properties": {
             "badge": {
               "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Network Item Scope ```ts interface NetworkInterface { name: string; description: string; status: 'up' | 'down'; dnsSuffix: string; type: string; gateway: string | null; mac: string; ipv4: string | null; ipv6: string | null; } const online: boolean; const interfaces: NetworkInterface[]; const usingInterface: NetworkInterface | null; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -404,6 +353,7 @@
             },
             "onClick": {
               "description": "Deprecated use `onClickV2` instead.",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -411,6 +361,7 @@
             },
             "onClickV2": {
               "description": "This code will be parsed and executed when the item is clicked.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Network Item Scope ```ts interface NetworkInterface { name: string; description: string; status: 'up' | 'down'; dnsSuffix: string; type: string; gateway: string | null; mac: string; ipv4: string | null; ipv6: string | null; } const online: boolean; const interfaces: NetworkInterface[]; const usingInterface: NetworkInterface | null; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -438,6 +389,7 @@
             },
             "tooltip": {
               "description": "Content to display in tooltip of the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Network Item Scope ```ts interface NetworkInterface { name: string; description: string; status: 'up' | 'down'; dnsSuffix: string; type: string; gateway: string | null; mac: string; ipv4: string | null; ipv6: string | null; } const online: boolean; const interfaces: NetworkInterface[]; const usingInterface: NetworkInterface | null; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -464,6 +416,7 @@
           "properties": {
             "badge": {
               "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Media Item Scope ```ts const volume: number; // output master volume from 0 to 1 const isMuted: boolean; // output master volume is muted const inputVolume: number; // input master volume from 0 to 1 const inputIsMuted: boolean; // input master volume is muted\n\ninterface MediaSession { id: string; title: string; author: string; thumbnail: string | null; // path to temporal media session image playing: boolean; default: boolean; owner: { name: string; iconPath: string | null; } | null; }\n\nconst mediaSession: MediaSession | null; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -476,6 +429,7 @@
             },
             "onClick": {
               "description": "Deprecated use `onClickV2` instead.",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -483,6 +437,7 @@
             },
             "onClickV2": {
               "description": "This code will be parsed and executed when the item is clicked.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Media Item Scope ```ts const volume: number; // output master volume from 0 to 1 const isMuted: boolean; // output master volume is muted const inputVolume: number; // input master volume from 0 to 1 const inputIsMuted: boolean; // input master volume is muted\n\ninterface MediaSession { id: string; title: string; author: string; thumbnail: string | null; // path to temporal media session image playing: boolean; default: boolean; owner: { name: string; iconPath: string | null; } | null; }\n\nconst mediaSession: MediaSession | null; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -510,6 +465,7 @@
             },
             "tooltip": {
               "description": "Content to display in tooltip of the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Media Item Scope ```ts const volume: number; // output master volume from 0 to 1 const isMuted: boolean; // output master volume is muted const inputVolume: number; // input master volume from 0 to 1 const inputIsMuted: boolean; // input master volume is muted\n\ninterface MediaSession { id: string; title: string; author: string; thumbnail: string | null; // path to temporal media session image playing: boolean; default: boolean; owner: { name: string; iconPath: string | null; } | null; }\n\nconst mediaSession: MediaSession | null; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -536,6 +492,7 @@
           "properties": {
             "badge": {
               "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Notifications Item Scope ```ts const count: number; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -548,6 +505,7 @@
             },
             "onClick": {
               "description": "Deprecated use `onClickV2` instead.",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -555,6 +513,7 @@
             },
             "onClickV2": {
               "description": "This code will be parsed and executed when the item is clicked.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Notifications Item Scope ```ts const count: number; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -582,6 +541,7 @@
             },
             "tooltip": {
               "description": "Content to display in tooltip of the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Notifications Item Scope ```ts const count: number; ```",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -675,6 +635,7 @@
           "properties": {
             "badge": {
               "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Workspace Item Scope this module does no expand the scope of the item",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -687,6 +648,7 @@
             },
             "onClick": {
               "description": "Deprecated use `onClickV2` instead.",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -694,6 +656,7 @@
             },
             "onClickV2": {
               "description": "This code will be parsed and executed when the item is clicked.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Workspace Item Scope this module does no expand the scope of the item",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -721,6 +684,7 @@
             },
             "tooltip": {
               "description": "Content to display in tooltip of the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Workspace Item Scope this module does no expand the scope of the item",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -742,6 +706,7 @@
           "properties": {
             "badge": {
               "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Device Item Scope this module does no expand the scope of the item",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -754,6 +719,7 @@
             },
             "onClick": {
               "description": "Deprecated use `onClickV2` instead.",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -761,6 +727,7 @@
             },
             "onClickV2": {
               "description": "This code will be parsed and executed when the item is clicked.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Device Item Scope this module does no expand the scope of the item",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -788,6 +755,7 @@
             },
             "tooltip": {
               "description": "Content to display in tooltip of the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Device Item Scope this module does no expand the scope of the item",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -809,6 +777,7 @@
           "properties": {
             "badge": {
               "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Settings Item Scope this module does no expand the scope of the item",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -821,6 +790,7 @@
             },
             "onClick": {
               "description": "Deprecated use `onClickV2` instead.",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -828,6 +798,7 @@
             },
             "onClickV2": {
               "description": "This code will be parsed and executed when the item is clicked.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Settings Item Scope this module does no expand the scope of the item",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -855,6 +826,7 @@
             },
             "tooltip": {
               "description": "Content to display in tooltip of the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Settings Item Scope this module does no expand the scope of the item",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -876,6 +848,7 @@
           "properties": {
             "badge": {
               "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Workspace Item Scope this module does no expand the scope of the item",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -896,6 +869,7 @@
             },
             "onClick": {
               "description": "Deprecated use `onClickV2` instead.",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -903,6 +877,7 @@
             },
             "onClickV2": {
               "description": "This code will be parsed and executed when the item is clicked.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Workspace Item Scope this module does no expand the scope of the item",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -930,6 +905,7 @@
             },
             "tooltip": {
               "description": "Content to display in tooltip of the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Workspace Item Scope this module does no expand the scope of the item",
+              "default": null,
               "type": [
                 "string",
                 "null"
@@ -948,7 +924,7 @@
     "ToolbarItem2": {
       "anyOf": [
         {
-          "type": "string"
+          "$ref": "#/definitions/PluginId"
         },
         {
           "$ref": "#/definitions/ToolbarItem"

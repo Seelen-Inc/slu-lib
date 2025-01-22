@@ -1,7 +1,8 @@
 import type { WegItem, WegItems as IWegItems } from '@seelen-ui/types';
-import { getCurrentWidget, invoke, SeelenCommand, SeelenEvent } from '../lib.ts';
+import { invoke, SeelenCommand, SeelenEvent } from '../handlers/mod.ts';
 import { createInstanceInvoker, createInstanceOnEvent } from '../utils/State.ts';
 import { enumFromUnion } from '../utils/enums.ts';
+import { getCurrentWidget } from './widget.ts';
 
 declare global {
   interface ArgsByCommand {

@@ -1,24 +1,17 @@
-import type { DateUpdateInterval, Placeholder, ToolbarItem, WorkspaceToolbarItemMode } from '@seelen-ui/types';
-import { List } from '../utils/List.ts';
-import { SeelenCommand, SeelenEvent } from '../lib.ts';
-import { createInstanceInvoker, createInstanceOnEvent } from '../utils/State.ts';
+import type { Placeholder, ToolbarItem, WorkspaceToolbarItemMode } from '@seelen-ui/types';
 import { enumFromUnion } from '../utils/enums.ts';
+import type { SeelenCommand, SeelenEvent } from '../handlers/mod.ts';
 
 declare global {
   interface ArgsByCommand {
-    [SeelenCommand.StateGetPlaceholders]: null;
+    [SeelenCommand.StateGetToolbarItems]: null;
   }
   interface ReturnByCommand {
-    [SeelenCommand.StateGetPlaceholders]: Placeholder[];
+    [SeelenCommand.StateGetToolbarItems]: Placeholder;
   }
   interface PayloadByEvent {
-    [SeelenEvent.StatePlaceholdersChanged]: Placeholder[];
+    [SeelenEvent.StateToolbarItemsChanged]: Placeholder;
   }
-}
-
-export class PlaceholderList extends List<Placeholder> {
-  static readonly getAsync = createInstanceInvoker(this, SeelenCommand.StateGetPlaceholders);
-  static readonly onChange = createInstanceOnEvent(this, SeelenEvent.StatePlaceholdersChanged);
 }
 
 // =================================================================================
@@ -46,12 +39,4 @@ const WorkspaceToolbarItemMode = enumFromUnion<WorkspaceToolbarItemMode>({
   Numbered: 'numbered',
 });
 
-const DateUpdateInterval = enumFromUnion<DateUpdateInterval>({
-  Millisecond: 'millisecond',
-  Second: 'second',
-  Minute: 'minute',
-  Hour: 'hour',
-  Day: 'day',
-});
-
-export { DateUpdateInterval, ToolbarModuleType, WorkspaceToolbarItemMode };
+export { ToolbarModuleType, WorkspaceToolbarItemMode };

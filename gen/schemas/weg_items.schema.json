@@ -1,9 +1,51 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Array_of_WegItem",
-  "type": "array",
-  "items": {
-    "$ref": "#/definitions/WegItem"
+  "title": "WegItems",
+  "type": "object",
+  "properties": {
+    "center": {
+      "default": [
+        {
+          "displayName": "Explorer",
+          "id": "a16c3f0a-3c71-4059-bc6e-f58d9368444e",
+          "isDir": false,
+          "path": "C:\\Windows\\explorer.exe",
+          "pinDisabled": false,
+          "relaunchCommand": "C:\\Windows\\explorer.exe",
+          "type": "Pinned",
+          "umid": null,
+          "windows": []
+        }
+      ],
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/WegItem"
+      }
+    },
+    "left": {
+      "default": [
+        {
+          "id": "f777d27c-2146-4713-b19a-ea7e3b918d0e",
+          "type": "StartMenu"
+        }
+      ],
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/WegItem"
+      }
+    },
+    "right": {
+      "default": [
+        {
+          "id": "d40ed3c9-3a1e-491e-8e7b-dd14f08781ba",
+          "type": "Media"
+        }
+      ],
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/WegItem"
+      }
+    }
   },
   "definitions": {
     "WegAppGroupItem": {

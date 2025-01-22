@@ -1,25 +1,5 @@
-import type { NodeSubtype, NoFallbackBehavior, WindowManagerLayout, WmNode } from '@seelen-ui/types';
-import { List } from '../utils/List.ts';
-import { SeelenCommand, SeelenEvent } from '../lib.ts';
-import { createInstanceInvoker, createInstanceOnEvent } from '../utils/State.ts';
+import type { NodeSubtype, NoFallbackBehavior, WmNode } from '@seelen-ui/types';
 import { enumFromUnion } from '../utils/enums.ts';
-
-declare global {
-  interface ArgsByCommand {
-    [SeelenCommand.StateGetLayouts]: null;
-  }
-  interface ReturnByCommand {
-    [SeelenCommand.StateGetLayouts]: WindowManagerLayout[];
-  }
-  interface PayloadByEvent {
-    [SeelenEvent.StateLayoutsChanged]: WindowManagerLayout[];
-  }
-}
-
-export class WindowManagerLayoutList extends List<WindowManagerLayout> {
-  static readonly getAsync = createInstanceInvoker(this, SeelenCommand.StateGetLayouts);
-  static readonly onChange = createInstanceOnEvent(this, SeelenEvent.StateLayoutsChanged);
-}
 
 // =================================================================================
 //    From here some enums as helpers like @seelen-ui/types only contains types

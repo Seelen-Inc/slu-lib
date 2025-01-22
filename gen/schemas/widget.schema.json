@@ -1,0 +1,428 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Widget",
+  "type": "object",
+  "properties": {
+    "css": {
+      "default": null,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "html": {
+      "default": null,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "default": "@unknown/unknown",
+      "allOf": [
+        {
+          "$ref": "#/definitions/WidgetId"
+        }
+      ]
+    },
+    "js": {
+      "default": null,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "metadata": {
+      "default": {
+        "author": "",
+        "bundled": false,
+        "description": {},
+        "displayName": {},
+        "filename": "",
+        "portrait": null,
+        "screenshots": [],
+        "tags": []
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/ResourceMetadata"
+        }
+      ]
+    },
+    "settings": {
+      "default": [],
+      "allOf": [
+        {
+          "$ref": "#/definitions/WidgetSettingsDeclarationList"
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "ResourceId": {
+      "description": "visual id composed of the creator username and the resource name",
+      "type": "string"
+    },
+    "ResourceMetadata": {
+      "type": "object",
+      "properties": {
+        "author": {
+          "description": "The author name of the resource",
+          "default": "",
+          "type": "string"
+        },
+        "bundled": {
+          "default": false,
+          "readOnly": true,
+          "type": "boolean"
+        },
+        "description": {
+          "description": "Map of language code to description. Could be a string, mapped to `en`.",
+          "default": {},
+          "allOf": [
+            {
+              "$ref": "#/definitions/ResourceText"
+            }
+          ]
+        },
+        "displayName": {
+          "description": "Map of language code to display name. Could be a string, mapped to `en`.",
+          "default": {},
+          "allOf": [
+            {
+              "$ref": "#/definitions/ResourceText"
+            }
+          ]
+        },
+        "filename": {
+          "default": "",
+          "readOnly": true,
+          "type": "string"
+        },
+        "portrait": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "screenshots": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "tags": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ResourceText": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "WidgetId": {
+      "$ref": "#/definitions/ResourceId"
+    },
+    "WidgetSettingsDeclarationList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/WsdGroup"
+      }
+    },
+    "WsdGroup": {
+      "type": "object",
+      "required": [
+        "settings"
+      ],
+      "properties": {
+        "header": {
+          "description": "Header configuration normally is a switch to enable or disable the group.\n\n**Note**: This property is ignored if the group is the root. Should be used on SubGroups.",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/WsdItem"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "settings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/WsdGroupEntry"
+          }
+        }
+      }
+    },
+    "WsdGroupEntry": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "subGroup"
+          ],
+          "properties": {
+            "subGroup": {
+              "$ref": "#/definitions/WsdGroup"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "config"
+          ],
+          "properties": {
+            "config": {
+              "$ref": "#/definitions/WsdItem"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "WsdItem": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "allowSetByMonitor",
+            "dependencies",
+            "key",
+            "label",
+            "type"
+          ],
+          "properties": {
+            "allowSetByMonitor": {
+              "description": "This setting could be set by monitor on the settings by monitor section.",
+              "type": "boolean"
+            },
+            "default": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "dependencies": {
+              "description": "Keys of items to be set in order to enable this item.\n\nit uses js logic (!!value) to determine if the item is enabled",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "key": {
+              "description": "Unique key for this item, used to identify it in the settings",
+              "type": "string"
+            },
+            "label": {
+              "description": "Label for this item could start with the prefix `t::` for translation\n\nexample: `t::obj.inner.translation_key`",
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "switch"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "allowSetByMonitor",
+            "dependencies",
+            "key",
+            "label",
+            "options",
+            "subtype",
+            "type"
+          ],
+          "properties": {
+            "allowSetByMonitor": {
+              "description": "This setting could be set by monitor on the settings by monitor section.",
+              "type": "boolean"
+            },
+            "default": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "dependencies": {
+              "description": "Keys of items to be set in order to enable this item.\n\nit uses js logic (!!value) to determine if the item is enabled",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "key": {
+              "description": "Unique key for this item, used to identify it in the settings",
+              "type": "string"
+            },
+            "label": {
+              "description": "Label for this item could start with the prefix `t::` for translation\n\nexample: `t::obj.inner.translation_key`",
+              "type": "string"
+            },
+            "options": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/WsdItemSelectOption"
+              }
+            },
+            "subtype": {
+              "$ref": "#/definitions/WsdItemSelectSubtype"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "select"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "allowSetByMonitor",
+            "dependencies",
+            "key",
+            "label",
+            "type"
+          ],
+          "properties": {
+            "allowSetByMonitor": {
+              "description": "This setting could be set by monitor on the settings by monitor section.",
+              "type": "boolean"
+            },
+            "default": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "dependencies": {
+              "description": "Keys of items to be set in order to enable this item.\n\nit uses js logic (!!value) to determine if the item is enabled",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "key": {
+              "description": "Unique key for this item, used to identify it in the settings",
+              "type": "string"
+            },
+            "label": {
+              "description": "Label for this item could start with the prefix `t::` for translation\n\nexample: `t::obj.inner.translation_key`",
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "input-text"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "allowSetByMonitor",
+            "dependencies",
+            "key",
+            "label",
+            "type"
+          ],
+          "properties": {
+            "allowSetByMonitor": {
+              "description": "This setting could be set by monitor on the settings by monitor section.",
+              "type": "boolean"
+            },
+            "default": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "format": "int32"
+            },
+            "dependencies": {
+              "description": "Keys of items to be set in order to enable this item.\n\nit uses js logic (!!value) to determine if the item is enabled",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "key": {
+              "description": "Unique key for this item, used to identify it in the settings",
+              "type": "string"
+            },
+            "label": {
+              "description": "Label for this item could start with the prefix `t::` for translation\n\nexample: `t::obj.inner.translation_key`",
+              "type": "string"
+            },
+            "max": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "format": "int32"
+            },
+            "min": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "format": "int32"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "input-number"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "WsdItemSelectOption": {
+      "type": "object",
+      "required": [
+        "label",
+        "value"
+      ],
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "value": {
+          "description": "The value to be set when this option is selected, should be unique",
+          "type": "string"
+        }
+      }
+    },
+    "WsdItemSelectSubtype": {
+      "type": "string",
+      "enum": [
+        "List",
+        "Inline"
+      ]
+    }
+  }
+}

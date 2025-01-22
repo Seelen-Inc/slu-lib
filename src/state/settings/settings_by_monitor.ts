@@ -1,4 +1,4 @@
-import { SeelenCommand } from '../../lib.ts';
+import { SeelenCommand } from '../../handlers/mod.ts';
 
 import type { MonitorConfiguration as IMonitorConfiguration, WorkspaceIdentifierType } from '@seelen-ui/types';
 import { createInstanceInvoker } from '../../utils/State.ts';

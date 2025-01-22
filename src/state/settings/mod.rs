@@ -18,7 +18,7 @@ use ts_rs::TS;
 
 use crate::rect::Rect;
 
-use super::WidgetId;
+use super::{PluginId, WidgetId};
 
 // ============== Fancy Toolbar Settings ==============
 
@@ -31,8 +31,6 @@ pub struct FancyToolbarSettings {
     pub enabled: bool,
     /// height of the fancy toolbar
     pub height: u32,
-    /// default placeholder for the fancy toolbar
-    pub placeholder: String,
     /// hide mode
     pub hide_mode: HideMode,
     /// enables the logic which persists last overlapped HWND to enchance multimonitor overlap feature
@@ -48,7 +46,6 @@ impl Default for FancyToolbarSettings {
         Self {
             enabled: true,
             height: 30,
-            placeholder: String::from("default.yml"),
             hide_mode: HideMode::Never,
             use_multi_monitor_overlap_logic: false,
             delay_to_show: 100,
@@ -206,7 +203,7 @@ pub struct WindowManagerSettings {
     /// floating window settings
     pub floating: FloatingWindowSettings,
     /// default layout
-    pub default_layout: String,
+    pub default_layout: PluginId,
 }
 
 impl Default for Border {
@@ -239,7 +236,7 @@ impl Default for WindowManagerSettings {
             workspace_padding: 10,
             workspace_margin: Rect::default(),
             floating: FloatingWindowSettings::default(),
-            default_layout: String::from("default.yml"),
+            default_layout: "@default/wm-bspwm".into(),
         }
     }
 }

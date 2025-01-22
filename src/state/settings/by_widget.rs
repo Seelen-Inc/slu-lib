@@ -45,7 +45,7 @@ impl SettingsByWidget {
     pub fn sanitize(&mut self) {
         let mut sanitized = self.0.clone();
         for (key, _) in self.0.iter() {
-            if !key.0.is_valid() {
+            if !key.is_valid() {
                 sanitized.remove(key);
             }
         }

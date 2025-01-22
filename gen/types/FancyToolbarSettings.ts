@@ -11,10 +11,6 @@ export type FancyToolbarSettings = {
    */
   height: number;
   /**
-   * default placeholder for the fancy toolbar
-   */
-  placeholder: string;
-  /**
    * hide mode
    */
   hideMode: HideMode;

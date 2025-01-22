@@ -1,5 +1,5 @@
 import type { UnlistenFn } from '@tauri-apps/api/event';
-import { invoke, type SeelenCommand, type SeelenEvent, subscribe } from '../lib.ts';
+import { invoke, type SeelenCommand, type SeelenEvent, subscribe } from '../handlers/mod.ts';
 import type { Options as ListenerOptions } from '@tauri-apps/api/event';
 
 interface ConstructorWithSingleArg {

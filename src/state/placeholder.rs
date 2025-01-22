@@ -4,6 +4,8 @@ use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 use ts_rs::TS;
 
+use super::PluginId;
+
 macro_rules! common_item {
     (
         $(
@@ -14,72 +16,56 @@ macro_rules! common_item {
         )*
     ) => {
         $(
-            #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
-            #[serde(rename_all = "camelCase")]
+            #[derive(Debug, Clone, Default, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
+            #[serde(default, rename_all = "camelCase")]
             pub struct $name {
                 /// Id to identify the item, should be unique.
-                #[serde(default)]
-                id: String,
+                pub id: String,
                 /// Content to display in the item.
                 ///
                 /// Should follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).
                 ///
                 $(#[$scope])*
-                #[serde(default)]
-                template: String,
+                pub template: String,
                 /// Content to display in tooltip of the item.
                 ///
                 /// Should follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).
                 ///
                 $(#[$scope])*
-                tooltip: Option<String>,
+                pub tooltip: Option<String>,
                 /// Badge will be displayed over the item, useful as notifications.
                 ///
                 /// Should follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).
                 ///
                 $(#[$scope])*
-                badge: Option<String>,
+                pub badge: Option<String>,
                 /// Deprecated use `onClickV2` instead.
-                on_click: Option<String>,
+                pub on_click: Option<String>,
                 /// This code will be parsed and executed when the item is clicked.
                 ///
                 /// Should follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).
                 ///
                 $(#[$scope])*
-                on_click_v2: Option<String>,
+                pub on_click_v2: Option<String>,
                 /// Styles to be added to the item. This follow the same interface of React's `style` prop.
-                #[serde(default)]
-                style: HashMap<String, Option<StyleValue>>,
+                pub style: HashMap<String, Option<StyleValue>>,
                 $($rest)*
             }
         )*
     };
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(untagged)]
 pub enum StyleValue {
     String(String),
-    PosInt(u64),
-    /// Always less than zero.
-    NegInt(i64),
-    /// Always finite.
-    Float(f64),
+    Number(serde_json::Number),
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
-#[serde(rename_all = "camelCase")]
-pub enum DateUpdateInterval {
-    Millisecond,
-    Second,
-    Minute,
-    Hour,
-    Day,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
+#[derive(Debug, Clone, Default, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(rename_all = "camelCase")]
 pub enum WorkspaceToolbarItemMode {
+    #[default]
     Dotted,
     Named,
     Numbered,
@@ -120,14 +106,7 @@ common_item! {
     /// ```ts
     /// const date: string; // the formatted date
     /// ```
-    struct DateToolbarItem {
-        /// @deprecated -- v2 uses settings date format instead (it will perform the minimal updates)
-        #[serde(default = "DateToolbarItem::default_interval")]
-        each: DateUpdateInterval,
-        /// @deprecated -- v2 uses settings date format instead
-        #[serde(default = "DateToolbarItem::default_format")]
-        format: String,
-    }
+    struct DateToolbarItem {}
 
     /// ## Power Item Scope
     /// ```ts
@@ -256,28 +235,11 @@ common_item! {
     /// ## Workspace Item Scope
     /// this module does no expand the scope of the item
     struct WorkspaceToolbarItem {
-        #[serde(default = "WorkspaceToolbarItem::default_mode")]
         mode: WorkspaceToolbarItemMode,
     }
 }
 
-impl DateToolbarItem {
-    fn default_interval() -> DateUpdateInterval {
-        DateUpdateInterval::Minute
-    }
-
-    fn default_format() -> String {
-        "MMM Do, HH:mm".to_string()
-    }
-}
-
-impl WorkspaceToolbarItem {
-    fn default_mode() -> WorkspaceToolbarItemMode {
-        WorkspaceToolbarItemMode::Dotted
-    }
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(tag = "type", rename_all = "camelCase")]
 pub enum ToolbarItem {
     Text(TextToolbarItem),
@@ -330,32 +292,17 @@ impl ToolbarItem {
     }
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(untagged)]
 pub enum ToolbarItem2 {
-    PluginId(String),
+    Plugin(PluginId),
     Inline(ToolbarItem),
 }
 
-#[derive(Debug, Clone, Default, Serialize, Deserialize, JsonSchema, TS)]
-#[serde(default, rename_all = "camelCase")]
-pub struct PlaceholderInfo {
-    /// Display name of the placeholder
-    pub display_name: String,
-    /// Author of the placeholder
-    pub author: String,
-    /// Description of the placeholder
-    pub description: String,
-    /// Filename of the placeholder, is overridden by the program on load.
-    pub filename: String,
-}
-
-#[derive(Debug, Clone, Default, Serialize, Deserialize, JsonSchema, TS)]
+#[derive(Debug, Clone, PartialEq, Eq, Default, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
 #[ts(export)]
 pub struct Placeholder {
-    /// Metadata about the placeholder
-    pub info: PlaceholderInfo,
     /// Items to be displayed in the toolbar
     pub left: Vec<ToolbarItem2>,
     /// Items to be displayed in the toolbar
@@ -369,10 +316,11 @@ impl Placeholder {
         let mut result = Vec::new();
         for item in items {
             match item {
-                ToolbarItem2::PluginId(id) => {
-                    if !dict.contains(&id) {
-                        dict.insert(id.clone());
-                        result.push(ToolbarItem2::PluginId(id));
+                ToolbarItem2::Plugin(id) => {
+                    let str_id = id.to_string();
+                    if !dict.contains(&str_id) && id.is_valid() {
+                        dict.insert(str_id);
+                        result.push(ToolbarItem2::Plugin(id));
                     }
                 }
                 ToolbarItem2::Inline(mut item) => {

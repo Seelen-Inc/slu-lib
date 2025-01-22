@@ -1,4 +1,4 @@
-import { SeelenCommand, SeelenEvent } from '../lib.ts';
+import { SeelenCommand, SeelenEvent } from '../handlers/mod.ts';
 import { List } from '../utils/List.ts';
 import { createInstanceInvoker, createInstanceOnEvent } from '../utils/State.ts';
 

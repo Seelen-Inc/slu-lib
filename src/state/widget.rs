@@ -1,32 +1,44 @@
+use std::ops::{Deref, DerefMut};
+
+use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 use ts_rs::TS;
 
-use super::{declaration::WidgetSettingsDeclarationList, ResourceId};
+use crate::resource::{ResourceId, ResourceMetadata};
 
-#[derive(Debug, Clone, Hash, PartialEq, Eq, Serialize, Deserialize, TS)]
-pub struct WidgetId(pub ResourceId);
+use super::declaration::WidgetSettingsDeclarationList;
+
+#[derive(Debug, Clone, Default, Hash, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
+pub struct WidgetId(ResourceId);
 
 impl WidgetId {
     pub fn known_weg() -> Self {
-        Self(ResourceId("@seelen/weg".to_string()))
+        "@seelen/weg".into()
     }
     pub fn known_toolbar() -> Self {
-        Self(ResourceId("@seelen/fancy-toolbar".to_string()))
+        "@seelen/fancy-toolbar".into()
     }
     pub fn known_wm() -> Self {
-        Self(ResourceId("@seelen/window-manager".to_string()))
+        "@seelen/window-manager".into()
     }
     pub fn known_launcher() -> Self {
-        Self(ResourceId("@seelen/launcher".to_string()))
+        "@seelen/launcher".into()
     }
     pub fn known_wall() -> Self {
-        Self(ResourceId("@seelen/wallpaper-manager".to_string()))
+        "@seelen/wallpaper-manager".into()
     }
 }
 
-impl From<ResourceId> for WidgetId {
-    fn from(value: ResourceId) -> Self {
-        Self(value)
+impl Deref for WidgetId {
+    type Target = ResourceId;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+
+impl DerefMut for WidgetId {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
 
@@ -36,17 +48,12 @@ impl From<&str> for WidgetId {
     }
 }
 
-impl std::fmt::Display for WidgetId {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "{}", self.0)
-    }
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize, TS)]
+#[derive(Debug, Clone, Default, Serialize, Deserialize, JsonSchema, TS)]
+#[serde(default, rename_all = "camelCase")]
 #[ts(export)]
 pub struct Widget {
     pub id: WidgetId,
-    #[serde(default)]
+    pub metadata: ResourceMetadata,
     pub settings: WidgetSettingsDeclarationList,
     pub js: Option<String>,
     pub css: Option<String>,
