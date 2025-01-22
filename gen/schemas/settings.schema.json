@@ -1517,13 +1517,30 @@
     },
     "MonitorConfiguration": {
       "type": "object",
-      "required": [
-        "byWidget",
-        "workspacesV2"
-      ],
       "properties": {
         "byWidget": {
           "description": "dictionary of settings by widget",
+          "default": {
+            "@seelen/fancy-toolbar": {
+              "enabled": true
+            },
+            "@seelen/wallpaper-manager": {
+              "backgrounds": null,
+              "enabled": true
+            },
+            "@seelen/weg": {
+              "enabled": true,
+              "pinnedItemsVisibility": null,
+              "temporalItemsVisibility": null
+            },
+            "@seelen/window-manager": {
+              "enabled": true,
+              "gap": null,
+              "layout": null,
+              "margin": null,
+              "padding": null
+            }
+          },
           "allOf": [
             {
               "$ref": "#/definitions/SettingsByWidget"
@@ -1580,6 +1597,7 @@
         },
         "workspacesV2": {
           "description": "list of settings by workspace on this monitor",
+          "default": [],
           "type": "array",
           "items": {
             "$ref": "#/definitions/WorkspaceConfiguration"

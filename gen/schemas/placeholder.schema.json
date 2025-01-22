@@ -590,6 +590,78 @@
             "type": {
               "type": "string",
               "enum": [
+                "user"
+              ]
+            },
+            "withUserFolder": {
+              "description": "Show user control popup on click",
+              "default": false,
+              "type": "boolean"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "badge": {
+              "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Notifications Item Scope ```ts const count: number; ```",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "id": {
+              "description": "Id to identify the item, should be unique.",
+              "default": "",
+              "type": "string"
+            },
+            "onClick": {
+              "description": "Deprecated use `onClickV2` instead.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "onClickV2": {
+              "description": "This code will be parsed and executed when the item is clicked.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Notifications Item Scope ```ts const count: number; ```",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "style": {
+              "description": "Styles to be added to the item. This follow the same interface of React's `style` prop.",
+              "default": {},
+              "type": "object",
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "$ref": "#/definitions/StyleValue"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "template": {
+              "description": "Content to display in the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Notifications Item Scope ```ts const count: number; ```",
+              "default": "",
+              "type": "string"
+            },
+            "tooltip": {
+              "description": "Content to display in tooltip of the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Notifications Item Scope ```ts const count: number; ```",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "type": {
+              "type": "string",
+              "enum": [
                 "notifications"
               ]
             }

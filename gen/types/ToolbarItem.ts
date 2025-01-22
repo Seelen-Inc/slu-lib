@@ -9,6 +9,7 @@ import type { PowerToolbarItem } from './PowerToolbarItem.ts';
 import type { SettingsToolbarItem } from './SettingsToolbarItem.ts';
 import type { TextToolbarItem } from './TextToolbarItem.ts';
 import type { TrayToolbarItem } from './TrayToolbarItem.ts';
+import type { UserToolbarItem } from './UserToolbarItem.ts';
 import type { WorkspaceToolbarItem } from './WorkspaceToolbarItem.ts';
 
 export type ToolbarItem =
@@ -18,6 +19,7 @@ export type ToolbarItem =
   | { 'type': 'power' } & PowerToolbarItem
   | { 'type': 'network' } & NetworkToolbarItem
   | { 'type': 'media' } & MediaToolbarItem
+  | { 'type': 'user' } & UserToolbarItem
   | { 'type': 'notifications' } & NotificationsToolbarItem
   | { 'type': 'tray' } & TrayToolbarItem
   | { 'type': 'device' } & DeviceToolbarItem
