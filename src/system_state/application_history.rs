@@ -10,7 +10,7 @@ pub struct ApplicationHistoryEntry {
     pub application: FocusedApp,
     pub focus_date: u64,
     pub is_seelen: bool,
-    pub on_monitor: String
+    pub on_monitor: String,
 }
 
 #[derive(Debug, PartialEq, Eq, Clone, Serialize, TS)]
