@@ -1,7 +1,7 @@
 import { getCurrentWidget, invoke, SeelenCommand, SeelenEvent, subscribe } from '../lib.ts';
 import { createInstanceInvoker, createInstanceOnEvent } from '../utils/State.ts';
 import { List } from '../utils/List.ts';
-import { type EventCallback } from '@tauri-apps/api/event';
+import type { EventCallback } from '@tauri-apps/api/event';
 import type { ApplicationHistoryEntry, FocusedApp } from '@seelen-ui/types';
 
 declare global {
@@ -36,7 +36,7 @@ export class ApplicationHistory extends List<ApplicationHistoryEntry> {
     target: { kind: 'Webview', label: getCurrentWidget().rawLabel },
   });
 
-  static readonly setLimitAsync = async function setLimitAsync(capacity: number) {
+  static readonly setLimitAsync = async function setLimitAsync(capacity: number): Promise<void> {
     await invoke(SeelenCommand.SetApplicationHistoryLimit, { capacity });
   };
 }
