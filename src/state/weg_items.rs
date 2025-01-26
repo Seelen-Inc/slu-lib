@@ -37,6 +37,12 @@ impl PinnedWegItemData {
     pub fn set_pin_disabled(&mut self, pin_disabled: bool) {
         self.pin_disabled = pin_disabled;
     }
+
+    /// Some apps changes of place on update, commonly this contains an App User Model Id
+    /// the path should be updated to the new location on these cases.
+    pub fn should_ensure_path(&self) -> bool {
+        self.umid.is_none() || self.path.extension().map_or(false, |ext| ext == "lnk")
+    }
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
@@ -116,7 +122,7 @@ impl WegItems {
         for mut item in items {
             match &mut item {
                 WegItem::Pinned(data) => {
-                    if !data.path.exists() {
+                    if data.should_ensure_path() && !data.path.exists() {
                         continue;
                     }
                     if data.relaunch_command.is_empty() {
@@ -124,7 +130,8 @@ impl WegItems {
                     }
                 }
                 WegItem::Temporal(data) => {
-                    if data.windows.is_empty() || !data.path.exists() {
+                    if data.windows.is_empty() || (data.should_ensure_path() && !data.path.exists())
+                    {
                         continue;
                     }
                     if data.relaunch_command.is_empty() {

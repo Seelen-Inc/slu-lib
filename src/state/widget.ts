@@ -54,7 +54,16 @@ function _getCurrentWidget(): Readonly<WidgetInformation> {
   });
 }
 
+/** If called on backend context, will return an empty structure */
 export function getCurrentWidget(): Readonly<WidgetInformation> {
+  if (!globalThis.window) {
+    return {
+      id: '',
+      label: '',
+      rawLabel: '',
+      params: {},
+    };
+  }
   if (!CURRENT_WIDGET_INFORMATION.ref) {
     CURRENT_WIDGET_INFORMATION.ref = _getCurrentWidget();
   }
