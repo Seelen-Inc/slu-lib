@@ -80,6 +80,11 @@ slu_commands_declaration! {
   StateGetIconPacks = state_get_icon_packs,
   StateGetProfiles = state_get_profiles,
 
+  // History
+  GetApplicationHistoryOnMonitor = get_application_history_by_monitor,
+  GetApplicationHistory = get_application_history,
+  SetApplicationHistoryLimit = set_application_history_limit,
+
   // User
   GetUser = get_user,
   GetUserFolderContent = get_user_folder_content,

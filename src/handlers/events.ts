@@ -3,6 +3,8 @@ export enum SeelenEvent {
   WorkspacesChanged = 'workspaces-changed',
   ActiveWorkspaceChanged = 'active-workspace-changed',
   GlobalFocusChanged = 'global-focus-changed',
+  GlobalHistoryChanged = 'global-history-changed',
+  HistoryChangedOnMonitor = 'global-history-changed-on-monitor',
   GlobalMouseMove = 'global-mouse-move',
   HandleLayeredHitboxes = 'handle-layered',
   SystemMonitorsChanged = 'system::monitors-changed',
