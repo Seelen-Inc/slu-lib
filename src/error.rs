@@ -24,6 +24,7 @@ define_app_errors!(
     Io(std::io::Error);
     SerdeJson(serde_json::Error);
     SerdeYaml(serde_yaml::Error);
+    Grass(Box<grass::Error>);
 );
 
 impl From<&str> for SeelenLibError {
