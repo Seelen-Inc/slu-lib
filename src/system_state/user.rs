@@ -1,15 +1,8 @@
-use std::path::{Path, PathBuf};
+use std::path::PathBuf;
 
 use serde::{Deserialize, Serialize};
 
 use ts_rs::TS;
-
-const RECENT_FOLDER_RELATIVE_PATH: &str = "..\\..\\Roaming\\Microsoft\\Windows\\Recent";
-const DOCUMENTS_FOLDER_RELATIVE_PATH: &str = "..\\..\\..\\Documents";
-const DOWNLOADS_RELATIVE_PATH: &str = "..\\..\\..\\Downloads";
-const PICTURES_RELATIVE_PATH: &str = "..\\..\\..\\Pictures";
-const VIDEOS_RELATIVE_PATH: &str = "..\\..\\..\\Videos";
-const MUSIC_RELATIVE_PATH: &str = "..\\..\\..\\Music";
 
 #[derive(Debug, Hash, Eq, PartialEq, Clone, Serialize, Deserialize, TS)]
 #[ts(export)]
@@ -24,18 +17,6 @@ pub enum FolderType {
 }
 
 impl FolderType {
-    pub fn to_path(&self) -> PathBuf {
-        match self {
-            FolderType::Recent => std::env::temp_dir().join(RECENT_FOLDER_RELATIVE_PATH),
-            FolderType::Downloads => std::env::temp_dir().join(DOWNLOADS_RELATIVE_PATH),
-            FolderType::Documents => std::env::temp_dir().join(DOCUMENTS_FOLDER_RELATIVE_PATH),
-            FolderType::Pictures => std::env::temp_dir().join(PICTURES_RELATIVE_PATH),
-            FolderType::Videos => std::env::temp_dir().join(VIDEOS_RELATIVE_PATH),
-            FolderType::Music => std::env::temp_dir().join(MUSIC_RELATIVE_PATH),
-            FolderType::Unknown => std::env::temp_dir(),
-        }
-    }
-
     pub fn values() -> [FolderType; 6] {
         [
             FolderType::Recent,
@@ -45,16 +26,6 @@ impl FolderType {
             FolderType::Videos,
             FolderType::Music,
         ]
-    }
-
-    pub fn from_path(path: &Path) -> FolderType {
-        for folder_type in FolderType::values() {
-            if path.starts_with(folder_type.to_path()) {
-                return folder_type;
-            }
-        }
-
-        FolderType::Unknown
     }
 }
 
