@@ -97,10 +97,10 @@ impl Default for WegItems {
     fn default() -> Self {
         Self {
             left: vec![WegItem::StartMenu {
-                id: uuid::Uuid::new_v4().to_string(),
+                id: String::new(),
             }],
             center: vec![WegItem::Pinned(PinnedWegItemData {
-                id: uuid::Uuid::new_v4().to_string(),
+                id: String::new(),
                 umid: None,
                 path: "C:\\Windows\\explorer.exe".into(),
                 display_name: "Explorer".into(),
@@ -110,7 +110,7 @@ impl Default for WegItems {
                 pin_disabled: false,
             })],
             right: vec![WegItem::Media {
-                id: uuid::Uuid::new_v4().to_string(),
+                id: String::new(),
             }],
         }
     }
