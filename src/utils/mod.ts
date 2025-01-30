@@ -33,9 +33,21 @@ export function disableWebviewShortcutsAndContextMenu(): void {
       }
     }
   });
+
+  // prevent browser context menu
   globalThis.addEventListener('contextmenu', (e) => e.preventDefault(), {
     capture: true,
   });
+
+  // prevent drop files in webview
   globalThis.addEventListener('drop', (e) => e.preventDefault());
   globalThis.addEventListener('dragover', (e) => e.preventDefault());
+
+  // prevent dragging images
+  globalThis.addEventListener('dragstart', (event) => {
+    const target = event.target as HTMLElement | null;
+    if (target?.tagName?.toLowerCase() === 'img') {
+      event.preventDefault();
+    }
+  });
 }

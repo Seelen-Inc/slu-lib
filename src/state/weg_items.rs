@@ -96,9 +96,7 @@ pub struct WegItems {
 impl Default for WegItems {
     fn default() -> Self {
         Self {
-            left: vec![WegItem::StartMenu {
-                id: String::new(),
-            }],
+            left: vec![WegItem::StartMenu { id: String::new() }],
             center: vec![WegItem::Pinned(PinnedWegItemData {
                 id: String::new(),
                 umid: None,
@@ -109,9 +107,7 @@ impl Default for WegItems {
                 windows: vec![],
                 pin_disabled: false,
             })],
-            right: vec![WegItem::Media {
-                id: String::new(),
-            }],
+            right: vec![WegItem::Media { id: String::new() }],
         }
     }
 }
