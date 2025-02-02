@@ -5,7 +5,7 @@ export type WegItems = {
   /**
    * Whether the reordering possible on the weg
    */
-  is_reorder_disabled: boolean;
+  isReorderDisabled: boolean;
   left: Array<WegItem>;
   center: Array<WegItem>;
   right: Array<WegItem>;

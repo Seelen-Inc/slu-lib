@@ -85,7 +85,7 @@ impl WegItem {
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
-#[serde(default)]
+#[serde(default, rename_all = "camelCase")]
 #[ts(export)]
 pub struct WegItems {
     /// Whether the reordering possible on the weg
