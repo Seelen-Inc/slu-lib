@@ -303,6 +303,8 @@ pub enum ToolbarItem2 {
 #[serde(default, rename_all = "camelCase")]
 #[ts(export)]
 pub struct Placeholder {
+    /// Whether the reordering possible on the toolbar 
+    pub is_reorder_disabled: bool,
     /// Items to be displayed in the toolbar
     pub left: Vec<ToolbarItem2>,
     /// Items to be displayed in the toolbar

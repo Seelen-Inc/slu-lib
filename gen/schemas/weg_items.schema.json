@@ -22,6 +22,11 @@
         "$ref": "#/definitions/WegItem"
       }
     },
+    "is_reorder_disabled": {
+      "description": "Whether the reordering possible on the weg",
+      "default": false,
+      "type": "boolean"
+    },
     "left": {
       "default": [
         {

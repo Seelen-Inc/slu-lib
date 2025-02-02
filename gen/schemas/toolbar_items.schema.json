@@ -11,6 +11,11 @@
         "$ref": "#/definitions/ToolbarItem2"
       }
     },
+    "isReorderDisabled": {
+      "description": "Whether the reordering possible on the toolbar",
+      "default": false,
+      "type": "boolean"
+    },
     "left": {
       "description": "Items to be displayed in the toolbar",
       "default": [],

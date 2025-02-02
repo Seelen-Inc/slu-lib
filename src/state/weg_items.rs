@@ -88,6 +88,8 @@ impl WegItem {
 #[serde(default)]
 #[ts(export)]
 pub struct WegItems {
+    /// Whether the reordering possible on the weg 
+    pub is_reorder_disabled: bool,
     pub left: Vec<WegItem>,
     pub center: Vec<WegItem>,
     pub right: Vec<WegItem>,
@@ -96,6 +98,7 @@ pub struct WegItems {
 impl Default for WegItems {
     fn default() -> Self {
         Self {
+            is_reorder_disabled: false,
             left: vec![WegItem::StartMenu { id: String::new() }],
             center: vec![WegItem::Pinned(PinnedWegItemData {
                 id: String::new(),

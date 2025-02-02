@@ -3,6 +3,10 @@ import type { ToolbarItem2 } from './ToolbarItem2.ts';
 
 export type Placeholder = {
   /**
+   * Whether the reordering possible on the toolbar
+   */
+  isReorderDisabled: boolean;
+  /**
    * Items to be displayed in the toolbar
    */
   left: Array<ToolbarItem2>;
