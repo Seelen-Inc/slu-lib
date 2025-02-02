@@ -114,6 +114,8 @@ pub struct SeelenWegSettings {
     pub position: SeelenWegSide,
     /// enables the logic which persists last overlapped HWND to enchance multimonitor overlap feature
     pub use_multi_monitor_overlap_logic: bool,
+    /// Decides whether the application hoover should generate thumbnails or just list the names instead
+    pub thumbnail_generation_enabled: bool,
     /// enable or disable separators visibility
     pub visible_separators: bool,
     /// item size in px
@@ -140,6 +142,7 @@ impl Default for SeelenWegSettings {
             hide_mode: HideMode::OnOverlap,
             position: SeelenWegSide::Bottom,
             use_multi_monitor_overlap_logic: false,
+            thumbnail_generation_enabled: true,
             visible_separators: true,
             temporal_items_visibility: WegTemporalItemsVisibility::All,
             pinned_items_visibility: WegPinnedItemsVisibility::Always,

@@ -35,6 +35,10 @@ export type SeelenWegSettings = {
    */
   useMultiMonitorOverlapLogic: boolean;
   /**
+   * Decides whether the application hoover should generate thumbnails or just list the names instead
+   */
+  thumbnailGenerationEnabled: boolean;
+  /**
    * enable or disable separators visibility
    */
   visibleSeparators: boolean;

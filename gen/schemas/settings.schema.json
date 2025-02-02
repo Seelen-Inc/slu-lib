@@ -426,6 +426,7 @@
           "size": 40,
           "spaceBetweenItems": 8,
           "temporalItemsVisibility": "All",
+          "thumbnailGenerationEnabled": true,
           "useMultiMonitorOverlapLogic": false,
           "visibleSeparators": true,
           "zoomSize": 70
@@ -1860,6 +1861,11 @@
               "$ref": "#/definitions/WegTemporalItemsVisibility"
             }
           ]
+        },
+        "thumbnailGenerationEnabled": {
+          "description": "Decides whether the application hoover should generate thumbnails or just list the names instead",
+          "default": true,
+          "type": "boolean"
         },
         "useMultiMonitorOverlapLogic": {
           "description": "enables the logic which persists last overlapped HWND to enchance multimonitor overlap feature",
