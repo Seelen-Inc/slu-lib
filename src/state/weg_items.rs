@@ -88,7 +88,7 @@ impl WegItem {
 #[serde(default)]
 #[ts(export)]
 pub struct WegItems {
-    /// Whether the reordering possible on the weg 
+    /// Whether the reordering possible on the weg
     pub is_reorder_disabled: bool,
     pub left: Vec<WegItem>,
     pub center: Vec<WegItem>,
