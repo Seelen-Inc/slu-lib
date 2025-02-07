@@ -31,6 +31,8 @@ pub struct FancyToolbarSettings {
     pub enabled: bool,
     /// height of the fancy toolbar
     pub height: u32,
+    /// position of the toolbar
+    pub position: FancyToolbarSide,
     /// hide mode
     pub hide_mode: HideMode,
     /// enables the logic which persists last overlapped HWND to enchance multimonitor overlap feature
@@ -46,12 +48,19 @@ impl Default for FancyToolbarSettings {
         Self {
             enabled: true,
             height: 30,
+            position: FancyToolbarSide::Top,
             hide_mode: HideMode::Never,
             use_multi_monitor_overlap_logic: false,
             delay_to_show: 100,
             delay_to_hide: 800,
         }
     }
+}
+
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
+pub enum FancyToolbarSide {
+    Top,
+    Bottom,
 }
 
 // ============== SeelenWeg Settings ==============
@@ -116,6 +125,8 @@ pub struct SeelenWegSettings {
     pub use_multi_monitor_overlap_logic: bool,
     /// Decides whether the application hoover should generate thumbnails or just list the names instead
     pub thumbnail_generation_enabled: bool,
+    /// enable or disable the instance counter visibility on weg instance
+    pub show_instance_counter: bool,
     /// enable or disable separators visibility
     pub visible_separators: bool,
     /// item size in px
@@ -144,6 +155,7 @@ impl Default for SeelenWegSettings {
             use_multi_monitor_overlap_logic: false,
             thumbnail_generation_enabled: true,
             visible_separators: true,
+            show_instance_counter: true,
             temporal_items_visibility: WegTemporalItemsVisibility::All,
             pinned_items_visibility: WegPinnedItemsVisibility::Always,
             size: 40,

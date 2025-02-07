@@ -387,6 +387,7 @@
           "enabled": true,
           "height": 30,
           "hideMode": "Never",
+          "position": "Top",
           "useMultiMonitorOverlapLogic": false
         },
         "@seelen/launcher": {
@@ -423,6 +424,7 @@
           "padding": 8,
           "pinnedItemsVisibility": "Always",
           "position": "Bottom",
+          "showInstanceCounter": true,
           "size": 40,
           "spaceBetweenItems": 8,
           "temporalItemsVisibility": "All",
@@ -1454,6 +1456,15 @@
             }
           ]
         },
+        "position": {
+          "description": "position of the toolbar",
+          "default": "Top",
+          "allOf": [
+            {
+              "$ref": "#/definitions/FancyToolbarSide"
+            }
+          ]
+        },
         "useMultiMonitorOverlapLogic": {
           "description": "enables the logic which persists last overlapped HWND to enchance multimonitor overlap feature",
           "default": false,
@@ -1469,6 +1480,13 @@
           "type": "boolean"
         }
       }
+    },
+    "FancyToolbarSide": {
+      "type": "string",
+      "enum": [
+        "Top",
+        "Bottom"
+      ]
     },
     "FloatingWindowSettings": {
       "type": "object",
@@ -1838,6 +1856,11 @@
               "$ref": "#/definitions/SeelenWegSide"
             }
           ]
+        },
+        "showInstanceCounter": {
+          "description": "enable or disable the instance counter visibility on weg instance",
+          "default": true,
+          "type": "boolean"
         },
         "size": {
           "description": "item size in px",
