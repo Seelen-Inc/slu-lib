@@ -1,6 +1,7 @@
 import { SeelenCommand, SeelenEvent } from '../../handlers/mod.ts';
 
 import type {
+  FancyToolbarSide,
   FancyToolbarSettings,
   HideMode,
   SeelenLauncherMonitor,
@@ -92,6 +93,11 @@ export class Settings {
 //    From here some enums as helpers like @seelen-ui/types only contains types
 // =================================================================================
 
+const FancyToolbarSide = enumFromUnion<FancyToolbarSide>({
+  Top: 'Top',
+  Bottom: 'Bottom',
+});
+
 const VirtualDesktopStrategy = enumFromUnion<VirtualDesktopStrategy>({
   Native: 'Native',
   Seelen: 'Seelen',
@@ -126,6 +132,6 @@ const UpdateChannel = enumFromUnion<UpdateChannel>({
   Nightly: 'Nightly',
 });
 
-export { HideMode, SeelenLauncherMonitor, SeelenWegMode, SeelenWegSide, UpdateChannel, VirtualDesktopStrategy };
+export { HideMode, SeelenLauncherMonitor, SeelenWegMode, SeelenWegSide, UpdateChannel, VirtualDesktopStrategy, FancyToolbarSide };
 export * from './settings_by_monitor.ts';
 export * from './declaration.ts';
