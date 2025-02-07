@@ -18,6 +18,7 @@ export enum SeelenEvent {
   NetworkWlanScanned = 'wlan-scanned',
   Notifications = 'notifications',
   PowerStatus = 'power-status',
+  PowerPlan = 'power-plan',
   BatteriesStatus = 'batteries-status',
   ColorsChanged = 'colors-changed',
   TrayInfo = 'tray-info',

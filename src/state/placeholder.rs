@@ -119,6 +119,16 @@ common_item! {
     ///     batteryFullLifeTime: number;
     /// }
     ///
+    /// enum PowerPlan {
+    ///   Balanced = 'Balanced',
+    ///   BatterySaver = 'BatterySaver',
+    ///   BetterBattery = 'BetterBattery',
+    ///   GameMode = 'GameMode',
+    ///   HighPerformance = 'HighPerformance',
+    ///   MaxPerformance = 'MaxPerformance',
+    ///   MixedReality = 'MixedReality',
+    /// }
+    /// 
     /// interface Battery {
     ///     // Static info
     ///     vendor: string | null;
@@ -147,6 +157,7 @@ common_item! {
     /// }
     ///
     /// const power: PowerStatus;
+    /// const powerPlan: PowerPlan;
     /// const batteries: Battery[];
     /// const battery: Battery | null;
     /// ```

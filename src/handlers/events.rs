@@ -51,6 +51,7 @@ slu_events_declaration! {
     Notifications = "notifications",
 
     PowerStatus = "power-status",
+    PowerPlan = "power-plan",
     BatteriesStatus = "batteries-status",
 
     ColorsChanged = "colors-changed",
