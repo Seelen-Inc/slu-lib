@@ -423,6 +423,7 @@
           "padding": 8,
           "pinnedItemsVisibility": "Always",
           "position": "Bottom",
+          "showInstanceCounter": true,
           "size": 40,
           "spaceBetweenItems": 8,
           "temporalItemsVisibility": "All",
@@ -1838,6 +1839,11 @@
               "$ref": "#/definitions/SeelenWegSide"
             }
           ]
+        },
+        "showInstanceCounter": {
+          "description": "enable or disable the instance counter visibility on weg instance",
+          "default": true,
+          "type": "boolean"
         },
         "size": {
           "description": "item size in px",
