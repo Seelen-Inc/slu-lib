@@ -128,7 +128,7 @@ common_item! {
     ///   MaxPerformance = 'MaxPerformance',
     ///   MixedReality = 'MixedReality',
     /// }
-    /// 
+    ///
     /// interface Battery {
     ///     // Static info
     ///     vendor: string | null;
