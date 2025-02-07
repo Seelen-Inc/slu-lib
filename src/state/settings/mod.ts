@@ -1,8 +1,8 @@
 import { SeelenCommand, SeelenEvent } from '../../handlers/mod.ts';
 
 import type {
-  FancyToolbarSide,
   FancyToolbarSettings,
+  FancyToolbarSide,
   HideMode,
   SeelenLauncherMonitor,
   SeelenLauncherSettings,
@@ -132,6 +132,15 @@ const UpdateChannel = enumFromUnion<UpdateChannel>({
   Nightly: 'Nightly',
 });
 
-export { HideMode, SeelenLauncherMonitor, SeelenWegMode, SeelenWegSide, UpdateChannel, VirtualDesktopStrategy, FancyToolbarSide };
+export {
+  HideMode,
+  SeelenLauncherMonitor,
+  SeelenWegMode,
+  SeelenWegSide,
+  UpdateChannel,
+  VirtualDesktopStrategy,
+  FancyToolbarSide
+};
+
 export * from './settings_by_monitor.ts';
 export * from './declaration.ts';
