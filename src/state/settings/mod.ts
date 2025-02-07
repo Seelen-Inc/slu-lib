@@ -133,13 +133,13 @@ const UpdateChannel = enumFromUnion<UpdateChannel>({
 });
 
 export {
+  FancyToolbarSide,
   HideMode,
   SeelenLauncherMonitor,
   SeelenWegMode,
   SeelenWegSide,
   UpdateChannel,
   VirtualDesktopStrategy,
-  FancyToolbarSide
 };
 
 export * from './settings_by_monitor.ts';
