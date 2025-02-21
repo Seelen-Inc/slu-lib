@@ -344,6 +344,77 @@
           ],
           "properties": {
             "badge": {
+              "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Keyboard Item Scope ```ts interface KeyboardLayout { id: string; displayName: string; active: boolean; }\n\ninterface SystemLanguage { code: string; name: string; inputMethods: KeyboardLayout[]; }\n\nconst languages: Language[]; const activeLang: Language; const activeKeyboard: KeyboardLayout; const activeLangPrefix: string; const activeKeyboardPrefix: string; ```",
+              "default": null,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "id": {
+              "description": "Id to identify the item, should be unique.",
+              "default": "",
+              "type": "string"
+            },
+            "onClick": {
+              "description": "Deprecated use `onClickV2` instead.",
+              "default": null,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "onClickV2": {
+              "description": "This code will be parsed and executed when the item is clicked.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Keyboard Item Scope ```ts interface KeyboardLayout { id: string; displayName: string; active: boolean; }\n\ninterface SystemLanguage { code: string; name: string; inputMethods: KeyboardLayout[]; }\n\nconst languages: Language[]; const activeLang: Language; const activeKeyboard: KeyboardLayout; const activeLangPrefix: string; const activeKeyboardPrefix: string; ```",
+              "default": null,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "style": {
+              "description": "Styles to be added to the item. This follow the same interface of React's `style` prop.",
+              "default": {},
+              "type": "object",
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "$ref": "#/definitions/StyleValue"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "template": {
+              "description": "Content to display in the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Keyboard Item Scope ```ts interface KeyboardLayout { id: string; displayName: string; active: boolean; }\n\ninterface SystemLanguage { code: string; name: string; inputMethods: KeyboardLayout[]; }\n\nconst languages: Language[]; const activeLang: Language; const activeKeyboard: KeyboardLayout; const activeLangPrefix: string; const activeKeyboardPrefix: string; ```",
+              "default": "",
+              "type": "string"
+            },
+            "tooltip": {
+              "description": "Content to display in tooltip of the item.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Keyboard Item Scope ```ts interface KeyboardLayout { id: string; displayName: string; active: boolean; }\n\ninterface SystemLanguage { code: string; name: string; inputMethods: KeyboardLayout[]; }\n\nconst languages: Language[]; const activeLang: Language; const activeKeyboard: KeyboardLayout; const activeLangPrefix: string; const activeKeyboardPrefix: string; ```",
+              "default": null,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "keyboard"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "badge": {
               "description": "Badge will be displayed over the item, useful as notifications.\n\nShould follow the [mathjs expression syntax](https://mathjs.org/docs/expressions/syntax.html).\n\n## Network Item Scope ```ts interface NetworkInterface { name: string; description: string; status: 'up' | 'down'; dnsSuffix: string; type: string; gateway: string | null; mac: string; ipv4: string | null; ipv6: string | null; } const online: boolean; const interfaces: NetworkInterface[]; const usingInterface: NetworkInterface | null; ```",
               "default": null,
               "type": [

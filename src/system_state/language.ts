@@ -17,6 +17,7 @@ declare global {
 export interface KeyboardLayout {
   id: string;
   displayName: string;
+  active: boolean;
 }
 
 export interface SystemLanguage {

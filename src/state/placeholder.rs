@@ -163,19 +163,43 @@ common_item! {
     /// ```
     struct PowerToolbarItem {}
 
+    /// ## Keyboard Item Scope
+    /// ```ts
+    /// interface KeyboardLayout {
+    ///   id: string;
+    ///   displayName: string;
+    ///   active: boolean;
+    /// }
+    ///
+    /// interface SystemLanguage {
+    ///   code: string;
+    ///   name: string;
+    ///   inputMethods: KeyboardLayout[];
+    /// }
+    ///
+    /// const languages: Language[];
+    /// const activeLang: Language;
+    /// const activeKeyboard: KeyboardLayout;
+    /// const activeLangPrefix: string;
+    /// const activeKeyboardPrefix: string;
+    /// ```
+    struct KeyboardToolbarItem {}
+
     /// ## Bluetooth Item Scope
     /// ```ts
     /// interface BluetoothDevice
     /// {
     ///     id: string,
     ///     name: string,
-    ///     major_class: BluetoothMajor,
-    ///     minor_main_class: BluetoothMinor,
-    ///     minor_sub_class: BluetoothMinor,
+    ///     address: bigint,
+    ///     majorClass: BluetoothMajor,
+    ///     minorMainClass: BluetoothMinor,
+    ///     minorSubClass: BluetoothMinor,
     ///     connected: boolean,
     ///     paired: boolean,
-    ///     can_pair: boolean,
-    ///     is_bluetooth_loweenergy: boolean,
+    ///     canPair: boolean,
+    ///     isBluetoothLoweenergy: boolean,
+    ///     iconPath: string,
     /// }
     ///
     /// type BluetoothMajor = "Miscellaneous" | "Computer" | "Phone" | "NetworkAccessPoint" | "AudioVideo" | "Peripheral" | "Imaging" | "Wearable" | "Toy" | "Health" | "Unkown";
@@ -295,6 +319,7 @@ pub enum ToolbarItem {
     Generic(GenericToolbarItem),
     Date(DateToolbarItem),
     Power(PowerToolbarItem),
+    Keyboard(KeyboardToolbarItem),
     Network(NetworkToolbarItem),
     Bluetooth(BluetoothToolbarItem),
     Media(MediaToolbarItem),
@@ -313,6 +338,7 @@ impl ToolbarItem {
             ToolbarItem::Generic(item) => item.id.clone(),
             ToolbarItem::Date(item) => item.id.clone(),
             ToolbarItem::Power(item) => item.id.clone(),
+            ToolbarItem::Keyboard(item) => item.id.clone(),
             ToolbarItem::Network(item) => item.id.clone(),
             ToolbarItem::Bluetooth(item) => item.id.clone(),
             ToolbarItem::Media(item) => item.id.clone(),
@@ -331,6 +357,7 @@ impl ToolbarItem {
             ToolbarItem::Generic(item) => item.id = id,
             ToolbarItem::Date(item) => item.id = id,
             ToolbarItem::Power(item) => item.id = id,
+            ToolbarItem::Keyboard(item) => item.id = id,
             ToolbarItem::Network(item) => item.id = id,
             ToolbarItem::Bluetooth(item) => item.id = id,
             ToolbarItem::Media(item) => item.id = id,

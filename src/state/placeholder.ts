@@ -23,6 +23,7 @@ const ToolbarModuleType = enumFromUnion<ToolbarItem['type']>({
   Generic: 'generic',
   Date: 'date',
   Power: 'power',
+  Keyboard: 'keyboard',
   Network: 'network',
   Bluetooth: 'bluetooth',
   Media: 'media',
