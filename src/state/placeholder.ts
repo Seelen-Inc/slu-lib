@@ -24,6 +24,7 @@ const ToolbarModuleType = enumFromUnion<ToolbarItem['type']>({
   Date: 'date',
   Power: 'power',
   Network: 'network',
+  Bluetooth: 'bluetooth',
   Media: 'media',
   Tray: 'tray',
   User: 'user',

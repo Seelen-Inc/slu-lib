@@ -59,7 +59,6 @@ slu_commands_declaration! {
     SystemGetMonitors = get_connected_monitors,
     SystemGetColors = get_system_colors,
     SystemGetLanguages = get_system_languages,
-    SystemSetKeyboardLayout = set_system_keyboard_layout,
 
     // Seelen Settings
     SetAutoStart = set_auto_start,
@@ -87,6 +86,16 @@ slu_commands_declaration! {
     GetUserFolderContent = get_user_folder_content,
     SetUserFolderLimit = set_user_folder_limit,
 
+    //Bluetooth
+    GetConnectedBluetoothDevices = get_connected_bluetooth_devices,
+    GetBluetoothRadioState = get_bluetooth_radio_state,
+    SetBluetoothRadioState = set_bluetooth_radio_state,
+    StartBluetoothScanning = start_bluetooth_scanning,
+    StopBluetoothScanning = stop_bluetooth_scanning,
+    PairBluetoothDevice = pair_bluetooth_device,
+    ForgetBluetoothDevice = forget_bluetooth_device,
+    ConfirmBluetoothDevicePair = confirm_bluetooth_device_pair,
+
     // Media
     MediaPrev = media_prev,
     MediaTogglePlayPause = media_toggle_play_pause,
@@ -100,9 +109,6 @@ slu_commands_declaration! {
     SetMainMonitorBrightness = set_main_monitor_brightness,
 
     // Power
-    GetPowerStatus = get_power_status,
-    GetPowerMode = get_power_mode,
-    GetBatteries = get_batteries,
     LogOut = log_out,
     Suspend = suspend,
     Restart = restart,

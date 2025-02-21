@@ -40,6 +40,12 @@ slu_events_declaration! {
     UserChanged = "user-changed",
     UserFolderChanged = "user-folder-changed",
 
+    BluetoothRadioStateChanged = "bluetooth-radio-state-changed",
+    BluetoothDevicesChanged = "bluetooth-devices-changed",
+    BluetoothDiscoveredDevicesChanged = "bluetooth-discovered-devices-changed",
+    BluetoothPairShowPin = "bluetooth-pair-show-pin",
+    BluetoothPairRequestPin = "bluetooth-pair-request-pin",
+
     MediaSessions = "media-sessions",
     MediaInputs = "media-inputs",
     MediaOutputs = "media-outputs",
