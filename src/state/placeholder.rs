@@ -188,6 +188,46 @@ common_item! {
     /// ```
     struct KeyboardToolbarItem {}
 
+    /// ## Bluetooth Item Scope
+    /// ```ts
+    /// interface BluetoothDevice
+    /// {
+    ///     id: string,
+    ///     name: string,
+    ///     address: bigint,
+    ///     majorClass: BluetoothMajor,
+    ///     minorMainClass: BluetoothMinor,
+    ///     minorSubClass: BluetoothMinor,
+    ///     connected: boolean,
+    ///     paired: boolean,
+    ///     canPair: boolean,
+    ///     isBluetoothLoweenergy: boolean,
+    ///     iconPath: string,
+    /// }
+    ///
+    /// type BluetoothMajor = "Miscellaneous" | "Computer" | "Phone" | "NetworkAccessPoint" | "AudioVideo" | "Peripheral" | "Imaging" | "Wearable" | "Toy" | "Health" | "Unkown";
+    ///
+    /// type BluetoothMinor = "Uncategorized" | "ComputerDesktop" | "ComputerServer" | "ComputerLaptop" | "ComputerHandheld" | "ComputerPalmSize" | "ComputerWearable" | "ComputerTablet"
+    ///     | "PhoneCellular" | "PhoneCordless" | "PhoneSmartPhone" | "PhoneWired" | "PhoneIsdn" | "NetworkFullyAvailable" | "NetworkUsed01To17Percent" | "NetworkUsed17To33Percent" | "NetworkUsed33To50Percent"
+    ///     | "NetworkUsed50To67Percent" | "NetworkUsed67To83Percent" | "NetworkUsed83To99Percent" | "NetworkNoServiceAvailable" | "AudioVideoWearableHeadset" | "AudioVideoHandsFree" | "AudioVideoMicrophone"
+    ///     | "AudioVideoLoudspeaker" | "AudioVideoHeadphones" | "AudioVideoPortableAudio" | "AudioVideoCarAudio" | "AudioVideoSetTopBox" | "AudioVideoHifiAudioDevice" | "AudioVideoVcr" | "AudioVideoVideoCamera"
+    ///     | "AudioVideoCamcorder" | "AudioVideoVideoMonitor" | "AudioVideoVideoDisplayAndLoudspeaker" | "AudioVideoVideoConferencing" | "AudioVideoGamingOrToy" | "PeripheralJoystick" | "PeripheralGamepad"
+    ///     | "PeripheralRemoteControl" | "PeripheralSensing" | "PeripheralDigitizerTablet" | "PeripheralCardReader" | "PeripheralDigitalPen" | "PeripheralHandheldScanner" | "PeripheralHandheldGesture"
+    ///     | "WearableWristwatch" | "WearablePager" | "WearableJacket" | "WearableHelmet" | "WearableGlasses" | "ToyRobot" | "ToyVehicle" | "ToyDoll" | "ToyController" | "ToyGame" | "HealthBloodPressureMonitor"
+    ///     | "HealthThermometer" | "HealthWeighingScale" | "HealthGlucoseMeter" | "HealthPulseOximeter" | "HealthHeartRateMonitor" | "HealthHealthDataDisplay" | "HealthStepCounter" | "HealthBodyCompositionAnalyzer"
+    ///     | "HealthPeakFlowMonitor" | "HealthMedicationMonitor" | "HealthKneeProsthesis" | "HealthAnkleProsthesis" | "HealthGenericHealthManager" | "HealthPersonalMobilityDevice" | "PeripheralOther" | "PeripheralPointer"
+    ///     | "PeripheralKeyboard" | "PeripheralKeyboardAndPointer";
+    ///
+    /// const bluetoothState: boolean;
+    /// const devices: BluetoothDevice[];
+    /// const connectedDevices: BluetoothDevice[];
+    /// ```
+    struct BluetoothToolbarItem {
+        /// Show bluetooth selector popup on click]
+        #[serde(default)]
+        with_bluetooth_selector: bool,
+    }
+
     /// ## Network Item Scope
     /// ```ts
     /// interface NetworkInterface {
@@ -284,6 +324,7 @@ pub enum ToolbarItem {
     Power(PowerToolbarItem),
     Keyboard(KeyboardToolbarItem),
     Network(NetworkToolbarItem),
+    Bluetooth(BluetoothToolbarItem),
     Media(MediaToolbarItem),
     User(UserToolbarItem),
     Notifications(NotificationsToolbarItem),
@@ -302,6 +343,7 @@ impl ToolbarItem {
             ToolbarItem::Power(item) => item.id.clone(),
             ToolbarItem::Keyboard(item) => item.id.clone(),
             ToolbarItem::Network(item) => item.id.clone(),
+            ToolbarItem::Bluetooth(item) => item.id.clone(),
             ToolbarItem::Media(item) => item.id.clone(),
             ToolbarItem::User(item) => item.id.clone(),
             ToolbarItem::Notifications(item) => item.id.clone(),
@@ -320,6 +362,7 @@ impl ToolbarItem {
             ToolbarItem::Power(item) => item.id = id,
             ToolbarItem::Keyboard(item) => item.id = id,
             ToolbarItem::Network(item) => item.id = id,
+            ToolbarItem::Bluetooth(item) => item.id = id,
             ToolbarItem::Media(item) => item.id = id,
             ToolbarItem::User(item) => item.id = id,
             ToolbarItem::Notifications(item) => item.id = id,
