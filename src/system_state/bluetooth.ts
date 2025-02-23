@@ -39,7 +39,6 @@ declare global {
     [SeelenEvent.BluetoothDiscoveredDevicesChanged]: BluetoothDevice[];
     [SeelenEvent.BluetoothPairShowPin]: BluetoothDevicePairShowPinRequest;
     [SeelenEvent.BluetoothPairRequestPin]: void;
-    [SeelenEvent.BluetoothPairResult]: boolean;
   }
 }
 
@@ -184,3 +183,5 @@ const BluetoothMinor = enumFromUnion<BluetoothMinor>({
   PeripheralKeyboard: 'PeripheralKeyboard',
   PeripheralKeyboardAndPointer: 'PeripheralKeyboardAndPointer',
 });
+
+export { BluetoothMajor, BluetoothMinor };
