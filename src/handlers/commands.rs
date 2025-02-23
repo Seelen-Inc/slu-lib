@@ -56,6 +56,7 @@ slu_commands_declaration! {
     // Restart the app after install the update so it returns a promise resolved with `never`
     InstallLastAvailableUpdate = install_last_available_update,
 
+    SystemGetForegroundWindowColor = get_foreground_window_color,
     SystemGetMonitors = get_connected_monitors,
     SystemGetColors = get_system_colors,
     SystemGetLanguages = get_system_languages,

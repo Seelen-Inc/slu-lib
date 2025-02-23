@@ -167,13 +167,16 @@ common_item! {
     /// ```ts
     /// interface KeyboardLayout {
     ///   id: string;
+    ///   handle: string;
     ///   displayName: string;
     ///   active: boolean;
     /// }
     ///
     /// interface SystemLanguage {
+    ///   id: string;
     ///   code: string;
     ///   name: string;
+    ///   nativeName: string;
     ///   inputMethods: KeyboardLayout[];
     /// }
     ///

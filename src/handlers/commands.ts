@@ -15,6 +15,7 @@ export enum SeelenCommand {
   SimulateFullscreen = 'simulate_fullscreen',
   CheckForUpdates = 'check_for_updates',
   InstallLastAvailableUpdate = 'install_last_available_update',
+  SystemGetForegroundWindowColor = 'get_foreground_window_color',
   SystemGetMonitors = 'get_connected_monitors',
   SystemGetColors = 'get_system_colors',
   SystemGetLanguages = 'get_system_languages',

@@ -35,7 +35,6 @@ slu_events_declaration! {
 
     SystemMonitorsChanged = "system::monitors-changed",
     SystemLanguagesChanged = "system::languages-changed",
-    SystemKeyboardLayoutChanged = "system::keyboard-layout-changed",
 
     UserChanged = "user-changed",
     UserFolderChanged = "user-folder-changed",
