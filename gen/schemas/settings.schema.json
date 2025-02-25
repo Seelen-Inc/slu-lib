@@ -388,7 +388,7 @@
           "height": 30,
           "hideMode": "Never",
           "position": "Top",
-          "useMultiMonitorOverlapLogic": false
+          "showHibernateButton": false
         },
         "@seelen/launcher": {
           "enabled": false,
@@ -429,7 +429,6 @@
           "spaceBetweenItems": 8,
           "temporalItemsVisibility": "All",
           "thumbnailGenerationEnabled": true,
-          "useMultiMonitorOverlapLogic": false,
           "visibleSeparators": true,
           "zoomSize": 70
         },
@@ -1465,8 +1464,8 @@
             }
           ]
         },
-        "useMultiMonitorOverlapLogic": {
-          "description": "enables the logic which persists last overlapped HWND to enchance multimonitor overlap feature",
+        "showHibernateButton": {
+          "description": "show the hibernate button on power menu",
           "default": false,
           "type": "boolean"
         }
@@ -1888,11 +1887,6 @@
         "thumbnailGenerationEnabled": {
           "description": "Decides whether the application hoover should generate thumbnails or just list the names instead",
           "default": true,
-          "type": "boolean"
-        },
-        "useMultiMonitorOverlapLogic": {
-          "description": "enables the logic which persists last overlapped HWND to enchance multimonitor overlap feature",
-          "default": false,
           "type": "boolean"
         },
         "visibleSeparators": {

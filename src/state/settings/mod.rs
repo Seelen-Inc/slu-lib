@@ -35,12 +35,12 @@ pub struct FancyToolbarSettings {
     pub position: FancyToolbarSide,
     /// hide mode
     pub hide_mode: HideMode,
-    /// enables the logic which persists last overlapped HWND to enchance multimonitor overlap feature
-    pub use_multi_monitor_overlap_logic: bool,
     /// delay to show the toolbar on Mouse Hover in milliseconds
     pub delay_to_show: u32,
     /// delay to hide the toolbar on Mouse Leave in milliseconds
     pub delay_to_hide: u32,
+    /// show the hibernate button on power menu
+    pub show_hibernate_button: bool,
 }
 
 impl Default for FancyToolbarSettings {
@@ -50,9 +50,9 @@ impl Default for FancyToolbarSettings {
             height: 30,
             position: FancyToolbarSide::Top,
             hide_mode: HideMode::Never,
-            use_multi_monitor_overlap_logic: false,
             delay_to_show: 100,
             delay_to_hide: 800,
+            show_hibernate_button: false,
         }
     }
 }
@@ -121,8 +121,6 @@ pub struct SeelenWegSettings {
     pub pinned_items_visibility: WegPinnedItemsVisibility,
     /// Dock position
     pub position: SeelenWegSide,
-    /// enables the logic which persists last overlapped HWND to enchance multimonitor overlap feature
-    pub use_multi_monitor_overlap_logic: bool,
     /// Decides whether the application hoover should generate thumbnails or just list the names instead
     pub thumbnail_generation_enabled: bool,
     /// enable or disable the instance counter visibility on weg instance
@@ -152,7 +150,6 @@ impl Default for SeelenWegSettings {
             mode: SeelenWegMode::MinContent,
             hide_mode: HideMode::OnOverlap,
             position: SeelenWegSide::Bottom,
-            use_multi_monitor_overlap_logic: false,
             thumbnail_generation_enabled: true,
             visible_separators: true,
             show_instance_counter: true,

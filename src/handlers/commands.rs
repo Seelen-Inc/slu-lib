@@ -98,6 +98,8 @@ slu_commands_declaration! {
     ConfirmBluetoothDevicePair = confirm_bluetooth_device_pair,
 
     // Media
+    GetMediaDevices = get_media_devices,
+    GetMediaSessions = get_media_sessions,
     MediaPrev = media_prev,
     MediaTogglePlayPause = media_toggle_play_pause,
     MediaNext = media_next,
@@ -112,6 +114,7 @@ slu_commands_declaration! {
     // Power
     LogOut = log_out,
     Suspend = suspend,
+    Hibernate = hibernate,
     Restart = restart,
     Shutdown = shutdown,
     Lock = lock,
