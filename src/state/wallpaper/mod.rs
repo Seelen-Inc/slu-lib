@@ -64,11 +64,11 @@ impl SluResource for Wallpaper {
 
 impl Wallpaper {
     /// https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types
-    const SUPPORTED_IMAGES: [&str; 11] = [
+    pub const SUPPORTED_IMAGES: [&str; 11] = [
         "apng", "avif", "gif", "jpg", "jpeg", "png", "svg", "webp", "bmp", "ico", "tiff",
     ];
     /// https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Containers
-    const SUPPORTED_VIDEOS: [&str; 7] = ["mp4", "webm", "ogg", "avi", "mov", "mkv", "mpeg"];
+    pub const SUPPORTED_VIDEOS: [&str; 7] = ["mp4", "webm", "ogg", "avi", "mov", "mkv", "mpeg"];
 
     /// path should be the path to the wallpaper image or video to be moved or copied to the wallpaper folder
     pub fn create_from_file(path: &Path, folder_to_store: &Path, copy: bool) -> Result<Self> {
