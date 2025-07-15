@@ -72,7 +72,7 @@ impl Wallpaper {
 
     /// path should be the path to the wallpaper image or video to be moved or copied to the wallpaper folder
     pub fn create_from_file(path: &Path, folder_to_store: &Path, copy: bool) -> Result<Self> {
-        if !path.exists() || !path.is_dir() {
+        if !path.exists() || path.is_dir() {
             return Err("File does not exist".into());
         }
 
