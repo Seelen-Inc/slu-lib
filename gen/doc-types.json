@@ -29940,9 +29940,9 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-        "line": 34,
+        "line": 35,
         "col": 0,
-        "byteIndex": 1759
+        "byteIndex": 1808
       },
       "declarationKind": "export",
       "kind": "typeAlias",
@@ -29962,9 +29962,9 @@
                     "name": "workspaces-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 35,
-                      "byteIndex": 1794
+                      "byteIndex": 1843
                     },
                     "params": [],
                     "computed": false,
@@ -30004,9 +30004,9 @@
                     "name": "active-workspace-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 87,
-                      "byteIndex": 1846
+                      "byteIndex": 1895
                     },
                     "params": [],
                     "computed": false,
@@ -30037,9 +30037,9 @@
                     "name": "global-focus-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 133,
-                      "byteIndex": 1892
+                      "byteIndex": 1941
                     },
                     "params": [],
                     "computed": false,
@@ -30070,9 +30070,9 @@
                     "name": "global-mouse-move",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 174,
-                      "byteIndex": 1933
+                      "byteIndex": 1982
                     },
                     "params": [],
                     "computed": false,
@@ -30111,9 +30111,9 @@
                     "name": "handle-layered",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 218,
-                      "byteIndex": 1977
+                      "byteIndex": 2026
                     },
                     "params": [],
                     "computed": false,
@@ -30141,9 +30141,9 @@
                     "name": "system::monitors-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 250,
-                      "byteIndex": 2009
+                      "byteIndex": 2058
                     },
                     "params": [],
                     "computed": false,
@@ -30183,9 +30183,9 @@
                     "name": "system::languages-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 307,
-                      "byteIndex": 2066
+                      "byteIndex": 2115
                     },
                     "params": [],
                     "computed": false,
@@ -30225,9 +30225,9 @@
                     "name": "user-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 364,
-                      "byteIndex": 2123
+                      "byteIndex": 2172
                     },
                     "params": [],
                     "computed": false,
@@ -30258,9 +30258,9 @@
                     "name": "user-folder-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 391,
-                      "byteIndex": 2150
+                      "byteIndex": 2199
                     },
                     "params": [],
                     "computed": false,
@@ -30291,9 +30291,9 @@
                     "name": "bluetooth-devices-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 438,
-                      "byteIndex": 2197
+                      "byteIndex": 2246
                     },
                     "params": [],
                     "computed": false,
@@ -30333,9 +30333,9 @@
                     "name": "bluetooth-discovered-devices-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 496,
-                      "byteIndex": 2255
+                      "byteIndex": 2304
                     },
                     "params": [],
                     "computed": false,
@@ -30375,9 +30375,9 @@
                     "name": "bluetooth-pair-show-pin",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 565,
-                      "byteIndex": 2324
+                      "byteIndex": 2373
                     },
                     "params": [],
                     "computed": false,
@@ -30408,9 +30408,9 @@
                     "name": "bluetooth-pair-request-pin",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 632,
-                      "byteIndex": 2391
+                      "byteIndex": 2440
                     },
                     "params": [],
                     "computed": false,
@@ -30438,9 +30438,9 @@
                     "name": "media-sessions",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 673,
-                      "byteIndex": 2432
+                      "byteIndex": 2481
                     },
                     "params": [],
                     "computed": false,
@@ -30480,9 +30480,9 @@
                     "name": "media-inputs",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 716,
-                      "byteIndex": 2475
+                      "byteIndex": 2524
                     },
                     "params": [],
                     "computed": false,
@@ -30522,9 +30522,9 @@
                     "name": "media-outputs",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 757,
-                      "byteIndex": 2516
+                      "byteIndex": 2565
                     },
                     "params": [],
                     "computed": false,
@@ -30564,9 +30564,9 @@
                     "name": "network-default-local-ip",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 799,
-                      "byteIndex": 2558
+                      "byteIndex": 2607
                     },
                     "params": [],
                     "computed": false,
@@ -30594,9 +30594,9 @@
                     "name": "network-adapters",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 840,
-                      "byteIndex": 2599
+                      "byteIndex": 2648
                     },
                     "params": [],
                     "computed": false,
@@ -30636,9 +30636,9 @@
                     "name": "network-internet-connection",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 888,
-                      "byteIndex": 2647
+                      "byteIndex": 2696
                     },
                     "params": [],
                     "computed": false,
@@ -30666,9 +30666,9 @@
                     "name": "wlan-scanned",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 933,
-                      "byteIndex": 2692
+                      "byteIndex": 2741
                     },
                     "params": [],
                     "computed": false,
@@ -30708,9 +30708,9 @@
                     "name": "notifications",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 975,
-                      "byteIndex": 2734
+                      "byteIndex": 2783
                     },
                     "params": [],
                     "computed": false,
@@ -30750,9 +30750,9 @@
                     "name": "power-status",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1021,
-                      "byteIndex": 2780
+                      "byteIndex": 2829
                     },
                     "params": [],
                     "computed": false,
@@ -30783,9 +30783,9 @@
                     "name": "power-mode",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1055,
-                      "byteIndex": 2814
+                      "byteIndex": 2863
                     },
                     "params": [],
                     "computed": false,
@@ -30816,9 +30816,9 @@
                     "name": "batteries-status",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1085,
-                      "byteIndex": 2844
+                      "byteIndex": 2893
                     },
                     "params": [],
                     "computed": false,
@@ -30858,9 +30858,9 @@
                     "name": "colors-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1126,
-                      "byteIndex": 2885
+                      "byteIndex": 2934
                     },
                     "params": [],
                     "computed": false,
@@ -30891,9 +30891,9 @@
                     "name": "tray-info",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1159,
-                      "byteIndex": 2918
+                      "byteIndex": 2967
                     },
                     "params": [],
                     "computed": false,
@@ -30933,9 +30933,9 @@
                     "name": "set-auto-hide",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1194,
-                      "byteIndex": 2953
+                      "byteIndex": 3002
                     },
                     "params": [],
                     "computed": false,
@@ -30963,9 +30963,9 @@
                     "name": "set-auto-hide",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1225,
-                      "byteIndex": 2984
+                      "byteIndex": 3033
                     },
                     "params": [],
                     "computed": false,
@@ -30993,9 +30993,9 @@
                     "name": "weg::instance-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1256,
-                      "byteIndex": 3015
+                      "byteIndex": 3064
                     },
                     "params": [],
                     "computed": false,
@@ -31026,9 +31026,9 @@
                     "name": "set-reservation",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1296,
-                      "byteIndex": 3055
+                      "byteIndex": 3104
                     },
                     "params": [],
                     "computed": false,
@@ -31056,9 +31056,9 @@
                     "name": "wm-force-retiling",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1326,
-                      "byteIndex": 3085
+                      "byteIndex": 3134
                     },
                     "params": [],
                     "computed": false,
@@ -31086,9 +31086,9 @@
                     "name": "wm-set-layout",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1358,
-                      "byteIndex": 3117
+                      "byteIndex": 3166
                     },
                     "params": [],
                     "computed": false,
@@ -31130,9 +31130,9 @@
                     "name": "wm-set-overlay-visibility",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1395,
-                      "byteIndex": 3154
+                      "byteIndex": 3203
                     },
                     "params": [],
                     "computed": false,
@@ -31160,9 +31160,9 @@
                     "name": "wm-set-active-window",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1438,
-                      "byteIndex": 3197
+                      "byteIndex": 3246
                     },
                     "params": [],
                     "computed": false,
@@ -31190,9 +31190,9 @@
                     "name": "wall-stop",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1475,
-                      "byteIndex": 3234
+                      "byteIndex": 3283
                     },
                     "params": [],
                     "computed": false,
@@ -31220,9 +31220,9 @@
                     "name": "popup-content-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1502,
-                      "byteIndex": 3261
+                      "byteIndex": 3310
                     },
                     "params": [],
                     "computed": false,
@@ -31253,9 +31253,9 @@
                     "name": "settings-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1548,
-                      "byteIndex": 3307
+                      "byteIndex": 3356
                     },
                     "params": [],
                     "computed": false,
@@ -31286,9 +31286,9 @@
                     "name": "weg-items",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1583,
-                      "byteIndex": 3342
+                      "byteIndex": 3391
                     },
                     "params": [],
                     "computed": false,
@@ -31319,9 +31319,9 @@
                     "name": "toolbar-items",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1611,
-                      "byteIndex": 3370
+                      "byteIndex": 3419
                     },
                     "params": [],
                     "computed": false,
@@ -31352,9 +31352,9 @@
                     "name": "themes",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1646,
-                      "byteIndex": 3405
+                      "byteIndex": 3454
                     },
                     "params": [],
                     "computed": false,
@@ -31394,9 +31394,9 @@
                     "name": "settings-by-app",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1675,
-                      "byteIndex": 3434
+                      "byteIndex": 3483
                     },
                     "params": [],
                     "computed": false,
@@ -31436,9 +31436,9 @@
                     "name": "history",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1717,
-                      "byteIndex": 3476
+                      "byteIndex": 3525
                     },
                     "params": [],
                     "computed": false,
@@ -31469,9 +31469,9 @@
                     "name": "icon-packs",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1750,
-                      "byteIndex": 3509
+                      "byteIndex": 3558
                     },
                     "params": [],
                     "computed": false,
@@ -31511,9 +31511,9 @@
                     "name": "plugins-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1786,
-                      "byteIndex": 3545
+                      "byteIndex": 3594
                     },
                     "params": [],
                     "computed": false,
@@ -31553,9 +31553,9 @@
                     "name": "widgets-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
+                      "line": 35,
                       "col": 1825,
-                      "byteIndex": 3584
+                      "byteIndex": 3633
                     },
                     "params": [],
                     "computed": false,
@@ -31592,12 +31592,54 @@
                 "methods": [],
                 "properties": [
                   {
+                    "name": "UserResources::wallpapers-changed",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
+                      "line": 35,
+                      "col": 1864,
+                      "byteIndex": 3672
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "Array",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": [
+                          {
+                            "repr": "Wallpaper",
+                            "kind": "typeRef",
+                            "typeRef": {
+                              "typeParams": null,
+                              "typeName": "Wallpaper"
+                            }
+                          }
+                        ],
+                        "typeName": "Array"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
                     "name": "profiles-changed",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenEventPayload.ts",
-                      "line": 34,
-                      "col": 1864,
-                      "byteIndex": 3623
+                      "line": 35,
+                      "col": 1924,
+                      "byteIndex": 3732
                     },
                     "params": [],
                     "computed": false,

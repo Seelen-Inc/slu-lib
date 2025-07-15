@@ -103,5 +103,6 @@ slu_events_declaration! {
     StateIconPacksChanged(Vec<IconPack>) as "icon-packs",
     StatePluginsChanged(Vec<Plugin>) as "plugins-changed",
     StateWidgetsChanged(Vec<Widget>) as "widgets-changed",
+    StateWallpapersChanged(Vec<Wallpaper>) as "UserResources::wallpapers-changed",
     StateProfilesChanged(Vec<Profile>) as "profiles-changed",
 }

@@ -45,5 +45,6 @@ export enum SeelenEvent {
   StateIconPacksChanged = 'icon-packs',
   StatePluginsChanged = 'plugins-changed',
   StateWidgetsChanged = 'widgets-changed',
+  StateWallpapersChanged = 'UserResources::wallpapers-changed',
   StateProfilesChanged = 'profiles-changed',
 }

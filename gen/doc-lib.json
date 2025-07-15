@@ -2636,6 +2636,23 @@
             }
           },
           {
+            "name": "StateWallpapersChanged",
+            "init": {
+              "repr": "UserResources::wallpapers-changed",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "UserResources::wallpapers-changed"
+              }
+            },
+            "location": {
+              "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
+              "line": 48,
+              "col": 2,
+              "byteIndex": 2034
+            }
+          },
+          {
             "name": "StateProfilesChanged",
             "init": {
               "repr": "profiles-changed",
@@ -2647,9 +2664,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 48,
+              "line": 49,
               "col": 2,
-              "byteIndex": 2034
+              "byteIndex": 2098
             }
           }
         ]
