@@ -901,8 +901,8 @@ dependencies = [
 
 [[package]]
 name = "ts-rs"
-version = "10.1.0"
-source = "git+https://github.com/eythaann/ts-rs.git#e09e6894d5520a61333121e2b0c5093edee3904e"
+version = "11.0.1"
+source = "git+https://github.com/eythaann/ts-rs.git#23c229c6cd2b3d2cfba50c2458eef4ce28c008df"
 dependencies = [
  "chrono",
  "serde_json",
@@ -914,8 +914,8 @@ dependencies = [
 
 [[package]]
 name = "ts-rs-macros"
-version = "10.1.0"
-source = "git+https://github.com/eythaann/ts-rs.git#e09e6894d5520a61333121e2b0c5093edee3904e"
+version = "11.0.1"
+source = "git+https://github.com/eythaann/ts-rs.git#23c229c6cd2b3d2cfba50c2458eef4ce28c008df"
 dependencies = [
  "proc-macro2",
  "quote",

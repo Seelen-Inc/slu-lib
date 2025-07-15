@@ -5,10 +5,7 @@ pub mod settings_by_widget;
 pub use settings_by_monitor::*;
 pub use settings_by_widget::*;
 
-use std::{
-    collections::{HashMap, HashSet},
-    path::PathBuf,
-};
+use std::collections::{HashMap, HashSet};
 
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
@@ -18,7 +15,7 @@ use ts_rs::TS;
 use crate::{
     error::Result,
     rect::Rect,
-    resource::{IconPackId, PluginId, ThemeId},
+    resource::{IconPackId, PluginId, ThemeId, WallpaperId},
     state::config::CssVariableName,
 };
 
@@ -328,21 +325,93 @@ impl SeelenLauncherSettings {
 
 // ================= Seelen Wall ================
 
-#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(rename_all = "camelCase")]
-pub struct SeelenWallWallpaper {
-    pub id: String,
-    pub path: PathBuf,
+pub enum ObjectFit {
+    Fill,
+    Contain,
+    #[default]
+    Cover,
+}
+
+#[derive(Debug, Default, Clone, Serialize, Deserialize, JsonSchema, TS)]
+#[serde(rename_all = "camelCase")]
+pub enum ObjectPosition {
+    Top,
+    #[default]
+    Center,
+    Bottom,
+    Left,
+    Right,
+}
+
+#[derive(Debug, Default, Clone, Serialize, Deserialize, JsonSchema, TS)]
+#[serde(rename_all = "kebab-case")]
+pub enum MixBlendMode {
+    Normal,
+    #[default]
+    Multiply,
+    Screen,
+    Overlay,
+    Darken,
+    Lighten,
+    ColorDodge,
+    ColorBurn,
+    HardLight,
+    SoftLight,
+    Difference,
+    Exclusion,
+    Hue,
+    Saturation,
+    Color,
+    Luminosity,
+    PlusDarker,
+    PlusLighter,
+}
+
+#[derive(Debug, Default, Clone, Serialize, Deserialize, JsonSchema, TS)]
+#[serde(rename_all = "camelCase")]
+pub enum PlaybackSpeed {
+    X0_25,
+    X0_5,
+    X0_75,
+    #[default]
+    X1,
+    X1_25,
+    X1_5,
+    X1_75,
+    X2,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
 pub struct SeelenWallSettings {
     pub enabled: bool,
-    pub backgrounds: Vec<SeelenWallWallpaper>,
+    pub backgrounds: Vec<WallpaperId>,
     /// update interval in seconds
     pub interval: u32,
+    /// randomize order
     pub randomize: bool,
+    /// playback speed for video backgrounds
+    pub playback_speed: PlaybackSpeed,
+    /// will flip the image/video vertically
+    pub flip_vertical: bool,
+    /// will flip the image/video horizontally
+    pub flip_horizontal: bool,
+    /// blur factor to apply to the image
+    pub blur: u32,
+    /// method to fill the monitor background
+    pub object_fit: ObjectFit,
+    /// position of the background
+    pub object_position: ObjectPosition,
+    /// number between 0 and 2
+    pub saturation: f32,
+    /// number between 0 and 2
+    pub contrast: f32,
+    /// will overlay the image/video with a color filter
+    pub with_overlay: bool,
+    pub overlay_mix_blend_mode: MixBlendMode,
+    pub overlay_color: String,
 }
 
 impl Default for SeelenWallSettings {
@@ -352,13 +421,18 @@ impl Default for SeelenWallSettings {
             backgrounds: vec![],
             interval: 60,
             randomize: false,
+            playback_speed: PlaybackSpeed::default(),
+            flip_vertical: false,
+            flip_horizontal: false,
+            blur: 0,
+            object_fit: ObjectFit::default(),
+            object_position: ObjectPosition::default(),
+            saturation: 1.0,
+            contrast: 1.0,
+            with_overlay: false,
+            overlay_mix_blend_mode: MixBlendMode::default(),
+            overlay_color: "#ff0000".to_string(),
         }
-    }
-}
-
-impl SeelenWallSettings {
-    pub fn sanitize(&mut self) {
-        self.backgrounds.retain(|b| b.path.exists());
     }
 }
 
@@ -626,7 +700,7 @@ pub struct Settings {
     #[serde(skip_serializing)]
     launcher: Option<SeelenLauncherSettings>,
     /// list of monitors and their configurations
-    pub monitors_v2: HashMap<String, MonitorConfiguration>,
+    pub monitors_v3: HashMap<String, MonitorConfiguration>,
     /// enable or disable ahk
     pub ahk_enabled: bool,
     /// ahk variables
@@ -679,7 +753,7 @@ impl Default for Settings {
             old_active_themes: Vec::new(),
             active_themes: vec!["@default/theme".into()],
             active_icon_packs: vec!["@system/icon-pack".into()],
-            monitors_v2: HashMap::new(),
+            monitors_v3: HashMap::new(),
             ahk_variables: AhkVarList::default(),
             dev_tools: false,
             language: Some(Self::get_system_language()),
@@ -736,7 +810,6 @@ impl Settings {
     }
 
     pub fn sanitize(&mut self) -> Result<()> {
-        self.by_widget.wall.sanitize();
         self.by_widget.launcher.sanitize();
 
         if self.language.is_none() {
@@ -749,10 +822,6 @@ impl Settings {
         // ensure base is always selected
         self.active_icon_packs.insert(0, "@system/icon-pack".into());
         self.dedup_icon_packs();
-
-        for m in self.monitors_v2.values_mut() {
-            m.sanitize()?;
-        }
 
         Ok(())
     }

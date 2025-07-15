@@ -3,12 +3,12 @@ use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use ts_rs::TS;
 
-use crate::{error::Result, rect::Rect, resource::WidgetId, utils::Flatenable};
-
-use super::{
-    SeelenWallWallpaper, ThirdPartyWidgetSettings, WegPinnedItemsVisibility,
-    WegTemporalItemsVisibility,
+use crate::{
+    rect::Rect,
+    resource::{WallpaperId, WidgetId},
 };
+
+use super::{ThirdPartyWidgetSettings, WegPinnedItemsVisibility, WegTemporalItemsVisibility};
 
 #[derive(Clone, Debug, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
@@ -70,7 +70,7 @@ impl Default for WindowManagerSettingsByMonitor {
 #[ts(export)]
 pub struct SeelenWallSettingsByMonitor {
     pub enabled: bool,
-    pub backgrounds: Option<Vec<SeelenWallWallpaper>>,
+    pub backgrounds: Option<Vec<WallpaperId>>,
 }
 
 impl Default for SeelenWallSettingsByMonitor {
@@ -82,92 +82,20 @@ impl Default for SeelenWallSettingsByMonitor {
     }
 }
 
-#[derive(Clone, Debug, Serialize, Deserialize, JsonSchema, TS)]
-#[ts(export)]
-pub enum WorkspaceIdentifierType {
-    #[serde(alias = "name")]
-    Name,
-    #[serde(alias = "index")]
-    Index,
-}
-
-#[derive(Clone, Debug, Serialize, Deserialize, JsonSchema, TS)]
-#[serde(rename_all = "camelCase")]
-#[ts(export)]
-pub struct WorkspaceIdentifier {
-    pub id: String,
-    pub kind: WorkspaceIdentifierType,
-}
-
-#[derive(Clone, Debug, Serialize, Deserialize, JsonSchema, TS)]
-#[serde(rename_all = "camelCase")]
-#[ts(export)]
-pub struct WorkspaceConfiguration {
-    pub identifier: WorkspaceIdentifier,
-    pub layout: Option<String>,
-    pub backgrounds: Option<Vec<SeelenWallWallpaper>>,
-}
-
 #[derive(Clone, Debug, Default, Serialize, Deserialize, JsonSchema, TS)]
-pub struct MonitorSettingsByWidget {
-    #[serde(rename = "@seelen/weg")]
-    pub weg: SeelenWegSettingsByMonitor,
-    #[serde(rename = "@seelen/fancy-toolbar")]
-    pub fancy_toolbar: FancyToolbarSettingsByMonitor,
-    #[serde(rename = "@seelen/window-manager")]
-    pub wm: WindowManagerSettingsByMonitor,
-    #[serde(rename = "@seelen/wallpaper-manager")]
-    pub wall: SeelenWallSettingsByMonitor,
-    #[serde(flatten)]
-    pub others: Flatenable<HashMap<WidgetId, ThirdPartyWidgetSettings>>,
+pub struct MonitorSettingsByWidget(HashMap<WidgetId, ThirdPartyWidgetSettings>);
+
+impl MonitorSettingsByWidget {
+    pub fn is_widget_enabled(&self, widget_id: &WidgetId) -> bool {
+        self.0
+            .get(widget_id)
+            .map_or(true, |settings| settings.enabled)
+    }
 }
 
 #[derive(Clone, Debug, Default, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
 pub struct MonitorConfiguration {
-    /// @deprecated since v2.1.0, will be removed in v3.0.0
-    #[ts(skip)]
-    #[serde(skip_serializing)]
-    tb: Option<FancyToolbarSettingsByMonitor>,
-    /// @deprecated since v2.1.0, will be removed in v3.0.0
-    #[ts(skip)]
-    #[serde(skip_serializing)]
-    weg: Option<SeelenWegSettingsByMonitor>,
-    /// @deprecated since v2.1.0, will be removed in v3.0.0
-    #[ts(skip)]
-    #[serde(skip_serializing)]
-    wm: Option<WindowManagerSettingsByMonitor>,
-    /// @deprecated since v2.1.0, will be removed in v3.0.0
-    #[ts(skip)]
-    #[serde(skip_serializing)]
-    wall: Option<SeelenWallSettingsByMonitor>,
-    // ---
     /// dictionary of settings by widget
     pub by_widget: MonitorSettingsByWidget,
-    /// list of settings by workspace on this monitor
-    pub workspaces_v2: Vec<WorkspaceConfiguration>,
-}
-
-impl MonitorConfiguration {
-    /// Migrate old settings (before v2.1.0) (will be removed in v3.0.0)
-    pub fn migrate(&mut self) -> Result<()> {
-        let dict = &mut self.by_widget;
-        if let Some(tb) = self.tb.take() {
-            dict.fancy_toolbar = tb;
-        }
-        if let Some(weg) = self.weg.take() {
-            dict.weg = weg;
-        }
-        if let Some(wm) = self.wm.take() {
-            dict.wm = wm;
-        }
-        if let Some(wall) = self.wall.take() {
-            dict.wall = wall;
-        }
-        Ok(())
-    }
-
-    pub fn sanitize(&mut self) -> Result<()> {
-        Ok(())
-    }
 }

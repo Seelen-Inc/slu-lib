@@ -1,5 +1,5 @@
 mod resource_id;
-pub use resource_id::{IconPackId, PluginId, ResourceId, ThemeId, WidgetId};
+pub use resource_id::{IconPackId, PluginId, ResourceId, ThemeId, WallpaperId, WidgetId};
 
 use std::{
     collections::HashMap,
@@ -18,7 +18,7 @@ use uuid::Uuid;
 
 use crate::{
     error::Result,
-    state::{IconPack, Plugin, Theme, Widget},
+    state::{IconPack, Plugin, Theme, Wallpaper, Widget},
     utils::{search_for_metadata_file, TsUnknown},
 };
 
@@ -185,6 +185,7 @@ pub enum ConcreteResource {
     Plugin(Plugin),
     IconPack(IconPack),
     Widget(Widget),
+    Wallpaper(Wallpaper),
 }
 
 impl SluResourceFile {

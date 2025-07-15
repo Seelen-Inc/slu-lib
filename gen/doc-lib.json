@@ -4739,43 +4739,6 @@
       "name": "WorkspaceIdentifierType",
       "isDefault": false,
       "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WorkspaceIdentifierType.ts",
-        "line": 3,
-        "col": 0,
-        "byteIndex": 110
-      },
-      "declarationKind": "export",
-      "kind": "typeAlias",
-      "typeAliasDef": {
-        "tsType": {
-          "repr": "",
-          "kind": "union",
-          "union": [
-            {
-              "repr": "Name",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "Name"
-              }
-            },
-            {
-              "repr": "Index",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "Index"
-              }
-            }
-          ]
-        },
-        "typeParams": []
-      }
-    },
-    {
-      "name": "WorkspaceIdentifierType",
-      "isDefault": false,
-      "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/settings/settings_by_monitor.ts",
         "line": 19,
         "col": 6,

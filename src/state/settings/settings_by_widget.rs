@@ -3,10 +3,7 @@ use std::collections::HashMap;
 use schemars::JsonSchema;
 use uuid::Uuid;
 
-use crate::{
-    resource::WidgetId,
-    utils::{Flatenable, TsUnknown},
-};
+use crate::{resource::WidgetId, utils::TsUnknown};
 
 use super::{
     FancyToolbarSettings, SeelenLauncherSettings, SeelenWallSettings, SeelenWegSettings,
@@ -27,7 +24,7 @@ pub struct SettingsByWidget {
     #[serde(rename = "@seelen/launcher")]
     pub launcher: SeelenLauncherSettings,
     #[serde(flatten)]
-    pub others: Flatenable<HashMap<WidgetId, ThirdPartyWidgetSettings>>,
+    pub others: HashMap<WidgetId, ThirdPartyWidgetSettings>,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize, JsonSchema, TS)]
@@ -42,7 +39,7 @@ pub struct ThirdPartyWidgetSettings {
     #[ts(optional = nullable)]
     pub instances: Option<HashMap<Uuid, HashMap<String, TsUnknown>>>,
     #[serde(flatten)]
-    pub rest: Flatenable<HashMap<String, TsUnknown>>,
+    pub rest: HashMap<String, TsUnknown>,
 }
 
 impl Default for ThirdPartyWidgetSettings {

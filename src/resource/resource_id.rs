@@ -162,6 +162,7 @@ resource_id_variant!(PluginId);
 resource_id_variant!(IconPackId);
 resource_id_variant!(ThemeId);
 resource_id_variant!(WidgetId);
+resource_id_variant!(WallpaperId);
 
 impl WidgetId {
     pub fn known_settings() -> Self {
