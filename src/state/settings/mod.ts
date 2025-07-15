@@ -67,7 +67,7 @@ export class Settings {
 
     const root = this.inner.byWidget[widgetId];
     const instance = instanceId ? root?.$instances?.[instanceId] : undefined;
-    const monitor = monitorId ? this.inner.monitorsV2[monitorId]?.byWidget[widgetId] : undefined;
+    const monitor = monitorId ? this.inner.monitorsV3[monitorId]?.byWidget[widgetId] : undefined;
 
     return {
       ...currentWidget.getDefaultConfig(),
