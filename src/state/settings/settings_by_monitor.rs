@@ -89,7 +89,7 @@ impl MonitorSettingsByWidget {
     pub fn is_widget_enabled(&self, widget_id: &WidgetId) -> bool {
         self.0
             .get(widget_id)
-            .map_or(true, |settings| settings.enabled)
+            .is_none_or(|settings| settings.enabled)
     }
 }
 

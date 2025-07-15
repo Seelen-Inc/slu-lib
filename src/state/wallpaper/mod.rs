@@ -83,10 +83,12 @@ impl Wallpaper {
             .to_string();
 
         let resource_name = uuid::Uuid::new_v4();
-        let id = format!("@user/{}", resource_name).into();
-        let mut metadata = ResourceMetadata::default();
-        metadata.display_name = ResourceText::En(filename.clone());
-        metadata.path = folder_to_store.join("metadata.yml");
+        let id = format!("@user/{resource_name}").into();
+        let metadata = ResourceMetadata {
+            display_name: ResourceText::En(filename.clone()),
+            path: folder_to_store.join("metadata.yml"),
+            ..Default::default()
+        };
 
         std::fs::create_dir_all(folder_to_store)?;
         if copy {
