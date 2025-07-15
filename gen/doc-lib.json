@@ -7928,7 +7928,7 @@
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wallpaper/mod.ts",
         "line": 6,
         "col": 0,
-        "byteIndex": 244
+        "byteIndex": 249
       },
       "declarationKind": "export",
       "kind": "class",
@@ -7973,7 +7973,7 @@
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wallpaper/mod.ts",
               "line": 7,
               "col": 2,
-              "byteIndex": 300
+              "byteIndex": 304
             }
           },
           {

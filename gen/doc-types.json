@@ -31943,7 +31943,7 @@
                 "typeParams": []
               },
               {
-                "name": "backgrounds",
+                "name": "backgroundsV2",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
                   "line": 8,
@@ -31981,7 +31981,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
                   "line": 12,
                   "col": 0,
-                  "byteIndex": 508
+                  "byteIndex": 510
                 },
                 "params": [],
                 "computed": false,
@@ -32002,7 +32002,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
                   "line": 16,
                   "col": 0,
-                  "byteIndex": 554
+                  "byteIndex": 556
                 },
                 "params": [],
                 "computed": false,
@@ -32023,7 +32023,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
                   "line": 20,
                   "col": 0,
-                  "byteIndex": 623
+                  "byteIndex": 625
                 },
                 "params": [],
                 "computed": false,
@@ -32047,7 +32047,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
                   "line": 24,
                   "col": 0,
-                  "byteIndex": 702
+                  "byteIndex": 704
                 },
                 "params": [],
                 "computed": false,
@@ -32068,7 +32068,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
                   "line": 28,
                   "col": 0,
-                  "byteIndex": 776
+                  "byteIndex": 778
                 },
                 "params": [],
                 "computed": false,
@@ -32089,7 +32089,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
                   "line": 32,
                   "col": 0,
-                  "byteIndex": 847
+                  "byteIndex": 849
                 },
                 "params": [],
                 "computed": false,
@@ -32110,7 +32110,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
                   "line": 36,
                   "col": 0,
-                  "byteIndex": 911
+                  "byteIndex": 913
                 },
                 "params": [],
                 "computed": false,
@@ -32134,7 +32134,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
                   "line": 40,
                   "col": 0,
-                  "byteIndex": 972
+                  "byteIndex": 974
                 },
                 "params": [],
                 "computed": false,
@@ -32158,7 +32158,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
                   "line": 44,
                   "col": 0,
-                  "byteIndex": 1039
+                  "byteIndex": 1041
                 },
                 "params": [],
                 "computed": false,
@@ -32179,7 +32179,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
                   "line": 48,
                   "col": 0,
-                  "byteIndex": 1094
+                  "byteIndex": 1096
                 },
                 "params": [],
                 "computed": false,
@@ -32200,7 +32200,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
                   "line": 52,
                   "col": 0,
-                  "byteIndex": 1173
+                  "byteIndex": 1175
                 },
                 "params": [],
                 "computed": false,
@@ -32218,7 +32218,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
                   "line": 52,
                   "col": 22,
-                  "byteIndex": 1195
+                  "byteIndex": 1197
                 },
                 "params": [],
                 "computed": false,
@@ -32239,7 +32239,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
                   "line": 52,
                   "col": 57,
-                  "byteIndex": 1230
+                  "byteIndex": 1232
                 },
                 "params": [],
                 "computed": false,
@@ -32297,7 +32297,7 @@
                 "typeParams": []
               },
               {
-                "name": "backgrounds",
+                "name": "backgroundsV2",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettingsByMonitor.ts",
                   "line": 4,

@@ -387,7 +387,7 @@ pub enum PlaybackSpeed {
 #[serde(default, rename_all = "camelCase")]
 pub struct SeelenWallSettings {
     pub enabled: bool,
-    pub backgrounds: Vec<WallpaperId>,
+    pub backgrounds_v2: Vec<WallpaperId>,
     /// update interval in seconds
     pub interval: u32,
     /// randomize order
@@ -418,7 +418,7 @@ impl Default for SeelenWallSettings {
     fn default() -> Self {
         Self {
             enabled: true,
-            backgrounds: vec![],
+            backgrounds_v2: vec![],
             interval: 60,
             randomize: false,
             playback_speed: PlaybackSpeed::default(),

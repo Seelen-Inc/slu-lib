@@ -438,7 +438,7 @@
           ]
         },
         "@seelen/wallpaper-manager": {
-          "backgrounds": [],
+          "backgroundsV2": [],
           "blur": 0,
           "contrast": 1.0,
           "enabled": true,
@@ -1464,7 +1464,7 @@
     "SeelenWallSettings": {
       "type": "object",
       "properties": {
-        "backgrounds": {
+        "backgroundsV2": {
           "type": "array",
           "default": [],
           "items": {
@@ -1711,7 +1711,7 @@
         "@seelen/wallpaper-manager": {
           "$ref": "#/$defs/SeelenWallSettings",
           "default": {
-            "backgrounds": [],
+            "backgroundsV2": [],
             "blur": 0,
             "contrast": 1.0,
             "enabled": true,

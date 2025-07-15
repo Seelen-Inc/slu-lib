@@ -70,14 +70,14 @@ impl Default for WindowManagerSettingsByMonitor {
 #[ts(export)]
 pub struct SeelenWallSettingsByMonitor {
     pub enabled: bool,
-    pub backgrounds: Option<Vec<WallpaperId>>,
+    pub backgrounds_v2: Option<Vec<WallpaperId>>,
 }
 
 impl Default for SeelenWallSettingsByMonitor {
     fn default() -> Self {
         Self {
             enabled: true,
-            backgrounds: None,
+            backgrounds_v2: None,
         }
     }
 }
