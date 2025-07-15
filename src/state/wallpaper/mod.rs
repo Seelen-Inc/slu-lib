@@ -44,13 +44,7 @@ impl SluResource for Wallpaper {
                 _ => return Err("Resource file is not a wallpaper".into()),
             },
             _ => {
-                if Wallpaper::SUPPORTED_IMAGES.contains(&extension.as_ref())
-                    || Wallpaper::SUPPORTED_VIDEOS.contains(&extension.as_ref())
-                {
-                    Wallpaper::create_from_file(path, path.parent().ok_or("Invalid path")?, false)?
-                } else {
-                    return Err("Invalid resource path extension".into());
-                }
+                return Err("Invalid wallpaper path extension".into());
             }
         };
         Ok(wallpaper)
@@ -83,7 +77,7 @@ impl Wallpaper {
             .to_string();
 
         let resource_name = uuid::Uuid::new_v4();
-        let id = format!("@user/{resource_name}").into();
+        let id = format!("@user/manual-added_{}", resource_name.as_simple()).into();
         let metadata = ResourceMetadata {
             display_name: ResourceText::En(filename.clone()),
             path: folder_to_store.join("metadata.yml"),
