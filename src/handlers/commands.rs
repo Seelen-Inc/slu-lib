@@ -135,8 +135,6 @@ slu_commands_declaration! {
     StateGetDefaultSettings = state_get_default_settings() -> Settings,
     StateGetDefaultMonitorSettings = state_get_default_monitor_settings() -> MonitorConfiguration,
     StateGetSpecificAppsConfigurations = state_get_specific_apps_configurations() -> Vec<AppConfig> ,
-    StateGetWallpaper = state_get_wallpaper() -> PathBuf,
-    StateSetWallpaper = state_set_wallpaper(path: PathBuf),
     StateGetHistory = state_get_history() -> LauncherHistory,
     StateGetPlugins = state_get_plugins() -> Vec<Plugin>,
     StateGetWidgets = state_get_widgets() -> Vec<Widget>,
@@ -144,6 +142,11 @@ slu_commands_declaration! {
     StateSetCustomIconPack = state_add_icon_to_custom_icon_pack(icon: IconPackEntry),
     StateGetProfiles = state_get_profiles() -> Vec<Profile>,
     StateDeleteCachedIcons = state_delete_cached_icons(),
+    StateRequestWallpaperAddition = state_request_wallpaper_addition(),
+
+    // Shell
+    GetNativeShellWallpaper = get_native_shell_wallpaper() -> PathBuf,
+    SetNativeShellWallpaper = set_native_shell_wallpaper(path: PathBuf),
 
     // User
     GetUser = get_user() -> User,
