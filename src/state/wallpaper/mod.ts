@@ -12,3 +12,18 @@ export class WallpaperList extends List<Wallpaper> {
     return newOnEvent(cb, this, SeelenEvent.StateWallpapersChanged);
   }
 }
+
+export const SUPPORTED_IMAGE_WALLPAPER_EXTENSIONS = [
+  'apng',
+  'avif',
+  'gif',
+  'jpg',
+  'jpeg',
+  'png',
+  'svg',
+  'webp',
+  'bmp',
+  'ico',
+  'tiff',
+];
+export const SUPPORTED_VIDEO_WALLPAPER_EXTENSIONS = ['mp4', 'webm', 'ogg', 'avi', 'mov', 'mkv', 'mpeg'];

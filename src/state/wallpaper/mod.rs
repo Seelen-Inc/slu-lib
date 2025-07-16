@@ -76,8 +76,11 @@ impl Wallpaper {
             .to_string_lossy()
             .to_string();
 
+        // as uuids can start with numbers and resources names can't start with numbers
+        // we prefix the uuid with an 'x'
         let resource_name = uuid::Uuid::new_v4();
-        let id = format!("@user/manual-added_{}", resource_name.as_simple()).into();
+        let id = format!("@user/x{}", resource_name.as_simple()).into();
+
         let metadata = ResourceMetadata {
             display_name: ResourceText::En(filename.clone()),
             path: folder_to_store.join("metadata.yml"),
