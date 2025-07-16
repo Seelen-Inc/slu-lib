@@ -70,11 +70,11 @@ impl Wallpaper {
             return Err("File does not exist".into());
         }
 
-        let filename = path
-            .file_name()
-            .ok_or("Invalid file name")?
-            .to_string_lossy()
-            .to_string();
+        let (Some(filename), Some(ext)) = (path.file_name(), path.extension()) else {
+            return Err("Invalid file name or extension".into());
+        };
+        let filename = filename.to_string_lossy().to_string();
+        let ext = ext.to_string_lossy().to_string();
 
         // as uuids can start with numbers and resources names can't start with numbers
         // we prefix the uuid with an 'x'
@@ -97,7 +97,12 @@ impl Wallpaper {
         let wallpaper = Self {
             id,
             metadata,
-            filename: Some(filename),
+            filename: Some(filename.clone()),
+            thumbnail_filename: if Self::SUPPORTED_IMAGES.contains(&ext.as_str()) {
+                Some(filename)
+            } else {
+                None
+            },
             ..Default::default()
         };
         wallpaper.save()?;
