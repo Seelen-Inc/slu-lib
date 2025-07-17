@@ -1355,13 +1355,13 @@
     "PlaybackSpeed": {
       "type": "string",
       "enum": [
-        "x0_25",
-        "x0_5",
-        "x0_75",
+        "xDot25",
+        "xDot5",
+        "xDot75",
         "x1",
-        "x1_25",
-        "x1_5",
-        "x1_75",
+        "x1Dot25",
+        "x1Dot5",
+        "x1Dot75",
         "x2"
       ]
     },

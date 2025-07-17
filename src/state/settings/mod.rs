@@ -372,14 +372,14 @@ pub enum MixBlendMode {
 #[derive(Debug, Default, Clone, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(rename_all = "camelCase")]
 pub enum PlaybackSpeed {
-    X0_25,
-    X0_5,
-    X0_75,
+    XDot25,
+    XDot5,
+    XDot75,
     #[default]
     X1,
-    X1_25,
-    X1_5,
-    X1_75,
+    X1Dot25,
+    X1Dot5,
+    X1Dot75,
     X2,
 }
 

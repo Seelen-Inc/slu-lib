@@ -8065,6 +8065,54 @@
       }
     },
     {
+      "name": "SUPPORTED_IMAGE_WALLPAPER_EXTENSIONS",
+      "isDefault": false,
+      "location": {
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wallpaper/mod.ts",
+        "line": 16,
+        "col": 13,
+        "byteIndex": 586
+      },
+      "declarationKind": "export",
+      "kind": "variable",
+      "variableDef": {
+        "tsType": {
+          "repr": "",
+          "kind": "array",
+          "array": {
+            "repr": "string",
+            "kind": "keyword",
+            "keyword": "string"
+          }
+        },
+        "kind": "const"
+      }
+    },
+    {
+      "name": "SUPPORTED_VIDEO_WALLPAPER_EXTENSIONS",
+      "isDefault": false,
+      "location": {
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wallpaper/mod.ts",
+        "line": 29,
+        "col": 13,
+        "byteIndex": 747
+      },
+      "declarationKind": "export",
+      "kind": "variable",
+      "variableDef": {
+        "tsType": {
+          "repr": "",
+          "kind": "array",
+          "array": {
+            "repr": "string",
+            "kind": "keyword",
+            "keyword": "string"
+          }
+        },
+        "kind": "const"
+      }
+    },
+    {
       "name": "ConnectedMonitorList",
       "isDefault": false,
       "location": {

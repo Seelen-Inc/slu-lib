@@ -19073,27 +19073,27 @@
           "kind": "union",
           "union": [
             {
-              "repr": "x025",
+              "repr": "xDot25",
               "kind": "literal",
               "literal": {
                 "kind": "string",
-                "string": "x025"
+                "string": "xDot25"
               }
             },
             {
-              "repr": "x05",
+              "repr": "xDot5",
               "kind": "literal",
               "literal": {
                 "kind": "string",
-                "string": "x05"
+                "string": "xDot5"
               }
             },
             {
-              "repr": "x075",
+              "repr": "xDot75",
               "kind": "literal",
               "literal": {
                 "kind": "string",
-                "string": "x075"
+                "string": "xDot75"
               }
             },
             {
@@ -19105,27 +19105,27 @@
               }
             },
             {
-              "repr": "x125",
+              "repr": "x1Dot25",
               "kind": "literal",
               "literal": {
                 "kind": "string",
-                "string": "x125"
+                "string": "x1Dot25"
               }
             },
             {
-              "repr": "x15",
+              "repr": "x1Dot5",
               "kind": "literal",
               "literal": {
                 "kind": "string",
-                "string": "x15"
+                "string": "x1Dot5"
               }
             },
             {
-              "repr": "x175",
+              "repr": "x1Dot75",
               "kind": "literal",
               "literal": {
                 "kind": "string",
-                "string": "x175"
+                "string": "x1Dot75"
               }
             },
             {
