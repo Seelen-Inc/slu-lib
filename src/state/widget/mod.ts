@@ -24,6 +24,10 @@ export class WidgetList extends List<IWidget> {
   static onChange(cb: (user: WidgetList) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.StateWidgetsChanged);
   }
+
+  findById(id: WidgetId): IWidget | undefined {
+    return this.asArray().find((widget) => widget.id === id);
+  }
 }
 
 interface WidgetInformation {
@@ -54,37 +58,46 @@ export class Widget {
     this.def = widget;
     this.webview = getCurrentWebviewWindow();
 
-    const encodedLabel = this.webview.label;
-    const decodedLabel = new TextDecoder().decode(decodeBase64Url(encodedLabel));
-    const [id, query] = decodedLabel.split('?');
-
+    const [id, query] = Widget.getDecodedWebviewLabel();
     const params = new URLSearchParams(query);
     const paramsObj = Object.freeze(Object.fromEntries(params));
 
     this.id = id as WidgetId;
     this.decoded = Object.freeze({
-      label: decodedLabel,
-      rawLabel: encodedLabel,
+      label: `${id}${query ? `?${query}` : ''}`,
       monitorId: paramsObj.monitorId,
       instanceId: paramsObj.instanceId,
       params: Object.freeze(Object.fromEntries(params)),
     });
   }
 
-  static getCurrentWidgetId(): WidgetId {
+  private static getDecodedWebviewLabel(): [WidgetId, string | undefined] {
     const encondedLabel = getCurrentWebviewWindow().label;
     const decodedLabel = new TextDecoder().decode(decodeBase64Url(encondedLabel));
-    const [id] = decodedLabel.split('?');
+    const [id, query] = decodedLabel.split('?');
     if (!id) {
       throw new Error('Missing widget id on webview label');
     }
-    return id as WidgetId;
+    return [id as WidgetId, query];
   }
 
-  static async getCurrentAsync(): Promise<Widget> {
-    const currentWidgetId = this.getCurrentWidgetId();
+  /** Will throw if the library is being used on a non Seelen UI environment */
+  static getCurrentWidgetId(): WidgetId {
+    return this.getCurrent().id;
+  }
+
+  /** Will throw if the library is being used on a non Seelen UI environment */
+  static getCurrent(): Widget {
+    if (!CURRENT_WIDGET) {
+      throw new Error('The library is being used on a non Seelen UI environment');
+    }
+    return CURRENT_WIDGET;
+  }
+
+  private static async getCurrentAsync(): Promise<Widget> {
+    const [currentWidgetId] = this.getDecodedWebviewLabel();
     const list = await WidgetList.getAsync();
-    const widget = list.asArray().find((widget) => widget.id === currentWidgetId);
+    const widget = list.findById(currentWidgetId);
     if (!widget) {
       throw new Error('Current Widget not found');
     }
@@ -185,4 +198,13 @@ export class Widget {
       console.info(`Widget size saved: ${width} ${height}`);
     }, 500));
   }
+}
+
+let CURRENT_WIDGET: Widget | null;
+try {
+  // @ts-ignore the method is private
+  CURRENT_WIDGET = await Widget.getCurrentAsync();
+} catch {
+  CURRENT_WIDGET = null;
+  console.warn('The library is being used on a non Seelen UI environment');
 }

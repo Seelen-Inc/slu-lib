@@ -59,8 +59,8 @@ export class Settings {
    * - the instance patch settings (if apply)
    * - the monitor patch settings (if apply)
    */
-  async getCurrentWidgetConfig(): Promise<ThirdPartyWidgetSettings> {
-    const currentWidget = await Widget.getCurrentAsync();
+  getCurrentWidgetConfig(): ThirdPartyWidgetSettings {
+    const currentWidget = Widget.getCurrent();
 
     const widgetId = currentWidget.id;
     const { monitorId, instanceId } = currentWidget.decoded;
