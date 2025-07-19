@@ -28,7 +28,6 @@ jobs:
           node-version: "20.x"
           registry-url: "https://registry.npmjs.org"
 
-      - run: rustup override set nightly
       - run: rustup --version
 
       - name: Build Rust Bindings (ts-rs)
