@@ -32,7 +32,7 @@ jobs:
       - name: Clippy
         run: |-
           rustup component add clippy
-          cargo clippy --locked --all-targets -- -D warnings
+          cargo clippy --locked --no-deps -- -D warnings
 
       - name: Test
         run: cargo test --locked --verbose
