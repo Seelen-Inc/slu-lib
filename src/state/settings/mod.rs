@@ -392,6 +392,13 @@ pub struct SeelenWallSettings {
     pub interval: u32,
     /// randomize order
     pub randomize: bool,
+    /// settings for each background
+    pub by_background: HashMap<WallpaperId, WallpaperInstanceSettings>,
+}
+
+#[derive(Debug, Default, Clone, Serialize, Deserialize, JsonSchema, TS)]
+#[serde(default, rename_all = "camelCase")]
+pub struct WallpaperInstanceSettings {
     /// playback speed for video backgrounds
     pub playback_speed: PlaybackSpeed,
     /// will flip the image/video vertically
@@ -421,17 +428,7 @@ impl Default for SeelenWallSettings {
             backgrounds_v2: vec![],
             interval: 60,
             randomize: false,
-            playback_speed: PlaybackSpeed::default(),
-            flip_vertical: false,
-            flip_horizontal: false,
-            blur: 0,
-            object_fit: ObjectFit::default(),
-            object_position: ObjectPosition::default(),
-            saturation: 1.0,
-            contrast: 1.0,
-            with_overlay: false,
-            overlay_mix_blend_mode: MixBlendMode::default(),
-            overlay_color: "#ff0000".to_string(),
+            by_background: HashMap::new(),
         }
     }
 }

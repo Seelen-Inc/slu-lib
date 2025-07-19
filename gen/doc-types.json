@@ -31910,9 +31910,9 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-        "line": 8,
+        "line": 5,
         "col": 0,
-        "byteIndex": 383
+        "byteIndex": 244
       },
       "declarationKind": "export",
       "kind": "typeAlias",
@@ -31928,9 +31928,9 @@
                 "name": "enabled",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 8,
+                  "line": 5,
                   "col": 35,
-                  "byteIndex": 418
+                  "byteIndex": 279
                 },
                 "params": [],
                 "computed": false,
@@ -31946,9 +31946,9 @@
                 "name": "backgroundsV2",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 8,
+                  "line": 5,
                   "col": 53,
-                  "byteIndex": 436
+                  "byteIndex": 297
                 },
                 "params": [],
                 "computed": false,
@@ -31979,9 +31979,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 12,
+                  "line": 9,
                   "col": 0,
-                  "byteIndex": 510
+                  "byteIndex": 371
                 },
                 "params": [],
                 "computed": false,
@@ -32000,9 +32000,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 16,
+                  "line": 13,
                   "col": 0,
-                  "byteIndex": 556
+                  "byteIndex": 417
                 },
                 "params": [],
                 "computed": false,
@@ -32015,239 +32015,44 @@
                 "typeParams": []
               },
               {
-                "name": "playbackSpeed",
+                "name": "byBackground",
                 "jsDoc": {
-                  "doc": "playback speed for video backgrounds"
+                  "doc": "settings for each background"
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 20,
+                  "line": 17,
                   "col": 0,
-                  "byteIndex": 625
+                  "byteIndex": 478
                 },
                 "params": [],
                 "computed": false,
                 "optional": false,
                 "tsType": {
-                  "repr": "PlaybackSpeed",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "PlaybackSpeed"
+                  "repr": "",
+                  "kind": "mapped",
+                  "mappedType": {
+                    "typeParam": {
+                      "name": "key",
+                      "constraint": {
+                        "repr": "WallpaperId",
+                        "kind": "typeRef",
+                        "typeRef": {
+                          "typeParams": null,
+                          "typeName": "WallpaperId"
+                        }
+                      }
+                    },
+                    "optional": true,
+                    "tsType": {
+                      "repr": "WallpaperInstanceSettings",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": null,
+                        "typeName": "WallpaperInstanceSettings"
+                      }
+                    }
                   }
-                },
-                "typeParams": []
-              },
-              {
-                "name": "flipVertical",
-                "jsDoc": {
-                  "doc": "will flip the image/video vertically"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 24,
-                  "col": 0,
-                  "byteIndex": 704
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "boolean",
-                  "kind": "keyword",
-                  "keyword": "boolean"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "flipHorizontal",
-                "jsDoc": {
-                  "doc": "will flip the image/video horizontally"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 28,
-                  "col": 0,
-                  "byteIndex": 778
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "boolean",
-                  "kind": "keyword",
-                  "keyword": "boolean"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "blur",
-                "jsDoc": {
-                  "doc": "blur factor to apply to the image"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 32,
-                  "col": 0,
-                  "byteIndex": 849
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "number",
-                  "kind": "keyword",
-                  "keyword": "number"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "objectFit",
-                "jsDoc": {
-                  "doc": "method to fill the monitor background"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 36,
-                  "col": 0,
-                  "byteIndex": 913
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "ObjectFit",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "ObjectFit"
-                  }
-                },
-                "typeParams": []
-              },
-              {
-                "name": "objectPosition",
-                "jsDoc": {
-                  "doc": "position of the background"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 40,
-                  "col": 0,
-                  "byteIndex": 974
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "ObjectPosition",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "ObjectPosition"
-                  }
-                },
-                "typeParams": []
-              },
-              {
-                "name": "saturation",
-                "jsDoc": {
-                  "doc": "number between 0 and 2"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 44,
-                  "col": 0,
-                  "byteIndex": 1041
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "number",
-                  "kind": "keyword",
-                  "keyword": "number"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "contrast",
-                "jsDoc": {
-                  "doc": "number between 0 and 2"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 48,
-                  "col": 0,
-                  "byteIndex": 1096
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "number",
-                  "kind": "keyword",
-                  "keyword": "number"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "withOverlay",
-                "jsDoc": {
-                  "doc": "will overlay the image/video with a color filter"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 52,
-                  "col": 0,
-                  "byteIndex": 1175
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "boolean",
-                  "kind": "keyword",
-                  "keyword": "boolean"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "overlayMixBlendMode",
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 52,
-                  "col": 22,
-                  "byteIndex": 1197
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "MixBlendMode",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "MixBlendMode"
-                  }
-                },
-                "typeParams": []
-              },
-              {
-                "name": "overlayColor",
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenWallSettings.ts",
-                  "line": 52,
-                  "col": 57,
-                  "byteIndex": 1232
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "string",
-                  "kind": "keyword",
-                  "keyword": "string"
                 },
                 "typeParams": []
               }
@@ -40925,6 +40730,270 @@
           "typeRef": {
             "typeParams": null,
             "typeName": "ResourceId"
+          }
+        },
+        "typeParams": []
+      }
+    },
+    {
+      "name": "WallpaperInstanceSettings",
+      "isDefault": false,
+      "location": {
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WallpaperInstanceSettings.ts",
+        "line": 7,
+        "col": 0,
+        "byteIndex": 330
+      },
+      "declarationKind": "export",
+      "kind": "typeAlias",
+      "typeAliasDef": {
+        "tsType": {
+          "repr": "",
+          "kind": "typeLiteral",
+          "typeLiteral": {
+            "constructors": [],
+            "methods": [],
+            "properties": [
+              {
+                "name": "playbackSpeed",
+                "jsDoc": {
+                  "doc": "playback speed for video backgrounds"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WallpaperInstanceSettings.ts",
+                  "line": 11,
+                  "col": 0,
+                  "byteIndex": 421
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "PlaybackSpeed",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "PlaybackSpeed"
+                  }
+                },
+                "typeParams": []
+              },
+              {
+                "name": "flipVertical",
+                "jsDoc": {
+                  "doc": "will flip the image/video vertically"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WallpaperInstanceSettings.ts",
+                  "line": 15,
+                  "col": 0,
+                  "byteIndex": 500
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "boolean",
+                  "kind": "keyword",
+                  "keyword": "boolean"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "flipHorizontal",
+                "jsDoc": {
+                  "doc": "will flip the image/video horizontally"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WallpaperInstanceSettings.ts",
+                  "line": 19,
+                  "col": 0,
+                  "byteIndex": 574
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "boolean",
+                  "kind": "keyword",
+                  "keyword": "boolean"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "blur",
+                "jsDoc": {
+                  "doc": "blur factor to apply to the image"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WallpaperInstanceSettings.ts",
+                  "line": 23,
+                  "col": 0,
+                  "byteIndex": 645
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "number",
+                  "kind": "keyword",
+                  "keyword": "number"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "objectFit",
+                "jsDoc": {
+                  "doc": "method to fill the monitor background"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WallpaperInstanceSettings.ts",
+                  "line": 27,
+                  "col": 0,
+                  "byteIndex": 709
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "ObjectFit",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "ObjectFit"
+                  }
+                },
+                "typeParams": []
+              },
+              {
+                "name": "objectPosition",
+                "jsDoc": {
+                  "doc": "position of the background"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WallpaperInstanceSettings.ts",
+                  "line": 31,
+                  "col": 0,
+                  "byteIndex": 770
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "ObjectPosition",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "ObjectPosition"
+                  }
+                },
+                "typeParams": []
+              },
+              {
+                "name": "saturation",
+                "jsDoc": {
+                  "doc": "number between 0 and 2"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WallpaperInstanceSettings.ts",
+                  "line": 35,
+                  "col": 0,
+                  "byteIndex": 837
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "number",
+                  "kind": "keyword",
+                  "keyword": "number"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "contrast",
+                "jsDoc": {
+                  "doc": "number between 0 and 2"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WallpaperInstanceSettings.ts",
+                  "line": 39,
+                  "col": 0,
+                  "byteIndex": 892
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "number",
+                  "kind": "keyword",
+                  "keyword": "number"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "withOverlay",
+                "jsDoc": {
+                  "doc": "will overlay the image/video with a color filter"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WallpaperInstanceSettings.ts",
+                  "line": 43,
+                  "col": 0,
+                  "byteIndex": 971
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "boolean",
+                  "kind": "keyword",
+                  "keyword": "boolean"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "overlayMixBlendMode",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WallpaperInstanceSettings.ts",
+                  "line": 43,
+                  "col": 22,
+                  "byteIndex": 993
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "MixBlendMode",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "MixBlendMode"
+                  }
+                },
+                "typeParams": []
+              },
+              {
+                "name": "overlayColor",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WallpaperInstanceSettings.ts",
+                  "line": 43,
+                  "col": 57,
+                  "byteIndex": 1028
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "string",
+                  "kind": "keyword",
+                  "keyword": "string"
+                },
+                "typeParams": []
+              }
+            ],
+            "callSignatures": [],
+            "indexSignatures": []
           }
         },
         "typeParams": []

@@ -439,20 +439,10 @@
         },
         "@seelen/wallpaper-manager": {
           "backgroundsV2": [],
-          "blur": 0,
-          "contrast": 1.0,
+          "byBackground": {},
           "enabled": true,
-          "flipHorizontal": false,
-          "flipVertical": false,
           "interval": 60,
-          "objectFit": "cover",
-          "objectPosition": "center",
-          "overlayColor": "#ff0000",
-          "overlayMixBlendMode": "multiply",
-          "playbackSpeed": "x1",
-          "randomize": false,
-          "saturation": 1.0,
-          "withOverlay": false
+          "randomize": false
         },
         "@seelen/weg": {
           "delayToHide": 800,
@@ -1471,32 +1461,17 @@
             "$ref": "#/$defs/WallpaperId"
           }
         },
-        "blur": {
-          "description": "blur factor to apply to the image",
-          "type": "integer",
-          "format": "uint32",
-          "default": 0,
-          "minimum": 0
-        },
-        "contrast": {
-          "description": "number between 0 and 2",
-          "type": "number",
-          "format": "float",
-          "default": 1.0
+        "byBackground": {
+          "description": "settings for each background",
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/WallpaperInstanceSettings"
+          },
+          "default": {}
         },
         "enabled": {
           "type": "boolean",
           "default": true
-        },
-        "flipHorizontal": {
-          "description": "will flip the image/video horizontally",
-          "type": "boolean",
-          "default": false
-        },
-        "flipVertical": {
-          "description": "will flip the image/video vertically",
-          "type": "boolean",
-          "default": false
         },
         "interval": {
           "description": "update interval in seconds",
@@ -1505,42 +1480,8 @@
           "default": 60,
           "minimum": 0
         },
-        "objectFit": {
-          "description": "method to fill the monitor background",
-          "$ref": "#/$defs/ObjectFit",
-          "default": "cover"
-        },
-        "objectPosition": {
-          "description": "position of the background",
-          "$ref": "#/$defs/ObjectPosition",
-          "default": "center"
-        },
-        "overlayColor": {
-          "type": "string",
-          "default": "#ff0000"
-        },
-        "overlayMixBlendMode": {
-          "$ref": "#/$defs/MixBlendMode",
-          "default": "multiply"
-        },
-        "playbackSpeed": {
-          "description": "playback speed for video backgrounds",
-          "$ref": "#/$defs/PlaybackSpeed",
-          "default": "x1"
-        },
         "randomize": {
           "description": "randomize order",
-          "type": "boolean",
-          "default": false
-        },
-        "saturation": {
-          "description": "number between 0 and 2",
-          "type": "number",
-          "format": "float",
-          "default": 1.0
-        },
-        "withOverlay": {
-          "description": "will overlay the image/video with a color filter",
           "type": "boolean",
           "default": false
         }
@@ -1712,20 +1653,10 @@
           "$ref": "#/$defs/SeelenWallSettings",
           "default": {
             "backgroundsV2": [],
-            "blur": 0,
-            "contrast": 1.0,
+            "byBackground": {},
             "enabled": true,
-            "flipHorizontal": false,
-            "flipVertical": false,
             "interval": 60,
-            "objectFit": "cover",
-            "objectPosition": "center",
-            "overlayColor": "#ff0000",
-            "overlayMixBlendMode": "multiply",
-            "playbackSpeed": "x1",
-            "randomize": false,
-            "saturation": 1.0,
-            "withOverlay": false
+            "randomize": false
           }
         },
         "@seelen/weg": {
@@ -1842,6 +1773,68 @@
     "WallpaperId": {
       "description": "Visual id composed of the creator username and the resource name. e.g. `@username/resource-name`",
       "$ref": "#/$defs/ResourceId"
+    },
+    "WallpaperInstanceSettings": {
+      "type": "object",
+      "properties": {
+        "blur": {
+          "description": "blur factor to apply to the image",
+          "type": "integer",
+          "format": "uint32",
+          "default": 0,
+          "minimum": 0
+        },
+        "contrast": {
+          "description": "number between 0 and 2",
+          "type": "number",
+          "format": "float",
+          "default": 0.0
+        },
+        "flipHorizontal": {
+          "description": "will flip the image/video horizontally",
+          "type": "boolean",
+          "default": false
+        },
+        "flipVertical": {
+          "description": "will flip the image/video vertically",
+          "type": "boolean",
+          "default": false
+        },
+        "objectFit": {
+          "description": "method to fill the monitor background",
+          "$ref": "#/$defs/ObjectFit",
+          "default": "cover"
+        },
+        "objectPosition": {
+          "description": "position of the background",
+          "$ref": "#/$defs/ObjectPosition",
+          "default": "center"
+        },
+        "overlayColor": {
+          "type": "string",
+          "default": ""
+        },
+        "overlayMixBlendMode": {
+          "$ref": "#/$defs/MixBlendMode",
+          "default": "multiply"
+        },
+        "playbackSpeed": {
+          "description": "playback speed for video backgrounds",
+          "$ref": "#/$defs/PlaybackSpeed",
+          "default": "x1"
+        },
+        "saturation": {
+          "description": "number between 0 and 2",
+          "type": "number",
+          "format": "float",
+          "default": 0.0
+        },
+        "withOverlay": {
+          "description": "will overlay the image/video with a color filter",
+          "type": "boolean",
+          "default": false
+        }
+      }
     },
     "WegPinnedItemsVisibility": {
       "type": "string",
