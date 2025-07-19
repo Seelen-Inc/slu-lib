@@ -1,12 +1,11 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/hook.sh"
 
-deno check ./src/lib.ts
-deno fmt --check
+deno check
 deno lint
+deno fmt --check
 
 cargo fmt -- --check
-cargo clippy -- -D warnings
+cargo clippy --no-deps -- -D warnings
 # cargo test # we skip this cuz cargo test generate files
 
 deno test
