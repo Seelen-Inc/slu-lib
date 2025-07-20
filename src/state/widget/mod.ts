@@ -200,11 +200,11 @@ export class Widget {
   }
 }
 
-let CURRENT_WIDGET: Widget | null;
-try {
-  // @ts-ignore the method is private
-  CURRENT_WIDGET = await Widget.getCurrentAsync();
-} catch {
+let CURRENT_WIDGET: Widget | null = null;
+// @ts-ignore the method is private
+Widget.getCurrentAsync().then((w) => {
+  CURRENT_WIDGET = w;
+}).catch(() => {
   CURRENT_WIDGET = null;
   console.warn('The library is being used on a non Seelen UI environment');
-}
+});
