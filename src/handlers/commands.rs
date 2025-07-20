@@ -124,6 +124,10 @@ slu_commands_declaration! {
     SystemSetKeyboardLayout = set_system_keyboard_layout(id: String, handle: String),
 
     // Seelen Settings
+    StateGetDefaultSettings = state_get_default_settings() -> Settings,
+    StateGetDefaultMonitorSettings = state_get_default_monitor_settings() -> MonitorConfiguration,
+    StateGetDefaultWallpaperSettings = state_get_default_wallpaper_settings() -> WallpaperInstanceSettings,
+
     SetAutoStart = set_auto_start(enabled: bool),
     GetAutoStartStatus = get_auto_start_status() -> bool,
     StateGetThemes = state_get_themes() -> Vec<Theme>,
@@ -132,8 +136,6 @@ slu_commands_declaration! {
     StateGetToolbarItems = state_get_toolbar_items() -> Placeholder,
     StateGetSettings = state_get_settings(path: Option<PathBuf>) -> Settings,
     StateWriteSettings = state_write_settings(settings: Settings),
-    StateGetDefaultSettings = state_get_default_settings() -> Settings,
-    StateGetDefaultMonitorSettings = state_get_default_monitor_settings() -> MonitorConfiguration,
     StateGetSpecificAppsConfigurations = state_get_specific_apps_configurations() -> Vec<AppConfig> ,
     StateGetHistory = state_get_history() -> LauncherHistory,
     StateGetPlugins = state_get_plugins() -> Vec<Plugin>,

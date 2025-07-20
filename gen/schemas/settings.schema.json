@@ -1788,7 +1788,7 @@
           "description": "number between 0 and 2",
           "type": "number",
           "format": "float",
-          "default": 0.0
+          "default": 1.0
         },
         "flipHorizontal": {
           "description": "will flip the image/video horizontally",
@@ -1812,11 +1812,11 @@
         },
         "overlayColor": {
           "type": "string",
-          "default": ""
+          "default": "#ff0000"
         },
         "overlayMixBlendMode": {
           "$ref": "#/$defs/MixBlendMode",
-          "default": "multiply"
+          "default": "normal"
         },
         "playbackSpeed": {
           "description": "playback speed for video backgrounds",
@@ -1827,7 +1827,7 @@
           "description": "number between 0 and 2",
           "type": "number",
           "format": "float",
-          "default": 0.0
+          "default": 1.0
         },
         "withOverlay": {
           "description": "will overlay the image/video with a color filter",

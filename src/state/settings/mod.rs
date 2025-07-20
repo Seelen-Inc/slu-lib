@@ -396,7 +396,7 @@ pub struct SeelenWallSettings {
     pub by_background: HashMap<WallpaperId, WallpaperInstanceSettings>,
 }
 
-#[derive(Debug, Default, Clone, Serialize, Deserialize, JsonSchema, TS)]
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
 pub struct WallpaperInstanceSettings {
     /// playback speed for video backgrounds
@@ -419,6 +419,24 @@ pub struct WallpaperInstanceSettings {
     pub with_overlay: bool,
     pub overlay_mix_blend_mode: MixBlendMode,
     pub overlay_color: String,
+}
+
+impl Default for WallpaperInstanceSettings {
+    fn default() -> Self {
+        Self {
+            playback_speed: PlaybackSpeed::X1,
+            flip_vertical: false,
+            flip_horizontal: false,
+            blur: 0,
+            object_fit: ObjectFit::Cover,
+            object_position: ObjectPosition::Center,
+            saturation: 1.0,
+            contrast: 1.0,
+            with_overlay: false,
+            overlay_mix_blend_mode: MixBlendMode::Normal,
+            overlay_color: "#ff0000".to_string(),
+        }
+    }
 }
 
 impl Default for SeelenWallSettings {
