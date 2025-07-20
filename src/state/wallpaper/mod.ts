@@ -31,7 +31,7 @@ export class WallpaperList extends List<IWallpaper> {
   }
 }
 
-export class WallpaperConfiguration extends Wrapper<WallpaperInstanceSettings>() {
+export class WallpaperConfiguration extends Wrapper<WallpaperInstanceSettings> {
   static default(): Promise<WallpaperConfiguration> {
     return newFromInvoke(this, SeelenCommand.StateGetDefaultWallpaperSettings);
   }

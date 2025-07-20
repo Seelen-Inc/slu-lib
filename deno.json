@@ -58,9 +58,6 @@
     "rules": {
       "include": [
         "explicit-function-return-type"
-      ],
-      "exclude": [
-        "no-slow-types"
       ]
     }
   },
