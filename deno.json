@@ -51,9 +51,7 @@
   "lint": {
     "include": [
       "src",
-      "src/types",
-      "scripts",
-      "gen"
+      "scripts"
     ],
     "rules": {
       "include": [

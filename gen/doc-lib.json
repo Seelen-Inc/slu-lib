@@ -8070,13 +8070,61 @@
       }
     },
     {
+      "name": "SUPPORTED_IMAGE_WALLPAPER_EXTENSIONS",
+      "isDefault": false,
+      "location": {
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wallpaper/mod.ts",
+        "line": 8,
+        "col": 13,
+        "byteIndex": 417
+      },
+      "declarationKind": "export",
+      "kind": "variable",
+      "variableDef": {
+        "tsType": {
+          "repr": "",
+          "kind": "array",
+          "array": {
+            "repr": "string",
+            "kind": "keyword",
+            "keyword": "string"
+          }
+        },
+        "kind": "const"
+      }
+    },
+    {
+      "name": "SUPPORTED_VIDEO_WALLPAPER_EXTENSIONS",
+      "isDefault": false,
+      "location": {
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wallpaper/mod.ts",
+        "line": 22,
+        "col": 13,
+        "byteIndex": 579
+      },
+      "declarationKind": "export",
+      "kind": "variable",
+      "variableDef": {
+        "tsType": {
+          "repr": "",
+          "kind": "array",
+          "array": {
+            "repr": "string",
+            "kind": "keyword",
+            "keyword": "string"
+          }
+        },
+        "kind": "const"
+      }
+    },
+    {
       "name": "WallpaperList",
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wallpaper/mod.ts",
-        "line": 6,
+        "line": 24,
         "col": 0,
-        "byteIndex": 249
+        "byteIndex": 672
       },
       "declarationKind": "export",
       "kind": "class",
@@ -8119,9 +8167,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wallpaper/mod.ts",
-              "line": 7,
+              "line": 25,
               "col": 2,
-              "byteIndex": 304
+              "byteIndex": 728
             }
           },
           {
@@ -8191,9 +8239,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wallpaper/mod.ts",
-              "line": 11,
+              "line": 29,
               "col": 2,
-              "byteIndex": 421
+              "byteIndex": 845
             }
           }
         ],
@@ -8202,62 +8250,85 @@
         "typeParams": [],
         "superTypeParams": [
           {
-            "repr": "Wallpaper",
+            "repr": "IWallpaper",
             "kind": "typeRef",
             "typeRef": {
               "typeParams": null,
-              "typeName": "Wallpaper"
+              "typeName": "IWallpaper"
             }
           }
         ]
       }
     },
     {
-      "name": "SUPPORTED_IMAGE_WALLPAPER_EXTENSIONS",
+      "name": "WallpaperConfiguration",
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wallpaper/mod.ts",
-        "line": 16,
-        "col": 13,
-        "byteIndex": 586
+        "line": 34,
+        "col": 0,
+        "byteIndex": 997
       },
       "declarationKind": "export",
-      "kind": "variable",
-      "variableDef": {
-        "tsType": {
-          "repr": "",
-          "kind": "array",
-          "array": {
-            "repr": "string",
-            "kind": "keyword",
-            "keyword": "string"
+      "kind": "class",
+      "classDef": {
+        "isAbstract": false,
+        "constructors": [],
+        "properties": [],
+        "indexSignatures": [],
+        "methods": [
+          {
+            "accessibility": null,
+            "optional": false,
+            "isAbstract": false,
+            "isStatic": true,
+            "name": "default",
+            "kind": "method",
+            "functionDef": {
+              "params": [],
+              "returnType": {
+                "repr": "Promise",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": [
+                    {
+                      "repr": "WallpaperConfiguration",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": null,
+                        "typeName": "WallpaperConfiguration"
+                      }
+                    }
+                  ],
+                  "typeName": "Promise"
+                }
+              },
+              "hasBody": true,
+              "isAsync": false,
+              "isGenerator": false,
+              "typeParams": []
+            },
+            "location": {
+              "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wallpaper/mod.ts",
+              "line": 35,
+              "col": 2,
+              "byteIndex": 1080
+            }
           }
-        },
-        "kind": "const"
-      }
-    },
-    {
-      "name": "SUPPORTED_VIDEO_WALLPAPER_EXTENSIONS",
-      "isDefault": false,
-      "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wallpaper/mod.ts",
-        "line": 29,
-        "col": 13,
-        "byteIndex": 747
-      },
-      "declarationKind": "export",
-      "kind": "variable",
-      "variableDef": {
-        "tsType": {
-          "repr": "",
-          "kind": "array",
-          "array": {
-            "repr": "string",
-            "kind": "keyword",
-            "keyword": "string"
+        ],
+        "extends": "Wrapper",
+        "implements": [],
+        "typeParams": [],
+        "superTypeParams": [
+          {
+            "repr": "WallpaperInstanceSettings",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "WallpaperInstanceSettings"
+            }
           }
-        },
-        "kind": "const"
+        ]
       }
     },
     {
