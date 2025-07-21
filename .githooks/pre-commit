@@ -3,6 +3,7 @@
 deno check
 deno lint
 deno fmt --check
+deno publish --allow-dirty --dry-run
 
 cargo fmt -- --check
 cargo clippy --no-deps -- -D warnings

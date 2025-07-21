@@ -51,11 +51,15 @@
   "lint": {
     "include": [
       "src",
+      "src/types",
       "scripts"
     ],
     "rules": {
       "include": [
         "explicit-function-return-type"
+      ],
+      "exclude": [
+        "no-slow-types"
       ]
     }
   },
