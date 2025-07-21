@@ -1816,7 +1816,7 @@
         },
         "overlayMixBlendMode": {
           "$ref": "#/$defs/MixBlendMode",
-          "default": "normal"
+          "default": "multiply"
         },
         "playbackSpeed": {
           "description": "playback speed for video backgrounds",

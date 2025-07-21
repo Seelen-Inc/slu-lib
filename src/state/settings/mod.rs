@@ -424,16 +424,16 @@ pub struct WallpaperInstanceSettings {
 impl Default for WallpaperInstanceSettings {
     fn default() -> Self {
         Self {
-            playback_speed: PlaybackSpeed::X1,
+            playback_speed: PlaybackSpeed::default(),
             flip_vertical: false,
             flip_horizontal: false,
             blur: 0,
-            object_fit: ObjectFit::Cover,
-            object_position: ObjectPosition::Center,
+            object_fit: ObjectFit::default(),
+            object_position: ObjectPosition::default(),
             saturation: 1.0,
             contrast: 1.0,
             with_overlay: false,
-            overlay_mix_blend_mode: MixBlendMode::Normal,
+            overlay_mix_blend_mode: MixBlendMode::default(),
             overlay_color: "#ff0000".to_string(),
         }
     }
