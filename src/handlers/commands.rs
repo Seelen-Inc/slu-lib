@@ -1,5 +1,8 @@
 #[cfg(test)]
-use crate::{rect::Rect, state::*, system_state::*};
+use crate::{
+    rect::Rect, state::by_monitor::MonitorConfiguration,
+    state::by_wallpaper::WallpaperInstanceSettings, state::*, system_state::*,
+};
 #[cfg(test)]
 use std::{collections::HashMap, path::PathBuf};
 

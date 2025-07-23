@@ -9,4 +9,4 @@ cargo fmt -- --check
 cargo clippy --no-deps -- -D warnings
 # cargo test # we skip this cuz cargo test generate files
 
-deno test
+deno task build:rs

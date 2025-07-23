@@ -398,10 +398,15 @@
       "description": "Custom variables for themes by theme id\n### example\n```json\n{\n    \"@username/themeName\": {\n        \"--css-variable-name\": \"123px\",\n        \"--css-variable-name2\": \"#aabbccaa\",\n    }\n}\n```",
       "type": "object",
       "additionalProperties": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        }
+        "$ref": "#/$defs/ThemeSettings"
+      },
+      "default": {}
+    },
+    "byWallpaper": {
+      "description": "settings for each background",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/WallpaperInstanceSettings"
       },
       "default": {}
     },
@@ -439,7 +444,6 @@
         },
         "@seelen/wallpaper-manager": {
           "backgroundsV2": [],
-          "byBackground": {},
           "enabled": true,
           "interval": 60,
           "randomize": false
@@ -1461,14 +1465,6 @@
             "$ref": "#/$defs/WallpaperId"
           }
         },
-        "byBackground": {
-          "description": "settings for each background",
-          "type": "object",
-          "additionalProperties": {
-            "$ref": "#/$defs/WallpaperInstanceSettings"
-          },
-          "default": {}
-        },
         "enabled": {
           "type": "boolean",
           "default": true
@@ -1653,7 +1649,6 @@
           "$ref": "#/$defs/SeelenWallSettings",
           "default": {
             "backgroundsV2": [],
-            "byBackground": {},
             "enabled": true,
             "interval": 60,
             "randomize": false
@@ -1716,6 +1711,12 @@
     "ThemeId": {
       "description": "Visual id composed of the creator username and the resource name. e.g. `@username/resource-name`",
       "$ref": "#/$defs/ResourceId"
+    },
+    "ThemeSettings": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
     },
     "ThirdPartyWidgetSettings": {
       "type": "object",
