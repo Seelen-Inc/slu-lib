@@ -1,9 +1,8 @@
 /* In this file we use #[serde_alias(SnakeCase)] as backward compatibility from versions below v1.9.8 */
-pub mod settings_by_monitor;
-pub mod settings_by_widget;
-
-pub use settings_by_monitor::*;
-pub use settings_by_widget::*;
+pub mod by_monitor;
+pub mod by_theme;
+pub mod by_wallpaper;
+pub mod by_widget;
 
 use std::collections::{HashMap, HashSet};
 
@@ -16,7 +15,10 @@ use crate::{
     error::Result,
     rect::Rect,
     resource::{IconPackId, PluginId, ThemeId, WallpaperId},
-    state::config::CssVariableName,
+    state::{
+        by_monitor::MonitorConfiguration, by_theme::ThemeSettings,
+        by_wallpaper::WallpaperInstanceSettings, by_widget::SettingsByWidget,
+    },
 };
 
 // ============== Fancy Toolbar Settings ==============
@@ -325,64 +327,6 @@ impl SeelenLauncherSettings {
 
 // ================= Seelen Wall ================
 
-#[derive(Debug, Default, Clone, Serialize, Deserialize, JsonSchema, TS)]
-#[serde(rename_all = "camelCase")]
-pub enum ObjectFit {
-    Fill,
-    Contain,
-    #[default]
-    Cover,
-}
-
-#[derive(Debug, Default, Clone, Serialize, Deserialize, JsonSchema, TS)]
-#[serde(rename_all = "camelCase")]
-pub enum ObjectPosition {
-    Top,
-    #[default]
-    Center,
-    Bottom,
-    Left,
-    Right,
-}
-
-#[derive(Debug, Default, Clone, Serialize, Deserialize, JsonSchema, TS)]
-#[serde(rename_all = "kebab-case")]
-pub enum MixBlendMode {
-    Normal,
-    #[default]
-    Multiply,
-    Screen,
-    Overlay,
-    Darken,
-    Lighten,
-    ColorDodge,
-    ColorBurn,
-    HardLight,
-    SoftLight,
-    Difference,
-    Exclusion,
-    Hue,
-    Saturation,
-    Color,
-    Luminosity,
-    PlusDarker,
-    PlusLighter,
-}
-
-#[derive(Debug, Default, Clone, Serialize, Deserialize, JsonSchema, TS)]
-#[serde(rename_all = "camelCase")]
-pub enum PlaybackSpeed {
-    XDot25,
-    XDot5,
-    XDot75,
-    #[default]
-    X1,
-    X1Dot25,
-    X1Dot5,
-    X1Dot75,
-    X2,
-}
-
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
 pub struct SeelenWallSettings {
@@ -392,51 +336,6 @@ pub struct SeelenWallSettings {
     pub interval: u32,
     /// randomize order
     pub randomize: bool,
-    /// settings for each background
-    pub by_background: HashMap<WallpaperId, WallpaperInstanceSettings>,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
-#[serde(default, rename_all = "camelCase")]
-pub struct WallpaperInstanceSettings {
-    /// playback speed for video backgrounds
-    pub playback_speed: PlaybackSpeed,
-    /// will flip the image/video vertically
-    pub flip_vertical: bool,
-    /// will flip the image/video horizontally
-    pub flip_horizontal: bool,
-    /// blur factor to apply to the image
-    pub blur: u32,
-    /// method to fill the monitor background
-    pub object_fit: ObjectFit,
-    /// position of the background
-    pub object_position: ObjectPosition,
-    /// number between 0 and 2
-    pub saturation: f32,
-    /// number between 0 and 2
-    pub contrast: f32,
-    /// will overlay the image/video with a color filter
-    pub with_overlay: bool,
-    pub overlay_mix_blend_mode: MixBlendMode,
-    pub overlay_color: String,
-}
-
-impl Default for WallpaperInstanceSettings {
-    fn default() -> Self {
-        Self {
-            playback_speed: PlaybackSpeed::default(),
-            flip_vertical: false,
-            flip_horizontal: false,
-            blur: 0,
-            object_fit: ObjectFit::default(),
-            object_position: ObjectPosition::default(),
-            saturation: 1.0,
-            contrast: 1.0,
-            with_overlay: false,
-            overlay_mix_blend_mode: MixBlendMode::default(),
-            overlay_color: "#ff0000".to_string(),
-        }
-    }
 }
 
 impl Default for SeelenWallSettings {
@@ -446,7 +345,6 @@ impl Default for SeelenWallSettings {
             backgrounds_v2: vec![],
             interval: 60,
             randomize: false,
-            by_background: HashMap::new(),
         }
     }
 }
@@ -751,7 +649,9 @@ pub struct Settings {
     ///     }
     /// }
     /// ```
-    pub by_theme: HashMap<ThemeId, HashMap<CssVariableName, String>>,
+    pub by_theme: HashMap<ThemeId, ThemeSettings>,
+    /// settings for each background
+    pub by_wallpaper: HashMap<WallpaperId, WallpaperInstanceSettings>,
 }
 
 impl Default for Settings {
@@ -777,6 +677,7 @@ impl Default for Settings {
             updater: UpdaterSettings::default(),
             by_widget: SettingsByWidget::default(),
             by_theme: HashMap::new(),
+            by_wallpaper: HashMap::new(),
         }
     }
 }
