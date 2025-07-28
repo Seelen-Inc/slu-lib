@@ -113,6 +113,8 @@ slu_commands_declaration! {
     SimulateFullscreen = simulate_fullscreen(),
     ShowDesktop = show_desktop(),
 
+    RequestToUserInputShortcut = request_to_user_input_shortcut(initial: Option<Vec<String>>) -> Option<Vec<String>>,
+
     CheckForUpdates = check_for_updates() -> bool,
     // Restart the app after install the update so it returns a promise resolved with `never`
     InstallLastAvailableUpdate = install_last_available_update(),

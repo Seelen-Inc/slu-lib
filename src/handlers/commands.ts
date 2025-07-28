@@ -14,6 +14,7 @@ export enum SeelenCommand {
   GetIcon = 'get_icon',
   SimulateFullscreen = 'simulate_fullscreen',
   ShowDesktop = 'show_desktop',
+  RequestToUserInputShortcut = 'request_to_user_input_shortcut',
   CheckForUpdates = 'check_for_updates',
   InstallLastAvailableUpdate = 'install_last_available_update',
   TranslateText = 'translate_text',

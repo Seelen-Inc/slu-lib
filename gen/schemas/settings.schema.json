@@ -23,377 +23,6 @@
         "$ref": "#/$defs/ThemeId"
       }
     },
-    "ahkEnabled": {
-      "description": "enable or disable ahk",
-      "type": "boolean",
-      "default": true
-    },
-    "ahkVariables": {
-      "description": "ahk variables",
-      "$ref": "#/$defs/AhkVarList",
-      "default": {
-        "decreaseHeight": {
-          "ahk": "^#!-",
-          "devonly": false,
-          "fancy": "Ctrl + Win + Alt + -",
-          "readonly": false
-        },
-        "decreaseWidth": {
-          "ahk": "#!-",
-          "devonly": false,
-          "fancy": "Win + Alt + -",
-          "readonly": false
-        },
-        "focusBottom": {
-          "ahk": "#!k",
-          "devonly": false,
-          "fancy": "Win + Alt + K",
-          "readonly": false
-        },
-        "focusLatest": {
-          "ahk": "#!u",
-          "devonly": false,
-          "fancy": "Win + Alt + U",
-          "readonly": false
-        },
-        "focusLeft": {
-          "ahk": "#!j",
-          "devonly": false,
-          "fancy": "Win + Alt + J",
-          "readonly": false
-        },
-        "focusRight": {
-          "ahk": "#!l",
-          "devonly": false,
-          "fancy": "Win + Alt + L",
-          "readonly": false
-        },
-        "focusTop": {
-          "ahk": "#!i",
-          "devonly": false,
-          "fancy": "Win + Alt + I",
-          "readonly": false
-        },
-        "increaseHeight": {
-          "ahk": "^#!=",
-          "devonly": false,
-          "fancy": "Ctrl + Win + Alt + =",
-          "readonly": false
-        },
-        "increaseWidth": {
-          "ahk": "#!=",
-          "devonly": false,
-          "fancy": "Win + Alt + =",
-          "readonly": false
-        },
-        "miscOpenSettings": {
-          "ahk": "^#i",
-          "devonly": false,
-          "fancy": "Ctrl + Win + I",
-          "readonly": true
-        },
-        "miscToggleLockTracing": {
-          "ahk": "^#!t",
-          "devonly": true,
-          "fancy": "Ctrl + Win + Alt + T",
-          "readonly": true
-        },
-        "miscToggleWinEventTracing": {
-          "ahk": "^#!l",
-          "devonly": true,
-          "fancy": "Ctrl + Win + Alt + L",
-          "readonly": true
-        },
-        "moveToWorkspace0": {
-          "ahk": "!+1",
-          "devonly": false,
-          "fancy": "Alt + Shift + 1",
-          "readonly": false
-        },
-        "moveToWorkspace1": {
-          "ahk": "!+2",
-          "devonly": false,
-          "fancy": "Alt + Shift + 2",
-          "readonly": false
-        },
-        "moveToWorkspace2": {
-          "ahk": "!+3",
-          "devonly": false,
-          "fancy": "Alt + Shift + 3",
-          "readonly": false
-        },
-        "moveToWorkspace3": {
-          "ahk": "!+4",
-          "devonly": false,
-          "fancy": "Alt + Shift + 4",
-          "readonly": false
-        },
-        "moveToWorkspace4": {
-          "ahk": "!+5",
-          "devonly": false,
-          "fancy": "Alt + Shift + 5",
-          "readonly": false
-        },
-        "moveToWorkspace5": {
-          "ahk": "!+6",
-          "devonly": false,
-          "fancy": "Alt + Shift + 6",
-          "readonly": false
-        },
-        "moveToWorkspace6": {
-          "ahk": "!+7",
-          "devonly": false,
-          "fancy": "Alt + Shift + 7",
-          "readonly": false
-        },
-        "moveToWorkspace7": {
-          "ahk": "!+8",
-          "devonly": false,
-          "fancy": "Alt + Shift + 8",
-          "readonly": false
-        },
-        "moveToWorkspace8": {
-          "ahk": "!+9",
-          "devonly": false,
-          "fancy": "Alt + Shift + 9",
-          "readonly": false
-        },
-        "moveToWorkspace9": {
-          "ahk": "!+0",
-          "devonly": false,
-          "fancy": "Alt + Shift + 0",
-          "readonly": false
-        },
-        "reserveBottom": {
-          "ahk": "#+k",
-          "devonly": false,
-          "fancy": "Win + Shift + K",
-          "readonly": false
-        },
-        "reserveFloat": {
-          "ahk": "#+u",
-          "devonly": false,
-          "fancy": "Win + Shift + U",
-          "readonly": false
-        },
-        "reserveLeft": {
-          "ahk": "#+j",
-          "devonly": false,
-          "fancy": "Win + Shift + J",
-          "readonly": false
-        },
-        "reserveRight": {
-          "ahk": "#+l",
-          "devonly": false,
-          "fancy": "Win + Shift + L",
-          "readonly": false
-        },
-        "reserveStack": {
-          "ahk": "#+o",
-          "devonly": false,
-          "fancy": "Win + Shift + O",
-          "readonly": false
-        },
-        "reserveTop": {
-          "ahk": "#+i",
-          "devonly": false,
-          "fancy": "Win + Shift + I",
-          "readonly": false
-        },
-        "restoreSizes": {
-          "ahk": "#!0",
-          "devonly": false,
-          "fancy": "Win + Alt + 0",
-          "readonly": false
-        },
-        "sendToWorkspace0": {
-          "ahk": "#+1",
-          "devonly": false,
-          "fancy": "Win + Shift + 1",
-          "readonly": false
-        },
-        "sendToWorkspace1": {
-          "ahk": "#+2",
-          "devonly": false,
-          "fancy": "Win + Shift + 2",
-          "readonly": false
-        },
-        "sendToWorkspace2": {
-          "ahk": "#+3",
-          "devonly": false,
-          "fancy": "Win + Shift + 3",
-          "readonly": false
-        },
-        "sendToWorkspace3": {
-          "ahk": "#+4",
-          "devonly": false,
-          "fancy": "Win + Shift + 4",
-          "readonly": false
-        },
-        "sendToWorkspace4": {
-          "ahk": "#+5",
-          "devonly": false,
-          "fancy": "Win + Shift + 5",
-          "readonly": false
-        },
-        "sendToWorkspace5": {
-          "ahk": "#+6",
-          "devonly": false,
-          "fancy": "Win + Shift + 6",
-          "readonly": false
-        },
-        "sendToWorkspace6": {
-          "ahk": "#+7",
-          "devonly": false,
-          "fancy": "Win + Shift + 7",
-          "readonly": false
-        },
-        "sendToWorkspace7": {
-          "ahk": "#+8",
-          "devonly": false,
-          "fancy": "Win + Shift + 8",
-          "readonly": false
-        },
-        "sendToWorkspace8": {
-          "ahk": "#+9",
-          "devonly": false,
-          "fancy": "Win + Shift + 9",
-          "readonly": false
-        },
-        "sendToWorkspace9": {
-          "ahk": "#+0",
-          "devonly": false,
-          "fancy": "Win + Shift + 0",
-          "readonly": false
-        },
-        "startWegApp0": {
-          "ahk": "#1",
-          "devonly": false,
-          "fancy": "Win + 1",
-          "readonly": false
-        },
-        "startWegApp1": {
-          "ahk": "#2",
-          "devonly": false,
-          "fancy": "Win + 2",
-          "readonly": false
-        },
-        "startWegApp2": {
-          "ahk": "#3",
-          "devonly": false,
-          "fancy": "Win + 3",
-          "readonly": false
-        },
-        "startWegApp3": {
-          "ahk": "#4",
-          "devonly": false,
-          "fancy": "Win + 4",
-          "readonly": false
-        },
-        "startWegApp4": {
-          "ahk": "#5",
-          "devonly": false,
-          "fancy": "Win + 5",
-          "readonly": false
-        },
-        "startWegApp5": {
-          "ahk": "#6",
-          "devonly": false,
-          "fancy": "Win + 6",
-          "readonly": false
-        },
-        "startWegApp6": {
-          "ahk": "#7",
-          "devonly": false,
-          "fancy": "Win + 7",
-          "readonly": false
-        },
-        "startWegApp7": {
-          "ahk": "#8",
-          "devonly": false,
-          "fancy": "Win + 8",
-          "readonly": false
-        },
-        "startWegApp8": {
-          "ahk": "#9",
-          "devonly": false,
-          "fancy": "Win + 9",
-          "readonly": false
-        },
-        "startWegApp9": {
-          "ahk": "#0",
-          "devonly": false,
-          "fancy": "Win + 0",
-          "readonly": false
-        },
-        "switchWorkspace0": {
-          "ahk": "!1",
-          "devonly": false,
-          "fancy": "Alt + 1",
-          "readonly": false
-        },
-        "switchWorkspace1": {
-          "ahk": "!2",
-          "devonly": false,
-          "fancy": "Alt + 2",
-          "readonly": false
-        },
-        "switchWorkspace2": {
-          "ahk": "!3",
-          "devonly": false,
-          "fancy": "Alt + 3",
-          "readonly": false
-        },
-        "switchWorkspace3": {
-          "ahk": "!4",
-          "devonly": false,
-          "fancy": "Alt + 4",
-          "readonly": false
-        },
-        "switchWorkspace4": {
-          "ahk": "!5",
-          "devonly": false,
-          "fancy": "Alt + 5",
-          "readonly": false
-        },
-        "switchWorkspace5": {
-          "ahk": "!6",
-          "devonly": false,
-          "fancy": "Alt + 6",
-          "readonly": false
-        },
-        "switchWorkspace6": {
-          "ahk": "!7",
-          "devonly": false,
-          "fancy": "Alt + 7",
-          "readonly": false
-        },
-        "switchWorkspace7": {
-          "ahk": "!8",
-          "devonly": false,
-          "fancy": "Alt + 8",
-          "readonly": false
-        },
-        "switchWorkspace8": {
-          "ahk": "!9",
-          "devonly": false,
-          "fancy": "Alt + 9",
-          "readonly": false
-        },
-        "switchWorkspace9": {
-          "ahk": "!0",
-          "devonly": false,
-          "fancy": "Alt + 0",
-          "readonly": false
-        },
-        "toggleLauncher": {
-          "ahk": "#s",
-          "devonly": false,
-          "fancy": "Win + S",
-          "readonly": true
-        }
-      }
-    },
     "byTheme": {
       "description": "Custom variables for themes by theme id\n### example\n```json\n{\n    \"@username/themeName\": {\n        \"--css-variable-name\": \"123px\",\n        \"--css-variable-name2\": \"#aabbccaa\",\n    }\n}\n```",
       "type": "object",
@@ -568,6 +197,492 @@
       ],
       "writeOnly": true
     },
+    "shortcuts": {
+      "description": "app shortcuts settings",
+      "$ref": "#/$defs/SluShortcutsSettings",
+      "default": {
+        "appCommands": [
+          {
+            "action": "toggle_launcher",
+            "keys": [
+              "Win",
+              "S"
+            ]
+          },
+          {
+            "action": "reserve_top",
+            "keys": [
+              "Win",
+              "Shift",
+              "I"
+            ]
+          },
+          {
+            "action": "reserve_bottom",
+            "keys": [
+              "Win",
+              "Shift",
+              "K"
+            ]
+          },
+          {
+            "action": "reserve_left",
+            "keys": [
+              "Win",
+              "Shift",
+              "J"
+            ]
+          },
+          {
+            "action": "reserve_right",
+            "keys": [
+              "Win",
+              "Shift",
+              "L"
+            ]
+          },
+          {
+            "action": "reserve_float",
+            "keys": [
+              "Win",
+              "Shift",
+              "U"
+            ]
+          },
+          {
+            "action": "reserve_stack",
+            "keys": [
+              "Win",
+              "Shift",
+              "O"
+            ]
+          },
+          {
+            "action": "focus_top",
+            "keys": [
+              "Alt",
+              "I"
+            ]
+          },
+          {
+            "action": "focus_bottom",
+            "keys": [
+              "Alt",
+              "K"
+            ]
+          },
+          {
+            "action": "focus_left",
+            "keys": [
+              "Alt",
+              "J"
+            ]
+          },
+          {
+            "action": "focus_right",
+            "keys": [
+              "Alt",
+              "L"
+            ]
+          },
+          {
+            "action": "increase_width",
+            "keys": [
+              "Win",
+              "Alt",
+              "="
+            ]
+          },
+          {
+            "action": "decrease_width",
+            "keys": [
+              "Win",
+              "Alt",
+              "-"
+            ]
+          },
+          {
+            "action": "increase_height",
+            "keys": [
+              "Win",
+              "Ctrl",
+              "="
+            ]
+          },
+          {
+            "action": "decrease_height",
+            "keys": [
+              "Win",
+              "Ctrl",
+              "-"
+            ]
+          },
+          {
+            "action": "restore_sizes",
+            "keys": [
+              "Win",
+              "Alt",
+              "0"
+            ]
+          },
+          {
+            "action": "move_window_up",
+            "keys": [
+              "Shift",
+              "Alt",
+              "I"
+            ]
+          },
+          {
+            "action": "move_window_down",
+            "keys": [
+              "Shift",
+              "Alt",
+              "K"
+            ]
+          },
+          {
+            "action": "move_window_left",
+            "keys": [
+              "Shift",
+              "Alt",
+              "J"
+            ]
+          },
+          {
+            "action": "move_window_right",
+            "keys": [
+              "Shift",
+              "Alt",
+              "L"
+            ]
+          },
+          {
+            "action": "switch_to_next_workspace",
+            "keys": [
+              "Ctrl",
+              "Win",
+              "Right"
+            ]
+          },
+          {
+            "action": "switch_to_previous_workspace",
+            "keys": [
+              "Ctrl",
+              "Win",
+              "Left"
+            ]
+          },
+          {
+            "action": "destroy_current_workspace",
+            "keys": [
+              "Ctrl",
+              "Win",
+              "F4"
+            ]
+          },
+          {
+            "action": "misc_open_settings",
+            "keys": [
+              "Win",
+              "Shift",
+              "S"
+            ]
+          },
+          {
+            "action": {
+              "switch_workspace": 0
+            },
+            "keys": [
+              "Alt",
+              "1"
+            ]
+          },
+          {
+            "action": {
+              "move_to_workspace": 0
+            },
+            "keys": [
+              "Alt",
+              "Shift",
+              "1"
+            ]
+          },
+          {
+            "action": {
+              "send_to_workspace": 0
+            },
+            "keys": [
+              "Win",
+              "Shift",
+              "1"
+            ]
+          },
+          {
+            "action": {
+              "switch_workspace": 1
+            },
+            "keys": [
+              "Alt",
+              "2"
+            ]
+          },
+          {
+            "action": {
+              "move_to_workspace": 1
+            },
+            "keys": [
+              "Alt",
+              "Shift",
+              "2"
+            ]
+          },
+          {
+            "action": {
+              "send_to_workspace": 1
+            },
+            "keys": [
+              "Win",
+              "Shift",
+              "2"
+            ]
+          },
+          {
+            "action": {
+              "switch_workspace": 2
+            },
+            "keys": [
+              "Alt",
+              "3"
+            ]
+          },
+          {
+            "action": {
+              "move_to_workspace": 2
+            },
+            "keys": [
+              "Alt",
+              "Shift",
+              "3"
+            ]
+          },
+          {
+            "action": {
+              "send_to_workspace": 2
+            },
+            "keys": [
+              "Win",
+              "Shift",
+              "3"
+            ]
+          },
+          {
+            "action": {
+              "switch_workspace": 3
+            },
+            "keys": [
+              "Alt",
+              "4"
+            ]
+          },
+          {
+            "action": {
+              "move_to_workspace": 3
+            },
+            "keys": [
+              "Alt",
+              "Shift",
+              "4"
+            ]
+          },
+          {
+            "action": {
+              "send_to_workspace": 3
+            },
+            "keys": [
+              "Win",
+              "Shift",
+              "4"
+            ]
+          },
+          {
+            "action": {
+              "switch_workspace": 4
+            },
+            "keys": [
+              "Alt",
+              "5"
+            ]
+          },
+          {
+            "action": {
+              "move_to_workspace": 4
+            },
+            "keys": [
+              "Alt",
+              "Shift",
+              "5"
+            ]
+          },
+          {
+            "action": {
+              "send_to_workspace": 4
+            },
+            "keys": [
+              "Win",
+              "Shift",
+              "5"
+            ]
+          },
+          {
+            "action": {
+              "switch_workspace": 5
+            },
+            "keys": [
+              "Alt",
+              "6"
+            ]
+          },
+          {
+            "action": {
+              "move_to_workspace": 5
+            },
+            "keys": [
+              "Alt",
+              "Shift",
+              "6"
+            ]
+          },
+          {
+            "action": {
+              "send_to_workspace": 5
+            },
+            "keys": [
+              "Win",
+              "Shift",
+              "6"
+            ]
+          },
+          {
+            "action": {
+              "switch_workspace": 6
+            },
+            "keys": [
+              "Alt",
+              "7"
+            ]
+          },
+          {
+            "action": {
+              "move_to_workspace": 6
+            },
+            "keys": [
+              "Alt",
+              "Shift",
+              "7"
+            ]
+          },
+          {
+            "action": {
+              "send_to_workspace": 6
+            },
+            "keys": [
+              "Win",
+              "Shift",
+              "7"
+            ]
+          },
+          {
+            "action": {
+              "switch_workspace": 7
+            },
+            "keys": [
+              "Alt",
+              "8"
+            ]
+          },
+          {
+            "action": {
+              "move_to_workspace": 7
+            },
+            "keys": [
+              "Alt",
+              "Shift",
+              "8"
+            ]
+          },
+          {
+            "action": {
+              "send_to_workspace": 7
+            },
+            "keys": [
+              "Win",
+              "Shift",
+              "8"
+            ]
+          },
+          {
+            "action": {
+              "switch_workspace": 8
+            },
+            "keys": [
+              "Alt",
+              "9"
+            ]
+          },
+          {
+            "action": {
+              "move_to_workspace": 8
+            },
+            "keys": [
+              "Alt",
+              "Shift",
+              "9"
+            ]
+          },
+          {
+            "action": {
+              "send_to_workspace": 8
+            },
+            "keys": [
+              "Win",
+              "Shift",
+              "9"
+            ]
+          },
+          {
+            "action": {
+              "switch_workspace": 9
+            },
+            "keys": [
+              "Alt",
+              "0"
+            ]
+          },
+          {
+            "action": {
+              "move_to_workspace": 9
+            },
+            "keys": [
+              "Alt",
+              "Shift",
+              "0"
+            ]
+          },
+          {
+            "action": {
+              "send_to_workspace": 9
+            },
+            "keys": [
+              "Win",
+              "Shift",
+              "0"
+            ]
+          }
+        ],
+        "enabled": true
+      }
+    },
     "updater": {
       "description": "Updater Settings",
       "$ref": "#/$defs/UpdaterSettings",
@@ -606,574 +721,6 @@
     }
   },
   "$defs": {
-    "AhkVar": {
-      "type": "object",
-      "properties": {
-        "ahk": {
-          "type": "string"
-        },
-        "devonly": {
-          "type": "boolean",
-          "default": false
-        },
-        "fancy": {
-          "type": "string"
-        },
-        "readonly": {
-          "type": "boolean",
-          "default": false
-        }
-      },
-      "required": [
-        "fancy",
-        "ahk"
-      ]
-    },
-    "AhkVarList": {
-      "type": "object",
-      "properties": {
-        "decreaseHeight": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "^#!-",
-            "devonly": false,
-            "fancy": "Ctrl + Win + Alt + -",
-            "readonly": false
-          }
-        },
-        "decreaseWidth": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#!-",
-            "devonly": false,
-            "fancy": "Win + Alt + -",
-            "readonly": false
-          }
-        },
-        "focusBottom": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#!k",
-            "devonly": false,
-            "fancy": "Win + Alt + K",
-            "readonly": false
-          }
-        },
-        "focusLatest": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#!u",
-            "devonly": false,
-            "fancy": "Win + Alt + U",
-            "readonly": false
-          }
-        },
-        "focusLeft": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#!j",
-            "devonly": false,
-            "fancy": "Win + Alt + J",
-            "readonly": false
-          }
-        },
-        "focusRight": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#!l",
-            "devonly": false,
-            "fancy": "Win + Alt + L",
-            "readonly": false
-          }
-        },
-        "focusTop": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#!i",
-            "devonly": false,
-            "fancy": "Win + Alt + I",
-            "readonly": false
-          }
-        },
-        "increaseHeight": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "^#!=",
-            "devonly": false,
-            "fancy": "Ctrl + Win + Alt + =",
-            "readonly": false
-          }
-        },
-        "increaseWidth": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#!=",
-            "devonly": false,
-            "fancy": "Win + Alt + =",
-            "readonly": false
-          }
-        },
-        "miscOpenSettings": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "^#i",
-            "devonly": false,
-            "fancy": "Ctrl + Win + I",
-            "readonly": true
-          }
-        },
-        "miscToggleLockTracing": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "^#!t",
-            "devonly": true,
-            "fancy": "Ctrl + Win + Alt + T",
-            "readonly": true
-          }
-        },
-        "miscToggleWinEventTracing": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "^#!l",
-            "devonly": true,
-            "fancy": "Ctrl + Win + Alt + L",
-            "readonly": true
-          }
-        },
-        "moveToWorkspace0": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!+1",
-            "devonly": false,
-            "fancy": "Alt + Shift + 1",
-            "readonly": false
-          }
-        },
-        "moveToWorkspace1": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!+2",
-            "devonly": false,
-            "fancy": "Alt + Shift + 2",
-            "readonly": false
-          }
-        },
-        "moveToWorkspace2": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!+3",
-            "devonly": false,
-            "fancy": "Alt + Shift + 3",
-            "readonly": false
-          }
-        },
-        "moveToWorkspace3": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!+4",
-            "devonly": false,
-            "fancy": "Alt + Shift + 4",
-            "readonly": false
-          }
-        },
-        "moveToWorkspace4": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!+5",
-            "devonly": false,
-            "fancy": "Alt + Shift + 5",
-            "readonly": false
-          }
-        },
-        "moveToWorkspace5": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!+6",
-            "devonly": false,
-            "fancy": "Alt + Shift + 6",
-            "readonly": false
-          }
-        },
-        "moveToWorkspace6": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!+7",
-            "devonly": false,
-            "fancy": "Alt + Shift + 7",
-            "readonly": false
-          }
-        },
-        "moveToWorkspace7": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!+8",
-            "devonly": false,
-            "fancy": "Alt + Shift + 8",
-            "readonly": false
-          }
-        },
-        "moveToWorkspace8": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!+9",
-            "devonly": false,
-            "fancy": "Alt + Shift + 9",
-            "readonly": false
-          }
-        },
-        "moveToWorkspace9": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!+0",
-            "devonly": false,
-            "fancy": "Alt + Shift + 0",
-            "readonly": false
-          }
-        },
-        "reserveBottom": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+k",
-            "devonly": false,
-            "fancy": "Win + Shift + K",
-            "readonly": false
-          }
-        },
-        "reserveFloat": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+u",
-            "devonly": false,
-            "fancy": "Win + Shift + U",
-            "readonly": false
-          }
-        },
-        "reserveLeft": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+j",
-            "devonly": false,
-            "fancy": "Win + Shift + J",
-            "readonly": false
-          }
-        },
-        "reserveRight": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+l",
-            "devonly": false,
-            "fancy": "Win + Shift + L",
-            "readonly": false
-          }
-        },
-        "reserveStack": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+o",
-            "devonly": false,
-            "fancy": "Win + Shift + O",
-            "readonly": false
-          }
-        },
-        "reserveTop": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+i",
-            "devonly": false,
-            "fancy": "Win + Shift + I",
-            "readonly": false
-          }
-        },
-        "restoreSizes": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#!0",
-            "devonly": false,
-            "fancy": "Win + Alt + 0",
-            "readonly": false
-          }
-        },
-        "sendToWorkspace0": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+1",
-            "devonly": false,
-            "fancy": "Win + Shift + 1",
-            "readonly": false
-          }
-        },
-        "sendToWorkspace1": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+2",
-            "devonly": false,
-            "fancy": "Win + Shift + 2",
-            "readonly": false
-          }
-        },
-        "sendToWorkspace2": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+3",
-            "devonly": false,
-            "fancy": "Win + Shift + 3",
-            "readonly": false
-          }
-        },
-        "sendToWorkspace3": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+4",
-            "devonly": false,
-            "fancy": "Win + Shift + 4",
-            "readonly": false
-          }
-        },
-        "sendToWorkspace4": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+5",
-            "devonly": false,
-            "fancy": "Win + Shift + 5",
-            "readonly": false
-          }
-        },
-        "sendToWorkspace5": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+6",
-            "devonly": false,
-            "fancy": "Win + Shift + 6",
-            "readonly": false
-          }
-        },
-        "sendToWorkspace6": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+7",
-            "devonly": false,
-            "fancy": "Win + Shift + 7",
-            "readonly": false
-          }
-        },
-        "sendToWorkspace7": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+8",
-            "devonly": false,
-            "fancy": "Win + Shift + 8",
-            "readonly": false
-          }
-        },
-        "sendToWorkspace8": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+9",
-            "devonly": false,
-            "fancy": "Win + Shift + 9",
-            "readonly": false
-          }
-        },
-        "sendToWorkspace9": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#+0",
-            "devonly": false,
-            "fancy": "Win + Shift + 0",
-            "readonly": false
-          }
-        },
-        "startWegApp0": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#1",
-            "devonly": false,
-            "fancy": "Win + 1",
-            "readonly": false
-          }
-        },
-        "startWegApp1": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#2",
-            "devonly": false,
-            "fancy": "Win + 2",
-            "readonly": false
-          }
-        },
-        "startWegApp2": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#3",
-            "devonly": false,
-            "fancy": "Win + 3",
-            "readonly": false
-          }
-        },
-        "startWegApp3": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#4",
-            "devonly": false,
-            "fancy": "Win + 4",
-            "readonly": false
-          }
-        },
-        "startWegApp4": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#5",
-            "devonly": false,
-            "fancy": "Win + 5",
-            "readonly": false
-          }
-        },
-        "startWegApp5": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#6",
-            "devonly": false,
-            "fancy": "Win + 6",
-            "readonly": false
-          }
-        },
-        "startWegApp6": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#7",
-            "devonly": false,
-            "fancy": "Win + 7",
-            "readonly": false
-          }
-        },
-        "startWegApp7": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#8",
-            "devonly": false,
-            "fancy": "Win + 8",
-            "readonly": false
-          }
-        },
-        "startWegApp8": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#9",
-            "devonly": false,
-            "fancy": "Win + 9",
-            "readonly": false
-          }
-        },
-        "startWegApp9": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#0",
-            "devonly": false,
-            "fancy": "Win + 0",
-            "readonly": false
-          }
-        },
-        "switchWorkspace0": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!1",
-            "devonly": false,
-            "fancy": "Alt + 1",
-            "readonly": false
-          }
-        },
-        "switchWorkspace1": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!2",
-            "devonly": false,
-            "fancy": "Alt + 2",
-            "readonly": false
-          }
-        },
-        "switchWorkspace2": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!3",
-            "devonly": false,
-            "fancy": "Alt + 3",
-            "readonly": false
-          }
-        },
-        "switchWorkspace3": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!4",
-            "devonly": false,
-            "fancy": "Alt + 4",
-            "readonly": false
-          }
-        },
-        "switchWorkspace4": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!5",
-            "devonly": false,
-            "fancy": "Alt + 5",
-            "readonly": false
-          }
-        },
-        "switchWorkspace5": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!6",
-            "devonly": false,
-            "fancy": "Alt + 6",
-            "readonly": false
-          }
-        },
-        "switchWorkspace6": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!7",
-            "devonly": false,
-            "fancy": "Alt + 7",
-            "readonly": false
-          }
-        },
-        "switchWorkspace7": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!8",
-            "devonly": false,
-            "fancy": "Alt + 8",
-            "readonly": false
-          }
-        },
-        "switchWorkspace8": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!9",
-            "devonly": false,
-            "fancy": "Alt + 9",
-            "readonly": false
-          }
-        },
-        "switchWorkspace9": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "!0",
-            "devonly": false,
-            "fancy": "Alt + 0",
-            "readonly": false
-          }
-        },
-        "toggleLauncher": {
-          "$ref": "#/$defs/AhkVar",
-          "default": {
-            "ahk": "#s",
-            "devonly": false,
-            "fancy": "Win + S",
-            "readonly": true
-          }
-        }
-      }
-    },
     "Border": {
       "type": "object",
       "properties": {
@@ -1706,6 +1253,609 @@
       },
       "additionalProperties": {
         "$ref": "#/$defs/ThirdPartyWidgetSettings"
+      }
+    },
+    "SluHotkey": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "$ref": "#/$defs/SluHotkeyAction"
+        },
+        "keys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "action",
+        "keys"
+      ]
+    },
+    "SluHotkeyAction": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "toggle_launcher",
+            "reserve_top",
+            "reserve_bottom",
+            "reserve_left",
+            "reserve_right",
+            "reserve_float",
+            "reserve_stack",
+            "focus_top",
+            "focus_bottom",
+            "focus_left",
+            "focus_right",
+            "increase_width",
+            "decrease_width",
+            "increase_height",
+            "decrease_height",
+            "restore_sizes",
+            "move_window_up",
+            "move_window_down",
+            "move_window_left",
+            "move_window_right",
+            "switch_to_next_workspace",
+            "switch_to_previous_workspace",
+            "destroy_current_workspace",
+            "misc_open_settings",
+            "misc_toggle_lock_tracing",
+            "misc_toggle_win_event_tracing"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "start_weg_app": {
+              "type": "integer",
+              "format": "uint",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "start_weg_app"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "switch_workspace": {
+              "type": "integer",
+              "format": "uint",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "switch_workspace"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "move_to_workspace": {
+              "type": "integer",
+              "format": "uint",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "move_to_workspace"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "send_to_workspace": {
+              "type": "integer",
+              "format": "uint",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "send_to_workspace"
+          ]
+        }
+      ]
+    },
+    "SluShortcutsSettings": {
+      "type": "object",
+      "properties": {
+        "appCommands": {
+          "type": "array",
+          "default": [
+            {
+              "action": "toggle_launcher",
+              "keys": [
+                "Win",
+                "S"
+              ]
+            },
+            {
+              "action": "reserve_top",
+              "keys": [
+                "Win",
+                "Shift",
+                "I"
+              ]
+            },
+            {
+              "action": "reserve_bottom",
+              "keys": [
+                "Win",
+                "Shift",
+                "K"
+              ]
+            },
+            {
+              "action": "reserve_left",
+              "keys": [
+                "Win",
+                "Shift",
+                "J"
+              ]
+            },
+            {
+              "action": "reserve_right",
+              "keys": [
+                "Win",
+                "Shift",
+                "L"
+              ]
+            },
+            {
+              "action": "reserve_float",
+              "keys": [
+                "Win",
+                "Shift",
+                "U"
+              ]
+            },
+            {
+              "action": "reserve_stack",
+              "keys": [
+                "Win",
+                "Shift",
+                "O"
+              ]
+            },
+            {
+              "action": "focus_top",
+              "keys": [
+                "Alt",
+                "I"
+              ]
+            },
+            {
+              "action": "focus_bottom",
+              "keys": [
+                "Alt",
+                "K"
+              ]
+            },
+            {
+              "action": "focus_left",
+              "keys": [
+                "Alt",
+                "J"
+              ]
+            },
+            {
+              "action": "focus_right",
+              "keys": [
+                "Alt",
+                "L"
+              ]
+            },
+            {
+              "action": "increase_width",
+              "keys": [
+                "Win",
+                "Alt",
+                "="
+              ]
+            },
+            {
+              "action": "decrease_width",
+              "keys": [
+                "Win",
+                "Alt",
+                "-"
+              ]
+            },
+            {
+              "action": "increase_height",
+              "keys": [
+                "Win",
+                "Ctrl",
+                "="
+              ]
+            },
+            {
+              "action": "decrease_height",
+              "keys": [
+                "Win",
+                "Ctrl",
+                "-"
+              ]
+            },
+            {
+              "action": "restore_sizes",
+              "keys": [
+                "Win",
+                "Alt",
+                "0"
+              ]
+            },
+            {
+              "action": "move_window_up",
+              "keys": [
+                "Shift",
+                "Alt",
+                "I"
+              ]
+            },
+            {
+              "action": "move_window_down",
+              "keys": [
+                "Shift",
+                "Alt",
+                "K"
+              ]
+            },
+            {
+              "action": "move_window_left",
+              "keys": [
+                "Shift",
+                "Alt",
+                "J"
+              ]
+            },
+            {
+              "action": "move_window_right",
+              "keys": [
+                "Shift",
+                "Alt",
+                "L"
+              ]
+            },
+            {
+              "action": "switch_to_next_workspace",
+              "keys": [
+                "Ctrl",
+                "Win",
+                "Right"
+              ]
+            },
+            {
+              "action": "switch_to_previous_workspace",
+              "keys": [
+                "Ctrl",
+                "Win",
+                "Left"
+              ]
+            },
+            {
+              "action": "destroy_current_workspace",
+              "keys": [
+                "Ctrl",
+                "Win",
+                "F4"
+              ]
+            },
+            {
+              "action": "misc_open_settings",
+              "keys": [
+                "Win",
+                "Shift",
+                "S"
+              ]
+            },
+            {
+              "action": {
+                "switch_workspace": 0
+              },
+              "keys": [
+                "Alt",
+                "1"
+              ]
+            },
+            {
+              "action": {
+                "move_to_workspace": 0
+              },
+              "keys": [
+                "Alt",
+                "Shift",
+                "1"
+              ]
+            },
+            {
+              "action": {
+                "send_to_workspace": 0
+              },
+              "keys": [
+                "Win",
+                "Shift",
+                "1"
+              ]
+            },
+            {
+              "action": {
+                "switch_workspace": 1
+              },
+              "keys": [
+                "Alt",
+                "2"
+              ]
+            },
+            {
+              "action": {
+                "move_to_workspace": 1
+              },
+              "keys": [
+                "Alt",
+                "Shift",
+                "2"
+              ]
+            },
+            {
+              "action": {
+                "send_to_workspace": 1
+              },
+              "keys": [
+                "Win",
+                "Shift",
+                "2"
+              ]
+            },
+            {
+              "action": {
+                "switch_workspace": 2
+              },
+              "keys": [
+                "Alt",
+                "3"
+              ]
+            },
+            {
+              "action": {
+                "move_to_workspace": 2
+              },
+              "keys": [
+                "Alt",
+                "Shift",
+                "3"
+              ]
+            },
+            {
+              "action": {
+                "send_to_workspace": 2
+              },
+              "keys": [
+                "Win",
+                "Shift",
+                "3"
+              ]
+            },
+            {
+              "action": {
+                "switch_workspace": 3
+              },
+              "keys": [
+                "Alt",
+                "4"
+              ]
+            },
+            {
+              "action": {
+                "move_to_workspace": 3
+              },
+              "keys": [
+                "Alt",
+                "Shift",
+                "4"
+              ]
+            },
+            {
+              "action": {
+                "send_to_workspace": 3
+              },
+              "keys": [
+                "Win",
+                "Shift",
+                "4"
+              ]
+            },
+            {
+              "action": {
+                "switch_workspace": 4
+              },
+              "keys": [
+                "Alt",
+                "5"
+              ]
+            },
+            {
+              "action": {
+                "move_to_workspace": 4
+              },
+              "keys": [
+                "Alt",
+                "Shift",
+                "5"
+              ]
+            },
+            {
+              "action": {
+                "send_to_workspace": 4
+              },
+              "keys": [
+                "Win",
+                "Shift",
+                "5"
+              ]
+            },
+            {
+              "action": {
+                "switch_workspace": 5
+              },
+              "keys": [
+                "Alt",
+                "6"
+              ]
+            },
+            {
+              "action": {
+                "move_to_workspace": 5
+              },
+              "keys": [
+                "Alt",
+                "Shift",
+                "6"
+              ]
+            },
+            {
+              "action": {
+                "send_to_workspace": 5
+              },
+              "keys": [
+                "Win",
+                "Shift",
+                "6"
+              ]
+            },
+            {
+              "action": {
+                "switch_workspace": 6
+              },
+              "keys": [
+                "Alt",
+                "7"
+              ]
+            },
+            {
+              "action": {
+                "move_to_workspace": 6
+              },
+              "keys": [
+                "Alt",
+                "Shift",
+                "7"
+              ]
+            },
+            {
+              "action": {
+                "send_to_workspace": 6
+              },
+              "keys": [
+                "Win",
+                "Shift",
+                "7"
+              ]
+            },
+            {
+              "action": {
+                "switch_workspace": 7
+              },
+              "keys": [
+                "Alt",
+                "8"
+              ]
+            },
+            {
+              "action": {
+                "move_to_workspace": 7
+              },
+              "keys": [
+                "Alt",
+                "Shift",
+                "8"
+              ]
+            },
+            {
+              "action": {
+                "send_to_workspace": 7
+              },
+              "keys": [
+                "Win",
+                "Shift",
+                "8"
+              ]
+            },
+            {
+              "action": {
+                "switch_workspace": 8
+              },
+              "keys": [
+                "Alt",
+                "9"
+              ]
+            },
+            {
+              "action": {
+                "move_to_workspace": 8
+              },
+              "keys": [
+                "Alt",
+                "Shift",
+                "9"
+              ]
+            },
+            {
+              "action": {
+                "send_to_workspace": 8
+              },
+              "keys": [
+                "Win",
+                "Shift",
+                "9"
+              ]
+            },
+            {
+              "action": {
+                "switch_workspace": 9
+              },
+              "keys": [
+                "Alt",
+                "0"
+              ]
+            },
+            {
+              "action": {
+                "move_to_workspace": 9
+              },
+              "keys": [
+                "Alt",
+                "Shift",
+                "0"
+              ]
+            },
+            {
+              "action": {
+                "send_to_workspace": 9
+              },
+              "keys": [
+                "Win",
+                "Shift",
+                "0"
+              ]
+            }
+          ],
+          "items": {
+            "$ref": "#/$defs/SluHotkey"
+          }
+        },
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        }
       }
     },
     "ThemeId": {

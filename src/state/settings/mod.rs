@@ -3,6 +3,7 @@ pub mod by_monitor;
 pub mod by_theme;
 pub mod by_wallpaper;
 pub mod by_widget;
+pub mod shortcuts;
 
 use std::collections::{HashMap, HashSet};
 
@@ -18,6 +19,7 @@ use crate::{
     state::{
         by_monitor::MonitorConfiguration, by_theme::ThemeSettings,
         by_wallpaper::WallpaperInstanceSettings, by_widget::SettingsByWidget,
+        shortcuts::SluShortcutsSettings,
     },
 };
 
@@ -349,213 +351,6 @@ impl Default for SeelenWallSettings {
     }
 }
 
-// ============== Ahk Variables ==============
-
-#[macro_export]
-macro_rules! define_struct_and_hashmap {
-    (
-        $($field:ident),*
-    ) => {
-        #[serde_alias(SnakeCase)]
-        #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
-        #[serde(default, rename_all = "camelCase")]
-        pub struct AhkVarList {
-            $(
-                pub $field: AhkVar,
-            )*
-        }
-
-        impl AhkVarList {
-            pub fn as_hash_map(&self) -> HashMap<String, AhkVar> {
-                let mut map = HashMap::new();
-                $(
-                    map.insert(
-                        stringify!($field).to_string(),
-                        self.$field.clone()
-                    );
-                )*
-                map
-            }
-        }
-    };
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
-pub struct AhkVar {
-    pub fancy: String,
-    pub ahk: String,
-    #[serde(default)]
-    pub readonly: bool,
-    #[serde(default)]
-    pub devonly: bool,
-}
-
-impl AhkVar {
-    pub fn new(f: &str, ahk: &str) -> Self {
-        Self {
-            fancy: f.to_string(),
-            ahk: ahk.to_string(),
-            readonly: false,
-            devonly: false,
-        }
-    }
-
-    pub fn readonly(mut self) -> Self {
-        self.readonly = true;
-        self
-    }
-
-    pub fn devonly(mut self) -> Self {
-        self.devonly = true;
-        self
-    }
-}
-
-define_struct_and_hashmap![
-    toggle_launcher,
-    reserve_top,
-    reserve_bottom,
-    reserve_left,
-    reserve_right,
-    reserve_float,
-    reserve_stack,
-    focus_top,
-    focus_bottom,
-    focus_left,
-    focus_right,
-    focus_latest,
-    increase_width,
-    decrease_width,
-    increase_height,
-    decrease_height,
-    restore_sizes,
-    start_weg_app_0,
-    start_weg_app_1,
-    start_weg_app_2,
-    start_weg_app_3,
-    start_weg_app_4,
-    start_weg_app_5,
-    start_weg_app_6,
-    start_weg_app_7,
-    start_weg_app_8,
-    start_weg_app_9,
-    switch_workspace_0,
-    switch_workspace_1,
-    switch_workspace_2,
-    switch_workspace_3,
-    switch_workspace_4,
-    switch_workspace_5,
-    switch_workspace_6,
-    switch_workspace_7,
-    switch_workspace_8,
-    switch_workspace_9,
-    move_to_workspace_0,
-    move_to_workspace_1,
-    move_to_workspace_2,
-    move_to_workspace_3,
-    move_to_workspace_4,
-    move_to_workspace_5,
-    move_to_workspace_6,
-    move_to_workspace_7,
-    move_to_workspace_8,
-    move_to_workspace_9,
-    send_to_workspace_0,
-    send_to_workspace_1,
-    send_to_workspace_2,
-    send_to_workspace_3,
-    send_to_workspace_4,
-    send_to_workspace_5,
-    send_to_workspace_6,
-    send_to_workspace_7,
-    send_to_workspace_8,
-    send_to_workspace_9,
-    misc_open_settings,
-    misc_toggle_lock_tracing,
-    misc_toggle_win_event_tracing
-];
-
-impl Default for AhkVarList {
-    fn default() -> Self {
-        // some aproaches taken in care to write default values
-        // Alt -> when modifying the current window/workspace/monitor
-        // Shift -> when sending/moving something of place
-        // Ctrl -> alternative to already used keys
-        Self {
-            // launcher
-            toggle_launcher: AhkVar::new("Win + S", "#s").readonly(),
-            // wm
-            reserve_top: AhkVar::new("Win + Shift + I", "#+i"),
-            reserve_bottom: AhkVar::new("Win + Shift + K", "#+k"),
-            reserve_left: AhkVar::new("Win + Shift + J", "#+j"),
-            reserve_right: AhkVar::new("Win + Shift + L", "#+l"),
-            reserve_float: AhkVar::new("Win + Shift + U", "#+u"),
-            reserve_stack: AhkVar::new("Win + Shift + O", "#+o"),
-
-            focus_top: AhkVar::new("Win + Alt + I", "#!i"),
-            focus_bottom: AhkVar::new("Win + Alt + K", "#!k"),
-            focus_left: AhkVar::new("Win + Alt + J", "#!j"),
-            focus_right: AhkVar::new("Win + Alt + L", "#!l"),
-            focus_latest: AhkVar::new("Win + Alt + U", "#!u"),
-
-            increase_width: AhkVar::new("Win + Alt + =", "#!="),
-            decrease_width: AhkVar::new("Win + Alt + -", "#!-"),
-            increase_height: AhkVar::new("Ctrl + Win + Alt + =", "^#!="),
-            decrease_height: AhkVar::new("Ctrl + Win + Alt + -", "^#!-"),
-            restore_sizes: AhkVar::new("Win + Alt + 0", "#!0"),
-            // weg
-            start_weg_app_0: AhkVar::new("Win + 1", "#1"),
-            start_weg_app_1: AhkVar::new("Win + 2", "#2"),
-            start_weg_app_2: AhkVar::new("Win + 3", "#3"),
-            start_weg_app_3: AhkVar::new("Win + 4", "#4"),
-            start_weg_app_4: AhkVar::new("Win + 5", "#5"),
-            start_weg_app_5: AhkVar::new("Win + 6", "#6"),
-            start_weg_app_6: AhkVar::new("Win + 7", "#7"),
-            start_weg_app_7: AhkVar::new("Win + 8", "#8"),
-            start_weg_app_8: AhkVar::new("Win + 9", "#9"),
-            start_weg_app_9: AhkVar::new("Win + 0", "#0"),
-            // virtual desktops
-            switch_workspace_0: AhkVar::new("Alt + 1", "!1"),
-            switch_workspace_1: AhkVar::new("Alt + 2", "!2"),
-            switch_workspace_2: AhkVar::new("Alt + 3", "!3"),
-            switch_workspace_3: AhkVar::new("Alt + 4", "!4"),
-            switch_workspace_4: AhkVar::new("Alt + 5", "!5"),
-            switch_workspace_5: AhkVar::new("Alt + 6", "!6"),
-            switch_workspace_6: AhkVar::new("Alt + 7", "!7"),
-            switch_workspace_7: AhkVar::new("Alt + 8", "!8"),
-            switch_workspace_8: AhkVar::new("Alt + 9", "!9"),
-            switch_workspace_9: AhkVar::new("Alt + 0", "!0"),
-            move_to_workspace_0: AhkVar::new("Alt + Shift + 1", "!+1"),
-            move_to_workspace_1: AhkVar::new("Alt + Shift + 2", "!+2"),
-            move_to_workspace_2: AhkVar::new("Alt + Shift + 3", "!+3"),
-            move_to_workspace_3: AhkVar::new("Alt + Shift + 4", "!+4"),
-            move_to_workspace_4: AhkVar::new("Alt + Shift + 5", "!+5"),
-            move_to_workspace_5: AhkVar::new("Alt + Shift + 6", "!+6"),
-            move_to_workspace_6: AhkVar::new("Alt + Shift + 7", "!+7"),
-            move_to_workspace_7: AhkVar::new("Alt + Shift + 8", "!+8"),
-            move_to_workspace_8: AhkVar::new("Alt + Shift + 9", "!+9"),
-            move_to_workspace_9: AhkVar::new("Alt + Shift + 0", "!+0"),
-            send_to_workspace_0: AhkVar::new("Win + Shift + 1", "#+1"),
-            send_to_workspace_1: AhkVar::new("Win + Shift + 2", "#+2"),
-            send_to_workspace_2: AhkVar::new("Win + Shift + 3", "#+3"),
-            send_to_workspace_3: AhkVar::new("Win + Shift + 4", "#+4"),
-            send_to_workspace_4: AhkVar::new("Win + Shift + 5", "#+5"),
-            send_to_workspace_5: AhkVar::new("Win + Shift + 6", "#+6"),
-            send_to_workspace_6: AhkVar::new("Win + Shift + 7", "#+7"),
-            send_to_workspace_7: AhkVar::new("Win + Shift + 8", "#+8"),
-            send_to_workspace_8: AhkVar::new("Win + Shift + 9", "#+9"),
-            send_to_workspace_9: AhkVar::new("Win + Shift + 0", "#+0"),
-            // miscellaneous
-            misc_open_settings: AhkVar::new("Ctrl + Win + I", "^#i").readonly(),
-            misc_toggle_lock_tracing: AhkVar::new("Ctrl + Win + Alt + T", "^#!t")
-                .readonly()
-                .devonly(),
-            misc_toggle_win_event_tracing: AhkVar::new("Ctrl + Win + Alt + L", "^#!l")
-                .readonly()
-                .devonly(),
-        }
-    }
-}
-
 // ========================== Seelen Updates ==============================
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
@@ -614,10 +409,8 @@ pub struct Settings {
     launcher: Option<SeelenLauncherSettings>,
     /// list of monitors and their configurations
     pub monitors_v3: HashMap<String, MonitorConfiguration>,
-    /// enable or disable ahk
-    pub ahk_enabled: bool,
-    /// ahk variables
-    pub ahk_variables: AhkVarList,
+    /// app shortcuts settings
+    pub shortcuts: SluShortcutsSettings,
     /// list of selected themes as filename as backguard compatibility for versions before v2.3.8, will be removed in v3
     #[serde(alias = "selectedThemes")]
     pub old_active_themes: Vec<String>,
@@ -663,13 +456,12 @@ impl Default for Settings {
             wall: None,
             launcher: None,
             // ---
-            ahk_enabled: true,
+            shortcuts: SluShortcutsSettings::default(),
             drpc: true,
             old_active_themes: Vec::new(),
             active_themes: vec!["@default/theme".into()],
             active_icon_packs: vec!["@system/icon-pack".into()],
             monitors_v3: HashMap::new(),
-            ahk_variables: AhkVarList::default(),
             dev_tools: false,
             language: Some(Self::get_system_language()),
             date_format: "ddd D MMM, hh:mm A".to_owned(),
@@ -739,6 +531,7 @@ impl Settings {
         self.active_icon_packs.insert(0, "@system/icon-pack".into());
         self.dedup_icon_packs();
 
+        self.shortcuts.sanitize();
         Ok(())
     }
 }
