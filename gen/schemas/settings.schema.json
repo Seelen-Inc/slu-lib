@@ -391,6 +391,15 @@
           },
           {
             "action": {
+              "start_weg_app": 0
+            },
+            "keys": [
+              "Win",
+              "1"
+            ]
+          },
+          {
+            "action": {
               "switch_workspace": 0
             },
             "keys": [
@@ -416,6 +425,15 @@
               "Win",
               "Shift",
               "1"
+            ]
+          },
+          {
+            "action": {
+              "start_weg_app": 1
+            },
+            "keys": [
+              "Win",
+              "2"
             ]
           },
           {
@@ -449,6 +467,15 @@
           },
           {
             "action": {
+              "start_weg_app": 2
+            },
+            "keys": [
+              "Win",
+              "3"
+            ]
+          },
+          {
+            "action": {
               "switch_workspace": 2
             },
             "keys": [
@@ -474,6 +501,15 @@
               "Win",
               "Shift",
               "3"
+            ]
+          },
+          {
+            "action": {
+              "start_weg_app": 3
+            },
+            "keys": [
+              "Win",
+              "4"
             ]
           },
           {
@@ -507,6 +543,15 @@
           },
           {
             "action": {
+              "start_weg_app": 4
+            },
+            "keys": [
+              "Win",
+              "5"
+            ]
+          },
+          {
+            "action": {
               "switch_workspace": 4
             },
             "keys": [
@@ -532,6 +577,15 @@
               "Win",
               "Shift",
               "5"
+            ]
+          },
+          {
+            "action": {
+              "start_weg_app": 5
+            },
+            "keys": [
+              "Win",
+              "6"
             ]
           },
           {
@@ -565,6 +619,15 @@
           },
           {
             "action": {
+              "start_weg_app": 6
+            },
+            "keys": [
+              "Win",
+              "7"
+            ]
+          },
+          {
+            "action": {
               "switch_workspace": 6
             },
             "keys": [
@@ -590,6 +653,15 @@
               "Win",
               "Shift",
               "7"
+            ]
+          },
+          {
+            "action": {
+              "start_weg_app": 7
+            },
+            "keys": [
+              "Win",
+              "8"
             ]
           },
           {
@@ -623,6 +695,15 @@
           },
           {
             "action": {
+              "start_weg_app": 8
+            },
+            "keys": [
+              "Win",
+              "9"
+            ]
+          },
+          {
+            "action": {
               "switch_workspace": 8
             },
             "keys": [
@@ -648,6 +729,15 @@
               "Win",
               "Shift",
               "9"
+            ]
+          },
+          {
+            "action": {
+              "start_weg_app": 9
+            },
+            "keys": [
+              "Win",
+              "0"
             ]
           },
           {
@@ -1559,6 +1649,15 @@
             },
             {
               "action": {
+                "start_weg_app": 0
+              },
+              "keys": [
+                "Win",
+                "1"
+              ]
+            },
+            {
+              "action": {
                 "switch_workspace": 0
               },
               "keys": [
@@ -1584,6 +1683,15 @@
                 "Win",
                 "Shift",
                 "1"
+              ]
+            },
+            {
+              "action": {
+                "start_weg_app": 1
+              },
+              "keys": [
+                "Win",
+                "2"
               ]
             },
             {
@@ -1617,6 +1725,15 @@
             },
             {
               "action": {
+                "start_weg_app": 2
+              },
+              "keys": [
+                "Win",
+                "3"
+              ]
+            },
+            {
+              "action": {
                 "switch_workspace": 2
               },
               "keys": [
@@ -1642,6 +1759,15 @@
                 "Win",
                 "Shift",
                 "3"
+              ]
+            },
+            {
+              "action": {
+                "start_weg_app": 3
+              },
+              "keys": [
+                "Win",
+                "4"
               ]
             },
             {
@@ -1675,6 +1801,15 @@
             },
             {
               "action": {
+                "start_weg_app": 4
+              },
+              "keys": [
+                "Win",
+                "5"
+              ]
+            },
+            {
+              "action": {
                 "switch_workspace": 4
               },
               "keys": [
@@ -1700,6 +1835,15 @@
                 "Win",
                 "Shift",
                 "5"
+              ]
+            },
+            {
+              "action": {
+                "start_weg_app": 5
+              },
+              "keys": [
+                "Win",
+                "6"
               ]
             },
             {
@@ -1733,6 +1877,15 @@
             },
             {
               "action": {
+                "start_weg_app": 6
+              },
+              "keys": [
+                "Win",
+                "7"
+              ]
+            },
+            {
+              "action": {
                 "switch_workspace": 6
               },
               "keys": [
@@ -1758,6 +1911,15 @@
                 "Win",
                 "Shift",
                 "7"
+              ]
+            },
+            {
+              "action": {
+                "start_weg_app": 7
+              },
+              "keys": [
+                "Win",
+                "8"
               ]
             },
             {
@@ -1791,6 +1953,15 @@
             },
             {
               "action": {
+                "start_weg_app": 8
+              },
+              "keys": [
+                "Win",
+                "9"
+              ]
+            },
+            {
+              "action": {
                 "switch_workspace": 8
               },
               "keys": [
@@ -1816,6 +1987,15 @@
                 "Win",
                 "Shift",
                 "9"
+              ]
+            },
+            {
+              "action": {
+                "start_weg_app": 9
+              },
+              "keys": [
+                "Win",
+                "0"
               ]
             },
             {

@@ -62,6 +62,36 @@ define_hotkey_actions! {
     MiscToggleWinEventTracing
 }
 
+/*TODO
+
+!+q:: CycleFocus("previous")
+!q:: CycleFocus("next")
+
+; Move windows
+#+a:: Move("left")
+#+s:: Move("down")
+#+w:: Move("up")
+#+d:: Move("right")
+
+#+Enter:: Promote()
+
+#+x:: FlipLayout("horizontal")
+#+z:: FlipLayout("vertical")
+
+; Stack windows
+#a:: Stack("left")
+#d:: Stack("right")
+#w:: Stack("up")
+#s:: Stack("down")
+#;:: Unstack()
+
+#+q:: CycleStack("previous")
+#q:: CycleStack("next")
+
+; Manipulate windows
+#f:: ToggleFloat()
+#m:: ToggleMonocle() */
+
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
 pub struct SluHotkey {
     pub action: SluHotkeyAction,
@@ -117,6 +147,10 @@ impl SluShortcutsSettings {
             } else {
                 format!("{}", i + 1)
             };
+
+            shorcuts.push(
+                SluHotkey::new(SluHotkeyAction::StartWegApp(i)).keys(["Win", digit_key.as_str()]),
+            );
 
             shorcuts.push(
                 SluHotkey::new(SluHotkeyAction::SwitchWorkspace(i))
