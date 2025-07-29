@@ -32487,163 +32487,36 @@
           "kind": "union",
           "union": [
             {
-              "repr": "toggle_launcher",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "toggle_launcher"
-              }
-            },
-            {
-              "repr": "reserve_top",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "reserve_top"
-              }
-            },
-            {
-              "repr": "reserve_bottom",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "reserve_bottom"
-              }
-            },
-            {
-              "repr": "reserve_left",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "reserve_left"
-              }
-            },
-            {
-              "repr": "reserve_right",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "reserve_right"
-              }
-            },
-            {
-              "repr": "reserve_float",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "reserve_float"
-              }
-            },
-            {
-              "repr": "reserve_stack",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "reserve_stack"
-              }
-            },
-            {
-              "repr": "focus_top",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "focus_top"
-              }
-            },
-            {
-              "repr": "focus_bottom",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "focus_bottom"
-              }
-            },
-            {
-              "repr": "focus_left",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "focus_left"
-              }
-            },
-            {
-              "repr": "focus_right",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "focus_right"
-              }
-            },
-            {
-              "repr": "increase_width",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "increase_width"
-              }
-            },
-            {
-              "repr": "decrease_width",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "decrease_width"
-              }
-            },
-            {
-              "repr": "increase_height",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "increase_height"
-              }
-            },
-            {
-              "repr": "decrease_height",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "decrease_height"
-              }
-            },
-            {
-              "repr": "restore_sizes",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "restore_sizes"
-              }
-            },
-            {
-              "repr": "move_window_up",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "move_window_up"
-              }
-            },
-            {
-              "repr": "move_window_down",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "move_window_down"
-              }
-            },
-            {
-              "repr": "move_window_left",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "move_window_left"
-              }
-            },
-            {
-              "repr": "move_window_right",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "move_window_right"
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 32,
+                      "byteIndex": 142
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "toggle_launcher",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "toggle_launcher"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
               }
             },
             {
@@ -32654,12 +32527,660 @@
                 "methods": [],
                 "properties": [
                   {
-                    "name": "start_weg_app",
+                    "name": "name",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
                       "line": 3,
-                      "col": 399,
-                      "byteIndex": 509
+                      "col": 64,
+                      "byteIndex": 174
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "reserve_top",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "reserve_top"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 92,
+                      "byteIndex": 202
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "reserve_bottom",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "reserve_bottom"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 123,
+                      "byteIndex": 233
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "reserve_left",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "reserve_left"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 152,
+                      "byteIndex": 262
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "reserve_right",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "reserve_right"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 182,
+                      "byteIndex": 292
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "reserve_float",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "reserve_float"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 212,
+                      "byteIndex": 322
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "reserve_stack",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "reserve_stack"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 242,
+                      "byteIndex": 352
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "focus_top",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "focus_top"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 268,
+                      "byteIndex": 378
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "focus_bottom",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "focus_bottom"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 297,
+                      "byteIndex": 407
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "focus_left",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "focus_left"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 324,
+                      "byteIndex": 434
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "focus_right",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "focus_right"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 352,
+                      "byteIndex": 462
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "increase_width",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "increase_width"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 383,
+                      "byteIndex": 493
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "decrease_width",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "decrease_width"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 414,
+                      "byteIndex": 524
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "increase_height",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "increase_height"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 446,
+                      "byteIndex": 556
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "decrease_height",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "decrease_height"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 478,
+                      "byteIndex": 588
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "restore_sizes",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "restore_sizes"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 508,
+                      "byteIndex": 618
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "move_window_up",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "move_window_up"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 539,
+                      "byteIndex": 649
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "move_window_down",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "move_window_down"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 572,
+                      "byteIndex": 682
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "move_window_left",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "move_window_left"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 605,
+                      "byteIndex": 715
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "move_window_right",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "move_window_right"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 639,
+                      "byteIndex": 749
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "start_weg_app",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "start_weg_app"
+                      }
+                    },
+                    "typeParams": []
+                  },
+                  {
+                    "name": "arg",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 664,
+                      "byteIndex": 774
                     },
                     "params": [],
                     "computed": false,
@@ -32684,12 +33205,33 @@
                 "methods": [],
                 "properties": [
                   {
-                    "name": "switch_workspace",
+                    "name": "name",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
                       "line": 3,
-                      "col": 429,
-                      "byteIndex": 539
+                      "col": 684,
+                      "byteIndex": 794
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "switch_workspace",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "switch_workspace"
+                      }
+                    },
+                    "typeParams": []
+                  },
+                  {
+                    "name": "arg",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 712,
+                      "byteIndex": 822
                     },
                     "params": [],
                     "computed": false,
@@ -32714,12 +33256,33 @@
                 "methods": [],
                 "properties": [
                   {
-                    "name": "move_to_workspace",
+                    "name": "name",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
                       "line": 3,
-                      "col": 462,
-                      "byteIndex": 572
+                      "col": 732,
+                      "byteIndex": 842
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "move_to_workspace",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "move_to_workspace"
+                      }
+                    },
+                    "typeParams": []
+                  },
+                  {
+                    "name": "arg",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 761,
+                      "byteIndex": 871
                     },
                     "params": [],
                     "computed": false,
@@ -32744,12 +33307,33 @@
                 "methods": [],
                 "properties": [
                   {
-                    "name": "send_to_workspace",
+                    "name": "name",
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
                       "line": 3,
-                      "col": 496,
-                      "byteIndex": 606
+                      "col": 781,
+                      "byteIndex": 891
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "send_to_workspace",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "send_to_workspace"
+                      }
+                    },
+                    "typeParams": []
+                  },
+                  {
+                    "name": "arg",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 810,
+                      "byteIndex": 920
                     },
                     "params": [],
                     "computed": false,
@@ -32767,51 +33351,201 @@
               }
             },
             {
-              "repr": "switch_to_next_workspace",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "switch_to_next_workspace"
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 830,
+                      "byteIndex": 940
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "switch_to_next_workspace",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "switch_to_next_workspace"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
               }
             },
             {
-              "repr": "switch_to_previous_workspace",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "switch_to_previous_workspace"
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 871,
+                      "byteIndex": 981
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "switch_to_previous_workspace",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "switch_to_previous_workspace"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
               }
             },
             {
-              "repr": "destroy_current_workspace",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "destroy_current_workspace"
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 916,
+                      "byteIndex": 1026
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "destroy_current_workspace",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "destroy_current_workspace"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
               }
             },
             {
-              "repr": "misc_open_settings",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "misc_open_settings"
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 958,
+                      "byteIndex": 1068
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "misc_open_settings",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "misc_open_settings"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
               }
             },
             {
-              "repr": "misc_toggle_lock_tracing",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "misc_toggle_lock_tracing"
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 993,
+                      "byteIndex": 1103
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "misc_toggle_lock_tracing",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "misc_toggle_lock_tracing"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
               }
             },
             {
-              "repr": "misc_toggle_win_event_tracing",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "misc_toggle_win_event_tracing"
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 1034,
+                      "byteIndex": 1144
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
+                      "repr": "misc_toggle_win_event_tracing",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "misc_toggle_win_event_tracing"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
               }
             }
           ]

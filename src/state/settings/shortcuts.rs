@@ -3,7 +3,7 @@ macro_rules! define_hotkey_actions {
         $($field:ident$(($arg:ty))? $(= $shortcut:expr)?),*
     ) => {
         #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash, Serialize, Deserialize, JsonSchema, TS)]
-        #[serde(rename_all = "snake_case")]
+        #[serde(tag = "name", content = "arg", rename_all = "snake_case")]
         pub enum SluHotkeyAction {
             $(
                 $field$(($arg))?,

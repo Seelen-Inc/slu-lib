@@ -203,14 +203,18 @@
       "default": {
         "appCommands": [
           {
-            "action": "toggle_launcher",
+            "action": {
+              "name": "toggle_launcher"
+            },
             "keys": [
               "Win",
               "S"
             ]
           },
           {
-            "action": "reserve_top",
+            "action": {
+              "name": "reserve_top"
+            },
             "keys": [
               "Win",
               "Shift",
@@ -218,7 +222,9 @@
             ]
           },
           {
-            "action": "reserve_bottom",
+            "action": {
+              "name": "reserve_bottom"
+            },
             "keys": [
               "Win",
               "Shift",
@@ -226,7 +232,9 @@
             ]
           },
           {
-            "action": "reserve_left",
+            "action": {
+              "name": "reserve_left"
+            },
             "keys": [
               "Win",
               "Shift",
@@ -234,7 +242,9 @@
             ]
           },
           {
-            "action": "reserve_right",
+            "action": {
+              "name": "reserve_right"
+            },
             "keys": [
               "Win",
               "Shift",
@@ -242,7 +252,9 @@
             ]
           },
           {
-            "action": "reserve_float",
+            "action": {
+              "name": "reserve_float"
+            },
             "keys": [
               "Win",
               "Shift",
@@ -250,7 +262,9 @@
             ]
           },
           {
-            "action": "reserve_stack",
+            "action": {
+              "name": "reserve_stack"
+            },
             "keys": [
               "Win",
               "Shift",
@@ -258,35 +272,45 @@
             ]
           },
           {
-            "action": "focus_top",
+            "action": {
+              "name": "focus_top"
+            },
             "keys": [
               "Alt",
               "I"
             ]
           },
           {
-            "action": "focus_bottom",
+            "action": {
+              "name": "focus_bottom"
+            },
             "keys": [
               "Alt",
               "K"
             ]
           },
           {
-            "action": "focus_left",
+            "action": {
+              "name": "focus_left"
+            },
             "keys": [
               "Alt",
               "J"
             ]
           },
           {
-            "action": "focus_right",
+            "action": {
+              "name": "focus_right"
+            },
             "keys": [
               "Alt",
               "L"
             ]
           },
           {
-            "action": "increase_width",
+            "action": {
+              "name": "increase_width"
+            },
             "keys": [
               "Win",
               "Alt",
@@ -294,7 +318,9 @@
             ]
           },
           {
-            "action": "decrease_width",
+            "action": {
+              "name": "decrease_width"
+            },
             "keys": [
               "Win",
               "Alt",
@@ -302,7 +328,9 @@
             ]
           },
           {
-            "action": "increase_height",
+            "action": {
+              "name": "increase_height"
+            },
             "keys": [
               "Win",
               "Ctrl",
@@ -310,7 +338,9 @@
             ]
           },
           {
-            "action": "decrease_height",
+            "action": {
+              "name": "decrease_height"
+            },
             "keys": [
               "Win",
               "Ctrl",
@@ -318,7 +348,9 @@
             ]
           },
           {
-            "action": "restore_sizes",
+            "action": {
+              "name": "restore_sizes"
+            },
             "keys": [
               "Win",
               "Alt",
@@ -326,7 +358,9 @@
             ]
           },
           {
-            "action": "move_window_up",
+            "action": {
+              "name": "move_window_up"
+            },
             "keys": [
               "Shift",
               "Alt",
@@ -334,7 +368,9 @@
             ]
           },
           {
-            "action": "move_window_down",
+            "action": {
+              "name": "move_window_down"
+            },
             "keys": [
               "Shift",
               "Alt",
@@ -342,7 +378,9 @@
             ]
           },
           {
-            "action": "move_window_left",
+            "action": {
+              "name": "move_window_left"
+            },
             "keys": [
               "Shift",
               "Alt",
@@ -350,7 +388,9 @@
             ]
           },
           {
-            "action": "move_window_right",
+            "action": {
+              "name": "move_window_right"
+            },
             "keys": [
               "Shift",
               "Alt",
@@ -358,7 +398,9 @@
             ]
           },
           {
-            "action": "switch_to_next_workspace",
+            "action": {
+              "name": "switch_to_next_workspace"
+            },
             "keys": [
               "Ctrl",
               "Win",
@@ -366,7 +408,9 @@
             ]
           },
           {
-            "action": "switch_to_previous_workspace",
+            "action": {
+              "name": "switch_to_previous_workspace"
+            },
             "keys": [
               "Ctrl",
               "Win",
@@ -374,7 +418,9 @@
             ]
           },
           {
-            "action": "destroy_current_workspace",
+            "action": {
+              "name": "destroy_current_workspace"
+            },
             "keys": [
               "Ctrl",
               "Win",
@@ -382,7 +428,9 @@
             ]
           },
           {
-            "action": "misc_open_settings",
+            "action": {
+              "name": "misc_open_settings"
+            },
             "keys": [
               "Win",
               "Shift",
@@ -391,7 +439,8 @@
           },
           {
             "action": {
-              "start_weg_app": 0
+              "arg": 0,
+              "name": "start_weg_app"
             },
             "keys": [
               "Win",
@@ -400,7 +449,8 @@
           },
           {
             "action": {
-              "switch_workspace": 0
+              "arg": 0,
+              "name": "switch_workspace"
             },
             "keys": [
               "Alt",
@@ -409,7 +459,8 @@
           },
           {
             "action": {
-              "move_to_workspace": 0
+              "arg": 0,
+              "name": "move_to_workspace"
             },
             "keys": [
               "Alt",
@@ -419,7 +470,8 @@
           },
           {
             "action": {
-              "send_to_workspace": 0
+              "arg": 0,
+              "name": "send_to_workspace"
             },
             "keys": [
               "Win",
@@ -429,7 +481,8 @@
           },
           {
             "action": {
-              "start_weg_app": 1
+              "arg": 1,
+              "name": "start_weg_app"
             },
             "keys": [
               "Win",
@@ -438,7 +491,8 @@
           },
           {
             "action": {
-              "switch_workspace": 1
+              "arg": 1,
+              "name": "switch_workspace"
             },
             "keys": [
               "Alt",
@@ -447,7 +501,8 @@
           },
           {
             "action": {
-              "move_to_workspace": 1
+              "arg": 1,
+              "name": "move_to_workspace"
             },
             "keys": [
               "Alt",
@@ -457,7 +512,8 @@
           },
           {
             "action": {
-              "send_to_workspace": 1
+              "arg": 1,
+              "name": "send_to_workspace"
             },
             "keys": [
               "Win",
@@ -467,7 +523,8 @@
           },
           {
             "action": {
-              "start_weg_app": 2
+              "arg": 2,
+              "name": "start_weg_app"
             },
             "keys": [
               "Win",
@@ -476,7 +533,8 @@
           },
           {
             "action": {
-              "switch_workspace": 2
+              "arg": 2,
+              "name": "switch_workspace"
             },
             "keys": [
               "Alt",
@@ -485,7 +543,8 @@
           },
           {
             "action": {
-              "move_to_workspace": 2
+              "arg": 2,
+              "name": "move_to_workspace"
             },
             "keys": [
               "Alt",
@@ -495,7 +554,8 @@
           },
           {
             "action": {
-              "send_to_workspace": 2
+              "arg": 2,
+              "name": "send_to_workspace"
             },
             "keys": [
               "Win",
@@ -505,7 +565,8 @@
           },
           {
             "action": {
-              "start_weg_app": 3
+              "arg": 3,
+              "name": "start_weg_app"
             },
             "keys": [
               "Win",
@@ -514,7 +575,8 @@
           },
           {
             "action": {
-              "switch_workspace": 3
+              "arg": 3,
+              "name": "switch_workspace"
             },
             "keys": [
               "Alt",
@@ -523,7 +585,8 @@
           },
           {
             "action": {
-              "move_to_workspace": 3
+              "arg": 3,
+              "name": "move_to_workspace"
             },
             "keys": [
               "Alt",
@@ -533,7 +596,8 @@
           },
           {
             "action": {
-              "send_to_workspace": 3
+              "arg": 3,
+              "name": "send_to_workspace"
             },
             "keys": [
               "Win",
@@ -543,7 +607,8 @@
           },
           {
             "action": {
-              "start_weg_app": 4
+              "arg": 4,
+              "name": "start_weg_app"
             },
             "keys": [
               "Win",
@@ -552,7 +617,8 @@
           },
           {
             "action": {
-              "switch_workspace": 4
+              "arg": 4,
+              "name": "switch_workspace"
             },
             "keys": [
               "Alt",
@@ -561,7 +627,8 @@
           },
           {
             "action": {
-              "move_to_workspace": 4
+              "arg": 4,
+              "name": "move_to_workspace"
             },
             "keys": [
               "Alt",
@@ -571,7 +638,8 @@
           },
           {
             "action": {
-              "send_to_workspace": 4
+              "arg": 4,
+              "name": "send_to_workspace"
             },
             "keys": [
               "Win",
@@ -581,7 +649,8 @@
           },
           {
             "action": {
-              "start_weg_app": 5
+              "arg": 5,
+              "name": "start_weg_app"
             },
             "keys": [
               "Win",
@@ -590,7 +659,8 @@
           },
           {
             "action": {
-              "switch_workspace": 5
+              "arg": 5,
+              "name": "switch_workspace"
             },
             "keys": [
               "Alt",
@@ -599,7 +669,8 @@
           },
           {
             "action": {
-              "move_to_workspace": 5
+              "arg": 5,
+              "name": "move_to_workspace"
             },
             "keys": [
               "Alt",
@@ -609,7 +680,8 @@
           },
           {
             "action": {
-              "send_to_workspace": 5
+              "arg": 5,
+              "name": "send_to_workspace"
             },
             "keys": [
               "Win",
@@ -619,7 +691,8 @@
           },
           {
             "action": {
-              "start_weg_app": 6
+              "arg": 6,
+              "name": "start_weg_app"
             },
             "keys": [
               "Win",
@@ -628,7 +701,8 @@
           },
           {
             "action": {
-              "switch_workspace": 6
+              "arg": 6,
+              "name": "switch_workspace"
             },
             "keys": [
               "Alt",
@@ -637,7 +711,8 @@
           },
           {
             "action": {
-              "move_to_workspace": 6
+              "arg": 6,
+              "name": "move_to_workspace"
             },
             "keys": [
               "Alt",
@@ -647,7 +722,8 @@
           },
           {
             "action": {
-              "send_to_workspace": 6
+              "arg": 6,
+              "name": "send_to_workspace"
             },
             "keys": [
               "Win",
@@ -657,7 +733,8 @@
           },
           {
             "action": {
-              "start_weg_app": 7
+              "arg": 7,
+              "name": "start_weg_app"
             },
             "keys": [
               "Win",
@@ -666,7 +743,8 @@
           },
           {
             "action": {
-              "switch_workspace": 7
+              "arg": 7,
+              "name": "switch_workspace"
             },
             "keys": [
               "Alt",
@@ -675,7 +753,8 @@
           },
           {
             "action": {
-              "move_to_workspace": 7
+              "arg": 7,
+              "name": "move_to_workspace"
             },
             "keys": [
               "Alt",
@@ -685,7 +764,8 @@
           },
           {
             "action": {
-              "send_to_workspace": 7
+              "arg": 7,
+              "name": "send_to_workspace"
             },
             "keys": [
               "Win",
@@ -695,7 +775,8 @@
           },
           {
             "action": {
-              "start_weg_app": 8
+              "arg": 8,
+              "name": "start_weg_app"
             },
             "keys": [
               "Win",
@@ -704,7 +785,8 @@
           },
           {
             "action": {
-              "switch_workspace": 8
+              "arg": 8,
+              "name": "switch_workspace"
             },
             "keys": [
               "Alt",
@@ -713,7 +795,8 @@
           },
           {
             "action": {
-              "move_to_workspace": 8
+              "arg": 8,
+              "name": "move_to_workspace"
             },
             "keys": [
               "Alt",
@@ -723,7 +806,8 @@
           },
           {
             "action": {
-              "send_to_workspace": 8
+              "arg": 8,
+              "name": "send_to_workspace"
             },
             "keys": [
               "Win",
@@ -733,7 +817,8 @@
           },
           {
             "action": {
-              "start_weg_app": 9
+              "arg": 9,
+              "name": "start_weg_app"
             },
             "keys": [
               "Win",
@@ -742,7 +827,8 @@
           },
           {
             "action": {
-              "switch_workspace": 9
+              "arg": 9,
+              "name": "switch_workspace"
             },
             "keys": [
               "Alt",
@@ -751,7 +837,8 @@
           },
           {
             "action": {
-              "move_to_workspace": 9
+              "arg": 9,
+              "name": "move_to_workspace"
             },
             "keys": [
               "Alt",
@@ -761,7 +848,8 @@
           },
           {
             "action": {
-              "send_to_workspace": 9
+              "arg": 9,
+              "name": "send_to_workspace"
             },
             "keys": [
               "Win",
@@ -1366,90 +1454,387 @@
     "SluHotkeyAction": {
       "oneOf": [
         {
-          "type": "string",
-          "enum": [
-            "toggle_launcher",
-            "reserve_top",
-            "reserve_bottom",
-            "reserve_left",
-            "reserve_right",
-            "reserve_float",
-            "reserve_stack",
-            "focus_top",
-            "focus_bottom",
-            "focus_left",
-            "focus_right",
-            "increase_width",
-            "decrease_width",
-            "increase_height",
-            "decrease_height",
-            "restore_sizes",
-            "move_window_up",
-            "move_window_down",
-            "move_window_left",
-            "move_window_right",
-            "switch_to_next_workspace",
-            "switch_to_previous_workspace",
-            "destroy_current_workspace",
-            "misc_open_settings",
-            "misc_toggle_lock_tracing",
-            "misc_toggle_win_event_tracing"
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "toggle_launcher"
+            }
+          },
+          "required": [
+            "name"
           ]
         },
         {
           "type": "object",
           "properties": {
-            "start_weg_app": {
-              "type": "integer",
-              "format": "uint",
-              "minimum": 0
+            "name": {
+              "type": "string",
+              "const": "reserve_top"
             }
           },
-          "additionalProperties": false,
           "required": [
-            "start_weg_app"
+            "name"
           ]
         },
         {
           "type": "object",
           "properties": {
-            "switch_workspace": {
-              "type": "integer",
-              "format": "uint",
-              "minimum": 0
+            "name": {
+              "type": "string",
+              "const": "reserve_bottom"
             }
           },
-          "additionalProperties": false,
           "required": [
-            "switch_workspace"
+            "name"
           ]
         },
         {
           "type": "object",
           "properties": {
-            "move_to_workspace": {
-              "type": "integer",
-              "format": "uint",
-              "minimum": 0
+            "name": {
+              "type": "string",
+              "const": "reserve_left"
             }
           },
-          "additionalProperties": false,
           "required": [
-            "move_to_workspace"
+            "name"
           ]
         },
         {
           "type": "object",
           "properties": {
-            "send_to_workspace": {
+            "name": {
+              "type": "string",
+              "const": "reserve_right"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "reserve_float"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "reserve_stack"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "focus_top"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "focus_bottom"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "focus_left"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "focus_right"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "increase_width"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "decrease_width"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "increase_height"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "decrease_height"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "restore_sizes"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "move_window_up"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "move_window_down"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "move_window_left"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "move_window_right"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "arg": {
               "type": "integer",
               "format": "uint",
               "minimum": 0
+            },
+            "name": {
+              "type": "string",
+              "const": "start_weg_app"
             }
           },
-          "additionalProperties": false,
           "required": [
-            "send_to_workspace"
+            "name",
+            "arg"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "arg": {
+              "type": "integer",
+              "format": "uint",
+              "minimum": 0
+            },
+            "name": {
+              "type": "string",
+              "const": "switch_workspace"
+            }
+          },
+          "required": [
+            "name",
+            "arg"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "arg": {
+              "type": "integer",
+              "format": "uint",
+              "minimum": 0
+            },
+            "name": {
+              "type": "string",
+              "const": "move_to_workspace"
+            }
+          },
+          "required": [
+            "name",
+            "arg"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "arg": {
+              "type": "integer",
+              "format": "uint",
+              "minimum": 0
+            },
+            "name": {
+              "type": "string",
+              "const": "send_to_workspace"
+            }
+          },
+          "required": [
+            "name",
+            "arg"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "switch_to_next_workspace"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "switch_to_previous_workspace"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "destroy_current_workspace"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "misc_open_settings"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "misc_toggle_lock_tracing"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "misc_toggle_win_event_tracing"
+            }
+          },
+          "required": [
+            "name"
           ]
         }
       ]
@@ -1461,14 +1846,18 @@
           "type": "array",
           "default": [
             {
-              "action": "toggle_launcher",
+              "action": {
+                "name": "toggle_launcher"
+              },
               "keys": [
                 "Win",
                 "S"
               ]
             },
             {
-              "action": "reserve_top",
+              "action": {
+                "name": "reserve_top"
+              },
               "keys": [
                 "Win",
                 "Shift",
@@ -1476,7 +1865,9 @@
               ]
             },
             {
-              "action": "reserve_bottom",
+              "action": {
+                "name": "reserve_bottom"
+              },
               "keys": [
                 "Win",
                 "Shift",
@@ -1484,7 +1875,9 @@
               ]
             },
             {
-              "action": "reserve_left",
+              "action": {
+                "name": "reserve_left"
+              },
               "keys": [
                 "Win",
                 "Shift",
@@ -1492,7 +1885,9 @@
               ]
             },
             {
-              "action": "reserve_right",
+              "action": {
+                "name": "reserve_right"
+              },
               "keys": [
                 "Win",
                 "Shift",
@@ -1500,7 +1895,9 @@
               ]
             },
             {
-              "action": "reserve_float",
+              "action": {
+                "name": "reserve_float"
+              },
               "keys": [
                 "Win",
                 "Shift",
@@ -1508,7 +1905,9 @@
               ]
             },
             {
-              "action": "reserve_stack",
+              "action": {
+                "name": "reserve_stack"
+              },
               "keys": [
                 "Win",
                 "Shift",
@@ -1516,35 +1915,45 @@
               ]
             },
             {
-              "action": "focus_top",
+              "action": {
+                "name": "focus_top"
+              },
               "keys": [
                 "Alt",
                 "I"
               ]
             },
             {
-              "action": "focus_bottom",
+              "action": {
+                "name": "focus_bottom"
+              },
               "keys": [
                 "Alt",
                 "K"
               ]
             },
             {
-              "action": "focus_left",
+              "action": {
+                "name": "focus_left"
+              },
               "keys": [
                 "Alt",
                 "J"
               ]
             },
             {
-              "action": "focus_right",
+              "action": {
+                "name": "focus_right"
+              },
               "keys": [
                 "Alt",
                 "L"
               ]
             },
             {
-              "action": "increase_width",
+              "action": {
+                "name": "increase_width"
+              },
               "keys": [
                 "Win",
                 "Alt",
@@ -1552,7 +1961,9 @@
               ]
             },
             {
-              "action": "decrease_width",
+              "action": {
+                "name": "decrease_width"
+              },
               "keys": [
                 "Win",
                 "Alt",
@@ -1560,7 +1971,9 @@
               ]
             },
             {
-              "action": "increase_height",
+              "action": {
+                "name": "increase_height"
+              },
               "keys": [
                 "Win",
                 "Ctrl",
@@ -1568,7 +1981,9 @@
               ]
             },
             {
-              "action": "decrease_height",
+              "action": {
+                "name": "decrease_height"
+              },
               "keys": [
                 "Win",
                 "Ctrl",
@@ -1576,7 +1991,9 @@
               ]
             },
             {
-              "action": "restore_sizes",
+              "action": {
+                "name": "restore_sizes"
+              },
               "keys": [
                 "Win",
                 "Alt",
@@ -1584,7 +2001,9 @@
               ]
             },
             {
-              "action": "move_window_up",
+              "action": {
+                "name": "move_window_up"
+              },
               "keys": [
                 "Shift",
                 "Alt",
@@ -1592,7 +2011,9 @@
               ]
             },
             {
-              "action": "move_window_down",
+              "action": {
+                "name": "move_window_down"
+              },
               "keys": [
                 "Shift",
                 "Alt",
@@ -1600,7 +2021,9 @@
               ]
             },
             {
-              "action": "move_window_left",
+              "action": {
+                "name": "move_window_left"
+              },
               "keys": [
                 "Shift",
                 "Alt",
@@ -1608,7 +2031,9 @@
               ]
             },
             {
-              "action": "move_window_right",
+              "action": {
+                "name": "move_window_right"
+              },
               "keys": [
                 "Shift",
                 "Alt",
@@ -1616,7 +2041,9 @@
               ]
             },
             {
-              "action": "switch_to_next_workspace",
+              "action": {
+                "name": "switch_to_next_workspace"
+              },
               "keys": [
                 "Ctrl",
                 "Win",
@@ -1624,7 +2051,9 @@
               ]
             },
             {
-              "action": "switch_to_previous_workspace",
+              "action": {
+                "name": "switch_to_previous_workspace"
+              },
               "keys": [
                 "Ctrl",
                 "Win",
@@ -1632,7 +2061,9 @@
               ]
             },
             {
-              "action": "destroy_current_workspace",
+              "action": {
+                "name": "destroy_current_workspace"
+              },
               "keys": [
                 "Ctrl",
                 "Win",
@@ -1640,7 +2071,9 @@
               ]
             },
             {
-              "action": "misc_open_settings",
+              "action": {
+                "name": "misc_open_settings"
+              },
               "keys": [
                 "Win",
                 "Shift",
@@ -1649,7 +2082,8 @@
             },
             {
               "action": {
-                "start_weg_app": 0
+                "arg": 0,
+                "name": "start_weg_app"
               },
               "keys": [
                 "Win",
@@ -1658,7 +2092,8 @@
             },
             {
               "action": {
-                "switch_workspace": 0
+                "arg": 0,
+                "name": "switch_workspace"
               },
               "keys": [
                 "Alt",
@@ -1667,7 +2102,8 @@
             },
             {
               "action": {
-                "move_to_workspace": 0
+                "arg": 0,
+                "name": "move_to_workspace"
               },
               "keys": [
                 "Alt",
@@ -1677,7 +2113,8 @@
             },
             {
               "action": {
-                "send_to_workspace": 0
+                "arg": 0,
+                "name": "send_to_workspace"
               },
               "keys": [
                 "Win",
@@ -1687,7 +2124,8 @@
             },
             {
               "action": {
-                "start_weg_app": 1
+                "arg": 1,
+                "name": "start_weg_app"
               },
               "keys": [
                 "Win",
@@ -1696,7 +2134,8 @@
             },
             {
               "action": {
-                "switch_workspace": 1
+                "arg": 1,
+                "name": "switch_workspace"
               },
               "keys": [
                 "Alt",
@@ -1705,7 +2144,8 @@
             },
             {
               "action": {
-                "move_to_workspace": 1
+                "arg": 1,
+                "name": "move_to_workspace"
               },
               "keys": [
                 "Alt",
@@ -1715,7 +2155,8 @@
             },
             {
               "action": {
-                "send_to_workspace": 1
+                "arg": 1,
+                "name": "send_to_workspace"
               },
               "keys": [
                 "Win",
@@ -1725,7 +2166,8 @@
             },
             {
               "action": {
-                "start_weg_app": 2
+                "arg": 2,
+                "name": "start_weg_app"
               },
               "keys": [
                 "Win",
@@ -1734,7 +2176,8 @@
             },
             {
               "action": {
-                "switch_workspace": 2
+                "arg": 2,
+                "name": "switch_workspace"
               },
               "keys": [
                 "Alt",
@@ -1743,7 +2186,8 @@
             },
             {
               "action": {
-                "move_to_workspace": 2
+                "arg": 2,
+                "name": "move_to_workspace"
               },
               "keys": [
                 "Alt",
@@ -1753,7 +2197,8 @@
             },
             {
               "action": {
-                "send_to_workspace": 2
+                "arg": 2,
+                "name": "send_to_workspace"
               },
               "keys": [
                 "Win",
@@ -1763,7 +2208,8 @@
             },
             {
               "action": {
-                "start_weg_app": 3
+                "arg": 3,
+                "name": "start_weg_app"
               },
               "keys": [
                 "Win",
@@ -1772,7 +2218,8 @@
             },
             {
               "action": {
-                "switch_workspace": 3
+                "arg": 3,
+                "name": "switch_workspace"
               },
               "keys": [
                 "Alt",
@@ -1781,7 +2228,8 @@
             },
             {
               "action": {
-                "move_to_workspace": 3
+                "arg": 3,
+                "name": "move_to_workspace"
               },
               "keys": [
                 "Alt",
@@ -1791,7 +2239,8 @@
             },
             {
               "action": {
-                "send_to_workspace": 3
+                "arg": 3,
+                "name": "send_to_workspace"
               },
               "keys": [
                 "Win",
@@ -1801,7 +2250,8 @@
             },
             {
               "action": {
-                "start_weg_app": 4
+                "arg": 4,
+                "name": "start_weg_app"
               },
               "keys": [
                 "Win",
@@ -1810,7 +2260,8 @@
             },
             {
               "action": {
-                "switch_workspace": 4
+                "arg": 4,
+                "name": "switch_workspace"
               },
               "keys": [
                 "Alt",
@@ -1819,7 +2270,8 @@
             },
             {
               "action": {
-                "move_to_workspace": 4
+                "arg": 4,
+                "name": "move_to_workspace"
               },
               "keys": [
                 "Alt",
@@ -1829,7 +2281,8 @@
             },
             {
               "action": {
-                "send_to_workspace": 4
+                "arg": 4,
+                "name": "send_to_workspace"
               },
               "keys": [
                 "Win",
@@ -1839,7 +2292,8 @@
             },
             {
               "action": {
-                "start_weg_app": 5
+                "arg": 5,
+                "name": "start_weg_app"
               },
               "keys": [
                 "Win",
@@ -1848,7 +2302,8 @@
             },
             {
               "action": {
-                "switch_workspace": 5
+                "arg": 5,
+                "name": "switch_workspace"
               },
               "keys": [
                 "Alt",
@@ -1857,7 +2312,8 @@
             },
             {
               "action": {
-                "move_to_workspace": 5
+                "arg": 5,
+                "name": "move_to_workspace"
               },
               "keys": [
                 "Alt",
@@ -1867,7 +2323,8 @@
             },
             {
               "action": {
-                "send_to_workspace": 5
+                "arg": 5,
+                "name": "send_to_workspace"
               },
               "keys": [
                 "Win",
@@ -1877,7 +2334,8 @@
             },
             {
               "action": {
-                "start_weg_app": 6
+                "arg": 6,
+                "name": "start_weg_app"
               },
               "keys": [
                 "Win",
@@ -1886,7 +2344,8 @@
             },
             {
               "action": {
-                "switch_workspace": 6
+                "arg": 6,
+                "name": "switch_workspace"
               },
               "keys": [
                 "Alt",
@@ -1895,7 +2354,8 @@
             },
             {
               "action": {
-                "move_to_workspace": 6
+                "arg": 6,
+                "name": "move_to_workspace"
               },
               "keys": [
                 "Alt",
@@ -1905,7 +2365,8 @@
             },
             {
               "action": {
-                "send_to_workspace": 6
+                "arg": 6,
+                "name": "send_to_workspace"
               },
               "keys": [
                 "Win",
@@ -1915,7 +2376,8 @@
             },
             {
               "action": {
-                "start_weg_app": 7
+                "arg": 7,
+                "name": "start_weg_app"
               },
               "keys": [
                 "Win",
@@ -1924,7 +2386,8 @@
             },
             {
               "action": {
-                "switch_workspace": 7
+                "arg": 7,
+                "name": "switch_workspace"
               },
               "keys": [
                 "Alt",
@@ -1933,7 +2396,8 @@
             },
             {
               "action": {
-                "move_to_workspace": 7
+                "arg": 7,
+                "name": "move_to_workspace"
               },
               "keys": [
                 "Alt",
@@ -1943,7 +2407,8 @@
             },
             {
               "action": {
-                "send_to_workspace": 7
+                "arg": 7,
+                "name": "send_to_workspace"
               },
               "keys": [
                 "Win",
@@ -1953,7 +2418,8 @@
             },
             {
               "action": {
-                "start_weg_app": 8
+                "arg": 8,
+                "name": "start_weg_app"
               },
               "keys": [
                 "Win",
@@ -1962,7 +2428,8 @@
             },
             {
               "action": {
-                "switch_workspace": 8
+                "arg": 8,
+                "name": "switch_workspace"
               },
               "keys": [
                 "Alt",
@@ -1971,7 +2438,8 @@
             },
             {
               "action": {
-                "move_to_workspace": 8
+                "arg": 8,
+                "name": "move_to_workspace"
               },
               "keys": [
                 "Alt",
@@ -1981,7 +2449,8 @@
             },
             {
               "action": {
-                "send_to_workspace": 8
+                "arg": 8,
+                "name": "send_to_workspace"
               },
               "keys": [
                 "Win",
@@ -1991,7 +2460,8 @@
             },
             {
               "action": {
-                "start_weg_app": 9
+                "arg": 9,
+                "name": "start_weg_app"
               },
               "keys": [
                 "Win",
@@ -2000,7 +2470,8 @@
             },
             {
               "action": {
-                "switch_workspace": 9
+                "arg": 9,
+                "name": "switch_workspace"
               },
               "keys": [
                 "Alt",
@@ -2009,7 +2480,8 @@
             },
             {
               "action": {
-                "move_to_workspace": 9
+                "arg": 9,
+                "name": "move_to_workspace"
               },
               "keys": [
                 "Alt",
@@ -2019,7 +2491,8 @@
             },
             {
               "action": {
-                "send_to_workspace": 9
+                "arg": 9,
+                "name": "send_to_workspace"
               },
               "keys": [
                 "Win",
