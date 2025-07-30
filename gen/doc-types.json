@@ -33435,6 +33435,39 @@
                     "computed": false,
                     "optional": false,
                     "tsType": {
+                      "repr": "create_new_workspace",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "create_new_workspace"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 953,
+                      "byteIndex": 1063
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
                       "repr": "destroy_current_workspace",
                       "kind": "literal",
                       "literal": {
@@ -33461,8 +33494,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
                       "line": 3,
-                      "col": 958,
-                      "byteIndex": 1068
+                      "col": 995,
+                      "byteIndex": 1105
                     },
                     "params": [],
                     "computed": false,
@@ -33494,8 +33527,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
                       "line": 3,
-                      "col": 993,
-                      "byteIndex": 1103
+                      "col": 1030,
+                      "byteIndex": 1140
                     },
                     "params": [],
                     "computed": false,
@@ -33527,8 +33560,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
                       "line": 3,
-                      "col": 1034,
-                      "byteIndex": 1144
+                      "col": 1071,
+                      "byteIndex": 1181
                     },
                     "params": [],
                     "computed": false,

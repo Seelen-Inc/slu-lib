@@ -55,6 +55,7 @@ define_hotkey_actions! {
     SendToWorkspace(usize),
     SwitchToNextWorkspace = ["Ctrl", "Win", "Right"],
     SwitchToPreviousWorkspace = ["Ctrl", "Win", "Left"],
+    CreateNewWorkspace = ["Ctrl", "Win", "D"],
     DestroyCurrentWorkspace = ["Ctrl", "Win", "F4"],
     // misc
     MiscOpenSettings = ["Win", "Shift", "S"],

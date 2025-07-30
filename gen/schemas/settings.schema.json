@@ -419,6 +419,16 @@
           },
           {
             "action": {
+              "name": "create_new_workspace"
+            },
+            "keys": [
+              "Ctrl",
+              "Win",
+              "D"
+            ]
+          },
+          {
+            "action": {
               "name": "destroy_current_workspace"
             },
             "keys": [
@@ -1794,6 +1804,18 @@
           "properties": {
             "name": {
               "type": "string",
+              "const": "create_new_workspace"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
               "const": "destroy_current_workspace"
             }
           },
@@ -2058,6 +2080,16 @@
                 "Ctrl",
                 "Win",
                 "Left"
+              ]
+            },
+            {
+              "action": {
+                "name": "create_new_workspace"
+              },
+              "keys": [
+                "Ctrl",
+                "Win",
+                "D"
               ]
             },
             {
