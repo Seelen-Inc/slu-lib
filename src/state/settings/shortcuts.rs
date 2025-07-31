@@ -28,6 +28,12 @@ macro_rules! define_hotkey_actions {
 
 define_hotkey_actions! {
     ToggleLauncher = ["Win", "S"],
+    // tiling-wm state
+    PauseTiling = ["Win", "P"],
+    ToggleFloat = ["Win", "F"],
+    ToggleMonocle = ["Win", "M"],
+    CycleStackNext = ["Win", "Alt", "Right"],
+    CycleStackPrev = ["Win", "Alt", "Left"],
     // tiling-wm reservation
     ReserveTop = ["Win", "Shift", "I"],
     ReserveBottom = ["Win", "Shift", "K"],
@@ -62,43 +68,13 @@ define_hotkey_actions! {
     CreateNewWorkspace = ["Ctrl", "Win", "D"],
     DestroyCurrentWorkspace = ["Ctrl", "Win", "F4"],
     // wallpaper manager
-    ChangeToNextWallpaper = ["Ctrl", "Win", "Up"],
-    ChangeToPreviousWallpaper = ["Ctrl", "Win", "Down"],
+    CycleWallpaperNext = ["Ctrl", "Win", "Up"],
+    CycleWallpaperPrev = ["Ctrl", "Win", "Down"],
     // misc
-    MiscOpenSettings = ["Win", "Shift", "S"],
+    MiscOpenSettings = ["Win", "K"],
     MiscToggleLockTracing,
     MiscToggleWinEventTracing
 }
-
-/*TODO
-
-!+q:: CycleFocus("previous")
-!q:: CycleFocus("next")
-
-; Move windows
-#+a:: Move("left")
-#+s:: Move("down")
-#+w:: Move("up")
-#+d:: Move("right")
-
-#+Enter:: Promote()
-
-#+x:: FlipLayout("horizontal")
-#+z:: FlipLayout("vertical")
-
-; Stack windows
-#a:: Stack("left")
-#d:: Stack("right")
-#w:: Stack("up")
-#s:: Stack("down")
-#;:: Unstack()
-
-#+q:: CycleStack("previous")
-#q:: CycleStack("next")
-
-; Manipulate windows
-#f:: ToggleFloat()
-#m:: ToggleMonocle() */
 
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
 pub struct SluHotkey {

@@ -819,6 +819,66 @@
           "properties": {
             "name": {
               "type": "string",
+              "const": "pause_tiling"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "toggle_float"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "toggle_monocle"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "cycle_stack_next"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "cycle_stack_prev"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
               "const": "reserve_top"
             }
           },
@@ -1167,7 +1227,7 @@
           "properties": {
             "name": {
               "type": "string",
-              "const": "change_to_next_wallpaper"
+              "const": "cycle_wallpaper_next"
             }
           },
           "required": [
@@ -1179,7 +1239,7 @@
           "properties": {
             "name": {
               "type": "string",
-              "const": "change_to_previous_wallpaper"
+              "const": "cycle_wallpaper_prev"
             }
           },
           "required": [
