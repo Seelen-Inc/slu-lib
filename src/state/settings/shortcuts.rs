@@ -1,3 +1,7 @@
+use std::collections::HashSet;
+
+use uuid::Uuid;
+
 macro_rules! define_hotkey_actions {
     (
         $($field:ident$(($arg:ty))? $(= $shortcut:expr)?),*
@@ -57,6 +61,9 @@ define_hotkey_actions! {
     SwitchToPreviousWorkspace = ["Ctrl", "Win", "Left"],
     CreateNewWorkspace = ["Ctrl", "Win", "D"],
     DestroyCurrentWorkspace = ["Ctrl", "Win", "F4"],
+    // wallpaper manager
+    ChangeToNextWallpaper = ["Ctrl", "Win", "Up"],
+    ChangeToPreviousWallpaper = ["Ctrl", "Win", "Down"],
     // misc
     MiscOpenSettings = ["Win", "Shift", "S"],
     MiscToggleLockTracing,
@@ -95,6 +102,7 @@ define_hotkey_actions! {
 
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
 pub struct SluHotkey {
+    pub id: Uuid,
     pub action: SluHotkeyAction,
     pub keys: Vec<String>,
 }
@@ -102,6 +110,7 @@ pub struct SluHotkey {
 impl SluHotkey {
     pub fn new(action: SluHotkeyAction) -> Self {
         Self {
+            id: Uuid::new_v4(),
             action,
             keys: vec![],
         }
@@ -137,6 +146,9 @@ impl SluShortcutsSettings {
                 self.app_commands.push(hotkey);
             }
         }
+
+        let mut seen_ids = HashSet::new();
+        self.app_commands.retain(|h| seen_ids.insert(h.id));
     }
 
     pub fn default_shortcuts() -> Vec<SluHotkey> {
@@ -178,7 +190,7 @@ impl Default for SluShortcutsSettings {
     fn default() -> Self {
         Self {
             enabled: true,
-            app_commands: Self::default_shortcuts(),
+            app_commands: Vec::new(),
         }
     }
 }
