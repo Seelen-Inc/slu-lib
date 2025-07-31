@@ -23945,7 +23945,7 @@
             "methods": [],
             "properties": [
               {
-                "name": "initial",
+                "name": "callbackEvent",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandRequestToUserInputShortcutArgs.ts",
                   "line": 3,
@@ -23956,29 +23956,9 @@
                 "computed": false,
                 "optional": false,
                 "tsType": {
-                  "repr": "",
-                  "kind": "union",
-                  "union": [
-                    {
-                      "repr": "Array",
-                      "kind": "typeRef",
-                      "typeRef": {
-                        "typeParams": [
-                          {
-                            "repr": "string",
-                            "kind": "keyword",
-                            "keyword": "string"
-                          }
-                        ],
-                        "typeName": "Array"
-                      }
-                    },
-                    {
-                      "repr": "null",
-                      "kind": "keyword",
-                      "keyword": "null"
-                    }
-                  ]
+                  "repr": "string",
+                  "kind": "keyword",
+                  "keyword": "string"
                 },
                 "typeParams": []
               }
@@ -24463,29 +24443,9 @@
                     "computed": false,
                     "optional": false,
                     "tsType": {
-                      "repr": "",
-                      "kind": "union",
-                      "union": [
-                        {
-                          "repr": "Array",
-                          "kind": "typeRef",
-                          "typeRef": {
-                            "typeParams": [
-                              {
-                                "repr": "string",
-                                "kind": "keyword",
-                                "keyword": "string"
-                              }
-                            ],
-                            "typeName": "Array"
-                          }
-                        },
-                        {
-                          "repr": "null",
-                          "kind": "keyword",
-                          "keyword": "null"
-                        }
-                      ]
+                      "repr": "null",
+                      "kind": "keyword",
+                      "keyword": "null"
                     },
                     "typeParams": []
                   }
@@ -24506,8 +24466,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 535,
-                      "byteIndex": 2320
+                      "col": 519,
+                      "byteIndex": 2304
                     },
                     "params": [],
                     "computed": false,
@@ -24536,8 +24496,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 570,
-                      "byteIndex": 2355
+                      "col": 554,
+                      "byteIndex": 2339
                     },
                     "params": [],
                     "computed": false,
@@ -24566,8 +24526,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 614,
-                      "byteIndex": 2399
+                      "col": 598,
+                      "byteIndex": 2383
                     },
                     "params": [],
                     "computed": false,
@@ -24596,8 +24556,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 645,
-                      "byteIndex": 2430
+                      "col": 629,
+                      "byteIndex": 2414
                     },
                     "params": [],
                     "computed": false,
@@ -24629,8 +24589,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 688,
-                      "byteIndex": 2473
+                      "col": 672,
+                      "byteIndex": 2457
                     },
                     "params": [],
                     "computed": false,
@@ -24671,8 +24631,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 743,
-                      "byteIndex": 2528
+                      "col": 727,
+                      "byteIndex": 2512
                     },
                     "params": [],
                     "computed": false,
@@ -24704,8 +24664,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 779,
-                      "byteIndex": 2564
+                      "col": 763,
+                      "byteIndex": 2548
                     },
                     "params": [],
                     "computed": false,
@@ -24746,8 +24706,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 831,
-                      "byteIndex": 2616
+                      "col": 815,
+                      "byteIndex": 2600
                     },
                     "params": [],
                     "computed": false,
@@ -24776,8 +24736,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 872,
-                      "byteIndex": 2657
+                      "col": 856,
+                      "byteIndex": 2641
                     },
                     "params": [],
                     "computed": false,
@@ -24809,8 +24769,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 917,
-                      "byteIndex": 2702
+                      "col": 901,
+                      "byteIndex": 2686
                     },
                     "params": [],
                     "computed": false,
@@ -24842,8 +24802,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 982,
-                      "byteIndex": 2767
+                      "col": 966,
+                      "byteIndex": 2751
                     },
                     "params": [],
                     "computed": false,
@@ -24875,8 +24835,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1054,
-                      "byteIndex": 2839
+                      "col": 1038,
+                      "byteIndex": 2823
                     },
                     "params": [],
                     "computed": false,
@@ -24905,8 +24865,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1083,
-                      "byteIndex": 2868
+                      "col": 1067,
+                      "byteIndex": 2852
                     },
                     "params": [],
                     "computed": false,
@@ -24935,8 +24895,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1122,
-                      "byteIndex": 2907
+                      "col": 1106,
+                      "byteIndex": 2891
                     },
                     "params": [],
                     "computed": false,
@@ -24977,8 +24937,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1161,
-                      "byteIndex": 2946
+                      "col": 1145,
+                      "byteIndex": 2930
                     },
                     "params": [],
                     "computed": false,
@@ -25010,8 +24970,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1199,
-                      "byteIndex": 2984
+                      "col": 1183,
+                      "byteIndex": 2968
                     },
                     "params": [],
                     "computed": false,
@@ -25040,8 +25000,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1235,
-                      "byteIndex": 3020
+                      "col": 1219,
+                      "byteIndex": 3004
                     },
                     "params": [],
                     "computed": false,
@@ -25073,8 +25033,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1280,
-                      "byteIndex": 3065
+                      "col": 1264,
+                      "byteIndex": 3049
                     },
                     "params": [],
                     "computed": false,
@@ -25106,8 +25066,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1317,
-                      "byteIndex": 3102
+                      "col": 1301,
+                      "byteIndex": 3086
                     },
                     "params": [],
                     "computed": false,
@@ -25136,8 +25096,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1352,
-                      "byteIndex": 3137
+                      "col": 1336,
+                      "byteIndex": 3121
                     },
                     "params": [],
                     "computed": false,
@@ -25178,8 +25138,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1417,
-                      "byteIndex": 3202
+                      "col": 1401,
+                      "byteIndex": 3186
                     },
                     "params": [],
                     "computed": false,
@@ -25211,8 +25171,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1460,
-                      "byteIndex": 3245
+                      "col": 1444,
+                      "byteIndex": 3229
                     },
                     "params": [],
                     "computed": false,
@@ -25253,8 +25213,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1501,
-                      "byteIndex": 3286
+                      "col": 1485,
+                      "byteIndex": 3270
                     },
                     "params": [],
                     "computed": false,
@@ -25295,8 +25255,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1542,
-                      "byteIndex": 3327
+                      "col": 1526,
+                      "byteIndex": 3311
                     },
                     "params": [],
                     "computed": false,
@@ -25337,8 +25297,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1588,
-                      "byteIndex": 3373
+                      "col": 1572,
+                      "byteIndex": 3357
                     },
                     "params": [],
                     "computed": false,
@@ -25379,8 +25339,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1635,
-                      "byteIndex": 3420
+                      "col": 1619,
+                      "byteIndex": 3404
                     },
                     "params": [],
                     "computed": false,
@@ -25409,8 +25369,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1684,
-                      "byteIndex": 3469
+                      "col": 1668,
+                      "byteIndex": 3453
                     },
                     "params": [],
                     "computed": false,
@@ -25451,8 +25411,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1727,
-                      "byteIndex": 3512
+                      "col": 1711,
+                      "byteIndex": 3496
                     },
                     "params": [],
                     "computed": false,
@@ -25481,8 +25441,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1767,
-                      "byteIndex": 3552
+                      "col": 1751,
+                      "byteIndex": 3536
                     },
                     "params": [],
                     "computed": false,
@@ -25511,8 +25471,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1814,
-                      "byteIndex": 3599
+                      "col": 1798,
+                      "byteIndex": 3583
                     },
                     "params": [],
                     "computed": false,
@@ -25541,8 +25501,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1857,
-                      "byteIndex": 3642
+                      "col": 1841,
+                      "byteIndex": 3626
                     },
                     "params": [],
                     "computed": false,
@@ -25571,8 +25531,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1898,
-                      "byteIndex": 3683
+                      "col": 1882,
+                      "byteIndex": 3667
                     },
                     "params": [],
                     "computed": false,
@@ -25604,8 +25564,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1921,
-                      "byteIndex": 3706
+                      "col": 1905,
+                      "byteIndex": 3690
                     },
                     "params": [],
                     "computed": false,
@@ -25646,8 +25606,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 1966,
-                      "byteIndex": 3751
+                      "col": 1950,
+                      "byteIndex": 3735
                     },
                     "params": [],
                     "computed": false,
@@ -25676,8 +25636,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2002,
-                      "byteIndex": 3787
+                      "col": 1986,
+                      "byteIndex": 3771
                     },
                     "params": [],
                     "computed": false,
@@ -25718,8 +25678,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2066,
-                      "byteIndex": 3851
+                      "col": 2050,
+                      "byteIndex": 3835
                     },
                     "params": [],
                     "computed": false,
@@ -25748,8 +25708,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2105,
-                      "byteIndex": 3890
+                      "col": 2089,
+                      "byteIndex": 3874
                     },
                     "params": [],
                     "computed": false,
@@ -25778,8 +25738,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2143,
-                      "byteIndex": 3928
+                      "col": 2127,
+                      "byteIndex": 3912
                     },
                     "params": [],
                     "computed": false,
@@ -25808,8 +25768,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2179,
-                      "byteIndex": 3964
+                      "col": 2163,
+                      "byteIndex": 3948
                     },
                     "params": [],
                     "computed": false,
@@ -25838,8 +25798,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2217,
-                      "byteIndex": 4002
+                      "col": 2201,
+                      "byteIndex": 3986
                     },
                     "params": [],
                     "computed": false,
@@ -25868,8 +25828,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2261,
-                      "byteIndex": 4046
+                      "col": 2245,
+                      "byteIndex": 4030
                     },
                     "params": [],
                     "computed": false,
@@ -25933,8 +25893,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2329,
-                      "byteIndex": 4114
+                      "col": 2313,
+                      "byteIndex": 4098
                     },
                     "params": [],
                     "computed": false,
@@ -25975,8 +25935,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2376,
-                      "byteIndex": 4161
+                      "col": 2360,
+                      "byteIndex": 4145
                     },
                     "params": [],
                     "computed": false,
@@ -26005,8 +25965,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2401,
-                      "byteIndex": 4186
+                      "col": 2385,
+                      "byteIndex": 4170
                     },
                     "params": [],
                     "computed": false,
@@ -26035,8 +25995,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2439,
-                      "byteIndex": 4224
+                      "col": 2423,
+                      "byteIndex": 4208
                     },
                     "params": [],
                     "computed": false,
@@ -26065,8 +26025,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2464,
-                      "byteIndex": 4249
+                      "col": 2448,
+                      "byteIndex": 4233
                     },
                     "params": [],
                     "computed": false,
@@ -26095,8 +26055,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2495,
-                      "byteIndex": 4280
+                      "col": 2479,
+                      "byteIndex": 4264
                     },
                     "params": [],
                     "computed": false,
@@ -26125,8 +26085,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2527,
-                      "byteIndex": 4312
+                      "col": 2511,
+                      "byteIndex": 4296
                     },
                     "params": [],
                     "computed": false,
@@ -26155,8 +26115,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2566,
-                      "byteIndex": 4351
+                      "col": 2550,
+                      "byteIndex": 4335
                     },
                     "params": [],
                     "computed": false,
@@ -26199,8 +26159,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2621,
-                      "byteIndex": 4406
+                      "col": 2605,
+                      "byteIndex": 4390
                     },
                     "params": [],
                     "computed": false,
@@ -26229,8 +26189,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2663,
-                      "byteIndex": 4448
+                      "col": 2647,
+                      "byteIndex": 4432
                     },
                     "params": [],
                     "computed": false,
@@ -26262,8 +26222,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2701,
-                      "byteIndex": 4486
+                      "col": 2685,
+                      "byteIndex": 4470
                     },
                     "params": [],
                     "computed": false,
@@ -26295,8 +26255,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2735,
-                      "byteIndex": 4520
+                      "col": 2719,
+                      "byteIndex": 4504
                     },
                     "params": [],
                     "computed": false,
@@ -26337,8 +26297,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2773,
-                      "byteIndex": 4558
+                      "col": 2757,
+                      "byteIndex": 4542
                     },
                     "params": [],
                     "computed": false,
@@ -26367,8 +26327,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2795,
-                      "byteIndex": 4580
+                      "col": 2779,
+                      "byteIndex": 4564
                     },
                     "params": [],
                     "computed": false,
@@ -26397,8 +26357,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2817,
-                      "byteIndex": 4602
+                      "col": 2801,
+                      "byteIndex": 4586
                     },
                     "params": [],
                     "computed": false,
@@ -26427,8 +26387,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2841,
-                      "byteIndex": 4626
+                      "col": 2825,
+                      "byteIndex": 4610
                     },
                     "params": [],
                     "computed": false,
@@ -26457,8 +26417,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2863,
-                      "byteIndex": 4648
+                      "col": 2847,
+                      "byteIndex": 4632
                     },
                     "params": [],
                     "computed": false,
@@ -26487,8 +26447,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2886,
-                      "byteIndex": 4671
+                      "col": 2870,
+                      "byteIndex": 4655
                     },
                     "params": [],
                     "computed": false,
@@ -26517,8 +26477,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2905,
-                      "byteIndex": 4690
+                      "col": 2889,
+                      "byteIndex": 4674
                     },
                     "params": [],
                     "computed": false,
@@ -26550,8 +26510,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2948,
-                      "byteIndex": 4733
+                      "col": 2932,
+                      "byteIndex": 4717
                     },
                     "params": [],
                     "computed": false,
@@ -26580,8 +26540,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 2976,
-                      "byteIndex": 4761
+                      "col": 2960,
+                      "byteIndex": 4745
                     },
                     "params": [],
                     "computed": false,
@@ -26610,8 +26570,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3003,
-                      "byteIndex": 4788
+                      "col": 2987,
+                      "byteIndex": 4772
                     },
                     "params": [],
                     "computed": false,
@@ -26640,8 +26600,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3041,
-                      "byteIndex": 4826
+                      "col": 3025,
+                      "byteIndex": 4810
                     },
                     "params": [],
                     "computed": false,
@@ -26670,8 +26630,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3083,
-                      "byteIndex": 4868
+                      "col": 3067,
+                      "byteIndex": 4852
                     },
                     "params": [],
                     "computed": false,
@@ -26700,8 +26660,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3110,
-                      "byteIndex": 4895
+                      "col": 3094,
+                      "byteIndex": 4879
                     },
                     "params": [],
                     "computed": false,
@@ -26730,8 +26690,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3144,
-                      "byteIndex": 4929
+                      "col": 3128,
+                      "byteIndex": 4913
                     },
                     "params": [],
                     "computed": false,
@@ -26760,8 +26720,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3172,
-                      "byteIndex": 4957
+                      "col": 3156,
+                      "byteIndex": 4941
                     },
                     "params": [],
                     "computed": false,
@@ -26802,8 +26762,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3220,
-                      "byteIndex": 5005
+                      "col": 3204,
+                      "byteIndex": 4989
                     },
                     "params": [],
                     "computed": false,
@@ -26832,8 +26792,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3249,
-                      "byteIndex": 5034
+                      "col": 3233,
+                      "byteIndex": 5018
                     },
                     "params": [],
                     "computed": false,
@@ -26862,8 +26822,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3276,
-                      "byteIndex": 5061
+                      "col": 3260,
+                      "byteIndex": 5045
                     },
                     "params": [],
                     "computed": false,
@@ -26892,8 +26852,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3302,
-                      "byteIndex": 5087
+                      "col": 3286,
+                      "byteIndex": 5071
                     },
                     "params": [],
                     "computed": false,
@@ -26925,8 +26885,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3343,
-                      "byteIndex": 5128
+                      "col": 3327,
+                      "byteIndex": 5112
                     },
                     "params": [],
                     "computed": false,
@@ -26967,8 +26927,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3383,
-                      "byteIndex": 5168
+                      "col": 3367,
+                      "byteIndex": 5152
                     },
                     "params": [],
                     "computed": false,
@@ -26997,8 +26957,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3416,
-                      "byteIndex": 5201
+                      "col": 3400,
+                      "byteIndex": 5185
                     },
                     "params": [],
                     "computed": false,
@@ -27027,8 +26987,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3456,
-                      "byteIndex": 5241
+                      "col": 3440,
+                      "byteIndex": 5225
                     },
                     "params": [],
                     "computed": false,
@@ -27069,8 +27029,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3502,
-                      "byteIndex": 5287
+                      "col": 3486,
+                      "byteIndex": 5271
                     },
                     "params": [],
                     "computed": false,
@@ -27099,8 +27059,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3536,
-                      "byteIndex": 5321
+                      "col": 3520,
+                      "byteIndex": 5305
                     },
                     "params": [],
                     "computed": false,
@@ -27129,8 +27089,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3569,
-                      "byteIndex": 5354
+                      "col": 3553,
+                      "byteIndex": 5338
                     },
                     "params": [],
                     "computed": false,
@@ -27159,8 +27119,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3599,
-                      "byteIndex": 5384
+                      "col": 3583,
+                      "byteIndex": 5368
                     },
                     "params": [],
                     "computed": false,
@@ -27189,8 +27149,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3629,
-                      "byteIndex": 5414
+                      "col": 3613,
+                      "byteIndex": 5398
                     },
                     "params": [],
                     "computed": false,
@@ -27231,8 +27191,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3679,
-                      "byteIndex": 5464
+                      "col": 3663,
+                      "byteIndex": 5448
                     },
                     "params": [],
                     "computed": false,
@@ -27261,8 +27221,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SeelenCommandReturn.ts",
                       "line": 37,
-                      "col": 3713,
-                      "byteIndex": 5498
+                      "col": 3697,
+                      "byteIndex": 5482
                     },
                     "params": [],
                     "computed": false,
