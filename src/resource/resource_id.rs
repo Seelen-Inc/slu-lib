@@ -4,7 +4,8 @@ use serde::{de::Visitor, Deserialize, Deserializer};
 
 use crate::error::Result;
 
-macro_rules! impl_common_traits {
+#[macro_export(local_inner_macros)]
+macro_rules! identifier_impl {
     ($type:ty, $inner:ty) => {
         impl std::ops::Deref for $type {
             type Target = $inner;
@@ -39,7 +40,7 @@ macro_rules! impl_common_traits {
 
         impl std::fmt::Display for $type {
             fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-                write!(f, "{}", self.0)
+                ::std::write!(f, "{}", self.0)
             }
         }
     };
@@ -97,7 +98,7 @@ impl ResourceId {
     }
 }
 
-impl_common_traits!(ResourceId, String);
+identifier_impl!(ResourceId, String);
 
 impl Default for ResourceId {
     fn default() -> Self {
@@ -154,7 +155,7 @@ macro_rules! resource_id_variant {
             Debug, Clone, Hash, Default, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS,
         )]
         pub struct $name(ResourceId);
-        impl_common_traits!($name, ResourceId);
+        identifier_impl!($name, ResourceId);
     };
 }
 

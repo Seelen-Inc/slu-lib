@@ -12216,6 +12216,33 @@
                   ]
                 },
                 "typeParams": []
+              },
+              {
+                "name": "windows",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/DesktopWorkspace.ts",
+                  "line": 4,
+                  "col": 71,
+                  "byteIndex": 234
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "Array",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": [
+                      {
+                        "repr": "number",
+                        "kind": "keyword",
+                        "keyword": "number"
+                      }
+                    ],
+                    "typeName": "Array"
+                  }
+                },
+                "typeParams": []
               }
             ],
             "callSignatures": [],
@@ -16050,6 +16077,26 @@
       }
     },
     {
+      "name": "MonitorId",
+      "isDefault": false,
+      "location": {
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/MonitorId.ts",
+        "line": 3,
+        "col": 0,
+        "byteIndex": 110
+      },
+      "declarationKind": "export",
+      "kind": "typeAlias",
+      "typeAliasDef": {
+        "tsType": {
+          "repr": "string",
+          "kind": "keyword",
+          "keyword": "string"
+        },
+        "typeParams": []
+      }
+    },
+    {
       "name": "MonitorSettingsByWidget",
       "isDefault": false,
       "location": {
@@ -17093,9 +17140,9 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/PhysicalMonitor.ts",
-        "line": 4,
+        "line": 5,
         "col": 0,
-        "byteIndex": 149
+        "byteIndex": 198
       },
       "declarationKind": "export",
       "kind": "typeAlias",
@@ -17111,17 +17158,20 @@
                 "name": "id",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/PhysicalMonitor.ts",
-                  "line": 4,
+                  "line": 5,
                   "col": 32,
-                  "byteIndex": 181
+                  "byteIndex": 230
                 },
                 "params": [],
                 "computed": false,
                 "optional": false,
                 "tsType": {
-                  "repr": "string",
-                  "kind": "keyword",
-                  "keyword": "string"
+                  "repr": "MonitorId",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "MonitorId"
+                  }
                 },
                 "typeParams": []
               },
@@ -17129,9 +17179,9 @@
                 "name": "name",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/PhysicalMonitor.ts",
-                  "line": 4,
-                  "col": 44,
-                  "byteIndex": 193
+                  "line": 5,
+                  "col": 47,
+                  "byteIndex": 245
                 },
                 "params": [],
                 "computed": false,
@@ -17147,9 +17197,9 @@
                 "name": "rect",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/PhysicalMonitor.ts",
-                  "line": 4,
-                  "col": 58,
-                  "byteIndex": 207
+                  "line": 5,
+                  "col": 61,
+                  "byteIndex": 259
                 },
                 "params": [],
                 "computed": false,
@@ -17168,9 +17218,9 @@
                 "name": "dpi",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/PhysicalMonitor.ts",
-                  "line": 4,
-                  "col": 70,
-                  "byteIndex": 219
+                  "line": 5,
+                  "col": 73,
+                  "byteIndex": 271
                 },
                 "params": [],
                 "computed": false,
@@ -40538,6 +40588,126 @@
                   "repr": "boolean",
                   "kind": "keyword",
                   "keyword": "boolean"
+                },
+                "typeParams": []
+              }
+            ],
+            "callSignatures": [],
+            "indexSignatures": []
+          }
+        },
+        "typeParams": []
+      }
+    },
+    {
+      "name": "VirtualDesktops",
+      "isDefault": false,
+      "location": {
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/VirtualDesktops.ts",
+        "line": 6,
+        "col": 0,
+        "byteIndex": 275
+      },
+      "declarationKind": "export",
+      "kind": "typeAlias",
+      "typeAliasDef": {
+        "tsType": {
+          "repr": "",
+          "kind": "typeLiteral",
+          "typeLiteral": {
+            "constructors": [],
+            "methods": [],
+            "properties": [
+              {
+                "name": "monitors",
+                "jsDoc": {
+                  "doc": "Workspaces per monitor"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/VirtualDesktops.ts",
+                  "line": 10,
+                  "col": 0,
+                  "byteIndex": 342
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "",
+                  "kind": "mapped",
+                  "mappedType": {
+                    "typeParam": {
+                      "name": "key",
+                      "constraint": {
+                        "repr": "MonitorId",
+                        "kind": "typeRef",
+                        "typeRef": {
+                          "typeParams": null,
+                          "typeName": "MonitorId"
+                        }
+                      }
+                    },
+                    "optional": true,
+                    "tsType": {
+                      "repr": "Array",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": [
+                          {
+                            "repr": "DesktopWorkspace",
+                            "kind": "typeRef",
+                            "typeRef": {
+                              "typeParams": null,
+                              "typeName": "DesktopWorkspace"
+                            }
+                          }
+                        ],
+                        "typeName": "Array"
+                      }
+                    }
+                  }
+                },
+                "typeParams": []
+              },
+              {
+                "name": "active_workspace",
+                "jsDoc": {
+                  "doc": "Active workspace per monitor"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/VirtualDesktops.ts",
+                  "line": 14,
+                  "col": 0,
+                  "byteIndex": 443
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "",
+                  "kind": "mapped",
+                  "mappedType": {
+                    "typeParam": {
+                      "name": "key",
+                      "constraint": {
+                        "repr": "MonitorId",
+                        "kind": "typeRef",
+                        "typeRef": {
+                          "typeParams": null,
+                          "typeName": "MonitorId"
+                        }
+                      }
+                    },
+                    "optional": true,
+                    "tsType": {
+                      "repr": "WorkspaceId",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": null,
+                        "typeName": "WorkspaceId"
+                      }
+                    }
+                  }
                 },
                 "typeParams": []
               }

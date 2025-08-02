@@ -1,27 +1,72 @@
+use std::collections::HashMap;
+
+use uuid::Uuid;
+
+use crate::{identifier_impl, system_state::MonitorId};
+
+#[derive(Debug, Clone, Serialize, Deserialize, TS)]
+#[ts(export)]
+pub struct VirtualDesktops {
+    /// Workspaces per monitor
+    pub monitors: HashMap<MonitorId, Vec<DesktopWorkspace>>,
+    /// Active workspace per monitor
+    pub active_workspace: HashMap<MonitorId, WorkspaceId>,
+}
+
+impl VirtualDesktops {
+    pub fn contains_window(&self, window_id: isize) -> bool {
+        self.monitors
+            .iter()
+            .any(|(_, workspaces)| workspaces.iter().any(|ws| ws.windows.contains(&window_id)))
+    }
+
+    pub fn sanitize(&mut self) {
+        // ensure monitors have at least one workspace
+        for workspaces in &mut self.monitors.values_mut() {
+            if workspaces.is_empty() {
+                workspaces.push(DesktopWorkspace::create());
+            }
+        }
+
+        // Verify the active workspace exists in this monitor's workspaces
+        for (monitor_id, workspaces) in &self.monitors {
+            let active_exists =
+                self.active_workspace
+                    .get(monitor_id)
+                    .is_some_and(|active_workspace| {
+                        workspaces.iter().any(|ws| &ws.id == active_workspace)
+                    });
+
+            if !active_exists {
+                self.active_workspace
+                    .insert(monitor_id.clone(), workspaces[0].id.clone());
+            }
+        }
+
+        // Remove active workspaces for monitors that don't exist
+        self.active_workspace
+            .retain(|monitor_id, _| self.monitors.contains_key(monitor_id));
+    }
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize, TS)]
 pub struct DesktopWorkspace {
     pub id: WorkspaceId,
     pub name: Option<String>,
+    pub windows: Vec<isize>,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, TS)]
+impl DesktopWorkspace {
+    pub fn create() -> Self {
+        Self {
+            id: WorkspaceId(Uuid::new_v4().to_string()),
+            name: None,
+            windows: Vec::new(),
+        }
+    }
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Hash, Serialize, Deserialize, TS)]
 pub struct WorkspaceId(pub String);
 
-impl std::ops::Deref for WorkspaceId {
-    type Target = String;
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-
-impl std::ops::DerefMut for WorkspaceId {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-
-impl From<String> for WorkspaceId {
-    fn from(value: String) -> Self {
-        Self(value)
-    }
-}
+identifier_impl!(WorkspaceId, String);
