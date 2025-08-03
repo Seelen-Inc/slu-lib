@@ -92,6 +92,10 @@ macro_rules! slu_commands_declaration {
 }
 
 slu_commands_declaration! {
+    // virtual desktops
+    StateGetVirtualDesktops = get_virtual_desktops() -> VirtualDesktops,
+    SwitchWorkspace = switch_workspace(idx: usize),
+
     // General
     Run = run(program: PathBuf, args: Option<RelaunchArguments>, working_dir: Option<PathBuf>),
     IsDevMode = is_dev_mode() -> bool,
@@ -99,10 +103,8 @@ slu_commands_declaration! {
     OpenFile = open_file(path: PathBuf),
     RunAsAdmin = run_as_admin(program: PathBuf, args: Option<RelaunchArguments>),
     SelectFileOnExplorer = select_file_on_explorer(path: PathBuf),
-    IsVirtualDesktopSupported = is_virtual_desktop_supported() -> bool,
     GetUserEnvs = get_user_envs() -> HashMap<String, String>,
     ShowAppSettings = show_app_settings(),
-    SwitchWorkspace = switch_workspace(idx: usize),
     SendKeys = send_keys(keys: String),
     GetIcon = get_icon(
         #[ts(optional = nullable)]

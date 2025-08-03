@@ -1,15 +1,15 @@
 // This file was generated via rust macros. Don't modify manually.
 export enum SeelenCommand {
+  StateGetVirtualDesktops = 'get_virtual_desktops',
+  SwitchWorkspace = 'switch_workspace',
   Run = 'run',
   IsDevMode = 'is_dev_mode',
   IsAppxPackage = 'is_appx_package',
   OpenFile = 'open_file',
   RunAsAdmin = 'run_as_admin',
   SelectFileOnExplorer = 'select_file_on_explorer',
-  IsVirtualDesktopSupported = 'is_virtual_desktop_supported',
   GetUserEnvs = 'get_user_envs',
   ShowAppSettings = 'show_app_settings',
-  SwitchWorkspace = 'switch_workspace',
   SendKeys = 'send_keys',
   GetIcon = 'get_icon',
   SimulateFullscreen = 'simulate_fullscreen',

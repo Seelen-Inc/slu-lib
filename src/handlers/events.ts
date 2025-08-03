@@ -1,7 +1,6 @@
 // This file was generated via rust macros. Don't modify manually.
 export enum SeelenEvent {
-  WorkspacesChanged = 'workspaces-changed',
-  ActiveWorkspaceChanged = 'active-workspace-changed',
+  VirtualDesktopsChanged = 'virtual-desktops::changed',
   GlobalFocusChanged = 'global-focus-changed',
   GlobalMouseMove = 'global-mouse-move',
   HandleLayeredHitboxes = 'handle-layered',

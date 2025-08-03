@@ -212,11 +212,6 @@
         "channel": "Release"
       }
     },
-    "virtualDesktopStrategy": {
-      "description": "what virtual desktop implementation will be used, in case Native is not available we use Seelen",
-      "$ref": "#/$defs/VirtualDesktopStrategy",
-      "default": "Native"
-    },
     "wall": {
       "description": "@deprecated since v2.1.0, will be removed in v3.0.0",
       "anyOf": [
@@ -1370,13 +1365,6 @@
       },
       "required": [
         "channel"
-      ]
-    },
-    "VirtualDesktopStrategy": {
-      "type": "string",
-      "enum": [
-        "Native",
-        "Seelen"
       ]
     },
     "WallpaperId": {

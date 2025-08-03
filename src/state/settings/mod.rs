@@ -375,13 +375,6 @@ impl Default for UpdaterSettings {
 }
 
 // ======================== Final Settings Struct ===============================
-
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
-pub enum VirtualDesktopStrategy {
-    Native,
-    Seelen,
-}
-
 #[serde_alias(SnakeCase)]
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
@@ -426,8 +419,6 @@ pub struct Settings {
     pub language: Option<String>,
     /// MomentJS date format
     pub date_format: String,
-    /// what virtual desktop implementation will be used, in case Native is not available we use Seelen
-    pub virtual_desktop_strategy: VirtualDesktopStrategy,
     /// Updater Settings
     pub updater: UpdaterSettings,
     /// Custom settings for widgets
@@ -465,7 +456,6 @@ impl Default for Settings {
             dev_tools: false,
             language: Some(Self::get_system_language()),
             date_format: "ddd D MMM, hh:mm A".to_owned(),
-            virtual_desktop_strategy: VirtualDesktopStrategy::Native,
             updater: UpdaterSettings::default(),
             by_widget: SettingsByWidget::default(),
             by_theme: HashMap::new(),

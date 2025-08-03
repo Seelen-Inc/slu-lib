@@ -14,12 +14,6 @@ pub struct VirtualDesktops {
 }
 
 impl VirtualDesktops {
-    pub fn contains_window(&self, window_id: isize) -> bool {
-        self.monitors
-            .iter()
-            .any(|(_, workspaces)| workspaces.iter().any(|ws| ws.windows.contains(&window_id)))
-    }
-
     pub fn sanitize(&mut self) {
         // ensure monitors have at least one workspace
         for workspaces in &mut self.monitors.values_mut() {

@@ -41,8 +41,7 @@ macro_rules! slu_events_declaration {
 }
 
 slu_events_declaration! {
-    WorkspacesChanged(Vec<DesktopWorkspace>) as "workspaces-changed",
-    ActiveWorkspaceChanged(WorkspaceId) as "active-workspace-changed",
+    VirtualDesktopsChanged(VirtualDesktops) as "virtual-desktops::changed",
 
     GlobalFocusChanged(FocusedApp) as "global-focus-changed",
     GlobalMouseMove([i32; 2]) as "global-mouse-move",

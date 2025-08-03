@@ -13,7 +13,6 @@ import type {
   Settings as ISettings,
   ThirdPartyWidgetSettings,
   UpdateChannel,
-  VirtualDesktopStrategy,
   WidgetId,
   WindowManagerSettings,
 } from '@seelen-ui/types';
@@ -118,11 +117,6 @@ const FancyToolbarSide: Enum<FancyToolbarSide> = {
   Bottom: 'Bottom',
 };
 
-const VirtualDesktopStrategy: Enum<VirtualDesktopStrategy> = {
-  Native: 'Native',
-  Seelen: 'Seelen',
-};
-
 const SeelenWegMode: Enum<SeelenWegMode> = {
   FullWidth: 'FullWidth',
   MinContent: 'MinContent',
@@ -152,14 +146,6 @@ const UpdateChannel: Enum<UpdateChannel> = {
   Nightly: 'Nightly',
 };
 
-export {
-  FancyToolbarSide,
-  HideMode,
-  SeelenLauncherMonitor,
-  SeelenWegMode,
-  SeelenWegSide,
-  UpdateChannel,
-  VirtualDesktopStrategy,
-};
+export { FancyToolbarSide, HideMode, SeelenLauncherMonitor, SeelenWegMode, SeelenWegSide, UpdateChannel };
 
 export * from './settings_by_monitor.ts';
