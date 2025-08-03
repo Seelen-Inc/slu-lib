@@ -4,7 +4,8 @@ use uuid::Uuid;
 
 use crate::{identifier_impl, system_state::MonitorId};
 
-#[derive(Debug, Clone, Serialize, Deserialize, TS)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize, TS)]
+#[serde(default, rename_all = "camelCase")]
 #[ts(export)]
 pub struct VirtualDesktops {
     /// Workspaces per monitor
@@ -46,7 +47,9 @@ impl VirtualDesktops {
 #[derive(Debug, Clone, Serialize, Deserialize, TS)]
 pub struct DesktopWorkspace {
     pub id: WorkspaceId,
+    #[serde(default)]
     pub name: Option<String>,
+    #[serde(default)]
     pub windows: Vec<isize>,
 }
 
