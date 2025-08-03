@@ -32489,6 +32489,24 @@
                   }
                 },
                 "typeParams": []
+              },
+              {
+                "name": "readonly",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkey.ts",
+                  "line": 4,
+                  "col": 84,
+                  "byteIndex": 255
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "boolean",
+                  "kind": "keyword",
+                  "keyword": "boolean"
+                },
+                "typeParams": []
               }
             ],
             "callSignatures": [],
@@ -33793,6 +33811,39 @@
                     "computed": false,
                     "optional": false,
                     "tsType": {
+                      "repr": "misc_force_restart",
+                      "kind": "literal",
+                      "literal": {
+                        "kind": "string",
+                        "string": "misc_force_restart"
+                      }
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            },
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "constructors": [],
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "name",
+                    "location": {
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
+                      "line": 3,
+                      "col": 1294,
+                      "byteIndex": 1404
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": false,
+                    "tsType": {
                       "repr": "misc_toggle_lock_tracing",
                       "kind": "literal",
                       "literal": {
@@ -33819,8 +33870,8 @@
                     "location": {
                       "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluHotkeyAction.ts",
                       "line": 3,
-                      "col": 1300,
-                      "byteIndex": 1410
+                      "col": 1335,
+                      "byteIndex": 1445
                     },
                     "params": [],
                     "computed": false,

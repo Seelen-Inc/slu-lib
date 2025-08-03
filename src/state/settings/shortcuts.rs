@@ -4,7 +4,9 @@ use uuid::Uuid;
 
 macro_rules! define_hotkey_actions {
     (
-        $($field:ident$(($arg:ty))? $(= $shortcut:expr)?),*
+        $(
+            $field:ident$(($arg:ty))? $(= [$($key:literal),*])?
+        ),*
     ) => {
         #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash, Serialize, Deserialize, JsonSchema, TS)]
         #[serde(tag = "name", content = "arg", rename_all = "snake_case")]
@@ -18,7 +20,7 @@ macro_rules! define_hotkey_actions {
             fn _default_shortcuts() -> Vec<SluHotkey> {
                 vec![
                     $($(
-                        SluHotkey::new(SluHotkeyAction::$field).keys($shortcut),
+                        SluHotkey::new(SluHotkeyAction::$field).keys([$($key),*]),
                     )?)*
                 ]
             }
@@ -72,6 +74,7 @@ define_hotkey_actions! {
     CycleWallpaperPrev = ["Ctrl", "Win", "Down"],
     // misc
     MiscOpenSettings = ["Win", "K"],
+    MiscForceRestart = ["Ctrl", "Win", "Alt", "R"],
     MiscToggleLockTracing,
     MiscToggleWinEventTracing
 }
@@ -81,6 +84,8 @@ pub struct SluHotkey {
     pub id: Uuid,
     pub action: SluHotkeyAction,
     pub keys: Vec<String>,
+    #[serde(default)]
+    pub readonly: bool,
 }
 
 impl SluHotkey {
@@ -89,6 +94,7 @@ impl SluHotkey {
             id: Uuid::new_v4(),
             action,
             keys: vec![],
+            readonly: false,
         }
     }
 
@@ -98,6 +104,11 @@ impl SluHotkey {
         I: IntoIterator<Item = T>,
     {
         self.keys = keys.into_iter().map(|k| k.as_ref().to_string()).collect();
+        self
+    }
+
+    pub fn readonly(mut self) -> Self {
+        self.readonly = true;
         self
     }
 }
@@ -116,7 +127,7 @@ impl SluShortcutsSettings {
 
     pub fn sanitize(&mut self) {
         let defaults = Self::default_shortcuts();
-        for hotkey in defaults {
+        for hotkey in defaults.app_commands {
             // add missing hotkeys from defaults
             if !self.contains_action(hotkey.action) {
                 self.app_commands.push(hotkey);
@@ -124,10 +135,15 @@ impl SluShortcutsSettings {
         }
 
         let mut seen_ids = HashSet::new();
-        self.app_commands.retain(|h| seen_ids.insert(h.id));
+        self.app_commands
+            .retain(|h| seen_ids.insert(h.id) && !h.keys.is_empty());
     }
 
-    pub fn default_shortcuts() -> Vec<SluHotkey> {
+    pub fn get_mut(&mut self, action: SluHotkeyAction) -> Option<&mut SluHotkey> {
+        self.app_commands.iter_mut().find(|h| h.action == action)
+    }
+
+    pub fn default_shortcuts() -> Self {
         let mut shorcuts = Self::_default_shortcuts();
 
         for i in 0..10 {
@@ -158,7 +174,17 @@ impl SluShortcutsSettings {
                 digit_key.as_str(),
             ]));
         }
-        shorcuts
+
+        let mut defaults = Self {
+            enabled: true,
+            app_commands: shorcuts,
+        };
+
+        if let Some(h) = defaults.get_mut(SluHotkeyAction::MiscForceRestart) {
+            h.readonly = true;
+        }
+
+        defaults
     }
 }
 

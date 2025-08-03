@@ -792,6 +792,10 @@
           "items": {
             "type": "string"
           }
+        },
+        "readonly": {
+          "type": "boolean",
+          "default": false
         }
       },
       "required": [
@@ -1252,6 +1256,18 @@
             "name": {
               "type": "string",
               "const": "misc_open_settings"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "const": "misc_force_restart"
             }
           },
           "required": [
