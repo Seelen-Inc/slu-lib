@@ -40620,13 +40620,112 @@
       }
     },
     {
+      "name": "VirtualDesktopMonitor",
+      "isDefault": false,
+      "location": {
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/VirtualDesktopMonitor.ts",
+        "line": 6,
+        "col": 0,
+        "byteIndex": 275
+      },
+      "declarationKind": "export",
+      "kind": "typeAlias",
+      "typeAliasDef": {
+        "tsType": {
+          "repr": "",
+          "kind": "typeLiteral",
+          "typeLiteral": {
+            "constructors": [],
+            "methods": [],
+            "properties": [
+              {
+                "name": "id",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/VirtualDesktopMonitor.ts",
+                  "line": 6,
+                  "col": 38,
+                  "byteIndex": 313
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "MonitorId",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "MonitorId"
+                  }
+                },
+                "typeParams": []
+              },
+              {
+                "name": "workspaces",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/VirtualDesktopMonitor.ts",
+                  "line": 6,
+                  "col": 53,
+                  "byteIndex": 328
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "Array",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": [
+                      {
+                        "repr": "DesktopWorkspace",
+                        "kind": "typeRef",
+                        "typeRef": {
+                          "typeParams": null,
+                          "typeName": "DesktopWorkspace"
+                        }
+                      }
+                    ],
+                    "typeName": "Array"
+                  }
+                },
+                "typeParams": []
+              },
+              {
+                "name": "current_workspace",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/VirtualDesktopMonitor.ts",
+                  "line": 6,
+                  "col": 90,
+                  "byteIndex": 365
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "WorkspaceId",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "WorkspaceId"
+                  }
+                },
+                "typeParams": []
+              }
+            ],
+            "callSignatures": [],
+            "indexSignatures": []
+          }
+        },
+        "typeParams": []
+      }
+    },
+    {
       "name": "VirtualDesktops",
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/VirtualDesktops.ts",
-        "line": 6,
+        "line": 5,
         "col": 0,
-        "byteIndex": 275
+        "byteIndex": 232
       },
       "declarationKind": "export",
       "kind": "typeAlias",
@@ -40645,9 +40744,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/VirtualDesktops.ts",
-                  "line": 10,
+                  "line": 9,
                   "col": 0,
-                  "byteIndex": 342
+                  "byteIndex": 299
                 },
                 "params": [],
                 "computed": false,
@@ -40669,62 +40768,11 @@
                     },
                     "optional": true,
                     "tsType": {
-                      "repr": "Array",
-                      "kind": "typeRef",
-                      "typeRef": {
-                        "typeParams": [
-                          {
-                            "repr": "DesktopWorkspace",
-                            "kind": "typeRef",
-                            "typeRef": {
-                              "typeParams": null,
-                              "typeName": "DesktopWorkspace"
-                            }
-                          }
-                        ],
-                        "typeName": "Array"
-                      }
-                    }
-                  }
-                },
-                "typeParams": []
-              },
-              {
-                "name": "activeWorkspace",
-                "jsDoc": {
-                  "doc": "Active workspace per monitor"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/VirtualDesktops.ts",
-                  "line": 14,
-                  "col": 0,
-                  "byteIndex": 443
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "",
-                  "kind": "mapped",
-                  "mappedType": {
-                    "typeParam": {
-                      "name": "key",
-                      "constraint": {
-                        "repr": "MonitorId",
-                        "kind": "typeRef",
-                        "typeRef": {
-                          "typeParams": null,
-                          "typeName": "MonitorId"
-                        }
-                      }
-                    },
-                    "optional": true,
-                    "tsType": {
-                      "repr": "WorkspaceId",
+                      "repr": "VirtualDesktopMonitor",
                       "kind": "typeRef",
                       "typeRef": {
                         "typeParams": null,
-                        "typeName": "WorkspaceId"
+                        "typeName": "VirtualDesktopMonitor"
                       }
                     }
                   }
@@ -40738,9 +40786,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/VirtualDesktops.ts",
-                  "line": 18,
+                  "line": 13,
                   "col": 0,
-                  "byteIndex": 570
+                  "byteIndex": 429
                 },
                 "params": [],
                 "computed": false,
