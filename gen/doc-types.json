@@ -12218,12 +12218,44 @@
                 "typeParams": []
               },
               {
+                "name": "icon",
+                "jsDoc": {
+                  "doc": "react-icon icon name"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/DesktopWorkspace.ts",
+                  "line": 8,
+                  "col": 0,
+                  "byteIndex": 267
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "",
+                  "kind": "union",
+                  "union": [
+                    {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    {
+                      "repr": "null",
+                      "kind": "keyword",
+                      "keyword": "null"
+                    }
+                  ]
+                },
+                "typeParams": []
+              },
+              {
                 "name": "windows",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/DesktopWorkspace.ts",
-                  "line": 4,
-                  "col": 71,
-                  "byteIndex": 234
+                  "line": 8,
+                  "col": 21,
+                  "byteIndex": 288
                 },
                 "params": [],
                 "computed": false,
@@ -40695,6 +40727,36 @@
                         "typeName": "WorkspaceId"
                       }
                     }
+                  }
+                },
+                "typeParams": []
+              },
+              {
+                "name": "pinned",
+                "jsDoc": {
+                  "doc": "pinned windows will be not affected by switching workspaces"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/VirtualDesktops.ts",
+                  "line": 18,
+                  "col": 0,
+                  "byteIndex": 570
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "Array",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": [
+                      {
+                        "repr": "number",
+                        "kind": "keyword",
+                        "keyword": "number"
+                      }
+                    ],
+                    "typeName": "Array"
                   }
                 },
                 "typeParams": []

@@ -12,6 +12,8 @@ pub struct VirtualDesktops {
     pub monitors: HashMap<MonitorId, Vec<DesktopWorkspace>>,
     /// Active workspace per monitor
     pub active_workspace: HashMap<MonitorId, WorkspaceId>,
+    /// pinned windows will be not affected by switching workspaces
+    pub pinned: Vec<isize>,
 }
 
 impl VirtualDesktops {
@@ -47,8 +49,9 @@ impl VirtualDesktops {
 #[derive(Debug, Clone, Serialize, Deserialize, TS)]
 pub struct DesktopWorkspace {
     pub id: WorkspaceId,
-    #[serde(default)]
     pub name: Option<String>,
+    /// react-icon icon name
+    pub icon: Option<String>,
     #[serde(default)]
     pub windows: Vec<isize>,
 }
@@ -58,6 +61,7 @@ impl DesktopWorkspace {
         Self {
             id: WorkspaceId(Uuid::new_v4().to_string()),
             name: None,
+            icon: None,
             windows: Vec::new(),
         }
     }
