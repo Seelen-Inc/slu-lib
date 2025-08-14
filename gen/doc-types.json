@@ -16702,80 +16702,6 @@
       }
     },
     {
-      "name": "NodeSubtype",
-      "isDefault": false,
-      "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/NodeSubtype.ts",
-        "line": 3,
-        "col": 0,
-        "byteIndex": 110
-      },
-      "declarationKind": "export",
-      "kind": "typeAlias",
-      "typeAliasDef": {
-        "tsType": {
-          "repr": "",
-          "kind": "union",
-          "union": [
-            {
-              "repr": "Temporal",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "Temporal"
-              }
-            },
-            {
-              "repr": "Permanent",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "Permanent"
-              }
-            }
-          ]
-        },
-        "typeParams": []
-      }
-    },
-    {
-      "name": "NoFallbackBehavior",
-      "isDefault": false,
-      "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/NoFallbackBehavior.ts",
-        "line": 3,
-        "col": 0,
-        "byteIndex": 110
-      },
-      "declarationKind": "export",
-      "kind": "typeAlias",
-      "typeAliasDef": {
-        "tsType": {
-          "repr": "",
-          "kind": "union",
-          "union": [
-            {
-              "repr": "Float",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "Float"
-              }
-            },
-            {
-              "repr": "Unmanaged",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "Unmanaged"
-              }
-            }
-          ]
-        },
-        "typeParams": []
-      }
-    },
-    {
       "name": "NotificationsToolbarItem",
       "isDefault": false,
       "location": {
@@ -42307,9 +42233,9 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerLayout.ts",
-        "line": 5,
+        "line": 4,
         "col": 0,
-        "byteIndex": 220
+        "byteIndex": 153
       },
       "declarationKind": "export",
       "kind": "typeAlias",
@@ -42325,9 +42251,9 @@
                 "name": "structure",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerLayout.ts",
-                  "line": 5,
+                  "line": 4,
                   "col": 36,
-                  "byteIndex": 256
+                  "byteIndex": 189
                 },
                 "params": [],
                 "computed": false,
@@ -42343,22 +42269,28 @@
                 "typeParams": []
               },
               {
-                "name": "noFallbackBehavior",
+                "name": "floatingWindows",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerLayout.ts",
-                  "line": 5,
+                  "line": 4,
                   "col": 55,
-                  "byteIndex": 275
+                  "byteIndex": 208
                 },
                 "params": [],
                 "computed": false,
                 "optional": false,
                 "tsType": {
-                  "repr": "NoFallbackBehavior",
+                  "repr": "Array",
                   "kind": "typeRef",
                   "typeRef": {
-                    "typeParams": null,
-                    "typeName": "NoFallbackBehavior"
+                    "typeParams": [
+                      {
+                        "repr": "number",
+                        "kind": "keyword",
+                        "keyword": "number"
+                      }
+                    ],
+                    "typeName": "Array"
                   }
                 },
                 "typeParams": []
@@ -42922,13 +42854,13 @@
       }
     },
     {
-      "name": "WmFallbackNode",
+      "name": "WmNode",
       "isDefault": false,
       "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmFallbackNode.ts",
-        "line": 4,
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
+        "line": 5,
         "col": 0,
-        "byteIndex": 163
+        "byteIndex": 220
       },
       "declarationKind": "export",
       "kind": "typeAlias",
@@ -42941,22 +42873,49 @@
             "methods": [],
             "properties": [
               {
-                "name": "subtype",
+                "name": "type",
+                "jsDoc": {
+                  "doc": "Type determines the behavior of the node"
+                },
                 "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmFallbackNode.ts",
-                  "line": 4,
-                  "col": 31,
-                  "byteIndex": 194
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
+                  "line": 9,
+                  "col": 0,
+                  "byteIndex": 296
                 },
                 "params": [],
                 "computed": false,
                 "optional": false,
                 "tsType": {
-                  "repr": "NodeSubtype",
+                  "repr": "WmNodeKind",
                   "kind": "typeRef",
                   "typeRef": {
                     "typeParams": null,
-                    "typeName": "NodeSubtype"
+                    "typeName": "WmNodeKind"
+                  }
+                },
+                "typeParams": []
+              },
+              {
+                "name": "lifetime",
+                "jsDoc": {
+                  "doc": "Lifetime of the node"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
+                  "line": 13,
+                  "col": 0,
+                  "byteIndex": 347
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "WmNodeLifetime",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "WmNodeLifetime"
                   }
                 },
                 "typeParams": []
@@ -42967,10 +42926,10 @@
                   "doc": "Order in how the tree will be traversed (1 = first, 2 = second, etc.)"
                 },
                 "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmFallbackNode.ts",
-                  "line": 8,
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
+                  "line": 17,
                   "col": 0,
-                  "byteIndex": 298
+                  "byteIndex": 455
                 },
                 "params": [],
                 "computed": false,
@@ -42988,10 +42947,10 @@
                   "doc": "How much of the remaining space this node will take"
                 },
                 "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmFallbackNode.ts",
-                  "line": 12,
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
+                  "line": 21,
                   "col": 0,
-                  "byteIndex": 380
+                  "byteIndex": 537
                 },
                 "params": [],
                 "computed": false,
@@ -43009,10 +42968,10 @@
                   "doc": "Math Condition for the node to be shown, e.g: n >= 3"
                 },
                 "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmFallbackNode.ts",
-                  "line": 16,
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
+                  "line": 25,
                   "col": 0,
-                  "byteIndex": 465
+                  "byteIndex": 622
                 },
                 "params": [],
                 "computed": false,
@@ -43038,13 +42997,13 @@
               {
                 "name": "active",
                 "jsDoc": {
-                  "doc": "active window handle (HWND) in the node"
+                  "doc": "Active window handle (HWND) in the node."
                 },
                 "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmFallbackNode.ts",
-                  "line": 20,
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
+                  "line": 29,
                   "col": 0,
-                  "byteIndex": 543
+                  "byteIndex": 701
                 },
                 "params": [],
                 "computed": false,
@@ -43068,15 +43027,15 @@
                 "typeParams": []
               },
               {
-                "name": "handles",
+                "name": "windows",
                 "jsDoc": {
-                  "doc": "window handles (HWND) in the node"
+                  "doc": "Window handles (HWND) in the node."
                 },
                 "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmFallbackNode.ts",
-                  "line": 24,
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
+                  "line": 33,
                   "col": 0,
-                  "byteIndex": 612
+                  "byteIndex": 771
                 },
                 "params": [],
                 "computed": false,
@@ -43096,136 +43055,17 @@
                   }
                 },
                 "typeParams": []
-              }
-            ],
-            "callSignatures": [],
-            "indexSignatures": []
-          }
-        },
-        "typeParams": []
-      }
-    },
-    {
-      "name": "WmHorizontalNode",
-      "isDefault": false,
-      "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmHorizontalNode.ts",
-        "line": 5,
-        "col": 0,
-        "byteIndex": 206
-      },
-      "declarationKind": "export",
-      "kind": "typeAlias",
-      "typeAliasDef": {
-        "tsType": {
-          "repr": "",
-          "kind": "typeLiteral",
-          "typeLiteral": {
-            "constructors": [],
-            "methods": [],
-            "properties": [
-              {
-                "name": "subtype",
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmHorizontalNode.ts",
-                  "line": 5,
-                  "col": 33,
-                  "byteIndex": 239
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "NodeSubtype",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "NodeSubtype"
-                  }
-                },
-                "typeParams": []
-              },
-              {
-                "name": "priority",
-                "jsDoc": {
-                  "doc": "Order in how the tree will be traversed (1 = first, 2 = second, etc.)"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmHorizontalNode.ts",
-                  "line": 9,
-                  "col": 0,
-                  "byteIndex": 343
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "number",
-                  "kind": "keyword",
-                  "keyword": "number"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "growFactor",
-                "jsDoc": {
-                  "doc": "How much of the remaining space this node will take"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmHorizontalNode.ts",
-                  "line": 13,
-                  "col": 0,
-                  "byteIndex": 425
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "number",
-                  "kind": "keyword",
-                  "keyword": "number"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "condition",
-                "jsDoc": {
-                  "doc": "Math Condition for the node to be shown, e.g: n >= 3"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmHorizontalNode.ts",
-                  "line": 17,
-                  "col": 0,
-                  "byteIndex": 510
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "",
-                  "kind": "union",
-                  "union": [
-                    {
-                      "repr": "string",
-                      "kind": "keyword",
-                      "keyword": "string"
-                    },
-                    {
-                      "repr": "null",
-                      "kind": "keyword",
-                      "keyword": "null"
-                    }
-                  ]
-                },
-                "typeParams": []
               },
               {
                 "name": "children",
+                "jsDoc": {
+                  "doc": "Child nodes, this field is ignored for leaf and stack nodes."
+                },
                 "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmHorizontalNode.ts",
-                  "line": 17,
-                  "col": 26,
-                  "byteIndex": 536
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
+                  "line": 37,
+                  "col": 0,
+                  "byteIndex": 868
                 },
                 "params": [],
                 "computed": false,
@@ -43248,139 +43088,17 @@
                   }
                 },
                 "typeParams": []
-              }
-            ],
-            "callSignatures": [],
-            "indexSignatures": []
-          }
-        },
-        "typeParams": []
-      }
-    },
-    {
-      "name": "WmLeafNode",
-      "isDefault": false,
-      "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmLeafNode.ts",
-        "line": 4,
-        "col": 0,
-        "byteIndex": 163
-      },
-      "declarationKind": "export",
-      "kind": "typeAlias",
-      "typeAliasDef": {
-        "tsType": {
-          "repr": "",
-          "kind": "typeLiteral",
-          "typeLiteral": {
-            "constructors": [],
-            "methods": [],
-            "properties": [
-              {
-                "name": "subtype",
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmLeafNode.ts",
-                  "line": 4,
-                  "col": 27,
-                  "byteIndex": 190
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "NodeSubtype",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "NodeSubtype"
-                  }
-                },
-                "typeParams": []
               },
               {
-                "name": "priority",
+                "name": "maxStackSize",
                 "jsDoc": {
-                  "doc": "Order in how the tree will be traversed (1 = first, 2 = second, etc.)"
+                  "doc": "Max amount of windows in the stack. Set it to `null` for unlimited stack.\\\nThis field is ignored for non-stack nodes"
                 },
                 "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmLeafNode.ts",
-                  "line": 8,
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
+                  "line": 42,
                   "col": 0,
-                  "byteIndex": 294
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "number",
-                  "kind": "keyword",
-                  "keyword": "number"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "growFactor",
-                "jsDoc": {
-                  "doc": "How much of the remaining space this node will take"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmLeafNode.ts",
-                  "line": 12,
-                  "col": 0,
-                  "byteIndex": 376
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "number",
-                  "kind": "keyword",
-                  "keyword": "number"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "condition",
-                "jsDoc": {
-                  "doc": "Math Condition for the node to be shown, e.g: n >= 3"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmLeafNode.ts",
-                  "line": 16,
-                  "col": 0,
-                  "byteIndex": 461
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "",
-                  "kind": "union",
-                  "union": [
-                    {
-                      "repr": "string",
-                      "kind": "keyword",
-                      "keyword": "string"
-                    },
-                    {
-                      "repr": "null",
-                      "kind": "keyword",
-                      "keyword": "null"
-                    }
-                  ]
-                },
-                "typeParams": []
-              },
-              {
-                "name": "handle",
-                "jsDoc": {
-                  "doc": "window handle (HWND) in the node"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmLeafNode.ts",
-                  "line": 20,
-                  "col": 0,
-                  "byteIndex": 532
+                  "byteIndex": 1025
                 },
                 "params": [],
                 "computed": false,
@@ -43412,13 +43130,13 @@
       }
     },
     {
-      "name": "WmNode",
+      "name": "WmNodeKind",
       "isDefault": false,
       "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
-        "line": 8,
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNodeKind.ts",
+        "line": 3,
         "col": 0,
-        "byteIndex": 395
+        "byteIndex": 110
       },
       "declarationKind": "export",
       "kind": "typeAlias",
@@ -43428,239 +43146,36 @@
           "kind": "union",
           "union": [
             {
-              "repr": "",
-              "kind": "intersection",
-              "intersection": [
-                {
-                  "repr": "",
-                  "kind": "typeLiteral",
-                  "typeLiteral": {
-                    "constructors": [],
-                    "methods": [],
-                    "properties": [
-                      {
-                        "name": "type",
-                        "location": {
-                          "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
-                          "line": 8,
-                          "col": 23,
-                          "byteIndex": 418
-                        },
-                        "params": [],
-                        "computed": false,
-                        "optional": false,
-                        "tsType": {
-                          "repr": "Vertical",
-                          "kind": "literal",
-                          "literal": {
-                            "kind": "string",
-                            "string": "Vertical"
-                          }
-                        },
-                        "typeParams": []
-                      }
-                    ],
-                    "callSignatures": [],
-                    "indexSignatures": []
-                  }
-                },
-                {
-                  "repr": "WmVerticalNode",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "WmVerticalNode"
-                  }
-                }
-              ]
+              "repr": "Leaf",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Leaf"
+              }
             },
             {
-              "repr": "",
-              "kind": "intersection",
-              "intersection": [
-                {
-                  "repr": "",
-                  "kind": "typeLiteral",
-                  "typeLiteral": {
-                    "constructors": [],
-                    "methods": [],
-                    "properties": [
-                      {
-                        "name": "type",
-                        "location": {
-                          "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
-                          "line": 8,
-                          "col": 65,
-                          "byteIndex": 460
-                        },
-                        "params": [],
-                        "computed": false,
-                        "optional": false,
-                        "tsType": {
-                          "repr": "Horizontal",
-                          "kind": "literal",
-                          "literal": {
-                            "kind": "string",
-                            "string": "Horizontal"
-                          }
-                        },
-                        "typeParams": []
-                      }
-                    ],
-                    "callSignatures": [],
-                    "indexSignatures": []
-                  }
-                },
-                {
-                  "repr": "WmHorizontalNode",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "WmHorizontalNode"
-                  }
-                }
-              ]
+              "repr": "Stack",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Stack"
+              }
             },
             {
-              "repr": "",
-              "kind": "intersection",
-              "intersection": [
-                {
-                  "repr": "",
-                  "kind": "typeLiteral",
-                  "typeLiteral": {
-                    "constructors": [],
-                    "methods": [],
-                    "properties": [
-                      {
-                        "name": "type",
-                        "location": {
-                          "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
-                          "line": 8,
-                          "col": 111,
-                          "byteIndex": 506
-                        },
-                        "params": [],
-                        "computed": false,
-                        "optional": false,
-                        "tsType": {
-                          "repr": "Leaf",
-                          "kind": "literal",
-                          "literal": {
-                            "kind": "string",
-                            "string": "Leaf"
-                          }
-                        },
-                        "typeParams": []
-                      }
-                    ],
-                    "callSignatures": [],
-                    "indexSignatures": []
-                  }
-                },
-                {
-                  "repr": "WmLeafNode",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "WmLeafNode"
-                  }
-                }
-              ]
+              "repr": "Vertical",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Vertical"
+              }
             },
             {
-              "repr": "",
-              "kind": "intersection",
-              "intersection": [
-                {
-                  "repr": "",
-                  "kind": "typeLiteral",
-                  "typeLiteral": {
-                    "constructors": [],
-                    "methods": [],
-                    "properties": [
-                      {
-                        "name": "type",
-                        "location": {
-                          "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
-                          "line": 8,
-                          "col": 145,
-                          "byteIndex": 540
-                        },
-                        "params": [],
-                        "computed": false,
-                        "optional": false,
-                        "tsType": {
-                          "repr": "Stack",
-                          "kind": "literal",
-                          "literal": {
-                            "kind": "string",
-                            "string": "Stack"
-                          }
-                        },
-                        "typeParams": []
-                      }
-                    ],
-                    "callSignatures": [],
-                    "indexSignatures": []
-                  }
-                },
-                {
-                  "repr": "WmStackNode",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "WmStackNode"
-                  }
-                }
-              ]
-            },
-            {
-              "repr": "",
-              "kind": "intersection",
-              "intersection": [
-                {
-                  "repr": "",
-                  "kind": "typeLiteral",
-                  "typeLiteral": {
-                    "constructors": [],
-                    "methods": [],
-                    "properties": [
-                      {
-                        "name": "type",
-                        "location": {
-                          "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNode.ts",
-                          "line": 8,
-                          "col": 181,
-                          "byteIndex": 576
-                        },
-                        "params": [],
-                        "computed": false,
-                        "optional": false,
-                        "tsType": {
-                          "repr": "Fallback",
-                          "kind": "literal",
-                          "literal": {
-                            "kind": "string",
-                            "string": "Fallback"
-                          }
-                        },
-                        "typeParams": []
-                      }
-                    ],
-                    "callSignatures": [],
-                    "indexSignatures": []
-                  }
-                },
-                {
-                  "repr": "WmFallbackNode",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "WmFallbackNode"
-                  }
-                }
-              ]
+              "repr": "Horizontal",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Horizontal"
+              }
             }
           ]
         },
@@ -43668,337 +43183,38 @@
       }
     },
     {
-      "name": "WmStackNode",
+      "name": "WmNodeLifetime",
       "isDefault": false,
       "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmStackNode.ts",
-        "line": 4,
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNodeLifetime.ts",
+        "line": 3,
         "col": 0,
-        "byteIndex": 163
+        "byteIndex": 110
       },
       "declarationKind": "export",
       "kind": "typeAlias",
       "typeAliasDef": {
         "tsType": {
           "repr": "",
-          "kind": "typeLiteral",
-          "typeLiteral": {
-            "constructors": [],
-            "methods": [],
-            "properties": [
-              {
-                "name": "subtype",
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmStackNode.ts",
-                  "line": 4,
-                  "col": 28,
-                  "byteIndex": 191
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "NodeSubtype",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "NodeSubtype"
-                  }
-                },
-                "typeParams": []
-              },
-              {
-                "name": "priority",
-                "jsDoc": {
-                  "doc": "Order in how the tree will be traversed (1 = first, 2 = second, etc.)"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmStackNode.ts",
-                  "line": 8,
-                  "col": 0,
-                  "byteIndex": 295
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "number",
-                  "kind": "keyword",
-                  "keyword": "number"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "growFactor",
-                "jsDoc": {
-                  "doc": "How much of the remaining space this node will take"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmStackNode.ts",
-                  "line": 12,
-                  "col": 0,
-                  "byteIndex": 377
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "number",
-                  "kind": "keyword",
-                  "keyword": "number"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "condition",
-                "jsDoc": {
-                  "doc": "Math Condition for the node to be shown, e.g: n >= 3"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmStackNode.ts",
-                  "line": 16,
-                  "col": 0,
-                  "byteIndex": 462
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "",
-                  "kind": "union",
-                  "union": [
-                    {
-                      "repr": "string",
-                      "kind": "keyword",
-                      "keyword": "string"
-                    },
-                    {
-                      "repr": "null",
-                      "kind": "keyword",
-                      "keyword": "null"
-                    }
-                  ]
-                },
-                "typeParams": []
-              },
-              {
-                "name": "active",
-                "jsDoc": {
-                  "doc": "active window handle (HWND) in the node"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmStackNode.ts",
-                  "line": 20,
-                  "col": 0,
-                  "byteIndex": 540
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "",
-                  "kind": "union",
-                  "union": [
-                    {
-                      "repr": "number",
-                      "kind": "keyword",
-                      "keyword": "number"
-                    },
-                    {
-                      "repr": "null",
-                      "kind": "keyword",
-                      "keyword": "null"
-                    }
-                  ]
-                },
-                "typeParams": []
-              },
-              {
-                "name": "handles",
-                "jsDoc": {
-                  "doc": "window handles (HWND) in the node"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmStackNode.ts",
-                  "line": 24,
-                  "col": 0,
-                  "byteIndex": 609
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "Array",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": [
-                      {
-                        "repr": "number",
-                        "kind": "keyword",
-                        "keyword": "number"
-                      }
-                    ],
-                    "typeName": "Array"
-                  }
-                },
-                "typeParams": []
+          "kind": "union",
+          "union": [
+            {
+              "repr": "Temporal",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Temporal"
               }
-            ],
-            "callSignatures": [],
-            "indexSignatures": []
-          }
-        },
-        "typeParams": []
-      }
-    },
-    {
-      "name": "WmVerticalNode",
-      "isDefault": false,
-      "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmVerticalNode.ts",
-        "line": 5,
-        "col": 0,
-        "byteIndex": 206
-      },
-      "declarationKind": "export",
-      "kind": "typeAlias",
-      "typeAliasDef": {
-        "tsType": {
-          "repr": "",
-          "kind": "typeLiteral",
-          "typeLiteral": {
-            "constructors": [],
-            "methods": [],
-            "properties": [
-              {
-                "name": "subtype",
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmVerticalNode.ts",
-                  "line": 5,
-                  "col": 31,
-                  "byteIndex": 237
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "NodeSubtype",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "NodeSubtype"
-                  }
-                },
-                "typeParams": []
-              },
-              {
-                "name": "priority",
-                "jsDoc": {
-                  "doc": "Order in how the tree will be traversed (1 = first, 2 = second, etc.)"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmVerticalNode.ts",
-                  "line": 9,
-                  "col": 0,
-                  "byteIndex": 341
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "number",
-                  "kind": "keyword",
-                  "keyword": "number"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "growFactor",
-                "jsDoc": {
-                  "doc": "How much of the remaining space this node will take"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmVerticalNode.ts",
-                  "line": 13,
-                  "col": 0,
-                  "byteIndex": 423
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "number",
-                  "kind": "keyword",
-                  "keyword": "number"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "condition",
-                "jsDoc": {
-                  "doc": "Math Condition for the node to be shown, e.g: n >= 3"
-                },
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmVerticalNode.ts",
-                  "line": 17,
-                  "col": 0,
-                  "byteIndex": 508
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "",
-                  "kind": "union",
-                  "union": [
-                    {
-                      "repr": "string",
-                      "kind": "keyword",
-                      "keyword": "string"
-                    },
-                    {
-                      "repr": "null",
-                      "kind": "keyword",
-                      "keyword": "null"
-                    }
-                  ]
-                },
-                "typeParams": []
-              },
-              {
-                "name": "children",
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmVerticalNode.ts",
-                  "line": 17,
-                  "col": 26,
-                  "byteIndex": 534
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "Array",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": [
-                      {
-                        "repr": "WmNode",
-                        "kind": "typeRef",
-                        "typeRef": {
-                          "typeParams": null,
-                          "typeName": "WmNode"
-                        }
-                      }
-                    ],
-                    "typeName": "Array"
-                  }
-                },
-                "typeParams": []
+            },
+            {
+              "repr": "Permanent",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Permanent"
               }
-            ],
-            "callSignatures": [],
-            "indexSignatures": []
-          }
+            }
+          ]
         },
         "typeParams": []
       }

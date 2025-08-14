@@ -580,20 +580,6 @@
         }
       }
     },
-    "NoFallbackBehavior": {
-      "type": "string",
-      "enum": [
-        "Float",
-        "Unmanaged"
-      ]
-    },
-    "NodeSubtype": {
-      "type": "string",
-      "enum": [
-        "Temporal",
-        "Permanent"
-      ]
-    },
     "NotificationsToolbarItem": {
       "type": "object",
       "properties": {
@@ -1369,231 +1355,29 @@
     "WindowManagerLayout": {
       "type": "object",
       "properties": {
-        "noFallbackBehavior": {
-          "$ref": "#/$defs/NoFallbackBehavior",
-          "default": "Float"
-        },
         "structure": {
           "$ref": "#/$defs/WmNode",
           "default": {
             "active": null,
+            "children": [],
             "condition": null,
             "growFactor": 1.0,
-            "handles": [],
+            "lifetime": "Permanent",
+            "maxStackSize": null,
             "priority": 1,
-            "subtype": "Permanent",
-            "type": "Fallback"
+            "type": "Stack",
+            "windows": []
           }
-        }
-      }
-    },
-    "WmFallbackNode": {
-      "type": "object",
-      "properties": {
-        "condition": {
-          "description": "Math Condition for the node to be shown, e.g: n >= 3",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "growFactor": {
-          "description": "How much of the remaining space this node will take",
-          "type": "number",
-          "format": "float",
-          "default": 1.0
-        },
-        "priority": {
-          "description": "Order in how the tree will be traversed (1 = first, 2 = second, etc.)",
-          "type": "integer",
-          "format": "uint32",
-          "default": 1,
-          "minimum": 0
-        },
-        "subtype": {
-          "$ref": "#/$defs/NodeSubtype",
-          "default": "Permanent"
-        }
-      }
-    },
-    "WmHorizontalNode": {
-      "type": "object",
-      "properties": {
-        "children": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/WmNode"
-          }
-        },
-        "condition": {
-          "description": "Math Condition for the node to be shown, e.g: n >= 3",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "growFactor": {
-          "description": "How much of the remaining space this node will take",
-          "type": "number",
-          "format": "float",
-          "default": 1.0
-        },
-        "priority": {
-          "description": "Order in how the tree will be traversed (1 = first, 2 = second, etc.)",
-          "type": "integer",
-          "format": "uint32",
-          "default": 1,
-          "minimum": 0
-        },
-        "subtype": {
-          "$ref": "#/$defs/NodeSubtype",
-          "default": "Permanent"
-        }
-      },
-      "required": [
-        "children"
-      ]
-    },
-    "WmLeafNode": {
-      "type": "object",
-      "properties": {
-        "condition": {
-          "description": "Math Condition for the node to be shown, e.g: n >= 3",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "growFactor": {
-          "description": "How much of the remaining space this node will take",
-          "type": "number",
-          "format": "float",
-          "default": 1.0
-        },
-        "handle": {
-          "description": "window handle (HWND) in the node",
-          "type": [
-            "integer",
-            "null"
-          ],
-          "format": "int"
-        },
-        "priority": {
-          "description": "Order in how the tree will be traversed (1 = first, 2 = second, etc.)",
-          "type": "integer",
-          "format": "uint32",
-          "default": 1,
-          "minimum": 0
-        },
-        "subtype": {
-          "$ref": "#/$defs/NodeSubtype",
-          "default": "Permanent"
         }
       }
     },
     "WmNode": {
-      "oneOf": [
-        {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "const": "Vertical"
-            }
-          },
-          "$ref": "#/$defs/WmVerticalNode",
-          "required": [
-            "type"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "const": "Horizontal"
-            }
-          },
-          "$ref": "#/$defs/WmHorizontalNode",
-          "required": [
-            "type"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "const": "Leaf"
-            }
-          },
-          "$ref": "#/$defs/WmLeafNode",
-          "required": [
-            "type"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "const": "Stack"
-            }
-          },
-          "$ref": "#/$defs/WmStackNode",
-          "required": [
-            "type"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "const": "Fallback"
-            }
-          },
-          "$ref": "#/$defs/WmFallbackNode",
-          "required": [
-            "type"
-          ]
-        }
-      ]
-    },
-    "WmStackNode": {
-      "type": "object",
-      "properties": {
-        "condition": {
-          "description": "Math Condition for the node to be shown, e.g: n >= 3",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "growFactor": {
-          "description": "How much of the remaining space this node will take",
-          "type": "number",
-          "format": "float",
-          "default": 1.0
-        },
-        "priority": {
-          "description": "Order in how the tree will be traversed (1 = first, 2 = second, etc.)",
-          "type": "integer",
-          "format": "uint32",
-          "default": 1,
-          "minimum": 0
-        },
-        "subtype": {
-          "$ref": "#/$defs/NodeSubtype",
-          "default": "Permanent"
-        }
-      }
-    },
-    "WmVerticalNode": {
       "type": "object",
       "properties": {
         "children": {
+          "description": "Child nodes, this field is ignored for leaf and stack nodes.",
           "type": "array",
+          "default": [],
           "items": {
             "$ref": "#/$defs/WmNode"
           }
@@ -1603,13 +1387,29 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "default": null
         },
         "growFactor": {
           "description": "How much of the remaining space this node will take",
           "type": "number",
           "format": "float",
           "default": 1.0
+        },
+        "lifetime": {
+          "description": "Lifetime of the node",
+          "$ref": "#/$defs/WmNodeLifetime",
+          "default": "Permanent"
+        },
+        "maxStackSize": {
+          "description": "Max amount of windows in the stack. Set it to `null` for unlimited stack.\\\nThis field is ignored for non-stack nodes",
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint",
+          "default": 3,
+          "minimum": 0
         },
         "priority": {
           "description": "Order in how the tree will be traversed (1 = first, 2 = second, etc.)",
@@ -1618,13 +1418,42 @@
           "default": 1,
           "minimum": 0
         },
-        "subtype": {
-          "$ref": "#/$defs/NodeSubtype",
-          "default": "Permanent"
+        "type": {
+          "description": "Type determines the behavior of the node",
+          "$ref": "#/$defs/WmNodeKind",
+          "default": "Leaf"
         }
-      },
-      "required": [
-        "children"
+      }
+    },
+    "WmNodeKind": {
+      "oneOf": [
+        {
+          "description": "node will not grow, this is the final node.",
+          "type": "string",
+          "const": "Leaf"
+        },
+        {
+          "description": "node will grow on z-axis",
+          "type": "string",
+          "const": "Stack"
+        },
+        {
+          "description": "node will grow on y-axis",
+          "type": "string",
+          "const": "Vertical"
+        },
+        {
+          "description": "node will grow on x-axis",
+          "type": "string",
+          "const": "Horizontal"
+        }
+      ]
+    },
+    "WmNodeLifetime": {
+      "type": "string",
+      "enum": [
+        "Temporal",
+        "Permanent"
       ]
     },
     "WorkspaceToolbarItem": {

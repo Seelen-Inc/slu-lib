@@ -5095,10 +5095,95 @@
       }
     },
     {
-      "name": "NodeSubtype",
+      "name": "WmNodeKind",
       "isDefault": false,
       "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/NodeSubtype.ts",
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNodeKind.ts",
+        "line": 3,
+        "col": 0,
+        "byteIndex": 110
+      },
+      "declarationKind": "export",
+      "kind": "typeAlias",
+      "typeAliasDef": {
+        "tsType": {
+          "repr": "",
+          "kind": "union",
+          "union": [
+            {
+              "repr": "Leaf",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Leaf"
+              }
+            },
+            {
+              "repr": "Stack",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Stack"
+              }
+            },
+            {
+              "repr": "Vertical",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Vertical"
+              }
+            },
+            {
+              "repr": "Horizontal",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Horizontal"
+              }
+            }
+          ]
+        },
+        "typeParams": []
+      }
+    },
+    {
+      "name": "WmNodeKind",
+      "isDefault": false,
+      "location": {
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wm_layout.ts",
+        "line": 8,
+        "col": 6,
+        "byteIndex": 373
+      },
+      "declarationKind": "export",
+      "kind": "variable",
+      "variableDef": {
+        "tsType": {
+          "repr": "Enum",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": [
+              {
+                "repr": "WmNodeKind",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "WmNodeKind"
+                }
+              }
+            ],
+            "typeName": "Enum"
+          }
+        },
+        "kind": "const"
+      }
+    },
+    {
+      "name": "WmNodeLifetime",
+      "isDefault": false,
+      "location": {
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmNodeLifetime.ts",
         "line": 3,
         "col": 0,
         "byteIndex": 110
@@ -5132,13 +5217,13 @@
       }
     },
     {
-      "name": "NodeSubtype",
+      "name": "WmNodeLifetime",
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wm_layout.ts",
-        "line": 16,
+        "line": 15,
         "col": 6,
-        "byteIndex": 541
+        "byteIndex": 502
       },
       "declarationKind": "export",
       "kind": "variable",
@@ -5149,127 +5234,11 @@
           "typeRef": {
             "typeParams": [
               {
-                "repr": "NodeSubtype",
+                "repr": "WmNodeLifetime",
                 "kind": "typeRef",
                 "typeRef": {
                   "typeParams": null,
-                  "typeName": "NodeSubtype"
-                }
-              }
-            ],
-            "typeName": "Enum"
-          }
-        },
-        "kind": "const"
-      }
-    },
-    {
-      "name": "NodeType",
-      "isDefault": false,
-      "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wm_layout.ts",
-        "line": 8,
-        "col": 6,
-        "byteIndex": 386
-      },
-      "declarationKind": "export",
-      "kind": "variable",
-      "variableDef": {
-        "tsType": {
-          "repr": "Enum",
-          "kind": "typeRef",
-          "typeRef": {
-            "typeParams": [
-              {
-                "repr": "",
-                "kind": "indexedAccess",
-                "indexedAccess": {
-                  "readonly": false,
-                  "objType": {
-                    "repr": "WmNode",
-                    "kind": "typeRef",
-                    "typeRef": {
-                      "typeParams": null,
-                      "typeName": "WmNode"
-                    }
-                  },
-                  "indexType": {
-                    "repr": "type",
-                    "kind": "literal",
-                    "literal": {
-                      "kind": "string",
-                      "string": "type"
-                    }
-                  }
-                }
-              }
-            ],
-            "typeName": "Enum"
-          }
-        },
-        "kind": "const"
-      }
-    },
-    {
-      "name": "NoFallbackBehavior",
-      "isDefault": false,
-      "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/NoFallbackBehavior.ts",
-        "line": 3,
-        "col": 0,
-        "byteIndex": 110
-      },
-      "declarationKind": "export",
-      "kind": "typeAlias",
-      "typeAliasDef": {
-        "tsType": {
-          "repr": "",
-          "kind": "union",
-          "union": [
-            {
-              "repr": "Float",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "Float"
-              }
-            },
-            {
-              "repr": "Unmanaged",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "Unmanaged"
-              }
-            }
-          ]
-        },
-        "typeParams": []
-      }
-    },
-    {
-      "name": "NoFallbackBehavior",
-      "isDefault": false,
-      "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/wm_layout.ts",
-        "line": 21,
-        "col": 6,
-        "byteIndex": 636
-      },
-      "declarationKind": "export",
-      "kind": "variable",
-      "variableDef": {
-        "tsType": {
-          "repr": "Enum",
-          "kind": "typeRef",
-          "typeRef": {
-            "typeParams": [
-              {
-                "repr": "NoFallbackBehavior",
-                "kind": "typeRef",
-                "typeRef": {
-                  "typeParams": null,
-                  "typeName": "NoFallbackBehavior"
+                  "typeName": "WmNodeLifetime"
                 }
               }
             ],
