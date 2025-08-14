@@ -103,7 +103,7 @@ impl std::fmt::Display for WmNode {
                     .iter()
                     .map(|n| n.to_string())
                     .collect::<Vec<_>>();
-                write!(f, "{:?} Container {:?}", self.kind, children)
+                write!(f, "{:?} Container [{}]", self.kind, children.join(", "))
             }
             WmNodeKind::Leaf => write!(f, "Leaf({:?})", self.windows.first()),
             WmNodeKind::Stack => write!(f, "Stack({:?})", self.windows),
