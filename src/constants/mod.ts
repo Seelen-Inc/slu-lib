@@ -3,7 +3,8 @@ const _languageList = [
   { label: 'English', enLabel: 'English', value: 'en' },
   { label: 'Español', enLabel: 'Spanish', value: 'es' },
   { label: '한국어', enLabel: 'Korean', value: 'ko' },
-  { label: '中文', enLabel: 'Chinese', value: 'zh' },
+  { label: '中文（简体）', enLabel: 'Simplified Chinese', value: 'zh' },
+  { label: '中文（繁體）', enLabel: 'Traditional Chinese', value: 'zh_tw' },
   { label: 'Français', enLabel: 'French', value: 'fr' },
   { label: 'العربية', enLabel: 'Arabic', value: 'ar' },
   { label: 'Português', enLabel: 'Portuguese', value: 'pt' },
@@ -68,16 +69,18 @@ const _languageList = [
   { label: 'తెలుగు', enLabel: 'Telugu', value: 'te' },
   { label: 'Oʻzbek', enLabel: 'Uzbek', value: 'uz' },
   { label: 'Yorùbá', enLabel: 'Yoruba', value: 'yo' },
-  { label: 'isiZulu', enLabel: 'Zulu', value: 'zu' },
-] as const;
+  { label: 'isiZulu', enLabel: 'Zulu', value: 'zu' }
+] as const
 
-export type SupportedLanguagesCode = (typeof _languageList)[number]['value'];
+export type SupportedLanguagesCode = (typeof _languageList)[number]['value']
 
 export interface SupportedLanguage {
-  label: string;
-  enLabel: string;
+  label: string
+  enLabel: string
   /** language code @example 'de' 'es' 'zh' 'en_us' 'en_uk' */
-  value: string;
+  value: string
 }
 
-export const SupportedLanguages: SupportedLanguage[] = _languageList.toSorted((a, b) => a.label.localeCompare(b.label));
+export const SupportedLanguages: SupportedLanguage[] = _languageList.toSorted((a, b) =>
+  a.label.localeCompare(b.label)
+)
