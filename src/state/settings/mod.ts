@@ -42,7 +42,7 @@ export class Settings {
     return newFromInvoke(this, SeelenCommand.StateGetSettings);
   }
 
-  static onChange(cb: (user: Settings) => void): Promise<UnSubscriber> {
+  static onChange(cb: (payload: Settings) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.StateSettingsChanged);
   }
 

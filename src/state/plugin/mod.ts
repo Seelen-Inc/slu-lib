@@ -9,7 +9,7 @@ export class PluginList extends List<Plugin> {
     return newFromInvoke(this, SeelenCommand.StateGetPlugins);
   }
 
-  static onChange(cb: (user: PluginList) => void): Promise<UnSubscriber> {
+  static onChange(cb: (payload: PluginList) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.StatePluginsChanged);
   }
 

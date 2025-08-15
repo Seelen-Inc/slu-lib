@@ -11,11 +11,11 @@ export class BluetoothDevices extends List<BluetoothDevice> {
     return newFromInvoke(this, SeelenCommand.GetConnectedBluetoothDevices);
   }
 
-  static onChange(cb: (user: BluetoothDevices) => void): Promise<UnSubscriber> {
+  static onChange(cb: (payload: BluetoothDevices) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.BluetoothDevicesChanged);
   }
 
-  static onDiscoveredDevicesChange(cb: (user: BluetoothDevices) => void): Promise<UnSubscriber> {
+  static onDiscoveredDevicesChange(cb: (payload: BluetoothDevices) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.BluetoothDiscoveredDevicesChanged);
   }
 

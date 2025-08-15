@@ -81,11 +81,10 @@ slu_events_declaration! {
     ToolbarOverlaped(bool) as "set-auto-hide",
 
     WegOverlaped(bool) as "set-auto-hide",
-    WegInstanceChanged(WegItems) as "weg::instance-changed",
 
     WMSetReservation as "set-reservation",
     WMForceRetiling as "wm-force-retiling",
-    WMSetLayout(Option<WmNode>) as "wm-set-layout",
+    WMSetLayout(WmNode) as "wm-set-layout",
     WMSetOverlayVisibility(bool) as "wm-set-overlay-visibility",
     WMSetActiveWindow(isize) as "wm-set-active-window",
 
@@ -94,7 +93,7 @@ slu_events_declaration! {
     PopupContentChanged(SluPopupConfig) as "popup-content-changed",
 
     StateSettingsChanged(Settings) as "settings-changed",
-    StateWegItemsChanged(WegItems) as "weg-items",
+    StateWegItemsChanged as "weg-items",
     StateToolbarItemsChanged(Placeholder) as "toolbar-items",
     StateThemesChanged(Vec<Theme>) as "themes",
     StateSettingsByAppChanged(Vec<AppConfig>) as "settings-by-app",

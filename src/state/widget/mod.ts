@@ -21,7 +21,7 @@ export class WidgetList extends List<IWidget> {
     return newFromInvoke(this, SeelenCommand.StateGetWidgets);
   }
 
-  static onChange(cb: (user: WidgetList) => void): Promise<UnSubscriber> {
+  static onChange(cb: (payload: WidgetList) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.StateWidgetsChanged);
   }
 
@@ -34,9 +34,9 @@ interface WidgetInformation {
   /** decoded webview label */
   label: string;
   /** Will be present if the widget replicas is set to by monitor */
-  monitorId?: string;
+  monitorId: string | null;
   /** Will be present if the widget replicas is set to multiple */
-  instanceId?: string;
+  instanceId: string | null;
   /** params present on the webview label */
   params: { readonly [key in string]?: string };
 }
@@ -65,8 +65,8 @@ export class Widget {
     this.id = id as WidgetId;
     this.decoded = Object.freeze({
       label: `${id}${query ? `?${query}` : ''}`,
-      monitorId: paramsObj.monitorId,
-      instanceId: paramsObj.instanceId,
+      monitorId: paramsObj.monitorId || null,
+      instanceId: paramsObj.instanceId || null,
       params: Object.freeze(Object.fromEntries(params)),
     });
   }

@@ -9,7 +9,7 @@ export class UIColors {
     return newFromInvoke(this, SeelenCommand.SystemGetColors);
   }
 
-  static onChange(cb: (user: UIColors) => void): Promise<UnSubscriber> {
+  static onChange(cb: (payload: UIColors) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.ColorsChanged);
   }
 

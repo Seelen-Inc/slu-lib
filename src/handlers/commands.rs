@@ -94,7 +94,7 @@ macro_rules! slu_commands_declaration {
 slu_commands_declaration! {
     // virtual desktops
     StateGetVirtualDesktops = get_virtual_desktops() -> VirtualDesktops,
-    SwitchWorkspace = switch_workspace(idx: usize),
+    SwitchWorkspace = switch_workspace(monitor_id: MonitorId, idx: usize),
 
     // General
     Run = run(program: PathBuf, args: Option<RelaunchArguments>, working_dir: Option<PathBuf>),
@@ -138,7 +138,7 @@ slu_commands_declaration! {
     SetAutoStart = set_auto_start(enabled: bool),
     GetAutoStartStatus = get_auto_start_status() -> bool,
     StateGetThemes = state_get_themes() -> Vec<Theme>,
-    StateGetWegItems = state_get_weg_items() -> WegItems,
+    StateGetWegItems = state_get_weg_items(monitor_id: Option<MonitorId>) -> WegItems,
     StateWriteWegItems = state_write_weg_items(items: WegItems),
     StateGetToolbarItems = state_get_toolbar_items() -> Placeholder,
     StateGetSettings = state_get_settings(path: Option<PathBuf>) -> Settings,
@@ -197,7 +197,6 @@ slu_commands_declaration! {
     Lock = lock(),
 
     // SeelenWeg
-    WegGetItemsForWidget = weg_get_items_for_widget() -> WegItems,
     WegCloseApp = weg_close_app(hwnd: isize),
     WegKillApp = weg_kill_app(hwnd: isize),
     WegToggleWindowState = weg_toggle_window_state(hwnd: isize, was_focused: bool),

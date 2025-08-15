@@ -8,7 +8,7 @@ export class ConnectedMonitorList extends List<PhysicalMonitor> {
     return newFromInvoke(this, SeelenCommand.SystemGetMonitors);
   }
 
-  static onChange(cb: (user: ConnectedMonitorList) => void): Promise<UnSubscriber> {
+  static onChange(cb: (payload: ConnectedMonitorList) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.SystemMonitorsChanged);
   }
 }

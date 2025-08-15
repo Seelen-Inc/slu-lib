@@ -22,7 +22,7 @@ export class LanguageList extends List<SystemLanguage> {
     return newFromInvoke(this, SeelenCommand.SystemGetLanguages);
   }
 
-  static onChange(cb: (user: LanguageList) => void): Promise<UnSubscriber> {
+  static onChange(cb: (payload: LanguageList) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.SystemLanguagesChanged);
   }
 }

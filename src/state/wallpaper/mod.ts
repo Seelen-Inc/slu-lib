@@ -26,7 +26,7 @@ export class WallpaperList extends List<IWallpaper> {
     return newFromInvoke(this, SeelenCommand.StateGetWallpapers);
   }
 
-  static onChange(cb: (user: WallpaperList) => void): Promise<UnSubscriber> {
+  static onChange(cb: (payload: WallpaperList) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.StateWallpapersChanged);
   }
 }

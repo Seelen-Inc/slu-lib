@@ -17,7 +17,7 @@ export class IconPackList extends List<IIconPack> {
     return newFromInvoke(this, SeelenCommand.StateGetIconPacks);
   }
 
-  static onChange(cb: (user: IconPackList) => void): Promise<UnSubscriber> {
+  static onChange(cb: (payload: IconPackList) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.StateIconPacksChanged);
   }
 }

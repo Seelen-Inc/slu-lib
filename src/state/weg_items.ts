@@ -1,32 +1,19 @@
-import type { WegItem, WegItems as IWegItems } from '@seelen-ui/types';
-import { invoke, SeelenCommand, SeelenEvent, type UnSubscriber } from '../handlers/mod.ts';
-import { newFromInvoke, newOnEvent } from '../utils/State.ts';
+import type { MonitorId, WegItem, WegItems as IWegItems } from '@seelen-ui/types';
+import { invoke, SeelenCommand } from '../handlers/mod.ts';
+import { newFromInvoke } from '../utils/State.ts';
 import type { Enum } from '../utils/enums.ts';
-import { getCurrentWindow } from '@tauri-apps/api/window';
 
 export class WegItems {
   constructor(public inner: IWegItems) {}
 
-  /** Will return the stored/saved weg items */
-  static getStored(): Promise<WegItems> {
+  /** Will return the weg items state without filtering by monitor */
+  static getNonFiltered(): Promise<WegItems> {
     return newFromInvoke(this, SeelenCommand.StateGetWegItems);
   }
 
-  /** Event triggered when the file where the weg items are stored is changed */
-  static onStoredChange(cb: (user: WegItems) => void): Promise<UnSubscriber> {
-    return newOnEvent(cb, this, SeelenEvent.StateWegItemsChanged);
-  }
-
-  /** Will return the weg items intance for the current widget */
-  static forCurrentWidget(): Promise<WegItems> {
-    return newFromInvoke(this, SeelenCommand.WegGetItemsForWidget);
-  }
-
-  /** Event triggered when the weg items for the current widget are changed */
-  static forCurrentWidgetChange(cb: (user: WegItems) => void): Promise<UnSubscriber> {
-    return newOnEvent(cb, this, SeelenEvent.WegInstanceChanged, {
-      target: { kind: 'Webview', label: getCurrentWindow().label },
-    });
+  /** Will return the weg items state for a specific monitor */
+  static getForMonitor(monitorId: MonitorId): Promise<WegItems> {
+    return newFromInvoke(this, SeelenCommand.StateGetWegItems, { monitorId });
   }
 
   /** Will store the weg items placeoments on disk */

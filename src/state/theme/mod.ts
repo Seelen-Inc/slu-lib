@@ -18,7 +18,7 @@ export class ThemeList extends List<ITheme> {
     return newFromInvoke(this, SeelenCommand.StateGetThemes);
   }
 
-  static onChange(cb: (user: ThemeList) => void): Promise<UnSubscriber> {
+  static onChange(cb: (payload: ThemeList) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.StateThemesChanged);
   }
 

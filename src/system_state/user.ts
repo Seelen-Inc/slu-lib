@@ -22,7 +22,7 @@ export class UserDetails {
     return newFromInvoke(this, SeelenCommand.GetUser);
   }
 
-  static onChange(cb: (user: UserDetails) => void): Promise<UnSubscriber> {
+  static onChange(cb: (payload: UserDetails) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.UserChanged);
   }
 }

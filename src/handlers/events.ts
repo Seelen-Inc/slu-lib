@@ -27,7 +27,6 @@ export enum SeelenEvent {
   TrayInfo = 'tray-info',
   ToolbarOverlaped = 'set-auto-hide',
   WegOverlaped = 'set-auto-hide',
-  WegInstanceChanged = 'weg::instance-changed',
   WMSetReservation = 'set-reservation',
   WMForceRetiling = 'wm-force-retiling',
   WMSetLayout = 'wm-set-layout',

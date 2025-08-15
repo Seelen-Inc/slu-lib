@@ -10,7 +10,7 @@ export class AppConfigurationList extends List<AppConfig> {
     return newFromInvoke(this, SeelenCommand.StateGetSpecificAppsConfigurations);
   }
 
-  static onChange(cb: (user: AppConfigurationList) => void): Promise<UnSubscriber> {
+  static onChange(cb: (payload: AppConfigurationList) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.StateSettingsByAppChanged);
   }
 }

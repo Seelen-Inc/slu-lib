@@ -22,7 +22,7 @@ export class LauncherHistory {
     return newFromInvoke(this, SeelenCommand.StateGetHistory);
   }
 
-  static onChange(cb: (user: LauncherHistory) => void): Promise<UnSubscriber> {
+  static onChange(cb: (payload: LauncherHistory) => void): Promise<UnSubscriber> {
     return newOnEvent(cb, this, SeelenEvent.StateHistoryChanged);
   }
 }
