@@ -14,4 +14,5 @@ pub struct FocusedApp {
     pub is_maximized: bool,
     pub is_fullscreened: bool,
     pub is_seelen_overlay: bool,
+    pub is_being_dragged: bool,
 }

@@ -13139,6 +13139,24 @@
                   "keyword": "boolean"
                 },
                 "typeParams": []
+              },
+              {
+                "name": "isBeingDragged",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/FocusedApp.ts",
+                  "line": 4,
+                  "col": 204,
+                  "byteIndex": 363
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "boolean",
+                  "kind": "keyword",
+                  "keyword": "boolean"
+                },
+                "typeParams": []
               }
             ],
             "callSignatures": [],
