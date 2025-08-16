@@ -1,5 +1,5 @@
 import type { MonitorId, WegItem, WegItems as IWegItems } from '@seelen-ui/types';
-import { invoke, SeelenCommand } from '../handlers/mod.ts';
+import { invoke, SeelenCommand, SeelenEvent, subscribe, type UnSubscriber } from '../handlers/mod.ts';
 import { newFromInvoke } from '../utils/State.ts';
 import type { Enum } from '../utils/enums.ts';
 
@@ -14,6 +14,10 @@ export class WegItems {
   /** Will return the weg items state for a specific monitor */
   static getForMonitor(monitorId: MonitorId): Promise<WegItems> {
     return newFromInvoke(this, SeelenCommand.StateGetWegItems, { monitorId });
+  }
+
+  static onChange(cb: () => void): Promise<UnSubscriber> {
+    return subscribe(SeelenEvent.StateWegItemsChanged, () => cb());
   }
 
   /** Will store the weg items placeoments on disk */

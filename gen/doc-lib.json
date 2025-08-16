@@ -4698,7 +4698,7 @@
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/weg_items.ts",
         "line": 6,
         "col": 0,
-        "byteIndex": 242
+        "byteIndex": 285
       },
       "declarationKind": "export",
       "kind": "class",
@@ -4729,7 +4729,7 @@
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/weg_items.ts",
               "line": 7,
               "col": 2,
-              "byteIndex": 268
+              "byteIndex": 311
             }
           }
         ],
@@ -4774,7 +4774,7 @@
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/weg_items.ts",
               "line": 10,
               "col": 2,
-              "byteIndex": 381
+              "byteIndex": 424
             }
           },
           {
@@ -4829,7 +4829,65 @@
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/weg_items.ts",
               "line": 15,
               "col": 2,
-              "byteIndex": 561
+              "byteIndex": 604
+            }
+          },
+          {
+            "accessibility": null,
+            "optional": false,
+            "isAbstract": false,
+            "isStatic": true,
+            "name": "onChange",
+            "kind": "method",
+            "functionDef": {
+              "params": [
+                {
+                  "kind": "identifier",
+                  "name": "cb",
+                  "optional": false,
+                  "tsType": {
+                    "repr": "",
+                    "kind": "fnOrConstructor",
+                    "fnOrConstructor": {
+                      "constructor": false,
+                      "tsType": {
+                        "repr": "void",
+                        "kind": "keyword",
+                        "keyword": "void"
+                      },
+                      "params": [],
+                      "typeParams": []
+                    }
+                  }
+                }
+              ],
+              "returnType": {
+                "repr": "Promise",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": [
+                    {
+                      "repr": "UnSubscriber",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": null,
+                        "typeName": "UnSubscriber"
+                      }
+                    }
+                  ],
+                  "typeName": "Promise"
+                }
+              },
+              "hasBody": true,
+              "isAsync": false,
+              "isGenerator": false,
+              "typeParams": []
+            },
+            "location": {
+              "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/weg_items.ts",
+              "line": 19,
+              "col": 2,
+              "byteIndex": 754
             }
           },
           {
@@ -4865,9 +4923,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/weg_items.ts",
-              "line": 20,
+              "line": 24,
               "col": 2,
-              "byteIndex": 765
+              "byteIndex": 940
             }
           }
         ],
@@ -4882,9 +4940,9 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/state/weg_items.ts",
-        "line": 29,
+        "line": 33,
         "col": 6,
-        "byteIndex": 1129
+        "byteIndex": 1304
       },
       "declarationKind": "export",
       "kind": "variable",
