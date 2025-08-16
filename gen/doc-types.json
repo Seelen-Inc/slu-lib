@@ -12939,9 +12939,9 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/FocusedApp.ts",
-        "line": 3,
+        "line": 4,
         "col": 0,
-        "byteIndex": 110
+        "byteIndex": 159
       },
       "declarationKind": "export",
       "kind": "typeAlias",
@@ -12957,9 +12957,9 @@
                 "name": "hwnd",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/FocusedApp.ts",
-                  "line": 3,
+                  "line": 4,
                   "col": 27,
-                  "byteIndex": 137
+                  "byteIndex": 186
                 },
                 "params": [],
                 "computed": false,
@@ -12972,12 +12972,33 @@
                 "typeParams": []
               },
               {
+                "name": "monitor",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/FocusedApp.ts",
+                  "line": 4,
+                  "col": 41,
+                  "byteIndex": 200
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "MonitorId",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "MonitorId"
+                  }
+                },
+                "typeParams": []
+              },
+              {
                 "name": "title",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/FocusedApp.ts",
-                  "line": 3,
-                  "col": 41,
-                  "byteIndex": 151
+                  "line": 4,
+                  "col": 61,
+                  "byteIndex": 220
                 },
                 "params": [],
                 "computed": false,
@@ -12993,9 +13014,9 @@
                 "name": "name",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/FocusedApp.ts",
-                  "line": 3,
-                  "col": 56,
-                  "byteIndex": 166
+                  "line": 4,
+                  "col": 76,
+                  "byteIndex": 235
                 },
                 "params": [],
                 "computed": false,
@@ -13011,9 +13032,9 @@
                 "name": "exe",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/FocusedApp.ts",
-                  "line": 3,
-                  "col": 70,
-                  "byteIndex": 180
+                  "line": 4,
+                  "col": 90,
+                  "byteIndex": 249
                 },
                 "params": [],
                 "computed": false,
@@ -13040,9 +13061,9 @@
                 "name": "umid",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/FocusedApp.ts",
-                  "line": 3,
-                  "col": 90,
-                  "byteIndex": 200
+                  "line": 4,
+                  "col": 110,
+                  "byteIndex": 269
                 },
                 "params": [],
                 "computed": false,
@@ -13069,9 +13090,27 @@
                 "name": "isMaximized",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/FocusedApp.ts",
-                  "line": 3,
-                  "col": 111,
-                  "byteIndex": 221
+                  "line": 4,
+                  "col": 131,
+                  "byteIndex": 290
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "boolean",
+                  "kind": "keyword",
+                  "keyword": "boolean"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "isFullscreened",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/FocusedApp.ts",
+                  "line": 4,
+                  "col": 153,
+                  "byteIndex": 312
                 },
                 "params": [],
                 "computed": false,
@@ -13087,9 +13126,9 @@
                 "name": "isSeelenOverlay",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/FocusedApp.ts",
-                  "line": 3,
-                  "col": 133,
-                  "byteIndex": 243
+                  "line": 4,
+                  "col": 178,
+                  "byteIndex": 337
                 },
                 "params": [],
                 "computed": false,
