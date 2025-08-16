@@ -85,8 +85,6 @@ slu_events_declaration! {
     WMSetReservation as "set-reservation",
     WMForceRetiling as "wm-force-retiling",
     WMSetLayout(WmNode) as "wm-set-layout",
-    WMSetOverlayVisibility(bool) as "wm-set-overlay-visibility",
-    WMSetActiveWindow(isize) as "wm-set-active-window",
 
     WallStop(bool) as "wall-stop",
 

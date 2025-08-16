@@ -98,10 +98,12 @@ slu_commands_declaration! {
 
     // General
     Run = run(program: PathBuf, args: Option<RelaunchArguments>, working_dir: Option<PathBuf>),
+    RunAsAdmin = run_as_admin(program: PathBuf, args: Option<RelaunchArguments>),
+
+    GetFocusedApp = get_focused_app() -> FocusedApp,
     IsDevMode = is_dev_mode() -> bool,
     IsAppxPackage = is_appx_package() -> bool,
     OpenFile = open_file(path: PathBuf),
-    RunAsAdmin = run_as_admin(program: PathBuf, args: Option<RelaunchArguments>),
     SelectFileOnExplorer = select_file_on_explorer(path: PathBuf),
     GetUserEnvs = get_user_envs() -> HashMap<String, String>,
     ShowAppSettings = show_app_settings(),

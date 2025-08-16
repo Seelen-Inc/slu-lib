@@ -30,8 +30,6 @@ export enum SeelenEvent {
   WMSetReservation = 'set-reservation',
   WMForceRetiling = 'wm-force-retiling',
   WMSetLayout = 'wm-set-layout',
-  WMSetOverlayVisibility = 'wm-set-overlay-visibility',
-  WMSetActiveWindow = 'wm-set-active-window',
   WallStop = 'wall-stop',
   PopupContentChanged = 'popup-content-changed',
   StateSettingsChanged = 'settings-changed',
