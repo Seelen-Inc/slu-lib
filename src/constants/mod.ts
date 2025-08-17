@@ -32,8 +32,7 @@ const _languageList = [
   { label: 'Lietuvių', enLabel: 'Lithuanian', value: 'lt' },
   { label: 'Latviešu', enLabel: 'Latvian', value: 'lv' },
   { label: 'Eesti', enLabel: 'Estonian', value: 'et' },
-  { label: 'Tagalog', enLabel: 'Tagalog', value: 'tl' },
-  { label: 'Filipino', enLabel: 'Filipino', value: 'fil' },
+  { label: 'Tagalog', enLabel: 'Filipino', value: 'tl' }, // or fil
   { label: 'Tiếng Việt', enLabel: 'Vietnamese', value: 'vi' },
   { label: 'ไทย', enLabel: 'Thai', value: 'th' },
   { label: 'Indonesia', enLabel: 'Indonesian', value: 'id' },

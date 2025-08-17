@@ -2755,9 +2755,9 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/constants/mod.ts",
-        "line": 77,
+        "line": 76,
         "col": 0,
-        "byteIndex": 4557
+        "byteIndex": 4508
       },
       "declarationKind": "export",
       "kind": "typeAlias",
@@ -2806,9 +2806,9 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/constants/mod.ts",
-        "line": 79,
+        "line": 78,
         "col": 0,
-        "byteIndex": 4636
+        "byteIndex": 4587
       },
       "declarationKind": "export",
       "kind": "interface",
@@ -2821,9 +2821,9 @@
             "name": "label",
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/constants/mod.ts",
-              "line": 80,
+              "line": 79,
               "col": 2,
-              "byteIndex": 4675
+              "byteIndex": 4626
             },
             "params": [],
             "computed": false,
@@ -2839,9 +2839,9 @@
             "name": "enLabel",
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/constants/mod.ts",
-              "line": 81,
+              "line": 80,
               "col": 2,
-              "byteIndex": 4692
+              "byteIndex": 4643
             },
             "params": [],
             "computed": false,
@@ -2860,9 +2860,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/constants/mod.ts",
-              "line": 83,
+              "line": 82,
               "col": 2,
-              "byteIndex": 4774
+              "byteIndex": 4725
             },
             "params": [],
             "computed": false,
@@ -2885,9 +2885,9 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/constants/mod.ts",
-        "line": 86,
+        "line": 85,
         "col": 13,
-        "byteIndex": 4805
+        "byteIndex": 4756
       },
       "declarationKind": "export",
       "kind": "variable",
