@@ -3,10 +3,12 @@ const _languageList = [
   { label: 'English', enLabel: 'English', value: 'en' },
   { label: 'Español', enLabel: 'Spanish', value: 'es' },
   { label: '한국어', enLabel: 'Korean', value: 'ko' },
-  { label: '中文', enLabel: 'Chinese', value: 'zh' },
+  { label: '中文 (简体)', enLabel: 'Chinese (Simplified)', value: 'zh-CN' },
+  { label: '中文 (繁體)', enLabel: 'Chinese (Traditional)', value: 'zh-TW' },
   { label: 'Français', enLabel: 'French', value: 'fr' },
   { label: 'العربية', enLabel: 'Arabic', value: 'ar' },
-  { label: 'Português', enLabel: 'Portuguese', value: 'pt' },
+  { label: 'Português (Portugal)', enLabel: 'Portuguese (Portugal)', value: 'pt-PT' },
+  { label: 'Português (Brasil)', enLabel: 'Portuguese (Brazil)', value: 'pt-BR' },
   { label: 'Русский', enLabel: 'Russian', value: 'ru' },
   { label: 'हिन्दी', enLabel: 'Hindi', value: 'hi' },
   { label: '日本語', enLabel: 'Japanese', value: 'ja' },
@@ -30,7 +32,8 @@ const _languageList = [
   { label: 'Lietuvių', enLabel: 'Lithuanian', value: 'lt' },
   { label: 'Latviešu', enLabel: 'Latvian', value: 'lv' },
   { label: 'Eesti', enLabel: 'Estonian', value: 'et' },
-  { label: 'Filipino', enLabel: 'Filipino', value: 'tl' },
+  { label: 'Tagalog', enLabel: 'Tagalog', value: 'tl' },
+  { label: 'Filipino', enLabel: 'Filipino', value: 'fil' },
   { label: 'Tiếng Việt', enLabel: 'Vietnamese', value: 'vi' },
   { label: 'ไทย', enLabel: 'Thai', value: 'th' },
   { label: 'Indonesia', enLabel: 'Indonesian', value: 'id' },
@@ -38,7 +41,7 @@ const _languageList = [
   { label: 'Català', enLabel: 'Catalan', value: 'ca' },
   { label: 'Afrikaans', enLabel: 'Afrikaans', value: 'af' },
   { label: 'বাংলা', enLabel: 'Bengali', value: 'bn' },
-  { label: 'فارسی', enLabel: 'Farsi', value: 'fa' },
+  { label: 'فارسی', enLabel: 'Persian', value: 'fa' },
   { label: 'ਪੰਜਾਬੀ', enLabel: 'Punjabi', value: 'pa' },
   { label: 'Kiswahili', enLabel: 'Swahili', value: 'sw' },
   { label: 'தமிழ்', enLabel: 'Tamil', value: 'ta' },
@@ -76,7 +79,7 @@ export type SupportedLanguagesCode = (typeof _languageList)[number]['value'];
 export interface SupportedLanguage {
   label: string;
   enLabel: string;
-  /** language code @example 'de' 'es' 'zh' 'en_us' 'en_uk' */
+  /** language code @example 'de' 'es' 'zh' 'en-US' 'en-UK' */
   value: string;
 }
 
