@@ -201,6 +201,7 @@ impl SluResourceFile {
                 reader.seek(SeekFrom::Current(3))?; // SLU mime type
                 reader.seek(SeekFrom::Current(4))?; // 32 bits reserved
             }
+            // todo for version 3, use zip crate
             _ => {
                 return Err("unsupported slu file version".into());
             }
@@ -330,6 +331,16 @@ pub trait SluResource: Sized + Serialize {
             _ => {
                 return Err("Unsupported path extension".into());
             }
+        }
+        Ok(())
+    }
+
+    fn delete(&self) -> Result<()> {
+        let path = self.metadata().path.to_path_buf();
+        if path.is_dir() {
+            std::fs::remove_dir_all(path)?;
+        } else {
+            std::fs::remove_file(path)?;
         }
         Ok(())
     }
