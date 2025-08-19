@@ -716,6 +716,23 @@
             }
           },
           {
+            "name": "RemoveResource",
+            "init": {
+              "repr": "remove_resource",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "remove_resource"
+              }
+            },
+            "location": {
+              "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
+              "line": 32,
+              "col": 2,
+              "byteIndex": 1375
+            }
+          },
+          {
             "name": "StateGetThemes",
             "init": {
               "repr": "state_get_themes",
@@ -727,9 +744,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 32,
+              "line": 33,
               "col": 2,
-              "byteIndex": 1375
+              "byteIndex": 1413
             }
           },
           {
@@ -744,9 +761,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 33,
+              "line": 34,
               "col": 2,
-              "byteIndex": 1414
+              "byteIndex": 1452
             }
           },
           {
@@ -761,9 +778,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 34,
+              "line": 35,
               "col": 2,
-              "byteIndex": 1458
+              "byteIndex": 1496
             }
           },
           {
@@ -778,9 +795,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 35,
+              "line": 36,
               "col": 2,
-              "byteIndex": 1506
+              "byteIndex": 1544
             }
           },
           {
@@ -795,9 +812,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 36,
+              "line": 37,
               "col": 2,
-              "byteIndex": 1558
+              "byteIndex": 1596
             }
           },
           {
@@ -812,9 +829,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 37,
+              "line": 38,
               "col": 2,
-              "byteIndex": 1601
+              "byteIndex": 1639
             }
           },
           {
@@ -829,9 +846,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 38,
+              "line": 39,
               "col": 2,
-              "byteIndex": 1648
+              "byteIndex": 1686
             }
           },
           {
@@ -846,9 +863,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 39,
+              "line": 40,
               "col": 2,
-              "byteIndex": 1729
+              "byteIndex": 1767
             }
           },
           {
@@ -863,9 +880,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 40,
+              "line": 41,
               "col": 2,
-              "byteIndex": 1770
+              "byteIndex": 1808
             }
           },
           {
@@ -880,9 +897,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 41,
+              "line": 42,
               "col": 2,
-              "byteIndex": 1811
+              "byteIndex": 1849
             }
           },
           {
@@ -897,9 +914,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 42,
+              "line": 43,
               "col": 2,
-              "byteIndex": 1852
+              "byteIndex": 1890
             }
           },
           {
@@ -914,9 +931,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 43,
+              "line": 44,
               "col": 2,
-              "byteIndex": 1898
+              "byteIndex": 1936
             }
           },
           {
@@ -931,9 +948,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 44,
+              "line": 45,
               "col": 2,
-              "byteIndex": 1945
+              "byteIndex": 1983
             }
           },
           {
@@ -948,9 +965,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 45,
+              "line": 46,
               "col": 2,
-              "byteIndex": 2010
+              "byteIndex": 2048
             }
           },
           {
@@ -965,9 +982,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 46,
+              "line": 47,
               "col": 2,
-              "byteIndex": 2053
+              "byteIndex": 2091
             }
           },
           {
@@ -982,9 +999,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 47,
+              "line": 48,
               "col": 2,
-              "byteIndex": 2109
+              "byteIndex": 2147
             }
           },
           {
@@ -999,9 +1016,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 48,
+              "line": 49,
               "col": 2,
-              "byteIndex": 2179
+              "byteIndex": 2217
             }
           },
           {
@@ -1016,9 +1033,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 49,
+              "line": 50,
               "col": 2,
-              "byteIndex": 2237
+              "byteIndex": 2275
             }
           },
           {
@@ -1033,9 +1050,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 50,
+              "line": 51,
               "col": 2,
-              "byteIndex": 2295
+              "byteIndex": 2333
             }
           },
           {
@@ -1050,9 +1067,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 51,
+              "line": 52,
               "col": 2,
-              "byteIndex": 2319
+              "byteIndex": 2357
             }
           },
           {
@@ -1067,9 +1084,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 52,
+              "line": 53,
               "col": 2,
-              "byteIndex": 2371
+              "byteIndex": 2409
             }
           },
           {
@@ -1084,9 +1101,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 53,
+              "line": 54,
               "col": 2,
-              "byteIndex": 2419
+              "byteIndex": 2457
             }
           },
           {
@@ -1101,9 +1118,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 54,
+              "line": 55,
               "col": 2,
-              "byteIndex": 2487
+              "byteIndex": 2525
             }
           },
           {
@@ -1118,9 +1135,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 55,
+              "line": 56,
               "col": 2,
-              "byteIndex": 2542
+              "byteIndex": 2580
             }
           },
           {
@@ -1135,9 +1152,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 56,
+              "line": 57,
               "col": 2,
-              "byteIndex": 2595
+              "byteIndex": 2633
             }
           },
           {
@@ -1152,9 +1169,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 57,
+              "line": 58,
               "col": 2,
-              "byteIndex": 2644
+              "byteIndex": 2682
             }
           },
           {
@@ -1169,9 +1186,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 58,
+              "line": 59,
               "col": 2,
-              "byteIndex": 2697
+              "byteIndex": 2735
             }
           },
           {
@@ -1186,9 +1203,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 59,
+              "line": 60,
               "col": 2,
-              "byteIndex": 2761
+              "byteIndex": 2799
             }
           },
           {
@@ -1203,9 +1220,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 60,
+              "line": 61,
               "col": 2,
-              "byteIndex": 2802
+              "byteIndex": 2840
             }
           },
           {
@@ -1220,9 +1237,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 61,
+              "line": 62,
               "col": 2,
-              "byteIndex": 2845
+              "byteIndex": 2883
             }
           },
           {
@@ -1237,9 +1254,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 62,
+              "line": 63,
               "col": 2,
-              "byteIndex": 2873
+              "byteIndex": 2911
             }
           },
           {
@@ -1254,9 +1271,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 63,
+              "line": 64,
               "col": 2,
-              "byteIndex": 2925
+              "byteIndex": 2963
             }
           },
           {
@@ -1271,9 +1288,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 64,
+              "line": 65,
               "col": 2,
-              "byteIndex": 2953
+              "byteIndex": 2991
             }
           },
           {
@@ -1288,9 +1305,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 65,
+              "line": 66,
               "col": 2,
-              "byteIndex": 2992
+              "byteIndex": 3030
             }
           },
           {
@@ -1305,9 +1322,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 66,
+              "line": 67,
               "col": 2,
-              "byteIndex": 3033
+              "byteIndex": 3071
             }
           },
           {
@@ -1322,9 +1339,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 67,
+              "line": 68,
               "col": 2,
-              "byteIndex": 3087
+              "byteIndex": 3125
             }
           },
           {
@@ -1339,9 +1356,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 68,
+              "line": 69,
               "col": 2,
-              "byteIndex": 3147
+              "byteIndex": 3185
             }
           },
           {
@@ -1356,9 +1373,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 69,
+              "line": 70,
               "col": 2,
-              "byteIndex": 3207
+              "byteIndex": 3245
             }
           },
           {
@@ -1373,9 +1390,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 70,
+              "line": 71,
               "col": 2,
-              "byteIndex": 3246
+              "byteIndex": 3284
             }
           },
           {
@@ -1390,9 +1407,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 71,
+              "line": 72,
               "col": 2,
-              "byteIndex": 3281
+              "byteIndex": 3319
             }
           },
           {
@@ -1407,9 +1424,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 72,
+              "line": 73,
               "col": 2,
-              "byteIndex": 3315
+              "byteIndex": 3353
             }
           },
           {
@@ -1424,9 +1441,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 73,
+              "line": 74,
               "col": 2,
-              "byteIndex": 3337
+              "byteIndex": 3375
             }
           },
           {
@@ -1441,9 +1458,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 74,
+              "line": 75,
               "col": 2,
-              "byteIndex": 3360
+              "byteIndex": 3398
             }
           },
           {
@@ -1458,9 +1475,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 75,
+              "line": 76,
               "col": 2,
-              "byteIndex": 3387
+              "byteIndex": 3425
             }
           },
           {
@@ -1475,9 +1492,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 76,
+              "line": 77,
               "col": 2,
-              "byteIndex": 3410
+              "byteIndex": 3448
             }
           },
           {
@@ -1492,9 +1509,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 77,
+              "line": 78,
               "col": 2,
-              "byteIndex": 3435
+              "byteIndex": 3473
             }
           },
           {
@@ -1509,9 +1526,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 78,
+              "line": 79,
               "col": 2,
-              "byteIndex": 3452
+              "byteIndex": 3490
             }
           },
           {
@@ -1526,9 +1543,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 79,
+              "line": 80,
               "col": 2,
-              "byteIndex": 3485
+              "byteIndex": 3523
             }
           },
           {
@@ -1543,9 +1560,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 80,
+              "line": 81,
               "col": 2,
-              "byteIndex": 3516
+              "byteIndex": 3554
             }
           },
           {
@@ -1560,9 +1577,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 81,
+              "line": 82,
               "col": 2,
-              "byteIndex": 3568
+              "byteIndex": 3606
             }
           },
           {
@@ -1577,9 +1594,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 82,
+              "line": 83,
               "col": 2,
-              "byteIndex": 3628
+              "byteIndex": 3666
             }
           },
           {
@@ -1594,9 +1611,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 83,
+              "line": 84,
               "col": 2,
-              "byteIndex": 3659
+              "byteIndex": 3697
             }
           },
           {
@@ -1611,9 +1628,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 84,
+              "line": 85,
               "col": 2,
-              "byteIndex": 3704
+              "byteIndex": 3742
             }
           },
           {
@@ -1628,9 +1645,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 85,
+              "line": 86,
               "col": 2,
-              "byteIndex": 3738
+              "byteIndex": 3776
             }
           },
           {
@@ -1645,9 +1662,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 86,
+              "line": 87,
               "col": 2,
-              "byteIndex": 3779
+              "byteIndex": 3817
             }
           },
           {
@@ -1662,9 +1679,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 87,
+              "line": 88,
               "col": 2,
-              "byteIndex": 3811
+              "byteIndex": 3849
             }
           },
           {
@@ -1679,9 +1696,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 88,
+              "line": 89,
               "col": 2,
-              "byteIndex": 3843
+              "byteIndex": 3881
             }
           },
           {
@@ -1696,9 +1713,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 89,
+              "line": 90,
               "col": 2,
-              "byteIndex": 3873
+              "byteIndex": 3911
             }
           },
           {
@@ -1713,9 +1730,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 90,
+              "line": 91,
               "col": 2,
-              "byteIndex": 3912
+              "byteIndex": 3950
             }
           },
           {
@@ -1730,9 +1747,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 91,
+              "line": 92,
               "col": 2,
-              "byteIndex": 3947
+              "byteIndex": 3985
             }
           },
           {
@@ -1747,9 +1764,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 92,
+              "line": 93,
               "col": 2,
-              "byteIndex": 3989
+              "byteIndex": 4027
             }
           },
           {
@@ -1764,9 +1781,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 93,
+              "line": 94,
               "col": 2,
-              "byteIndex": 4044
+              "byteIndex": 4082
             }
           },
           {
@@ -1781,9 +1798,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 94,
+              "line": 95,
               "col": 2,
-              "byteIndex": 4085
+              "byteIndex": 4123
             }
           },
           {
@@ -1798,9 +1815,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 95,
+              "line": 96,
               "col": 2,
-              "byteIndex": 4130
+              "byteIndex": 4168
             }
           },
           {
@@ -1815,9 +1832,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 96,
+              "line": 97,
               "col": 2,
-              "byteIndex": 4173
+              "byteIndex": 4211
             }
           },
           {
@@ -1832,9 +1849,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 97,
+              "line": 98,
               "col": 2,
-              "byteIndex": 4205
+              "byteIndex": 4243
             }
           },
           {
@@ -1849,9 +1866,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 98,
+              "line": 99,
               "col": 2,
-              "byteIndex": 4243
+              "byteIndex": 4281
             }
           },
           {
@@ -1866,9 +1883,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 99,
+              "line": 100,
               "col": 2,
-              "byteIndex": 4285
+              "byteIndex": 4323
             }
           },
           {
@@ -1883,9 +1900,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/commands.ts",
-              "line": 100,
+              "line": 101,
               "col": 2,
-              "byteIndex": 4331
+              "byteIndex": 4369
             }
           }
         ]

@@ -29,6 +29,7 @@ export enum SeelenCommand {
   StateGetDefaultWallpaperSettings = 'state_get_default_wallpaper_settings',
   SetAutoStart = 'set_auto_start',
   GetAutoStartStatus = 'get_auto_start_status',
+  RemoveResource = 'remove_resource',
   StateGetThemes = 'state_get_themes',
   StateGetWegItems = 'state_get_weg_items',
   StateWriteWegItems = 'state_write_weg_items',

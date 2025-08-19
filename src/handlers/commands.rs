@@ -1,6 +1,6 @@
 #[cfg(test)]
 use crate::{
-    rect::Rect, state::by_monitor::MonitorConfiguration,
+    rect::Rect, resource::*, state::by_monitor::MonitorConfiguration,
     state::by_wallpaper::WallpaperInstanceSettings, state::*, system_state::*,
 };
 #[cfg(test)]
@@ -126,6 +126,7 @@ slu_commands_declaration! {
     // miscellaneous
     TranslateText = translate_text(source: String, source_lang: String, target_lang: String) -> String,
 
+    // System
     SystemGetForegroundWindowColor = get_foreground_window_color() -> Color,
     SystemGetMonitors = get_connected_monitors() -> Vec<PhysicalMonitor>,
     SystemGetColors = get_system_colors() -> UIColors,
@@ -139,6 +140,8 @@ slu_commands_declaration! {
 
     SetAutoStart = set_auto_start(enabled: bool),
     GetAutoStartStatus = get_auto_start_status() -> bool,
+    RemoveResource = remove_resource(id: ResourceId, kind: ResourceKind),
+
     StateGetThemes = state_get_themes() -> Vec<Theme>,
     StateGetWegItems = state_get_weg_items(monitor_id: Option<MonitorId>) -> WegItems,
     StateWriteWegItems = state_write_weg_items(items: WegItems),
