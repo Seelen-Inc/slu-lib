@@ -19797,14 +19797,11 @@
               },
               {
                 "name": "path",
-                "jsDoc": {
-                  "doc": "internal field used by the app on load of the resource"
-                },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ResourceMetadata.ts",
-                  "line": 38,
-                  "col": 0,
-                  "byteIndex": 1140
+                  "line": 34,
+                  "col": 51,
+                  "byteIndex": 1073
                 },
                 "params": [],
                 "computed": false,
@@ -19818,14 +19815,11 @@
               },
               {
                 "name": "filename",
-                "jsDoc": {
-                  "doc": "internal field used by the app on load of the resource, will be removed on v3"
-                },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ResourceMetadata.ts",
-                  "line": 42,
-                  "col": 0,
-                  "byteIndex": 1244
+                  "line": 34,
+                  "col": 65,
+                  "byteIndex": 1087
                 },
                 "params": [],
                 "computed": false,
@@ -19839,14 +19833,11 @@
               },
               {
                 "name": "bundled",
-                "jsDoc": {
-                  "doc": "internal field that indicates if the resource is bundled"
-                },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ResourceMetadata.ts",
-                  "line": 46,
-                  "col": 0,
-                  "byteIndex": 1331
+                  "line": 34,
+                  "col": 83,
+                  "byteIndex": 1105
                 },
                 "params": [],
                 "computed": false,
@@ -19855,6 +19846,35 @@
                   "repr": "boolean",
                   "kind": "keyword",
                   "keyword": "boolean"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "downloaded_at",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ResourceMetadata.ts",
+                  "line": 34,
+                  "col": 101,
+                  "byteIndex": 1123
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "",
+                  "kind": "union",
+                  "union": [
+                    {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    {
+                      "repr": "null",
+                      "kind": "keyword",
+                      "keyword": "null"
+                    }
+                  ]
                 },
                 "typeParams": []
               }

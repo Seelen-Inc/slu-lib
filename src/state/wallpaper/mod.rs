@@ -5,7 +5,8 @@ use url::Url;
 use crate::{
     error::Result,
     resource::{
-        ConcreteResource, ResourceMetadata, ResourceText, SluResource, SluResourceFile, WallpaperId,
+        ConcreteResource, InternalResourceMetadata, ResourceMetadata, ResourceText, SluResource,
+        SluResourceFile, WallpaperId,
     },
     utils::search_for_metadata_file,
 };
@@ -83,7 +84,10 @@ impl Wallpaper {
 
         let metadata = ResourceMetadata {
             display_name: ResourceText::En(filename.clone()),
-            path: folder_to_store.join("metadata.yml"),
+            internal: InternalResourceMetadata {
+                path: folder_to_store.join("metadata.yml"),
+                ..Default::default()
+            },
             ..Default::default()
         };
 

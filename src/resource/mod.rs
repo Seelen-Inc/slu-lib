@@ -52,6 +52,7 @@ impl ResourceText {
 }
 
 // =============================================================================
+
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
 pub struct ResourceMetadata {
@@ -71,15 +72,16 @@ pub struct ResourceMetadata {
     /// Developers are responsible to update the resource so when resource does not
     /// match the current app version, the resource will be shown with a warning message
     pub app_target_version: Option<(u32, u32, u32)>,
-    /// internal field used by the app on load of the resource
-    #[serde(skip_deserializing)]
+    #[serde(flatten, skip_deserializing)]
+    pub internal: InternalResourceMetadata,
+}
+
+#[derive(Debug, Default, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
+pub struct InternalResourceMetadata {
     pub path: PathBuf,
-    /// internal field used by the app on load of the resource, will be removed on v3
-    #[serde(skip_deserializing)]
     pub filename: String,
-    /// internal field that indicates if the resource is bundled
-    #[serde(skip_deserializing)]
     pub bundled: bool,
+    pub downloaded_at: Option<DateTime<Utc>>,
 }
 
 impl Default for ResourceMetadata {
@@ -92,9 +94,7 @@ impl Default for ResourceMetadata {
             screenshots: Vec::new(),
             tags: Vec::new(),
             app_target_version: None,
-            path: PathBuf::new(),
-            filename: String::new(),
-            bundled: false,
+            internal: InternalResourceMetadata::default(),
         }
     }
 }
@@ -226,7 +226,11 @@ impl SluResourceFile {
     }
 
     pub fn load(path: &Path) -> Result<Self> {
-        Self::decode(&File::open(path)?)
+        let file = File::open(path)?;
+        let mut decoded = Self::decode(&file)?;
+        decoded.resource.verify()?;
+        decoded.resource.metadata.internal.downloaded_at = Some(file.metadata()?.created()?.into());
+        Ok(decoded)
     }
 
     pub fn store(&self, path: &Path) -> Result<()> {
@@ -236,6 +240,7 @@ impl SluResourceFile {
 
     pub fn concrete(&self) -> Result<ConcreteResource> {
         let mut resource = serde_json::value::Map::new();
+
         resource.insert(
             "id".to_string(),
             serde_json::Value::String(self.resource.friendly_id.to_string()),
@@ -289,8 +294,8 @@ pub trait SluResource: Sized + Serialize {
         };
 
         let meta = resource.metadata_mut();
-        meta.path = path.to_path_buf();
-        meta.filename = path
+        meta.internal.path = path.to_path_buf();
+        meta.internal.filename = path
             .file_name()
             .unwrap_or_default()
             .to_string_lossy()
@@ -302,7 +307,7 @@ pub trait SluResource: Sized + Serialize {
     }
 
     fn save(&self) -> Result<()> {
-        let mut save_path = self.metadata().path.to_path_buf();
+        let mut save_path = self.metadata().internal.path.to_path_buf();
         if save_path.is_dir() {
             save_path = search_for_metadata_file(&save_path)
                 .unwrap_or_else(|| save_path.join("metadata.yml"));
@@ -336,7 +341,7 @@ pub trait SluResource: Sized + Serialize {
     }
 
     fn delete(&self) -> Result<()> {
-        let path = self.metadata().path.to_path_buf();
+        let path = self.metadata().internal.path.to_path_buf();
         if path.is_dir() {
             std::fs::remove_dir_all(path)?;
         } else {
