@@ -1,5 +1,5 @@
 import type { ResourceKind, ResourceStatus } from '@seelen-ui/types';
-import type { Enum } from './utils/enums.ts';
+import type { Enum } from '../utils/enums.ts';
 
 const ResourceKind: Enum<ResourceKind> = {
   IconPack: 'IconPack',

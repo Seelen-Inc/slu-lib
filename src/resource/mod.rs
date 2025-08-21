@@ -2,8 +2,9 @@ mod resource_id;
 pub use resource_id::{IconPackId, PluginId, ResourceId, ThemeId, WallpaperId, WidgetId};
 
 use std::{
-    collections::HashMap,
+    collections::{HashMap, HashSet},
     fs::File,
+    hash::Hash,
     io::{Read, Seek, SeekFrom, Write},
     path::{Path, PathBuf},
 };
@@ -129,28 +130,52 @@ pub enum ResourceStatus {
 
 // =============================================================================
 
+#[derive(Debug, Clone, PartialEq, Eq, Hash, Serialize, Deserialize, JsonSchema, TS)]
+pub enum ResourceAttribute {
+    /// this resource is not working
+    NotWorking,
+    /// this resource is recommended by the staff
+    StaffLiked,
+}
+
+// =============================================================================
+
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(rename_all = "camelCase")]
 #[ts(export)]
 pub struct Resource {
+    /// unique id
     pub id: Uuid,
+    /// id of the document containing the resource
+    pub data_id: Uuid,
+    /// user id who created the resource
     pub creator_id: Uuid,
     /// visual id composed of creator username and resource name
     pub friendly_id: ResourceId,
+    pub kind: ResourceKind,
     pub metadata: ResourceMetadata,
     pub created_at: DateTime<Utc>,
     pub updated_at: DateTime<Utc>,
+
+    /// current status
     pub status: ResourceStatus,
+    /// if status == ResourceStatus::Rejected, this is the reason for rejection
     pub rejected_reason: Option<String>,
+    /// date when the resource was reviewed
     pub reviewed_at: Option<DateTime<Utc>>,
+    /// user id who reviewed the resource
     pub reviewed_by: Option<Uuid>,
     /// should be filled if `status == ResourceStatus::Deleted`
     pub deleted_at: Option<DateTime<Utc>>,
+
+    /// resource attributes
+    #[serde(default, skip_serializing_if = "HashSet::is_empty")]
+    pub attributes: HashSet<ResourceAttribute>,
+    /// resource version (increased every time the resource is updated)
     pub version: u32,
-    pub kind: ResourceKind,
-    /// id of the document containing the resource
-    pub data_id: Uuid,
+    /// number of stars
     pub stars: u32,
+    /// number of downloads
     pub downloads: u32,
 }
 

@@ -10672,10 +10672,10 @@
       "name": "ResourceKind",
       "isDefault": false,
       "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/resource.ts",
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/resource/mod.ts",
         "line": 4,
         "col": 6,
-        "byteIndex": 123
+        "byteIndex": 124
       },
       "declarationKind": "export",
       "kind": "variable",
@@ -10765,10 +10765,10 @@
       "name": "ResourceStatus",
       "isDefault": false,
       "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/resource.ts",
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/resource/mod.ts",
         "line": 13,
         "col": 6,
-        "byteIndex": 304
+        "byteIndex": 305
       },
       "declarationKind": "export",
       "kind": "variable",
