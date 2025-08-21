@@ -169,7 +169,7 @@ pub struct Resource {
     pub deleted_at: Option<DateTime<Utc>>,
 
     /// resource attributes
-    #[serde(default, skip_serializing_if = "HashSet::is_empty")]
+    #[serde(default)]
     pub attributes: HashSet<ResourceAttribute>,
     /// resource version (increased every time the resource is updated)
     pub version: u32,

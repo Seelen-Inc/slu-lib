@@ -19394,7 +19394,7 @@
                 },
                 "params": [],
                 "computed": false,
-                "optional": true,
+                "optional": false,
                 "tsType": {
                   "repr": "Array",
                   "kind": "typeRef",
@@ -19423,7 +19423,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Resource.ts",
                   "line": 52,
                   "col": 0,
-                  "byteIndex": 1331
+                  "byteIndex": 1330
                 },
                 "params": [],
                 "computed": false,
@@ -19444,7 +19444,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Resource.ts",
                   "line": 56,
                   "col": 0,
-                  "byteIndex": 1376
+                  "byteIndex": 1375
                 },
                 "params": [],
                 "computed": false,
@@ -19465,7 +19465,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Resource.ts",
                   "line": 60,
                   "col": 0,
-                  "byteIndex": 1423
+                  "byteIndex": 1422
                 },
                 "params": [],
                 "computed": false,
