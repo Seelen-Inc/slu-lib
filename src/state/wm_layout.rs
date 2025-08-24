@@ -39,6 +39,9 @@ pub struct WmNode {
     pub max_stack_size: Option<usize>,
 }
 
+unsafe impl Send for WmNode {}
+unsafe impl Sync for WmNode {}
+
 impl WmNode {
     pub fn len(&self) -> usize {
         match self.kind {
