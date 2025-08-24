@@ -690,7 +690,7 @@ dependencies = [
 
 [[package]]
 name = "seelen-core"
-version = "2.3.6"
+version = "2.4.1"
 dependencies = [
  "base64",
  "chrono",
