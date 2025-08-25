@@ -9,7 +9,7 @@
     "jsr:@deno/graph@~0.73.1": "0.73.1",
     "jsr:@std/assert@0.223": "0.223.0",
     "jsr:@std/assert@0.226": "0.226.0",
-    "jsr:@std/assert@^1.0.13": "1.0.13",
+    "jsr:@std/assert@^1.0.14": "1.0.14",
     "jsr:@std/bytes@0.223": "0.223.0",
     "jsr:@std/bytes@^1.0.5": "1.0.6",
     "jsr:@std/encoding@^1.0.10": "1.0.10",
@@ -20,7 +20,7 @@
     "jsr:@std/fs@1": "1.0.18",
     "jsr:@std/fs@^1.0.6": "1.0.18",
     "jsr:@std/fs@~0.229.3": "0.229.3",
-    "jsr:@std/internal@^1.0.6": "1.0.8",
+    "jsr:@std/internal@^1.0.10": "1.0.10",
     "jsr:@std/io@0.223": "0.223.0",
     "jsr:@std/io@0.225": "0.225.2",
     "jsr:@std/path@0.223": "0.223.0",
@@ -33,15 +33,11 @@
     "jsr:@ts-morph/bootstrap@0.25": "0.25.0",
     "jsr:@ts-morph/common@0.24": "0.24.0",
     "jsr:@ts-morph/common@0.25": "0.25.0",
-    "npm:@tauri-apps/api@^2.5.0": "2.5.0",
-    "npm:@tauri-apps/plugin-dialog@*": "2.2.2",
-    "npm:@tauri-apps/plugin-dialog@^2.2.2": "2.2.2",
-    "npm:@tauri-apps/plugin-fs@*": "2.3.0",
-    "npm:@tauri-apps/plugin-fs@^2.3.0": "2.3.0",
-    "npm:@tauri-apps/plugin-log@*": "2.4.0",
-    "npm:@tauri-apps/plugin-log@^2.4.0": "2.4.0",
-    "npm:@tauri-apps/plugin-process@*": "2.2.1",
-    "npm:@tauri-apps/plugin-process@^2.2.1": "2.2.1",
+    "npm:@tauri-apps/api@^2.8.0": "2.8.0",
+    "npm:@tauri-apps/plugin-dialog@^2.3.3": "2.3.3",
+    "npm:@tauri-apps/plugin-fs@^2.4.2": "2.4.2",
+    "npm:@tauri-apps/plugin-log@^2.6.0": "2.6.0",
+    "npm:@tauri-apps/plugin-process@^2.3.0": "2.3.0",
     "npm:json-refs@*": "3.0.15",
     "npm:json-refs@3.0.15": "3.0.15",
     "npm:json-schema-to-zod@2.6.1": "2.6.1"
@@ -100,8 +96,8 @@
     "@std/assert@0.226.0": {
       "integrity": "0dfb5f7c7723c18cec118e080fec76ce15b4c31154b15ad2bd74822603ef75b3"
     },
-    "@std/assert@1.0.13": {
-      "integrity": "ae0d31e41919b12c656c742b22522c32fb26ed0cba32975cb0de2a273cb68b29",
+    "@std/assert@1.0.14": {
+      "integrity": "68d0d4a43b365abc927f45a9b85c639ea18a9fab96ad92281e493e4ed84abaa4",
       "dependencies": [
         "jsr:@std/internal"
       ]
@@ -136,8 +132,8 @@
         "jsr:@std/path@^1.1.0"
       ]
     },
-    "@std/internal@1.0.8": {
-      "integrity": "fc66e846d8d38a47cffd274d80d2ca3f0de71040f855783724bb6b87f60891f5"
+    "@std/internal@1.0.10": {
+      "integrity": "e3be62ce42cab0e177c27698e5d9800122f67b766a0bea6ca4867886cbde8cf7"
     },
     "@std/io@0.223.0": {
       "integrity": "2d8c3c2ab3a515619b90da2c6ff5ea7b75a94383259ef4d02116b228393f84f1",
@@ -210,29 +206,29 @@
         "@noble/hashes"
       ]
     },
-    "@tauri-apps/api@2.5.0": {
-      "integrity": "sha512-Ldux4ip+HGAcPUmuLT8EIkk6yafl5vK0P0c0byzAKzxJh7vxelVtdPONjfgTm96PbN24yjZNESY8CKo8qniluA=="
+    "@tauri-apps/api@2.8.0": {
+      "integrity": "sha512-ga7zdhbS2GXOMTIZRT0mYjKJtR9fivsXzsyq5U3vjDL0s6DTMwYRm0UHNjzTY5dh4+LSC68Sm/7WEiimbQNYlw=="
     },
-    "@tauri-apps/plugin-dialog@2.2.2": {
-      "integrity": "sha512-Pm9qnXQq8ZVhAMFSEPwxvh+nWb2mk7LASVlNEHYaksHvcz8P6+ElR5U5dNL9Ofrm+uwhh1/gYKWswK8JJJAh6A==",
+    "@tauri-apps/plugin-dialog@2.3.3": {
+      "integrity": "sha512-cWXB9QJDbLIA0v7I5QY183awazBEQNPhp19iPvrMZoJRX8SbFkhWFx1/q7zy7xGpXXzxz29qtq6z21Ho7W5Iew==",
       "dependencies": [
         "@tauri-apps/api"
       ]
     },
-    "@tauri-apps/plugin-fs@2.3.0": {
-      "integrity": "sha512-G9gEyYVUaaxhdRJBgQTTLmzAe0vtHYxYyN1oTQzU3zwvb8T+tVLcAqCdFMWHq0qGeGbmynI5whvYpcXo5LvZ1w==",
+    "@tauri-apps/plugin-fs@2.4.2": {
+      "integrity": "sha512-YGhmYuTgXGsi6AjoV+5mh2NvicgWBfVJHHheuck6oHD+HC9bVWPaHvCP0/Aw4pHDejwrvT8hE3+zZAaWf+hrig==",
       "dependencies": [
         "@tauri-apps/api"
       ]
     },
-    "@tauri-apps/plugin-log@2.4.0": {
-      "integrity": "sha512-j7yrDtLNmayCBOO2esl3aZv9jSXy2an8MDLry3Ys9ZXerwUg35n1Y2uD8HoCR+8Ng/EUgx215+qOUfJasjYrHw==",
+    "@tauri-apps/plugin-log@2.6.0": {
+      "integrity": "sha512-gVp3l31akA1Jk2bZsTA0hMFD5/gLe49Nw1btu5lViau0QqgC2XyT79LSwvy7a44ewtQbSexchqIg7oTJKMIbXQ==",
       "dependencies": [
         "@tauri-apps/api"
       ]
     },
-    "@tauri-apps/plugin-process@2.2.1": {
-      "integrity": "sha512-cF/k8J+YjjuowhNG1AboHNTlrGiOwgX5j6NzsX6WFf9FMzyZUchkCgZMxCdSE5NIgFX0vvOgLQhODFJgbMenLg==",
+    "@tauri-apps/plugin-process@2.3.0": {
+      "integrity": "sha512-0DNj6u+9csODiV4seSxxRbnLpeGYdojlcctCuLOCgpH9X3+ckVZIEj6H7tRQ7zqWr7kSTEWnrxtAdBb0FbtrmQ==",
       "dependencies": [
         "@tauri-apps/api"
       ]
@@ -686,13 +682,13 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@std/assert@^1.0.13",
+      "jsr:@std/assert@^1.0.14",
       "jsr:@std/encoding@^1.0.10",
-      "npm:@tauri-apps/api@^2.5.0",
-      "npm:@tauri-apps/plugin-dialog@^2.2.2",
-      "npm:@tauri-apps/plugin-fs@^2.3.0",
-      "npm:@tauri-apps/plugin-log@^2.4.0",
-      "npm:@tauri-apps/plugin-process@^2.2.1"
+      "npm:@tauri-apps/api@^2.8.0",
+      "npm:@tauri-apps/plugin-dialog@^2.3.3",
+      "npm:@tauri-apps/plugin-fs@^2.4.2",
+      "npm:@tauri-apps/plugin-log@^2.6.0",
+      "npm:@tauri-apps/plugin-process@^2.3.0"
     ]
   }
 }
