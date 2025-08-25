@@ -88,20 +88,16 @@ export class Widget {
 
   /** Will throw if the library is being used on a non Seelen UI environment */
   static getCurrent(): Widget {
-    if (!CURRENT_WIDGET) {
+    const scope = globalThis as ExtendedGlobalThis;
+    if (!scope.__SLU_WIDGET) {
       throw new Error('The library is being used on a non Seelen UI environment');
     }
-    return CURRENT_WIDGET;
+    return scope.__SLU_WIDGET_INSTANCE || (scope.__SLU_WIDGET_INSTANCE = new Widget(scope.__SLU_WIDGET));
   }
 
-  private static async getCurrentAsync(): Promise<Widget> {
-    const [currentWidgetId] = this.getDecodedWebviewLabel();
-    const list = await WidgetList.getAsync();
-    const widget = list.findById(currentWidgetId);
-    if (!widget) {
-      throw new Error('Current Widget not found');
-    }
-    return new Widget(widget);
+  /** @deprecated Use `getCurrent` instead, this method will be removed on future */
+  private static getCurrentAsync(): Widget {
+    return this.getCurrent();
   }
 
   private static getEntryDefaultValues(entry: WsdGroupEntry): Record<string, unknown> {
@@ -200,11 +196,4 @@ export class Widget {
   }
 }
 
-let CURRENT_WIDGET: Widget | null = null;
-// @ts-ignore the method is private
-Widget.getCurrentAsync().then((w) => {
-  CURRENT_WIDGET = w;
-}).catch(() => {
-  CURRENT_WIDGET = null;
-  console.warn('The library is being used on a non Seelen UI environment');
-});
+type ExtendedGlobalThis = typeof globalThis & { __SLU_WIDGET?: IWidget; __SLU_WIDGET_INSTANCE?: Widget };
