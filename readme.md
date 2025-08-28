@@ -3,35 +3,34 @@
   Seelen UI Library
 </h1>
 
+The **Seelen UI Library** is the core library for [Seelen UI](https://github.com/eythaann/seelen-ui), a highly customizable desktop UI. This library provides the necessary tools and types to create and manage widgets, plugins, and themes for the Seelen UI application. It's a hybrid library with a Rust core and TypeScript/Deno bindings, designed for performance and type safety.
 
-The **Seelen UI Library** provides tools to create and manage widgets for the [Seelen UI](https://github.com/eythaann/seelen-ui) application. This library simplifies interaction with the Seelen UI's internal protocols and structure, making widget development efficient and straightforward.
+## Installation
 
-## Submodules
+### TypeScript/Deno
 
-The library is organized into two key submodules:
+You can use the library from JSR or npm.
 
-### API
-
-The **API** submodule offers a set of classes, functions, and helpers to interact seamlessly with the Seelen UI App. It provides easy access to internal Tauri protocols.
-
-```ts
-import { SeelenClass } from '@seelen-ui/lib';
-
-let instance = await SeelenClass.getAsync();
+**JSR:**
+```sh
+deno add @seelen-ui/lib
 ```
 
-### Types
-
-The **Types** submodule contains TypeScript interfaces and types generated directly from the Rust codebase. It ensures type safety and consistency when working with Seelen UI.
-
-```ts
-import type { SeelenType } from '@seelen-ui/lib/types';
-
-let myVariable: SeelenType = { ... };
+**NPM:**
+```sh
+npm install @seelen-ui/lib
 ```
+
+## Contributing
+
+Contributions are welcome! Please read our [contributing guidelines](contributing.md) to get started.
+
+## License
+
+This project is licensed under the Apache-2.0 License. See the [LICENSE](LICENSE) file for details.
 
 ## Links
 
 - [GitHub Repository](https://github.com/Seelen-Inc/slu-lib)
 - [NPM Package](https://npmjs.com/package/@seelen-ui/lib)
-- [JSR Documentation](https://jsr.io/@seelen-ui/lib)
+- [JSR Package](https://jsr.io/@seelen-ui/lib)

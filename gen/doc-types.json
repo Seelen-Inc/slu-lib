@@ -19947,7 +19947,7 @@
                 "typeParams": []
               },
               {
-                "name": "downloaded_at",
+                "name": "downloadedAt",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ResourceMetadata.ts",
                   "line": 34,
@@ -34715,11 +34715,14 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluResourceFile.ts",
-        "line": 5,
+        "line": 12,
         "col": 0,
-        "byteIndex": 206
+        "byteIndex": 424
       },
       "declarationKind": "export",
+      "jsDoc": {
+        "doc": "A container for Seelen UI resources.\n\nThis struct contains all the necessary data that a resource needs.\nIt uses a custom `.slu` file extension format that can change over time\nwith new versions."
+      },
       "kind": "typeAlias",
       "typeAliasDef": {
         "tsType": {
@@ -34733,9 +34736,9 @@
                 "name": "version",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluResourceFile.ts",
-                  "line": 5,
+                  "line": 12,
                   "col": 32,
-                  "byteIndex": 238
+                  "byteIndex": 456
                 },
                 "params": [],
                 "computed": false,
@@ -34751,9 +34754,9 @@
                 "name": "resource",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluResourceFile.ts",
-                  "line": 5,
+                  "line": 12,
                   "col": 49,
-                  "byteIndex": 255
+                  "byteIndex": 473
                 },
                 "params": [],
                 "computed": false,
@@ -34772,9 +34775,9 @@
                 "name": "data",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/SluResourceFile.ts",
-                  "line": 5,
+                  "line": 12,
                   "col": 69,
-                  "byteIndex": 275
+                  "byteIndex": 493
                 },
                 "params": [],
                 "computed": false,
