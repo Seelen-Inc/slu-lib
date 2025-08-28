@@ -14,6 +14,7 @@ export * from './plugin/mod.ts';
 export * from './widget/mod.ts';
 export * from './profile.ts';
 export * from './wallpaper/mod.ts';
+export * from './startup.ts';
 
 export class LauncherHistory {
   constructor(public inner: ILauncherHistory) {}
