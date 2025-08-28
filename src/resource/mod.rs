@@ -82,7 +82,8 @@ pub struct InternalResourceMetadata {
     pub path: PathBuf,
     pub filename: String,
     pub bundled: bool,
-    pub downloaded_at: Option<DateTime<Utc>>,
+    /// Date when the metadata file was created
+    pub created_at: Option<DateTime<Utc>>,
 }
 
 impl Default for ResourceMetadata {
@@ -223,6 +224,7 @@ pub trait SluResource: Sized + Serialize {
             .unwrap_or_default()
             .to_string_lossy()
             .to_string();
+        meta.internal.created_at = Some(path.metadata()?.created()?.into());
 
         resource.sanitize();
         resource.validate()?;

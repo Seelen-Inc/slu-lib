@@ -77,9 +77,8 @@ impl SluResourceFile {
 
     pub fn load(path: &Path) -> Result<Self> {
         let file = File::open(path)?;
-        let mut decoded = Self::decode(&file)?;
+        let decoded = Self::decode(&file)?;
         decoded.resource.verify()?;
-        decoded.resource.metadata.internal.downloaded_at = Some(file.metadata()?.created()?.into());
         Ok(decoded)
     }
 

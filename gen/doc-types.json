@@ -19947,12 +19947,15 @@
                 "typeParams": []
               },
               {
-                "name": "downloadedAt",
+                "name": "createdAt",
+                "jsDoc": {
+                  "doc": "Date when the metadata file was created"
+                },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ResourceMetadata.ts",
-                  "line": 34,
-                  "col": 101,
-                  "byteIndex": 1123
+                  "line": 38,
+                  "col": 0,
+                  "byteIndex": 1175
                 },
                 "params": [],
                 "computed": false,
