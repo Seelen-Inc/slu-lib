@@ -19947,34 +19947,23 @@
                 "typeParams": []
               },
               {
-                "name": "createdAt",
+                "name": "writtenAt",
                 "jsDoc": {
-                  "doc": "Date when the metadata file was created"
+                  "doc": "Last date when the metadata file was written"
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ResourceMetadata.ts",
                   "line": 38,
                   "col": 0,
-                  "byteIndex": 1175
+                  "byteIndex": 1180
                 },
                 "params": [],
                 "computed": false,
                 "optional": false,
                 "tsType": {
-                  "repr": "",
-                  "kind": "union",
-                  "union": [
-                    {
-                      "repr": "string",
-                      "kind": "keyword",
-                      "keyword": "string"
-                    },
-                    {
-                      "repr": "null",
-                      "kind": "keyword",
-                      "keyword": "null"
-                    }
-                  ]
+                  "repr": "string",
+                  "kind": "keyword",
+                  "keyword": "string"
                 },
                 "typeParams": []
               }
