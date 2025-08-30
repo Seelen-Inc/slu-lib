@@ -43,4 +43,5 @@ export enum SeelenEvent {
   StateWidgetsChanged = 'widgets-changed',
   StateWallpapersChanged = 'UserResources::wallpapers-changed',
   StateProfilesChanged = 'profiles-changed',
+  StatePerformanceModeChanged = 'state::performance-mode-changed',
 }

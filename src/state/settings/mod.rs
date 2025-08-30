@@ -6,6 +6,9 @@ pub mod by_widget;
 pub mod shortcuts;
 
 use std::collections::{HashMap, HashSet};
+use std::fs::File;
+use std::io::Write;
+use std::path::Path;
 
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
@@ -436,6 +439,8 @@ pub struct Settings {
     pub by_theme: HashMap<ThemeId, ThemeSettings>,
     /// settings for each background
     pub by_wallpaper: HashMap<WallpaperId, WallpaperInstanceSettings>,
+    /// Performance options
+    pub performance_mode: PerformanceModeSettings,
 }
 
 impl Default for Settings {
@@ -447,6 +452,7 @@ impl Default for Settings {
             wall: None,
             launcher: None,
             // ---
+            performance_mode: PerformanceModeSettings::default(),
             shortcuts: SluShortcutsSettings::default(),
             drpc: true,
             old_active_themes: Vec::new(),
@@ -523,5 +529,72 @@ impl Settings {
 
         self.shortcuts.sanitize();
         Ok(())
+    }
+
+    pub fn load(path: impl AsRef<Path>) -> Result<Self> {
+        let path = path.as_ref();
+
+        let mut settings: Self = {
+            let file = File::open(path)?;
+            file.lock_shared()?;
+            serde_json::from_reader(&file)?
+        };
+
+        // Load shortcuts from sibling file if it exists
+        if let (Some(parent), Some(stem)) = (path.parent(), path.file_stem()) {
+            let shortcuts_path = parent.join(format!("{}_shortcuts.json", stem.to_string_lossy()));
+            if shortcuts_path.exists() {
+                let file = File::open(&shortcuts_path)?;
+                file.lock_shared()?;
+                settings.shortcuts = serde_json::from_reader(&file)?;
+            }
+        }
+
+        settings.migrate()?;
+        settings.sanitize()?;
+        Ok(settings)
+    }
+
+    pub fn save(&self, path: impl AsRef<Path>) -> Result<()> {
+        let path = path.as_ref();
+
+        {
+            // Create a copy without shortcuts for main settings file
+            let mut settings_copy = serde_json::to_value(self)?;
+            settings_copy.as_object_mut().unwrap().remove("shortcuts");
+
+            let mut file = File::create(path)?;
+            file.lock()?;
+            serde_json::to_writer_pretty(&file, &settings_copy)?;
+            file.flush()?;
+        }
+
+        // Save shortcuts to sibling file
+        if let (Some(parent), Some(stem)) = (path.parent(), path.file_stem()) {
+            let shortcuts_path = parent.join(format!("{}_shortcuts.json", stem.to_string_lossy()));
+            let mut shortcuts_file = File::create(&shortcuts_path)?;
+            shortcuts_file.lock()?;
+            serde_json::to_writer_pretty(&shortcuts_file, &self.shortcuts)?;
+            shortcuts_file.flush()?;
+        }
+
+        Ok(())
+    }
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
+pub struct PerformanceModeSettings {
+    pub always_enabled: bool,
+    pub toggle_on_battery: bool,
+    pub toggle_on_energy_saver: bool,
+}
+
+impl Default for PerformanceModeSettings {
+    fn default() -> Self {
+        Self {
+            always_enabled: false,
+            toggle_on_battery: false,
+            toggle_on_energy_saver: true,
+        }
     }
 }

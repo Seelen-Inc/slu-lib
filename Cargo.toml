@@ -2,6 +2,7 @@
 name = "seelen-core"
 version = "2.4.1"
 edition = "2021"
+rust-version = "1.89"
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
@@ -30,3 +31,4 @@ paste = "1.0.15"
 [features]
 default = ["gen_enums"]
 gen_enums = []
+nightly = []

@@ -158,6 +158,7 @@ slu_commands_declaration! {
     StateGetProfiles = state_get_profiles() -> Vec<Profile>,
     StateDeleteCachedIcons = state_delete_cached_icons(),
     StateRequestWallpaperAddition = state_request_wallpaper_addition(),
+    StateIsPerformanceModeEnabled = state_is_performance_mode_enabled() -> bool,
 
     // Shell
     GetNativeShellWallpaper = get_native_shell_wallpaper() -> PathBuf,
