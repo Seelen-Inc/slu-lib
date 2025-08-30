@@ -81,7 +81,7 @@ export enum SeelenCommand {
   WegToggleWindowState = 'weg_toggle_window_state',
   WegRequestUpdatePreviews = 'weg_request_update_previews',
   WegPinItem = 'weg_pin_item',
-  SetWindowPosition = 'set_window_position',
+  SetAppWindowsPositions = 'set_app_windows_positions',
   RequestFocus = 'request_focus',
   LauncherGetApps = 'launcher_get_apps',
   CreatePopup = 'create_popup',

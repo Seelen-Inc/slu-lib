@@ -209,7 +209,7 @@ slu_commands_declaration! {
     WegPinItem = weg_pin_item(path: PathBuf),
 
     // Windows Manager
-    SetWindowPosition = set_window_position(hwnd: isize, rect: Rect),
+    SetAppWindowsPositions = set_app_windows_positions(positions: HashMap<isize, Rect>),
     RequestFocus = request_focus(hwnd: isize),
 
     // App Launcher
