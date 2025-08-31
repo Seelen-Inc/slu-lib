@@ -98,9 +98,11 @@
           "zoomSize": 70
         },
         "@seelen/window-manager": {
-          "animationsDurationMs": 250,
-          "animationsEaseFunction": "EaseInCubic",
-          "animationsEnabled": true,
+          "animations": {
+            "durationMs": 200,
+            "easeFunction": "EaseOut",
+            "enabled": true
+          },
           "autoStackingByCategory": true,
           "border": {
             "enabled": true,
@@ -192,9 +194,9 @@
       "description": "Performance options",
       "$ref": "#/$defs/PerformanceModeSettings",
       "default": {
-        "always_enabled": false,
-        "toggle_on_battery": false,
-        "toggle_on_energy_saver": true
+        "default": "Disabled",
+        "onBattery": "Minimal",
+        "onEnergySaver": "Extreme"
       }
     },
     "seelenweg": {
@@ -422,24 +424,41 @@
         "right"
       ]
     },
+    "PerformanceMode": {
+      "oneOf": [
+        {
+          "description": "Does nothing, all animations are enabled.",
+          "type": "string",
+          "const": "Disabled"
+        },
+        {
+          "description": "Disables windows animations and other heavy effects.",
+          "type": "string",
+          "const": "Minimal"
+        },
+        {
+          "description": "Disables all the animations.",
+          "type": "string",
+          "const": "Extreme"
+        }
+      ]
+    },
     "PerformanceModeSettings": {
       "type": "object",
       "properties": {
-        "always_enabled": {
-          "type": "boolean"
+        "default": {
+          "$ref": "#/$defs/PerformanceMode",
+          "default": "Disabled"
         },
-        "toggle_on_battery": {
-          "type": "boolean"
+        "onBattery": {
+          "$ref": "#/$defs/PerformanceMode",
+          "default": "Minimal"
         },
-        "toggle_on_energy_saver": {
-          "type": "boolean"
+        "onEnergySaver": {
+          "$ref": "#/$defs/PerformanceMode",
+          "default": "Extreme"
         }
-      },
-      "required": [
-        "always_enabled",
-        "toggle_on_battery",
-        "toggle_on_energy_saver"
-      ]
+      }
     },
     "PlaybackSpeed": {
       "type": "string",
@@ -775,9 +794,11 @@
         "@seelen/window-manager": {
           "$ref": "#/$defs/WindowManagerSettings",
           "default": {
-            "animationsDurationMs": 250,
-            "animationsEaseFunction": "EaseInCubic",
-            "animationsEnabled": true,
+            "animations": {
+              "durationMs": 200,
+              "easeFunction": "EaseOut",
+              "enabled": true
+            },
             "autoStackingByCategory": true,
             "border": {
               "enabled": true,
@@ -1484,19 +1505,14 @@
     "WindowManagerSettings": {
       "type": "object",
       "properties": {
-        "animationsDurationMs": {
-          "type": "integer",
-          "format": "uint64",
-          "default": 250,
-          "minimum": 0
-        },
-        "animationsEaseFunction": {
-          "type": "string",
-          "default": "EaseInCubic"
-        },
-        "animationsEnabled": {
-          "type": "boolean",
-          "default": true
+        "animations": {
+          "description": "window manager animations",
+          "$ref": "#/$defs/WmAnimations",
+          "default": {
+            "durationMs": 200,
+            "easeFunction": "EaseOut",
+            "enabled": true
+          }
         },
         "autoStackingByCategory": {
           "description": "enable or disable auto stacking by category",
@@ -1559,6 +1575,25 @@
           "format": "uint32",
           "default": 10,
           "minimum": 0
+        }
+      }
+    },
+    "WmAnimations": {
+      "type": "object",
+      "properties": {
+        "durationMs": {
+          "type": "integer",
+          "format": "uint64",
+          "default": 200,
+          "minimum": 0
+        },
+        "easeFunction": {
+          "type": "string",
+          "default": "EaseOut"
+        },
+        "enabled": {
+          "type": "boolean",
+          "default": true
         }
       }
     }

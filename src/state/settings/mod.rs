@@ -227,18 +227,34 @@ pub struct WindowManagerSettings {
     pub floating: FloatingWindowSettings,
     /// default layout
     pub default_layout: PluginId,
+    /// window manager animations
+    pub animations: WmAnimations,
+}
 
-    pub animations_enabled: bool,
-    pub animations_duration_ms: u64,
-    pub animations_ease_function: String,
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
+#[serde(default, rename_all = "camelCase")]
+pub struct WmAnimations {
+    pub enabled: bool,
+    pub duration_ms: u64,
+    pub ease_function: String,
+}
+
+impl Default for WmAnimations {
+    fn default() -> Self {
+        Self {
+            enabled: true,
+            duration_ms: 200,
+            ease_function: "EaseOut".into(),
+        }
+    }
 }
 
 impl Default for Border {
     fn default() -> Self {
         Self {
             enabled: true,
-            width: 3.0,
             offset: 0.0,
+            width: 3.0,
         }
     }
 }
@@ -264,9 +280,7 @@ impl Default for WindowManagerSettings {
             workspace_margin: Rect::default(),
             floating: FloatingWindowSettings::default(),
             default_layout: "@default/wm-bspwm".into(),
-            animations_enabled: true,
-            animations_duration_ms: 250,
-            animations_ease_function: "EaseInCubic".into(),
+            animations: WmAnimations::default(),
         }
     }
 }
@@ -589,18 +603,29 @@ impl Settings {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
+#[serde(default, rename_all = "camelCase")]
 pub struct PerformanceModeSettings {
-    pub always_enabled: bool,
-    pub toggle_on_battery: bool,
-    pub toggle_on_energy_saver: bool,
+    pub default: PerformanceMode,
+    pub on_battery: PerformanceMode,
+    pub on_energy_saver: PerformanceMode,
 }
 
 impl Default for PerformanceModeSettings {
     fn default() -> Self {
         Self {
-            always_enabled: false,
-            toggle_on_battery: false,
-            toggle_on_energy_saver: true,
+            default: PerformanceMode::Disabled,
+            on_battery: PerformanceMode::Minimal,
+            on_energy_saver: PerformanceMode::Extreme,
         }
     }
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
+pub enum PerformanceMode {
+    /// Does nothing, all animations are enabled.
+    Disabled,
+    /// Disables windows animations and other heavy effects.
+    Minimal,
+    /// Disables all the animations.
+    Extreme,
 }

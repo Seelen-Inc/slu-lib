@@ -17151,13 +17151,58 @@
       }
     },
     {
+      "name": "PerformanceMode",
+      "isDefault": false,
+      "location": {
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/PerformanceMode.ts",
+        "line": 3,
+        "col": 0,
+        "byteIndex": 110
+      },
+      "declarationKind": "export",
+      "kind": "typeAlias",
+      "typeAliasDef": {
+        "tsType": {
+          "repr": "",
+          "kind": "union",
+          "union": [
+            {
+              "repr": "Disabled",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Disabled"
+              }
+            },
+            {
+              "repr": "Minimal",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Minimal"
+              }
+            },
+            {
+              "repr": "Extreme",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Extreme"
+              }
+            }
+          ]
+        },
+        "typeParams": []
+      }
+    },
+    {
       "name": "PerformanceModeSettings",
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/PerformanceModeSettings.ts",
-        "line": 3,
+        "line": 4,
         "col": 0,
-        "byteIndex": 110
+        "byteIndex": 171
       },
       "declarationKind": "export",
       "kind": "typeAlias",
@@ -17170,56 +17215,65 @@
             "methods": [],
             "properties": [
               {
-                "name": "always_enabled",
+                "name": "default",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/PerformanceModeSettings.ts",
-                  "line": 3,
+                  "line": 4,
                   "col": 40,
-                  "byteIndex": 150
+                  "byteIndex": 211
                 },
                 "params": [],
                 "computed": false,
                 "optional": false,
                 "tsType": {
-                  "repr": "boolean",
-                  "kind": "keyword",
-                  "keyword": "boolean"
+                  "repr": "PerformanceMode",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "PerformanceMode"
+                  }
                 },
                 "typeParams": []
               },
               {
-                "name": "toggle_on_battery",
+                "name": "onBattery",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/PerformanceModeSettings.ts",
-                  "line": 3,
-                  "col": 65,
-                  "byteIndex": 175
+                  "line": 4,
+                  "col": 66,
+                  "byteIndex": 237
                 },
                 "params": [],
                 "computed": false,
                 "optional": false,
                 "tsType": {
-                  "repr": "boolean",
-                  "kind": "keyword",
-                  "keyword": "boolean"
+                  "repr": "PerformanceMode",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "PerformanceMode"
+                  }
                 },
                 "typeParams": []
               },
               {
-                "name": "toggle_on_energy_saver",
+                "name": "onEnergySaver",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/PerformanceModeSettings.ts",
-                  "line": 3,
-                  "col": 93,
-                  "byteIndex": 203
+                  "line": 4,
+                  "col": 94,
+                  "byteIndex": 265
                 },
                 "params": [],
                 "computed": false,
                 "optional": false,
                 "tsType": {
-                  "repr": "boolean",
-                  "kind": "keyword",
-                  "keyword": "boolean"
+                  "repr": "PerformanceMode",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "PerformanceMode"
+                  }
                 },
                 "typeParams": []
               }
@@ -42777,9 +42831,9 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
-        "line": 7,
+        "line": 8,
         "col": 0,
-        "byteIndex": 314
+        "byteIndex": 369
       },
       "declarationKind": "export",
       "kind": "typeAlias",
@@ -42798,9 +42852,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
-                  "line": 11,
+                  "line": 12,
                   "col": 0,
-                  "byteIndex": 408
+                  "byteIndex": 463
                 },
                 "params": [],
                 "computed": false,
@@ -42819,9 +42873,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
-                  "line": 15,
+                  "line": 16,
                   "col": 0,
-                  "byteIndex": 482
+                  "byteIndex": 537
                 },
                 "params": [],
                 "computed": false,
@@ -42840,9 +42894,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
-                  "line": 19,
+                  "line": 20,
                   "col": 0,
-                  "byteIndex": 549
+                  "byteIndex": 604
                 },
                 "params": [],
                 "computed": false,
@@ -42864,9 +42918,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
-                  "line": 23,
+                  "line": 24,
                   "col": 0,
-                  "byteIndex": 631
+                  "byteIndex": 686
                 },
                 "params": [],
                 "computed": false,
@@ -42885,9 +42939,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
-                  "line": 27,
+                  "line": 28,
                   "col": 0,
-                  "byteIndex": 695
+                  "byteIndex": 750
                 },
                 "params": [],
                 "computed": false,
@@ -42906,9 +42960,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
-                  "line": 31,
+                  "line": 32,
                   "col": 0,
-                  "byteIndex": 755
+                  "byteIndex": 810
                 },
                 "params": [],
                 "computed": false,
@@ -42927,9 +42981,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
-                  "line": 35,
+                  "line": 36,
                   "col": 0,
-                  "byteIndex": 818
+                  "byteIndex": 873
                 },
                 "params": [],
                 "computed": false,
@@ -42951,9 +43005,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
-                  "line": 39,
+                  "line": 40,
                   "col": 0,
-                  "byteIndex": 878
+                  "byteIndex": 933
                 },
                 "params": [],
                 "computed": false,
@@ -42975,9 +43029,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
-                  "line": 43,
+                  "line": 44,
                   "col": 0,
-                  "byteIndex": 939
+                  "byteIndex": 994
                 },
                 "params": [],
                 "computed": false,
@@ -42993,56 +43047,26 @@
                 "typeParams": []
               },
               {
-                "name": "animationsEnabled",
+                "name": "animations",
+                "jsDoc": {
+                  "doc": "window manager animations"
+                },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
-                  "line": 43,
-                  "col": 25,
-                  "byteIndex": 964
+                  "line": 48,
+                  "col": 0,
+                  "byteIndex": 1057
                 },
                 "params": [],
                 "computed": false,
                 "optional": false,
                 "tsType": {
-                  "repr": "boolean",
-                  "kind": "keyword",
-                  "keyword": "boolean"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "animationsDurationMs",
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
-                  "line": 43,
-                  "col": 53,
-                  "byteIndex": 992
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "bigint",
-                  "kind": "keyword",
-                  "keyword": "bigint"
-                },
-                "typeParams": []
-              },
-              {
-                "name": "animationsEaseFunction",
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
-                  "line": 43,
-                  "col": 83,
-                  "byteIndex": 1022
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "string",
-                  "kind": "keyword",
-                  "keyword": "string"
+                  "repr": "WmAnimations",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "WmAnimations"
+                  }
                 },
                 "typeParams": []
               }
@@ -43365,6 +43389,87 @@
                       "keyword": "null"
                     }
                   ]
+                },
+                "typeParams": []
+              }
+            ],
+            "callSignatures": [],
+            "indexSignatures": []
+          }
+        },
+        "typeParams": []
+      }
+    },
+    {
+      "name": "WmAnimations",
+      "isDefault": false,
+      "location": {
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmAnimations.ts",
+        "line": 3,
+        "col": 0,
+        "byteIndex": 110
+      },
+      "declarationKind": "export",
+      "kind": "typeAlias",
+      "typeAliasDef": {
+        "tsType": {
+          "repr": "",
+          "kind": "typeLiteral",
+          "typeLiteral": {
+            "constructors": [],
+            "methods": [],
+            "properties": [
+              {
+                "name": "enabled",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmAnimations.ts",
+                  "line": 3,
+                  "col": 29,
+                  "byteIndex": 139
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "boolean",
+                  "kind": "keyword",
+                  "keyword": "boolean"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "durationMs",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmAnimations.ts",
+                  "line": 3,
+                  "col": 47,
+                  "byteIndex": 157
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "bigint",
+                  "kind": "keyword",
+                  "keyword": "bigint"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "easeFunction",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WmAnimations.ts",
+                  "line": 3,
+                  "col": 67,
+                  "byteIndex": 177
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "string",
+                  "kind": "keyword",
+                  "keyword": "string"
                 },
                 "typeParams": []
               }
