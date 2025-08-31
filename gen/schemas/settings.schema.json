@@ -98,6 +98,9 @@
           "zoomSize": 70
         },
         "@seelen/window-manager": {
+          "animationsDurationMs": 250,
+          "animationsEaseFunction": "EaseInCubic",
+          "animationsEnabled": true,
           "autoStackingByCategory": true,
           "border": {
             "enabled": true,
@@ -772,6 +775,9 @@
         "@seelen/window-manager": {
           "$ref": "#/$defs/WindowManagerSettings",
           "default": {
+            "animationsDurationMs": 250,
+            "animationsEaseFunction": "EaseInCubic",
+            "animationsEnabled": true,
             "autoStackingByCategory": true,
             "border": {
               "enabled": true,
@@ -1478,6 +1484,20 @@
     "WindowManagerSettings": {
       "type": "object",
       "properties": {
+        "animationsDurationMs": {
+          "type": "integer",
+          "format": "uint64",
+          "default": 250,
+          "minimum": 0
+        },
+        "animationsEaseFunction": {
+          "type": "string",
+          "default": "EaseInCubic"
+        },
+        "animationsEnabled": {
+          "type": "boolean",
+          "default": true
+        },
         "autoStackingByCategory": {
           "description": "enable or disable auto stacking by category",
           "type": "boolean",
@@ -1498,7 +1518,7 @@
           "default": "@default/wm-bspwm"
         },
         "enabled": {
-          "description": "enable or disable the window manager",
+          "description": "enable or disable the tiling window manager",
           "type": "boolean",
           "default": false
         },

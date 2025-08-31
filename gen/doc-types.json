@@ -42794,13 +42794,13 @@
               {
                 "name": "enabled",
                 "jsDoc": {
-                  "doc": "enable or disable the window manager"
+                  "doc": "enable or disable the tiling window manager"
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
                   "line": 11,
                   "col": 0,
-                  "byteIndex": 401
+                  "byteIndex": 408
                 },
                 "params": [],
                 "computed": false,
@@ -42821,7 +42821,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
                   "line": 15,
                   "col": 0,
-                  "byteIndex": 475
+                  "byteIndex": 482
                 },
                 "params": [],
                 "computed": false,
@@ -42842,7 +42842,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
                   "line": 19,
                   "col": 0,
-                  "byteIndex": 542
+                  "byteIndex": 549
                 },
                 "params": [],
                 "computed": false,
@@ -42866,7 +42866,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
                   "line": 23,
                   "col": 0,
-                  "byteIndex": 624
+                  "byteIndex": 631
                 },
                 "params": [],
                 "computed": false,
@@ -42887,7 +42887,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
                   "line": 27,
                   "col": 0,
-                  "byteIndex": 688
+                  "byteIndex": 695
                 },
                 "params": [],
                 "computed": false,
@@ -42908,7 +42908,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
                   "line": 31,
                   "col": 0,
-                  "byteIndex": 748
+                  "byteIndex": 755
                 },
                 "params": [],
                 "computed": false,
@@ -42929,7 +42929,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
                   "line": 35,
                   "col": 0,
-                  "byteIndex": 811
+                  "byteIndex": 818
                 },
                 "params": [],
                 "computed": false,
@@ -42953,7 +42953,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
                   "line": 39,
                   "col": 0,
-                  "byteIndex": 871
+                  "byteIndex": 878
                 },
                 "params": [],
                 "computed": false,
@@ -42977,7 +42977,7 @@
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
                   "line": 43,
                   "col": 0,
-                  "byteIndex": 932
+                  "byteIndex": 939
                 },
                 "params": [],
                 "computed": false,
@@ -42989,6 +42989,60 @@
                     "typeParams": null,
                     "typeName": "PluginId"
                   }
+                },
+                "typeParams": []
+              },
+              {
+                "name": "animationsEnabled",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
+                  "line": 43,
+                  "col": 25,
+                  "byteIndex": 964
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "boolean",
+                  "kind": "keyword",
+                  "keyword": "boolean"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "animationsDurationMs",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
+                  "line": 43,
+                  "col": 53,
+                  "byteIndex": 992
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "bigint",
+                  "kind": "keyword",
+                  "keyword": "bigint"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "animationsEaseFunction",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/WindowManagerSettings.ts",
+                  "line": 43,
+                  "col": 83,
+                  "byteIndex": 1022
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "string",
+                  "kind": "keyword",
+                  "keyword": "string"
                 },
                 "typeParams": []
               }

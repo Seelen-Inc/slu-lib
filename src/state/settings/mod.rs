@@ -209,7 +209,7 @@ pub struct FloatingWindowSettings {
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default, rename_all = "camelCase")]
 pub struct WindowManagerSettings {
-    /// enable or disable the window manager
+    /// enable or disable the tiling window manager
     pub enabled: bool,
     /// enable or disable auto stacking by category
     pub auto_stacking_by_category: bool,
@@ -222,12 +222,15 @@ pub struct WindowManagerSettings {
     /// default workspace padding
     pub workspace_padding: u32,
     /// default workspace margin
-    #[serde(alias = "global_work_area_offset")]
     pub workspace_margin: Rect,
     /// floating window settings
     pub floating: FloatingWindowSettings,
     /// default layout
     pub default_layout: PluginId,
+
+    pub animations_enabled: bool,
+    pub animations_duration_ms: u64,
+    pub animations_ease_function: String,
 }
 
 impl Default for Border {
@@ -261,6 +264,9 @@ impl Default for WindowManagerSettings {
             workspace_margin: Rect::default(),
             floating: FloatingWindowSettings::default(),
             default_layout: "@default/wm-bspwm".into(),
+            animations_enabled: true,
+            animations_duration_ms: 250,
+            animations_ease_function: "EaseInCubic".into(),
         }
     }
 }
