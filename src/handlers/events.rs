@@ -102,5 +102,5 @@ slu_events_declaration! {
     StateWallpapersChanged(Vec<Wallpaper>) as "UserResources::wallpapers-changed",
     StateProfilesChanged(Vec<Profile>) as "profiles-changed",
 
-    StatePerformanceModeChanged(bool) as "state::performance-mode-changed",
+    StatePerformanceModeChanged(PerformanceMode) as "state::performance-mode-changed",
 }
