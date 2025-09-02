@@ -242,7 +242,7 @@ pub struct WmAnimations {
 impl Default for WmAnimations {
     fn default() -> Self {
         Self {
-            enabled: true,
+            enabled: false,
             duration_ms: 200,
             ease_function: "EaseOut".into(),
         }

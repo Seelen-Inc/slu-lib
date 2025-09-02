@@ -101,7 +101,7 @@
           "animations": {
             "durationMs": 200,
             "easeFunction": "EaseOut",
-            "enabled": true
+            "enabled": false
           },
           "autoStackingByCategory": true,
           "border": {
@@ -797,7 +797,7 @@
             "animations": {
               "durationMs": 200,
               "easeFunction": "EaseOut",
-              "enabled": true
+              "enabled": false
             },
             "autoStackingByCategory": true,
             "border": {
@@ -1511,7 +1511,7 @@
           "default": {
             "durationMs": 200,
             "easeFunction": "EaseOut",
-            "enabled": true
+            "enabled": false
           }
         },
         "autoStackingByCategory": {
@@ -1593,7 +1593,7 @@
         },
         "enabled": {
           "type": "boolean",
-          "default": true
+          "default": false
         }
       }
     }
