@@ -86,8 +86,6 @@ slu_events_declaration! {
     WMForceRetiling as "wm-force-retiling",
     WMSetLayout(WmNode) as "wm-set-layout",
 
-    WallStop(bool) as "wall-stop",
-
     PopupContentChanged(SluPopupConfig) as "popup-content-changed",
 
     StateSettingsChanged(Settings) as "settings-changed",

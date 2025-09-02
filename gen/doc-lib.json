@@ -2449,23 +2449,6 @@
             }
           },
           {
-            "name": "WallStop",
-            "init": {
-              "repr": "wall-stop",
-              "kind": "literal",
-              "literal": {
-                "kind": "string",
-                "string": "wall-stop"
-              }
-            },
-            "location": {
-              "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 33,
-              "col": 2,
-              "byteIndex": 1394
-            }
-          },
-          {
             "name": "PopupContentChanged",
             "init": {
               "repr": "popup-content-changed",
@@ -2477,9 +2460,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 34,
+              "line": 33,
               "col": 2,
-              "byteIndex": 1420
+              "byteIndex": 1394
             }
           },
           {
@@ -2494,9 +2477,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 35,
+              "line": 34,
               "col": 2,
-              "byteIndex": 1469
+              "byteIndex": 1443
             }
           },
           {
@@ -2511,9 +2494,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 36,
+              "line": 35,
               "col": 2,
-              "byteIndex": 1514
+              "byteIndex": 1488
             }
           },
           {
@@ -2528,9 +2511,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 37,
+              "line": 36,
               "col": 2,
-              "byteIndex": 1552
+              "byteIndex": 1526
             }
           },
           {
@@ -2545,9 +2528,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 38,
+              "line": 37,
               "col": 2,
-              "byteIndex": 1598
+              "byteIndex": 1572
             }
           },
           {
@@ -2562,9 +2545,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 39,
+              "line": 38,
               "col": 2,
-              "byteIndex": 1631
+              "byteIndex": 1605
             }
           },
           {
@@ -2579,9 +2562,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 40,
+              "line": 39,
               "col": 2,
-              "byteIndex": 1680
+              "byteIndex": 1654
             }
           },
           {
@@ -2596,9 +2579,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 41,
+              "line": 40,
               "col": 2,
-              "byteIndex": 1715
+              "byteIndex": 1689
             }
           },
           {
@@ -2613,9 +2596,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 42,
+              "line": 41,
               "col": 2,
-              "byteIndex": 1755
+              "byteIndex": 1729
             }
           },
           {
@@ -2630,9 +2613,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 43,
+              "line": 42,
               "col": 2,
-              "byteIndex": 1798
+              "byteIndex": 1772
             }
           },
           {
@@ -2647,9 +2630,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 44,
+              "line": 43,
               "col": 2,
-              "byteIndex": 1841
+              "byteIndex": 1815
             }
           },
           {
@@ -2664,9 +2647,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 45,
+              "line": 44,
               "col": 2,
-              "byteIndex": 1905
+              "byteIndex": 1879
             }
           },
           {
@@ -2681,9 +2664,9 @@
             },
             "location": {
               "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/handlers/events.ts",
-              "line": 46,
+              "line": 45,
               "col": 2,
-              "byteIndex": 1950
+              "byteIndex": 1924
             }
           }
         ]
