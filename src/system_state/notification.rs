@@ -15,13 +15,26 @@ pub struct AppNotification {
     pub content: Toast,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, TS)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize, TS)]
 pub struct Toast {
-    #[serde(rename = "@launch")]
-    pub launch: Option<String>,
     pub header: Option<ToastHeader>,
     pub visual: ToastVisual,
     pub actions: Option<ToastActions>,
+    #[serde(rename = "@launch")]
+    pub launch: Option<String>,
+    #[serde(rename = "@activationType")]
+    pub activation_type: ToastActionActivationType,
+    #[serde(rename = "@duration")]
+    pub duration: ToastDuration,
+}
+
+#[derive(Debug, Default, Clone, Serialize, Deserialize, TS)]
+pub enum ToastDuration {
+    #[default]
+    Short,
+    Long,
+    #[serde(other)]
+    Unknown,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, TS)]
@@ -36,18 +49,40 @@ pub struct ToastHeader {
     pub activation_type: ToastActionActivationType,
 }
 
+/// https://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-visual
 #[derive(Debug, Clone, Serialize, Deserialize, TS)]
+#[serde(default)]
 pub struct ToastVisual {
-    pub binding: Binding,
+    pub binding: ToastBinding,
+    #[serde(rename = "@baseUri")]
+    pub base_uri: String,
+    #[serde(rename = "@lang")]
+    pub lang: String,
+    #[serde(rename = "@version")]
+    pub version: u32,
+    #[serde(rename = "@addImageQuery")]
+    pub add_image_query: bool,
+}
+
+impl Default for ToastVisual {
+    fn default() -> Self {
+        ToastVisual {
+            binding: Default::default(),
+            base_uri: "ms-appx:///".to_owned(),
+            lang: "none".to_owned(),
+            version: 1,
+            add_image_query: false,
+        }
+    }
 }
 
 #[derive(Debug, Clone, Default, Serialize, Deserialize, TS)]
 #[serde(default)]
-pub struct Binding {
+pub struct ToastBinding {
     #[serde(rename = "@template")]
     pub template: ToastTemplateType,
     #[serde(rename = "$value")]
-    pub entries: Vec<ToastBindingEntry>,
+    pub children: Vec<ToastBindingEntry>,
 }
 
 #[derive(Debug, Clone, Default, Serialize, Deserialize, TS)]
@@ -75,11 +110,12 @@ pub enum ToastBindingEntry {
     Progress(ToastProgress),
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, TS)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize, TS)]
+#[serde(default)]
 pub struct ToastText {
     #[serde(rename = "@id")]
     pub id: Option<u32>,
-    #[serde(default, rename = "$value")]
+    #[serde(rename = "$value")]
     pub content: String,
 }
 
@@ -125,6 +161,7 @@ pub struct ToastGroup {
 #[derive(Debug, Clone, Default, Serialize, Deserialize, TS)]
 #[serde(default)]
 pub struct ToastSubGroup {
+    #[serde(rename = "$value")]
     pub entries: Vec<ToastSubGroupEntry>,
 }
 
@@ -147,9 +184,10 @@ pub struct ToastProgress {
     pub value_string_override: Option<String>,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, TS)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize, TS)]
+#[serde(default)]
 pub struct ToastActions {
-    #[serde(default, rename = "$value")]
+    #[serde(rename = "$value")]
     pub entries: Vec<ToastActionsEntry>,
 }
 
@@ -238,7 +276,7 @@ pub enum ToastActionAfterActivationBehavior {
     Unknown,
 }
 
-#[derive(Debug, Clone, Default, Serialize, Deserialize, TS)]
+#[derive(Debug, Default, Clone, Serialize, Deserialize, TS)]
 pub enum ToastActionActivationType {
     #[default]
     #[serde(alias = "foreground")]

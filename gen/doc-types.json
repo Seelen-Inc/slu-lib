@@ -1097,84 +1097,6 @@
       }
     },
     {
-      "name": "Binding",
-      "isDefault": false,
-      "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Binding.ts",
-        "line": 5,
-        "col": 0,
-        "byteIndex": 240
-      },
-      "declarationKind": "export",
-      "kind": "typeAlias",
-      "typeAliasDef": {
-        "tsType": {
-          "repr": "",
-          "kind": "typeLiteral",
-          "typeLiteral": {
-            "constructors": [],
-            "methods": [],
-            "properties": [
-              {
-                "name": "@template",
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Binding.ts",
-                  "line": 5,
-                  "col": 24,
-                  "byteIndex": 264
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "ToastTemplateType",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": null,
-                    "typeName": "ToastTemplateType"
-                  }
-                },
-                "typeParams": []
-              },
-              {
-                "name": "$value",
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Binding.ts",
-                  "line": 5,
-                  "col": 56,
-                  "byteIndex": 296
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "Array",
-                  "kind": "typeRef",
-                  "typeRef": {
-                    "typeParams": [
-                      {
-                        "repr": "ToastBindingEntry",
-                        "kind": "typeRef",
-                        "typeRef": {
-                          "typeParams": null,
-                          "typeName": "ToastBindingEntry"
-                        }
-                      }
-                    ],
-                    "typeName": "Array"
-                  }
-                },
-                "typeParams": []
-              }
-            ],
-            "callSignatures": [],
-            "indexSignatures": []
-          }
-        },
-        "typeParams": []
-      }
-    },
-    {
       "name": "BLEAppearance",
       "isDefault": false,
       "location": {
@@ -36947,9 +36869,9 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
-        "line": 6,
+        "line": 8,
         "col": 0,
-        "byteIndex": 271
+        "byteIndex": 409
       },
       "declarationKind": "export",
       "kind": "typeAlias",
@@ -36962,41 +36884,12 @@
             "methods": [],
             "properties": [
               {
-                "name": "@launch",
-                "location": {
-                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
-                  "line": 6,
-                  "col": 22,
-                  "byteIndex": 293
-                },
-                "params": [],
-                "computed": false,
-                "optional": false,
-                "tsType": {
-                  "repr": "",
-                  "kind": "union",
-                  "union": [
-                    {
-                      "repr": "string",
-                      "kind": "keyword",
-                      "keyword": "string"
-                    },
-                    {
-                      "repr": "null",
-                      "kind": "keyword",
-                      "keyword": "null"
-                    }
-                  ]
-                },
-                "typeParams": []
-              },
-              {
                 "name": "header",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
-                  "line": 6,
-                  "col": 48,
-                  "byteIndex": 319
+                  "line": 8,
+                  "col": 22,
+                  "byteIndex": 431
                 },
                 "params": [],
                 "computed": false,
@@ -37026,9 +36919,9 @@
                 "name": "visual",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
-                  "line": 6,
-                  "col": 76,
-                  "byteIndex": 347
+                  "line": 8,
+                  "col": 50,
+                  "byteIndex": 459
                 },
                 "params": [],
                 "computed": false,
@@ -37047,9 +36940,9 @@
                 "name": "actions",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
-                  "line": 6,
-                  "col": 97,
-                  "byteIndex": 368
+                  "line": 8,
+                  "col": 71,
+                  "byteIndex": 480
                 },
                 "params": [],
                 "computed": false,
@@ -37072,6 +36965,77 @@
                       "keyword": "null"
                     }
                   ]
+                },
+                "typeParams": []
+              },
+              {
+                "name": "@launch",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
+                  "line": 8,
+                  "col": 101,
+                  "byteIndex": 510
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "",
+                  "kind": "union",
+                  "union": [
+                    {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    {
+                      "repr": "null",
+                      "kind": "keyword",
+                      "keyword": "null"
+                    }
+                  ]
+                },
+                "typeParams": []
+              },
+              {
+                "name": "@activationType",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
+                  "line": 8,
+                  "col": 127,
+                  "byteIndex": 536
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "ToastActionActivationType",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "ToastActionActivationType"
+                  }
+                },
+                "typeParams": []
+              },
+              {
+                "name": "@duration",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
+                  "line": 8,
+                  "col": 173,
+                  "byteIndex": 582
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "ToastDuration",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "ToastDuration"
+                  }
                 },
                 "typeParams": []
               }
@@ -37681,6 +37645,84 @@
       }
     },
     {
+      "name": "ToastBinding",
+      "isDefault": false,
+      "location": {
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastBinding.ts",
+        "line": 5,
+        "col": 0,
+        "byteIndex": 240
+      },
+      "declarationKind": "export",
+      "kind": "typeAlias",
+      "typeAliasDef": {
+        "tsType": {
+          "repr": "",
+          "kind": "typeLiteral",
+          "typeLiteral": {
+            "constructors": [],
+            "methods": [],
+            "properties": [
+              {
+                "name": "@template",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastBinding.ts",
+                  "line": 5,
+                  "col": 29,
+                  "byteIndex": 269
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "ToastTemplateType",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "ToastTemplateType"
+                  }
+                },
+                "typeParams": []
+              },
+              {
+                "name": "$value",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastBinding.ts",
+                  "line": 5,
+                  "col": 61,
+                  "byteIndex": 301
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "Array",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": [
+                      {
+                        "repr": "ToastBindingEntry",
+                        "kind": "typeRef",
+                        "typeRef": {
+                          "typeParams": null,
+                          "typeName": "ToastBindingEntry"
+                        }
+                      }
+                    ],
+                    "typeName": "Array"
+                  }
+                },
+                "typeParams": []
+              }
+            ],
+            "callSignatures": [],
+            "indexSignatures": []
+          }
+        },
+        "typeParams": []
+      }
+    },
+    {
       "name": "ToastBindingEntry",
       "isDefault": false,
       "location": {
@@ -37826,6 +37868,51 @@
                 ],
                 "callSignatures": [],
                 "indexSignatures": []
+              }
+            }
+          ]
+        },
+        "typeParams": []
+      }
+    },
+    {
+      "name": "ToastDuration",
+      "isDefault": false,
+      "location": {
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastDuration.ts",
+        "line": 3,
+        "col": 0,
+        "byteIndex": 110
+      },
+      "declarationKind": "export",
+      "kind": "typeAlias",
+      "typeAliasDef": {
+        "tsType": {
+          "repr": "",
+          "kind": "union",
+          "union": [
+            {
+              "repr": "Short",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Short"
+              }
+            },
+            {
+              "repr": "Long",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Long"
+              }
+            },
+            {
+              "repr": "Unknown",
+              "kind": "literal",
+              "literal": {
+                "kind": "string",
+                "string": "Unknown"
               }
             }
           ]
@@ -38662,7 +38749,7 @@
             "methods": [],
             "properties": [
               {
-                "name": "entries",
+                "name": "$value",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastSubGroup.ts",
                   "line": 4,
@@ -38966,11 +39053,14 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastVisual.ts",
-        "line": 4,
+        "line": 7,
         "col": 0,
-        "byteIndex": 155
+        "byteIndex": 255
       },
       "declarationKind": "export",
+      "jsDoc": {
+        "doc": "https://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-visual"
+      },
       "kind": "typeAlias",
       "typeAliasDef": {
         "tsType": {
@@ -38984,20 +39074,92 @@
                 "name": "binding",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastVisual.ts",
-                  "line": 4,
+                  "line": 7,
                   "col": 28,
-                  "byteIndex": 183
+                  "byteIndex": 283
                 },
                 "params": [],
                 "computed": false,
                 "optional": false,
                 "tsType": {
-                  "repr": "Binding",
+                  "repr": "ToastBinding",
                   "kind": "typeRef",
                   "typeRef": {
                     "typeParams": null,
-                    "typeName": "Binding"
+                    "typeName": "ToastBinding"
                   }
+                },
+                "typeParams": []
+              },
+              {
+                "name": "@baseUri",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastVisual.ts",
+                  "line": 7,
+                  "col": 51,
+                  "byteIndex": 306
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "string",
+                  "kind": "keyword",
+                  "keyword": "string"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "@lang",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastVisual.ts",
+                  "line": 7,
+                  "col": 71,
+                  "byteIndex": 326
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "string",
+                  "kind": "keyword",
+                  "keyword": "string"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "@version",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastVisual.ts",
+                  "line": 7,
+                  "col": 88,
+                  "byteIndex": 343
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "number",
+                  "kind": "keyword",
+                  "keyword": "number"
+                },
+                "typeParams": []
+              },
+              {
+                "name": "@addImageQuery",
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastVisual.ts",
+                  "line": 7,
+                  "col": 108,
+                  "byteIndex": 363
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "boolean",
+                  "kind": "keyword",
+                  "keyword": "boolean"
                 },
                 "typeParams": []
               }
