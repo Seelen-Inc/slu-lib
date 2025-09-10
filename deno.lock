@@ -682,6 +682,7 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@deno/dnt@0.41.3",
       "jsr:@std/assert@^1.0.14",
       "jsr:@std/encoding@^1.0.10",
       "npm:@tauri-apps/api@^2.8.0",

@@ -17,6 +17,7 @@ pub struct AppNotification {
 
 /// Base toast element, which contains at least a single visual element
 #[derive(Debug, Default, Clone, Serialize, Deserialize, TS)]
+#[serde(default)]
 pub struct Toast {
     pub header: Option<ToastHeader>,
     pub visual: ToastVisual,
