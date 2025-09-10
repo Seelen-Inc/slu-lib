@@ -36869,11 +36869,14 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
-        "line": 8,
+        "line": 11,
         "col": 0,
-        "byteIndex": 409
+        "byteIndex": 488
       },
       "declarationKind": "export",
+      "jsDoc": {
+        "doc": "Base toast element, which contains at least a single visual element"
+      },
       "kind": "typeAlias",
       "typeAliasDef": {
         "tsType": {
@@ -36887,9 +36890,9 @@
                 "name": "header",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
-                  "line": 8,
+                  "line": 11,
                   "col": 22,
-                  "byteIndex": 431
+                  "byteIndex": 510
                 },
                 "params": [],
                 "computed": false,
@@ -36919,9 +36922,9 @@
                 "name": "visual",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
-                  "line": 8,
+                  "line": 11,
                   "col": 50,
-                  "byteIndex": 459
+                  "byteIndex": 538
                 },
                 "params": [],
                 "computed": false,
@@ -36940,9 +36943,9 @@
                 "name": "actions",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
-                  "line": 8,
+                  "line": 11,
                   "col": 71,
-                  "byteIndex": 480
+                  "byteIndex": 559
                 },
                 "params": [],
                 "computed": false,
@@ -36972,9 +36975,9 @@
                 "name": "@launch",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
-                  "line": 8,
+                  "line": 11,
                   "col": 101,
-                  "byteIndex": 510
+                  "byteIndex": 589
                 },
                 "params": [],
                 "computed": false,
@@ -37001,9 +37004,9 @@
                 "name": "@activationType",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
-                  "line": 8,
+                  "line": 11,
                   "col": 127,
-                  "byteIndex": 536
+                  "byteIndex": 615
                 },
                 "params": [],
                 "computed": false,
@@ -37022,9 +37025,9 @@
                 "name": "@duration",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/Toast.ts",
-                  "line": 8,
+                  "line": 11,
                   "col": 173,
-                  "byteIndex": 582
+                  "byteIndex": 661
                 },
                 "params": [],
                 "computed": false,
@@ -37052,11 +37055,14 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastAction.ts",
-        "line": 7,
+        "line": 12,
         "col": 0,
-        "byteIndex": 436
+        "byteIndex": 569
       },
       "declarationKind": "export",
+      "jsDoc": {
+        "doc": "Specifies a button shown in a toast.\n\nhttps://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-action"
+      },
       "kind": "typeAlias",
       "typeAliasDef": {
         "tsType": {
@@ -37070,9 +37076,9 @@
                 "name": "@content",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastAction.ts",
-                  "line": 7,
+                  "line": 12,
                   "col": 28,
-                  "byteIndex": 464
+                  "byteIndex": 597
                 },
                 "params": [],
                 "computed": false,
@@ -37088,9 +37094,9 @@
                 "name": "@arguments",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastAction.ts",
-                  "line": 7,
+                  "line": 12,
                   "col": 48,
-                  "byteIndex": 484
+                  "byteIndex": 617
                 },
                 "params": [],
                 "computed": false,
@@ -37106,9 +37112,9 @@
                 "name": "@activationType",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastAction.ts",
-                  "line": 7,
+                  "line": 12,
                   "col": 70,
-                  "byteIndex": 506
+                  "byteIndex": 639
                 },
                 "params": [],
                 "computed": false,
@@ -37127,9 +37133,9 @@
                 "name": "@afterActivationBehavior",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastAction.ts",
-                  "line": 7,
+                  "line": 12,
                   "col": 116,
-                  "byteIndex": 552
+                  "byteIndex": 685
                 },
                 "params": [],
                 "computed": false,
@@ -37151,9 +37157,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastAction.ts",
-                  "line": 11,
+                  "line": 16,
                   "col": 0,
-                  "byteIndex": 729
+                  "byteIndex": 862
                 },
                 "params": [],
                 "computed": false,
@@ -37186,9 +37192,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastAction.ts",
-                  "line": 15,
+                  "line": 20,
                   "col": 0,
-                  "byteIndex": 812
+                  "byteIndex": 945
                 },
                 "params": [],
                 "computed": false,
@@ -37215,9 +37221,9 @@
                 "name": "@hint-inputid",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastAction.ts",
-                  "line": 15,
+                  "line": 20,
                   "col": 28,
-                  "byteIndex": 840
+                  "byteIndex": 973
                 },
                 "params": [],
                 "computed": false,
@@ -37244,9 +37250,9 @@
                 "name": "@hint-buttonStyle",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastAction.ts",
-                  "line": 15,
+                  "line": 20,
                   "col": 60,
-                  "byteIndex": 872
+                  "byteIndex": 1005
                 },
                 "params": [],
                 "computed": false,
@@ -37279,9 +37285,9 @@
                 },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastAction.ts",
-                  "line": 19,
+                  "line": 24,
                   "col": 0,
-                  "byteIndex": 951
+                  "byteIndex": 1084
                 },
                 "params": [],
                 "computed": false,
@@ -37505,11 +37511,14 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastActions.ts",
-        "line": 4,
+        "line": 9,
         "col": 0,
-        "byteIndex": 175
+        "byteIndex": 380
       },
       "declarationKind": "export",
+      "jsDoc": {
+        "doc": "Container element for declaring up to five inputs and up to five button actions for the toast notification.\n\nhttps://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-actions"
+      },
       "kind": "typeAlias",
       "typeAliasDef": {
         "tsType": {
@@ -37523,9 +37532,9 @@
                 "name": "$value",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastActions.ts",
-                  "line": 4,
+                  "line": 9,
                   "col": 29,
-                  "byteIndex": 204
+                  "byteIndex": 409
                 },
                 "params": [],
                 "computed": false,
@@ -37536,11 +37545,11 @@
                   "typeRef": {
                     "typeParams": [
                       {
-                        "repr": "ToastActionsEntry",
+                        "repr": "ToastActionsChild",
                         "kind": "typeRef",
                         "typeRef": {
                           "typeParams": null,
-                          "typeName": "ToastActionsEntry"
+                          "typeName": "ToastActionsChild"
                         }
                       }
                     ],
@@ -37558,10 +37567,10 @@
       }
     },
     {
-      "name": "ToastActionsEntry",
+      "name": "ToastActionsChild",
       "isDefault": false,
       "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastActionsEntry.ts",
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastActionsChild.ts",
         "line": 5,
         "col": 0,
         "byteIndex": 214
@@ -37583,7 +37592,7 @@
                   {
                     "name": "input",
                     "location": {
-                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastActionsEntry.ts",
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastActionsChild.ts",
                       "line": 5,
                       "col": 34,
                       "byteIndex": 248
@@ -37616,7 +37625,7 @@
                   {
                     "name": "action",
                     "location": {
-                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastActionsEntry.ts",
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastActionsChild.ts",
                       "line": 5,
                       "col": 60,
                       "byteIndex": 274
@@ -37701,11 +37710,11 @@
                   "typeRef": {
                     "typeParams": [
                       {
-                        "repr": "ToastBindingEntry",
+                        "repr": "ToastBindingChild",
                         "kind": "typeRef",
                         "typeRef": {
                           "typeParams": null,
-                          "typeName": "ToastBindingEntry"
+                          "typeName": "ToastBindingChild"
                         }
                       }
                     ],
@@ -37723,10 +37732,10 @@
       }
     },
     {
-      "name": "ToastBindingEntry",
+      "name": "ToastBindingChild",
       "isDefault": false,
       "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastBindingEntry.ts",
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastBindingChild.ts",
         "line": 7,
         "col": 0,
         "byteIndex": 318
@@ -37748,7 +37757,7 @@
                   {
                     "name": "text",
                     "location": {
-                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastBindingEntry.ts",
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastBindingChild.ts",
                       "line": 7,
                       "col": 34,
                       "byteIndex": 352
@@ -37781,7 +37790,7 @@
                   {
                     "name": "image",
                     "location": {
-                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastBindingEntry.ts",
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastBindingChild.ts",
                       "line": 7,
                       "col": 58,
                       "byteIndex": 376
@@ -37814,7 +37823,7 @@
                   {
                     "name": "group",
                     "location": {
-                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastBindingEntry.ts",
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastBindingChild.ts",
                       "line": 7,
                       "col": 84,
                       "byteIndex": 402
@@ -37847,7 +37856,7 @@
                   {
                     "name": "progress",
                     "location": {
-                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastBindingEntry.ts",
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastBindingChild.ts",
                       "line": 7,
                       "col": 110,
                       "byteIndex": 428
@@ -37925,11 +37934,14 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastGroup.ts",
-        "line": 4,
+        "line": 10,
         "col": 0,
-        "byteIndex": 167
+        "byteIndex": 436
       },
       "declarationKind": "export",
+      "jsDoc": {
+        "doc": "Semantically identifies that the content in the group must either be displayed as a whole,\nor not displayed if it cannot fit. Groups also allow creating multiple columns.\n\nhttps://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-group"
+      },
       "kind": "typeAlias",
       "typeAliasDef": {
         "tsType": {
@@ -37943,9 +37955,9 @@
                 "name": "subgroup",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastGroup.ts",
-                  "line": 4,
+                  "line": 10,
                   "col": 27,
-                  "byteIndex": 194
+                  "byteIndex": 463
                 },
                 "params": [],
                 "computed": false,
@@ -37982,11 +37994,14 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastHeader.ts",
-        "line": 4,
+        "line": 9,
         "col": 0,
-        "byteIndex": 191
+        "byteIndex": 379
       },
       "declarationKind": "export",
+      "jsDoc": {
+        "doc": "Specifies a custom header that groups multiple notifications together within Action Center.\n\nhttps://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-header"
+      },
       "kind": "typeAlias",
       "typeAliasDef": {
         "tsType": {
@@ -38000,9 +38015,9 @@
                 "name": "@id",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastHeader.ts",
-                  "line": 4,
+                  "line": 9,
                   "col": 28,
-                  "byteIndex": 219
+                  "byteIndex": 407
                 },
                 "params": [],
                 "computed": false,
@@ -38018,9 +38033,9 @@
                 "name": "@title",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastHeader.ts",
-                  "line": 4,
+                  "line": 9,
                   "col": 43,
-                  "byteIndex": 234
+                  "byteIndex": 422
                 },
                 "params": [],
                 "computed": false,
@@ -38036,9 +38051,9 @@
                 "name": "@arguments",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastHeader.ts",
-                  "line": 4,
+                  "line": 9,
                   "col": 61,
-                  "byteIndex": 252
+                  "byteIndex": 440
                 },
                 "params": [],
                 "computed": false,
@@ -38054,9 +38069,9 @@
                 "name": "@activationType",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastHeader.ts",
-                  "line": 4,
+                  "line": 9,
                   "col": 83,
-                  "byteIndex": 274
+                  "byteIndex": 462
                 },
                 "params": [],
                 "computed": false,
@@ -38351,11 +38366,14 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastInput.ts",
-        "line": 5,
+        "line": 10,
         "col": 0,
-        "byteIndex": 238
+        "byteIndex": 419
       },
       "declarationKind": "export",
+      "jsDoc": {
+        "doc": "Specifies an input, either text box or selection menu, shown in a toast notification.\n\nhttps://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-input"
+      },
       "kind": "typeAlias",
       "typeAliasDef": {
         "tsType": {
@@ -38367,11 +38385,14 @@
             "properties": [
               {
                 "name": "@id",
+                "jsDoc": {
+                  "doc": "The ID associated with the input"
+                },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastInput.ts",
-                  "line": 5,
-                  "col": 27,
-                  "byteIndex": 265
+                  "line": 14,
+                  "col": 0,
+                  "byteIndex": 491
                 },
                 "params": [],
                 "computed": false,
@@ -38385,11 +38406,14 @@
               },
               {
                 "name": "@type",
+                "jsDoc": {
+                  "doc": "The type of input."
+                },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastInput.ts",
-                  "line": 5,
-                  "col": 42,
-                  "byteIndex": 280
+                  "line": 18,
+                  "col": 0,
+                  "byteIndex": 537
                 },
                 "params": [],
                 "computed": false,
@@ -38406,11 +38430,14 @@
               },
               {
                 "name": "@placeHolderContent",
+                "jsDoc": {
+                  "doc": "The placeholder displayed for text input."
+                },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastInput.ts",
-                  "line": 5,
-                  "col": 67,
-                  "byteIndex": 305
+                  "line": 22,
+                  "col": 0,
+                  "byteIndex": 616
                 },
                 "params": [],
                 "computed": false,
@@ -38435,11 +38462,14 @@
               },
               {
                 "name": "@title",
+                "jsDoc": {
+                  "doc": "Text displayed as a label for the input."
+                },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastInput.ts",
-                  "line": 5,
-                  "col": 105,
-                  "byteIndex": 343
+                  "line": 26,
+                  "col": 0,
+                  "byteIndex": 707
                 },
                 "params": [],
                 "computed": false,
@@ -38464,11 +38494,14 @@
               },
               {
                 "name": "selection",
+                "jsDoc": {
+                  "doc": "Options for the input if it is of type selection."
+                },
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastInput.ts",
-                  "line": 5,
-                  "col": 130,
-                  "byteIndex": 368
+                  "line": 30,
+                  "col": 0,
+                  "byteIndex": 794
                 },
                 "params": [],
                 "computed": false,
@@ -38505,11 +38538,14 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastInputSelection.ts",
-        "line": 3,
+        "line": 8,
         "col": 0,
-        "byteIndex": 110
+        "byteIndex": 256
       },
       "declarationKind": "export",
+      "jsDoc": {
+        "doc": "Specifies the id and text of a selection item.\n\nhttps://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-selection"
+      },
       "kind": "typeAlias",
       "typeAliasDef": {
         "tsType": {
@@ -38523,9 +38559,9 @@
                 "name": "@id",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastInputSelection.ts",
-                  "line": 3,
+                  "line": 8,
                   "col": 36,
-                  "byteIndex": 146
+                  "byteIndex": 292
                 },
                 "params": [],
                 "computed": false,
@@ -38541,9 +38577,9 @@
                 "name": "@content",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastInputSelection.ts",
-                  "line": 3,
+                  "line": 8,
                   "col": 51,
-                  "byteIndex": 161
+                  "byteIndex": 307
                 },
                 "params": [],
                 "computed": false,
@@ -38734,11 +38770,14 @@
       "isDefault": false,
       "location": {
         "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastSubGroup.ts",
-        "line": 4,
+        "line": 9,
         "col": 0,
-        "byteIndex": 177
+        "byteIndex": 336
       },
       "declarationKind": "export",
+      "jsDoc": {
+        "doc": "Specifies vertical columns that can contain text and images.\n\nhttps://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-subgroup"
+      },
       "kind": "typeAlias",
       "typeAliasDef": {
         "tsType": {
@@ -38752,9 +38791,9 @@
                 "name": "$value",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastSubGroup.ts",
-                  "line": 4,
+                  "line": 9,
                   "col": 30,
-                  "byteIndex": 207
+                  "byteIndex": 366
                 },
                 "params": [],
                 "computed": false,
@@ -38765,11 +38804,11 @@
                   "typeRef": {
                     "typeParams": [
                       {
-                        "repr": "ToastSubGroupEntry",
+                        "repr": "ToastSubGroupChild",
                         "kind": "typeRef",
                         "typeRef": {
                           "typeParams": null,
-                          "typeName": "ToastSubGroupEntry"
+                          "typeName": "ToastSubGroupChild"
                         }
                       }
                     ],
@@ -38787,10 +38826,10 @@
       }
     },
     {
-      "name": "ToastSubGroupEntry",
+      "name": "ToastSubGroupChild",
       "isDefault": false,
       "location": {
-        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastSubGroupEntry.ts",
+        "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastSubGroupChild.ts",
         "line": 5,
         "col": 0,
         "byteIndex": 210
@@ -38812,7 +38851,7 @@
                   {
                     "name": "text",
                     "location": {
-                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastSubGroupEntry.ts",
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastSubGroupChild.ts",
                       "line": 5,
                       "col": 35,
                       "byteIndex": 245
@@ -38845,7 +38884,7 @@
                   {
                     "name": "image",
                     "location": {
-                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastSubGroupEntry.ts",
+                      "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/ToastSubGroupChild.ts",
                       "line": 5,
                       "col": 59,
                       "byteIndex": 269

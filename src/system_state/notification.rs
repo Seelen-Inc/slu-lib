@@ -15,6 +15,7 @@ pub struct AppNotification {
     pub content: Toast,
 }
 
+/// Base toast element, which contains at least a single visual element
 #[derive(Debug, Default, Clone, Serialize, Deserialize, TS)]
 pub struct Toast {
     pub header: Option<ToastHeader>,
@@ -37,6 +38,9 @@ pub enum ToastDuration {
     Unknown,
 }
 
+/// Specifies a custom header that groups multiple notifications together within Action Center.
+///
+/// https://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-header
 #[derive(Debug, Clone, Serialize, Deserialize, TS)]
 pub struct ToastHeader {
     #[serde(rename = "@id")]
@@ -82,7 +86,7 @@ pub struct ToastBinding {
     #[serde(rename = "@template")]
     pub template: ToastTemplateType,
     #[serde(rename = "$value")]
-    pub children: Vec<ToastBindingEntry>,
+    pub children: Vec<ToastBindingChild>,
 }
 
 #[derive(Debug, Clone, Default, Serialize, Deserialize, TS)]
@@ -103,7 +107,7 @@ pub enum ToastTemplateType {
 
 #[derive(Debug, Clone, Serialize, Deserialize, TS)]
 #[serde(rename_all = "camelCase")]
-pub enum ToastBindingEntry {
+pub enum ToastBindingChild {
     Text(ToastText),
     Image(ToastImage),
     Group(ToastGroup),
@@ -153,21 +157,28 @@ pub enum ToastImagePlacement {
     Unknown,
 }
 
+/// Semantically identifies that the content in the group must either be displayed as a whole,
+/// or not displayed if it cannot fit. Groups also allow creating multiple columns.
+///
+/// https://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-group
 #[derive(Debug, Clone, Serialize, Deserialize, TS)]
 pub struct ToastGroup {
     pub subgroup: Vec<ToastSubGroup>,
 }
 
+/// Specifies vertical columns that can contain text and images.
+///
+/// https://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-subgroup
 #[derive(Debug, Clone, Default, Serialize, Deserialize, TS)]
 #[serde(default)]
 pub struct ToastSubGroup {
     #[serde(rename = "$value")]
-    pub entries: Vec<ToastSubGroupEntry>,
+    pub children: Vec<ToastSubGroupChild>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, TS)]
 #[serde(rename_all = "camelCase")]
-pub enum ToastSubGroupEntry {
+pub enum ToastSubGroupChild {
     Text(ToastText),
     Image(ToastImage),
 }
@@ -184,30 +195,41 @@ pub struct ToastProgress {
     pub value_string_override: Option<String>,
 }
 
+/// Container element for declaring up to five inputs and up to five button actions for the toast notification.
+///
+/// https://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-actions
 #[derive(Debug, Default, Clone, Serialize, Deserialize, TS)]
 #[serde(default)]
 pub struct ToastActions {
     #[serde(rename = "$value")]
-    pub entries: Vec<ToastActionsEntry>,
+    pub children: Vec<ToastActionsChild>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, TS)]
 #[serde(rename_all = "camelCase")]
-pub enum ToastActionsEntry {
+pub enum ToastActionsChild {
     Input(ToastInput),
     Action(ToastAction),
 }
 
+/// Specifies an input, either text box or selection menu, shown in a toast notification.
+///
+/// https://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-input
 #[derive(Debug, Clone, Serialize, Deserialize, TS)]
 pub struct ToastInput {
+    /// The ID associated with the input
     #[serde(rename = "@id")]
     pub id: String,
+    /// The type of input.
     #[serde(rename = "@type")]
     pub r#type: ToastInputType,
+    /// The placeholder displayed for text input.
     #[serde(rename = "@placeHolderContent")]
     pub placeholder: Option<String>,
+    /// Text displayed as a label for the input.
     #[serde(rename = "@title")]
     pub title: Option<String>,
+    /// Options for the input if it is of type selection.
     #[serde(default)]
     pub selection: Vec<ToastInputSelection>,
 }
@@ -222,6 +244,9 @@ pub enum ToastInputType {
     Unknown,
 }
 
+/// Specifies the id and text of a selection item.
+///
+/// https://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-selection
 #[derive(Debug, Clone, Serialize, Deserialize, TS)]
 pub struct ToastInputSelection {
     #[serde(rename = "@id")]
@@ -230,6 +255,9 @@ pub struct ToastInputSelection {
     pub content: String,
 }
 
+/// Specifies a button shown in a toast.
+///
+/// https://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/element-action
 #[derive(Debug, Clone, Serialize, Deserialize, TS)]
 pub struct ToastAction {
     #[serde(rename = "@content")]
