@@ -35237,12 +35237,44 @@
                 "typeParams": []
               },
               {
-                "name": "target",
+                "name": "toast_activator",
                 "location": {
                   "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/StartMenuItem.ts",
                   "line": 3,
                   "col": 65,
                   "byteIndex": 175
+                },
+                "params": [],
+                "computed": false,
+                "optional": false,
+                "tsType": {
+                  "repr": "",
+                  "kind": "union",
+                  "union": [
+                    {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    {
+                      "repr": "null",
+                      "kind": "keyword",
+                      "keyword": "null"
+                    }
+                  ]
+                },
+                "typeParams": []
+              },
+              {
+                "name": "target",
+                "jsDoc": {
+                  "doc": "Will be present if the item is a shortcut"
+                },
+                "location": {
+                  "filename": "file:///C:/Users/dlmqc/source/repos/seelen/slu-lib/src/types/StartMenuItem.ts",
+                  "line": 7,
+                  "col": 0,
+                  "byteIndex": 261
                 },
                 "params": [],
                 "computed": false,

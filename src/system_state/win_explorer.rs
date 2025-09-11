@@ -4,6 +4,8 @@ use std::path::PathBuf;
 pub struct StartMenuItem {
     pub path: PathBuf,
     pub umid: Option<String>,
+    pub toast_activator: Option<String>,
+    /// Will be present if the item is a shortcut
     pub target: Option<PathBuf>,
 }
 
