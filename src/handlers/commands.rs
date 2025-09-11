@@ -238,4 +238,9 @@ slu_commands_declaration! {
     GetNotifications = get_notifications() -> Vec<AppNotification>,
     NotificationsClose = notifications_close(id: u32),
     NotificationsCloseAll = notifications_close_all(),
+    ActivateNotification = activate_notification(
+        umid: String,
+        args: String,
+        input_data: HashMap<String, String>,
+    ),
 }

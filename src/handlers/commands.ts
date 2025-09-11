@@ -100,4 +100,5 @@ export enum SeelenCommand {
   GetNotifications = 'get_notifications',
   NotificationsClose = 'notifications_close',
   NotificationsCloseAll = 'notifications_close_all',
+  ActivateNotification = 'activate_notification',
 }
