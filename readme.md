@@ -3,6 +3,8 @@
   Seelen UI Library
 </h1>
 
+> **⚠️ DEPRECATED**: This repository has been deprecated. The library has been moved to https://github.com/eythaann/Seelen-UI/tree/master/libs/core as part of the main application monorepo to streamline development. Please use the new location for future development and contributions.
+
 The **Seelen UI Library** is the core library for [Seelen UI](https://github.com/eythaann/seelen-ui), a highly customizable desktop UI. This library provides the necessary tools and types to create and manage widgets, plugins, and themes for the Seelen UI application. It's a hybrid library with a Rust core and TypeScript/Deno bindings, designed for performance and type safety.
 
 ## Installation

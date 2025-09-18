@@ -1,7 +1,7 @@
 {
   "name": "@seelen-ui/lib",
   "version": "2.4.1",
-  "description": "Seelen UI Library for Widgets",
+  "description": "[DEPRECATED] Seelen UI Library for Widgets - Moved to https://github.com/eythaann/Seelen-UI/tree/master/libs/core",
   "license": "Apache-2.0",
   "exports": {
     ".": "./src/lib.ts",

@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+> **⚠️ DEPRECATED**: This repository has been deprecated. The library has been moved to https://github.com/eythaann/Seelen-UI/tree/master/libs/core as part of the main application monorepo to streamline development.
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Common Development Commands
